@@ -4,7 +4,18 @@ version: 0.0.1-SNAPSHOT
 author: rohitjain+27@simpledatalabs.com
 language: scala
 buildSystem: maven
-pipelines: {}
+pipelines:
+  pipelines/Application1:
+    name: Application1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2022-11-17 10:20:33'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
