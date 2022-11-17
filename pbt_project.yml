@@ -18,23 +18,7 @@ pipelines:
       - gitUri=http://gitserver:3000/aH3lOJfD_team_93/gq7R5qIv_project_177.git&subPath=&tag=BaseProjectScala/8.0&projectSubscriptionProjectId=177&path=datasets/baseDS1
       - gitUri=http://gitserver:3000/aH3lOJfD_team_93/gq7R5qIv_project_177.git&subPath=&tag=BaseProjectScala/8.0&projectSubscriptionProjectId=177&path=datasets/baseDS3
       outputs: []
-    dependencies:
-      project/182:
-        name: project/182
-        projectUID: 182
-        projectName: ApplicationProject2
-        version: ApplicationProject2/1.0
-        author: null
-        repositoryPath: gitUri=http://gitserver:3000/9CnRzp7s_team_95/HjDoIqdC_project_182.git&subPath=
-        createdAt: '2022-11-17 10:46:25'
-      project/177:
-        name: project/177
-        projectUID: 177
-        projectName: BaseProjectScala
-        version: BaseProjectScala/8.0
-        author: null
-        repositoryPath: gitUri=http://gitserver:3000/aH3lOJfD_team_93/gq7R5qIv_project_177.git&subPath=
-        createdAt: '2022-11-17 10:44:56'
+    dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
@@ -43,3 +27,19 @@ subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
 dependencies: '[]'
+projectDependencies:
+  '182':
+    projectUID: 182
+    projectName: ApplicationProject2
+    repositoryPath: gitUri=http://gitserver:3000/9CnRzp7s_team_95/HjDoIqdC_project_182.git&subPath=
+    version: ApplicationProject2/1.0
+    author: ''
+    createdAt: '2022-11-17 11:39:14'
+  '177':
+    projectUID: 177
+    projectName: BaseProjectScala
+    repositoryPath: gitUri=http://gitserver:3000/aH3lOJfD_team_93/gq7R5qIv_project_177.git&subPath=
+    version: BaseProjectScala/8.0
+    author: ''
+    createdAt: '2022-11-17 11:39:14'
+pipelineConfigurations: {}
