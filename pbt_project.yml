@@ -3,13 +3,19 @@ description: ''
 version: 0.0.1-SNAPSHOT
 author: rohitjain+27@simpledatalabs.com
 language: scala
-buildSystem: maven
+buildSystem: ''
+buildSystemDetails:
+  packageName: ExternalGitProject
+  buildSystem: maven
+  author: null
+  createdAt: '2022-11-18 09:07:17'
 pipelines:
   pipelines/Application1:
     name: Application1
     description: ''
     author: rohitjain+27@simpledatalabs.com
     mode: batch
+    artefactID: ''
     language: scala
     createdAt: '2022-11-17 10:20:33'
     datasets:
@@ -18,11 +24,18 @@ pipelines:
       - gitUri=http://gitserver:3000/aH3lOJfD_team_93/gq7R5qIv_project_177.git&subPath=&tag=BaseProjectScala/8.0&projectSubscriptionProjectId=177&path=datasets/baseDS1
       - gitUri=http://gitserver:3000/aH3lOJfD_team_93/gq7R5qIv_project_177.git&subPath=&tag=BaseProjectScala/8.0&projectSubscriptionProjectId=177&path=datasets/baseDS3
       outputs: []
+    subgraphs: []
     dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
-libraries: []
+functions:
+  author: null
+  createdAt: '2022-11-18 09:07:17'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
 subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
@@ -35,11 +48,12 @@ projectDependencies:
     version: ApplicationProject2/1.0
     author: null
     createdAt: '2022-11-17 11:56:04'
-  '177':
-    projectUID: 177
-    projectName: ''
-    repositoryPath: gitUri=http://gitserver:3000/aH3lOJfD_team_93/gq7R5qIv_project_177.git&subPath=&tag=BaseProjectScala/8.0&projectSubscriptionProjectId=177
-    version: BaseProjectScala/8.0
+  '184':
+    projectUID: 184
+    projectName: BaseProject2
+    repositoryPath: gitUri=http://gitserver:3000/aH3lOJfD_team_93/9yHRynRC_project_184.git&subPath=
+    version: BaseProject2/1.0
     author: null
-    createdAt: '2022-11-17 11:56:04'
+    createdAt: '2022-11-18 05:49:40'
 pipelineConfigurations: {}
+artefactID: ''
