@@ -24,7 +24,6 @@ pipelines:
       outputs:
       - datasets/d2
     subgraphs:
-    - subgraphs/sharedSG1
     - subgraphs/appSG1
     dependencies: {}
 datasets:
@@ -83,13 +82,6 @@ subgraphs:
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
-projectDependencies:
-  '192':
-    projectUID: 192
-    projectName: BaseProjectExt3
-    repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=baseProjectExt3
-    version: BaseProjectExt3/2.0
-    author: null
-    createdAt: '2022-12-15 19:15:52'
+projectDependencies: {}
 pipelineConfigurations: {}
 artefactID: ApplicationProjectExt2

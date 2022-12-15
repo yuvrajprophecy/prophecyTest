@@ -9,7 +9,7 @@
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "simpledatalabs_27.applicationprojectext2.functions",
-      "sharedFunctionPackageNames" : [ "rohitjain25simpledatalabs.com_team.baseprojectext3.functions" ]
+      "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
       "language" : "scala",
@@ -35,11 +35,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "192",
-      "projectName" : "BaseProjectExt3",
-      "externalDependencies" : [ ]
-    } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -68,12 +64,6 @@
     "sourcePort" : "i03nwWzNgDiQ7nRDtdW4C$$sDTkM6zAdg9rROTMIHPdU",
     "target" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
     "targetPort" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1"
-  }, {
-    "id" : "RFegaxoSqFiPmfzb6PZcN",
-    "source" : "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR",
-    "sourcePort" : "cRbgttT-qkjGNSmRbigaZ$$20W-S-AbVr0_eHMoQyktk",
-    "target" : "2-KeU5KTm8XkdrYr-B2BH$$-IvRewuBPBoLFa9dt7XQ9",
-    "targetPort" : "3GokDrQHvIPkyChv7Yt4k$$0LCQHF7Xro0Bpczy744LX"
   } ],
   "processes" : {
     "XJPM0QOEud3FQVseDBUyC$$zNjw-4BKvCQYJH9xEdk7K" : {
@@ -139,90 +129,6 @@
         } ]
       }
     },
-    "2-KeU5KTm8XkdrYr-B2BH$$-IvRewuBPBoLFa9dt7XQ9" : {
-      "id" : "2-KeU5KTm8XkdrYr-B2BH$$-IvRewuBPBoLFa9dt7XQ9",
-      "component" : "Subgraph",
-      "metadata" : {
-        "label" : "sharedSG1_1",
-        "slug" : "sharedSG1_1",
-        "x" : 510.0005631116027,
-        "y" : 363.20000000000005,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "3GokDrQHvIPkyChv7Yt4k$$0LCQHF7Xro0Bpczy744LX",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "8S9ks7bwB-DgFwj4faC9B$$ay0SzeVmWfSNSoZskwWye",
-          "slug" : "out0"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "packageName" : "rohitjain25simpledatalabs.com_team.baseprojectext3.subgraph.sharedsg1",
-        "externalId" : "subgraphs/sharedSG1",
-        "name" : "sharedSG1"
-      },
-      "connections" : [ {
-        "id" : "6su9EJM6tuqhtBayPxak1",
-        "source" : "2-KeU5KTm8XkdrYr-B2BH$$-IvRewuBPBoLFa9dt7XQ9",
-        "sourcePort" : "3GokDrQHvIPkyChv7Yt4k$$0LCQHF7Xro0Bpczy744LX",
-        "target" : "mDHIjD5e9fouqf9HFYkYn$$cuROiRMgYU1myLMw5FVdm",
-        "targetPort" : "VYLJBz4vL2ip3Lwzc2a7j$$EsB5OuKsuq3uPksggeauW"
-      }, {
-        "id" : "dxM43M0W-7qirbwg2S_63",
-        "source" : "mDHIjD5e9fouqf9HFYkYn$$cuROiRMgYU1myLMw5FVdm",
-        "sourcePort" : "YwFGDfFLAistmhh44PCxP$$3NbyF1CTOxbJ6gOMSh1s4",
-        "target" : "2-KeU5KTm8XkdrYr-B2BH$$-IvRewuBPBoLFa9dt7XQ9",
-        "targetPort" : "8S9ks7bwB-DgFwj4faC9B$$ay0SzeVmWfSNSoZskwWye"
-      } ],
-      "processes" : {
-        "mDHIjD5e9fouqf9HFYkYn$$cuROiRMgYU1myLMw5FVdm" : {
-          "id" : "mDHIjD5e9fouqf9HFYkYn$$cuROiRMgYU1myLMw5FVdm",
-          "component" : "Reformat",
-          "metadata" : {
-            "label" : "Reformat_2",
-            "slug" : "Reformat_2",
-            "x" : 689.5999999999999,
-            "y" : 630.4,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "VYLJBz4vL2ip3Lwzc2a7j$$EsB5OuKsuq3uPksggeauW",
-              "slug" : "in"
-            } ],
-            "outputs" : [ {
-              "id" : "YwFGDfFLAistmhh44PCxP$$3NbyF1CTOxbJ6gOMSh1s4",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false
-          },
-          "properties" : {
-            "columnsSelector" : [ ],
-            "expressions" : [ {
-              "target" : "id",
-              "expression" : {
-                "format" : "scala",
-                "expression" : "sharedSquare(col(\"id\"))"
-              },
-              "description" : ""
-            } ]
-          }
-        }
-      },
-      "externalDependencies" : [ ]
-    },
     "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6" : {
       "id" : "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6",
       "component" : "Subgraph",
@@ -249,9 +155,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "simpledatalabs_27.applicationprojectext2.subgraph.appsg1",
         "externalId" : "subgraphs/appSG1",
-        "name" : "appSG1",
-        "packageName" : "simpledatalabs_27.applicationprojectext2.subgraph.appsg1"
+        "name" : "appSG1"
       },
       "connections" : [ {
         "id" : "stB1pYue5zf3HBvrI-EYP",

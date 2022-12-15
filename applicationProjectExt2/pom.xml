@@ -70,13 +70,6 @@
         
 
         
-               <dependency>
-    			<groupId>rohitjain25simpledatalabs.com_team.baseprojectext3</groupId>
-    			<artifactId>aggregator</artifactId>
-    			<version>1.0</version>
-            
-    </dependency>
-        
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
