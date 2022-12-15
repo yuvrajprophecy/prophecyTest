@@ -1,0 +1,83 @@
+{
+  "id" : "2-KeU5KTm8XkdrYr-B2BH",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "3GokDrQHvIPkyChv7Yt4k",
+      "slug" : "in0"
+    } ],
+    "outputs" : [ {
+      "id" : "8S9ks7bwB-DgFwj4faC9B",
+      "slug" : "out0"
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "rohitjain25simpledatalabs.com_team.baseprojectext3.subgraph.sharedsg1"
+  },
+  "connections" : [ {
+    "id" : "6su9EJM6tuqhtBayPxak1",
+    "source" : "2-KeU5KTm8XkdrYr-B2BH",
+    "sourcePort" : "3GokDrQHvIPkyChv7Yt4k",
+    "target" : "mDHIjD5e9fouqf9HFYkYn",
+    "targetPort" : "VYLJBz4vL2ip3Lwzc2a7j"
+  }, {
+    "id" : "dxM43M0W-7qirbwg2S_63",
+    "source" : "mDHIjD5e9fouqf9HFYkYn",
+    "sourcePort" : "YwFGDfFLAistmhh44PCxP",
+    "target" : "2-KeU5KTm8XkdrYr-B2BH",
+    "targetPort" : "8S9ks7bwB-DgFwj4faC9B"
+  } ],
+  "processes" : {
+    "mDHIjD5e9fouqf9HFYkYn" : {
+      "id" : "mDHIjD5e9fouqf9HFYkYn",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : 689.5999999999999,
+        "y" : 630.4,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VYLJBz4vL2ip3Lwzc2a7j",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "YwFGDfFLAistmhh44PCxP",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "c_46",
+          "target" : "id",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "sharedSquare(col(\"id\"))"
+          },
+          "description" : ""
+        } ]
+      }
+    }
+  },
+  "externalDependencies" : [ ]
+}
