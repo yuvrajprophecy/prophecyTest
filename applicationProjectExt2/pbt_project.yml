@@ -23,7 +23,8 @@ pipelines:
       - datasets/d1
       outputs:
       - datasets/d2
-    subgraphs: []
+    subgraphs:
+    - subgraphs/sharedSG1
     dependencies: {}
 datasets:
   datasets/d1:

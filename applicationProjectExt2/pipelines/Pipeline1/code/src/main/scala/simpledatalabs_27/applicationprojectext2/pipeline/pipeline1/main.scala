@@ -18,7 +18,10 @@ object Main {
 
   def apply(spark: SparkSession): Unit = {
     val df_d1         = d1(spark)
-    val df_Reformat_1 = Reformat_1(spark,       df_d1)
+    val df_Reformat_1 = Reformat_1(spark, df_d1)
+    val df_sharedSG1_1 =
+      rohitjain25simpledatalabs.com_team.baseprojectext3.subgraph.sharedsg1
+        .apply(spark, df_Reformat_1)
     val df_Subgraph_1 = Subgraph_1.apply(spark, df_Reformat_1)
     d2(spark, df_Subgraph_1)
   }
