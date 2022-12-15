@@ -8,7 +8,8 @@
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
-      "functionPackageName" : "simpledatalabs_27.applicationprojectext2.functions"
+      "functionPackageName" : "simpledatalabs_27.applicationprojectext2.functions",
+      "sharedFunctionPackageNames" : [ "rohitjain25simpledatalabs.com_team.baseprojectext3.functions" ]
     },
     "udafs" : {
       "language" : "scala",

@@ -8,7 +8,10 @@ import org.apache.spark.sql._
 
 object UDFs extends Serializable {
 
-  def registerUDFs(spark: SparkSession) =
+  def registerUDFs(spark: SparkSession) = {
     simpledatalabs_27.applicationprojectext2.functions.registerFunctions(spark)
+    rohitjain25simpledatalabs.com_team.baseprojectext3.functions
+      .registerFunctions(spark)
+  }
 
 }
