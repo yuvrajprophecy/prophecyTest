@@ -1,4 +1,4 @@
-package simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.graph.Subgraph_1
+package simpledatalabs_27.applicationprojectext2.subgraph.appsg1
 
 import io.prophecy.libs._
 import simpledatalabs_27.applicationprojectext2.functions._

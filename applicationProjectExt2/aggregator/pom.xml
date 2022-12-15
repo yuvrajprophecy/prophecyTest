@@ -13,6 +13,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <dependencies>
         <dependency>
             <groupId>simpledatalabs_27.applicationprojectext2</groupId>
+            <artifactId>subgraph.appsg1</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>simpledatalabs_27.applicationprojectext2</groupId>
             <artifactId>functions</artifactId>
             <version>${project.version}</version>
         </dependency>

@@ -1,0 +1,119 @@
+{
+  "id" : "obV2YWPUV3NbT5w68CLHt",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "cOkxvp6TKcuPq5rpgHX49",
+      "slug" : "in0"
+    } ],
+    "outputs" : [ {
+      "id" : "i03nwWzNgDiQ7nRDtdW4C",
+      "slug" : "out0"
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "simpledatalabs_27.applicationprojectext2.subgraph.appsg1"
+  },
+  "connections" : [ {
+    "id" : "stB1pYue5zf3HBvrI-EYP",
+    "source" : "obV2YWPUV3NbT5w68CLHt",
+    "sourcePort" : "cOkxvp6TKcuPq5rpgHX49",
+    "target" : "F9RbTSXWHo4YZq6MXRAO7",
+    "targetPort" : "xv0FGDUN_KNVQEqmrjd82"
+  }, {
+    "id" : "-_-ub08jk0H8RGraW4SaJ",
+    "source" : "F9RbTSXWHo4YZq6MXRAO7",
+    "sourcePort" : "IpwQsso9nnJ-2OldpjVry",
+    "target" : "W47Ps6Iz_OOGGwmLSVKll",
+    "targetPort" : "s7FEnk2kSr8otpnjUcTdX"
+  }, {
+    "id" : "qAMeMlmPXXmZe0vLoUG_d",
+    "source" : "W47Ps6Iz_OOGGwmLSVKll",
+    "sourcePort" : "70lQ2eF03pAlUG0uDvc7v",
+    "target" : "obV2YWPUV3NbT5w68CLHt",
+    "targetPort" : "i03nwWzNgDiQ7nRDtdW4C"
+  } ],
+  "processes" : {
+    "F9RbTSXWHo4YZq6MXRAO7" : {
+      "id" : "F9RbTSXWHo4YZq6MXRAO7",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : 736.3999999999999,
+        "y" : 473.2,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xv0FGDUN_KNVQEqmrjd82",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "IpwQsso9nnJ-2OldpjVry",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "square(col(\"id\"))"
+          },
+          "description" : "",
+          "_row_id" : "2085215196"
+        } ]
+      }
+    },
+    "W47Ps6Iz_OOGGwmLSVKll" : {
+      "id" : "W47Ps6Iz_OOGGwmLSVKll",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_3",
+        "slug" : "Reformat_3",
+        "x" : 1205.6,
+        "y" : 490.8000000000001,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "s7FEnk2kSr8otpnjUcTdX",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "70lQ2eF03pAlUG0uDvc7v",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    }
+  },
+  "externalDependencies" : [ ]
+}

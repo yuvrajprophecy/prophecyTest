@@ -25,6 +25,7 @@ pipelines:
       - datasets/d2
     subgraphs:
     - subgraphs/sharedSG1
+    - subgraphs/appSG1
     dependencies: {}
 datasets:
   datasets/d1:
@@ -71,7 +72,14 @@ functions:
       createdAt: '2022-12-15 18:04:50'
   udafs: {}
   expressions: {}
-subgraphs: {}
+subgraphs:
+  subgraphs/appSG1:
+    name: appSG1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: scala
+    artefactID: ''
+    createdAt: '2022-12-15 19:16:17'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
