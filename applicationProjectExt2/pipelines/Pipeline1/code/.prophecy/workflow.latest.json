@@ -3,7 +3,7 @@
     "id" : "1",
     "language" : "scala",
     "fabricId" : "52",
-    "frontEndLanguage" : "sql",
+    "frontEndLanguage" : "scala",
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
@@ -91,6 +91,69 @@
         "datasetId" : "datasets/d1"
       }
     },
+    "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR" : {
+      "id" : "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 320.00024719663946,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3ltkIAVGFWz2GOoDFN65j$$QhOeFbh-_uUTIc7x8sTC2",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "cRbgttT-qkjGNSmRbigaZ$$20W-S-AbVr0_eHMoQyktk",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "square(col(\"id\"))"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG" : {
+      "id" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "d2",
+        "slug" : "d2",
+        "x" : 720.0007852379332,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1",
+          "slug" : "in"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/d2"
+      }
+    },
     "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6" : {
       "id" : "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6",
       "component" : "Subgraph",
@@ -158,67 +221,18 @@
           },
           "properties" : {
             "columnsSelector" : [ ],
-            "expressions" : [ ]
+            "expressions" : [ {
+              "target" : "id",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "square(col(\"id\"))"
+              },
+              "description" : ""
+            } ]
           }
         }
       },
       "externalDependencies" : [ ]
-    },
-    "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR" : {
-      "id" : "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_1",
-        "slug" : "Reformat_1",
-        "x" : 320.00024719663946,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "3ltkIAVGFWz2GOoDFN65j$$QhOeFbh-_uUTIc7x8sTC2",
-          "slug" : "in"
-        } ],
-        "outputs" : [ {
-          "id" : "cRbgttT-qkjGNSmRbigaZ$$20W-S-AbVr0_eHMoQyktk",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
-      }
-    },
-    "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG" : {
-      "id" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
-      "component" : "Target",
-      "metadata" : {
-        "label" : "d2",
-        "slug" : "d2",
-        "x" : 720.0007852379332,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1",
-          "slug" : "in"
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/d2"
-      }
     }
   },
   "ports" : {

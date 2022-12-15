@@ -10,5 +10,8 @@ import org.apache.spark.sql.expressions._
 import java.time._
 
 object Reformat_2 {
-  def apply(spark: SparkSession, in: DataFrame): DataFrame = in
+
+  def apply(spark: SparkSession, in: DataFrame): DataFrame =
+    in.select(square(col("id")).as("id"))
+
 }

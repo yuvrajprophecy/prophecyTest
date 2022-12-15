@@ -3,7 +3,7 @@ schema:
   type: struct
   fields:
   - name: id
-    type: string
+    type: integer
     nullable: true
     metadata:
       description: ''

@@ -56,13 +56,24 @@ functions:
   author: null
   createdAt: '2022-12-15 18:02:27'
   gems: {}
-  udfs: {}
+  udfs:
+    udfs/square:
+      name: square
+      description: ''
+      tags:
+      - ''
+      inputs:
+      - ''
+      outputs:
+      - ''
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
   udafs: {}
   expressions: {}
 subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
-dependencies: '[]'
+dependencies: []
 projectDependencies: {}
 pipelineConfigurations: {}
 artefactID: ApplicationProjectExt2
