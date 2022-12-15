@@ -1,6 +1,6 @@
 name: BaseProjectExt3
 description: ''
-version: 0.0.1
+version: '1.0'
 author: rohitjain+25@simpledatalabs.com
 language: scala
 buildSystem: ''
