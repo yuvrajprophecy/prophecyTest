@@ -8,7 +8,8 @@
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
-      "functionPackageName" : "rohitjain25simpledatalabs.com_team.baseprojectext3.functions"
+      "functionPackageName" : "rohitjain25simpledatalabs.com_team.baseprojectext3.functions",
+      "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
       "language" : "scala",
@@ -122,9 +123,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "rohitjain25simpledatalabs.com_team.baseprojectext3.subgraph.sharedsg1",
         "externalId" : "subgraphs/sharedSG1",
-        "name" : "sharedSG1",
-        "packageName" : "rohitjain25simpledatalabs.com_team.baseprojectext3.subgraph.sharedsg1"
+        "name" : "sharedSG1"
       },
       "connections" : [ {
         "id" : "6su9EJM6tuqhtBayPxak1",
