@@ -74,6 +74,13 @@ subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
-projectDependencies: {}
+projectDependencies:
+  '192':
+    projectUID: 192
+    projectName: BaseProjectExt3
+    repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=baseProjectExt3
+    version: BaseProjectExt3/1.0
+    author: null
+    createdAt: '2022-12-15 18:14:59'
 pipelineConfigurations: {}
 artefactID: ApplicationProjectExt2
