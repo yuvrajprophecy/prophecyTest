@@ -9,8 +9,47 @@ buildSystemDetails:
   buildSystem: maven
   author: null
   createdAt: '2022-12-15 18:02:27'
-pipelines: {}
-datasets: {}
+pipelines:
+  pipelines/Pipeline1:
+    name: Pipeline1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2022-12-15 18:03:09'
+    datasets:
+      inputs:
+      - datasets/d1
+      outputs:
+      - datasets/d2
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/d1:
+    name: d1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2022-12-15 18:03:33'
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2022-12-15 18:03:33'
+  datasets/d2:
+    name: d2
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2022-12-15 18:04:05'
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2022-12-15 18:04:05'
 templates: {}
 jobs: {}
 functions:

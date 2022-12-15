@@ -1,0 +1,22 @@
+<project 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <parent>
+        <groupId>simpledatalabs_27.applicationprojectext2</groupId>
+        <artifactId>applicationprojectext2</artifactId>
+        <version>${revision}</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <artifactId>functions</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <name>functions</name>
+    <description>My wonderfull scala app</description>
+    <inceptionYear>2018</inceptionYear>
+    <licenses>
+        <license>
+            <name>My License</name>
+            <url>http://....</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <dependencies> </dependencies>
+</project>
