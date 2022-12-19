@@ -72,7 +72,7 @@
       "metadata" : {
         "label" : "d1",
         "slug" : "d1",
-        "x" : 120.00034098527239,
+        "x" : 120.00062054553015,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -98,7 +98,7 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 320.00024719663946,
+        "x" : 320.00054477685245,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -135,8 +135,8 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 512.8008637126503,
-        "y" : 147.6,
+        "x" : 520.0001899004155,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -255,7 +255,7 @@
       "metadata" : {
         "label" : "d2",
         "slug" : "d2",
-        "x" : 720.0007852379332,
+        "x" : 720.0008230599656,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
