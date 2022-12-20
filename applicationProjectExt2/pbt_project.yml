@@ -62,7 +62,7 @@ functions:
       name: square
       description: ''
       tags:
-      - ''
+      - tag1
       inputs:
       - ''
       outputs:
