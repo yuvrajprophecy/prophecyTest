@@ -18,7 +18,15 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -44,7 +52,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2.pipeline.pipeline1"
+    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2.pipeline.pipeline1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "iSXSnkfVSElBvhNBxm1B4",

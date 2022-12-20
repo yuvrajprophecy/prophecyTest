@@ -9,7 +9,14 @@
     "phase" : 0,
     "cache" : false,
     "detailedStats" : false,
-    "isImported" : false
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "configPathInPipelineConfig" : [ "Subgraph_1" ]
   },
   "ports" : {
     "inputs" : [ {
