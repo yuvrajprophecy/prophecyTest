@@ -8,7 +8,11 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
     <name>BaseProjectExt3</name>
+<<<<<<< HEAD
     <description>BaseProjectExt3 dev branch change</description>
+=======
+    <description>BaseProjectExt3 main branch change</description>
+>>>>>>> refs/remotes/local/main
     <modules>
       
         <module>pipelines/baseP/code</module>
