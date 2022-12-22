@@ -7,5 +7,5 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
 object Square4 extends Serializable {
-  def square4 = udf((i4: Int) => i4 * i4)
+  def square4 = udf((i41: Int) => i41 * i41)
 }
