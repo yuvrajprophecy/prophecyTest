@@ -2,6 +2,7 @@ package simpledatalabs_27.applicationprojectext2.subgraph.appsg1
 
 import io.prophecy.libs._
 import simpledatalabs_27.applicationprojectext2.functions._
+import simpledatalabs_27.applicationprojectext2.subgraph.appsg1.config.ConfigStore._
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._

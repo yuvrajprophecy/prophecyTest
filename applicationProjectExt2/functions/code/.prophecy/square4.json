@@ -1,0 +1,1 @@
+{"initCode":"","code":"udf((i4: Int)=> i4*i4)"}
