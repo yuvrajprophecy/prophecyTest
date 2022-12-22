@@ -1,11 +1,12 @@
-package simpledatalabs_27.applicationprojectext2.pipeline.pipeline1
+package simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1
 
 import io.prophecy.libs._
-import simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.config.ConfigStore._
-import simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.config._
-import simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.udfs.UDFs._
-import simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.udfs._
-import simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.graph._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.config.ConfigStore._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.config._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.udfs.UDFs._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.udfs._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.graph._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.graph.Subgraph_1
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -18,9 +19,9 @@ object Main {
   def apply(spark: SparkSession): Unit = {
     val df_d1         = d1(spark)
     val df_Reformat_1 = Reformat_1(spark, df_d1)
-    val df_Subgraph_1 = simpledatalabs_27.applicationprojectext2.subgraph.appsg1
-      .apply(spark, ConfigStore.Config.Subgraph_1, df_Reformat_1)
-    d2(spark,       df_Subgraph_1)
+    val df_Subgraph_1 =
+      Subgraph_1.apply(spark, ConfigStore.Config.Subgraph_1, df_Reformat_1)
+    d2(spark,                 df_Subgraph_1)
   }
 
   def main(args: Array[String]): Unit = {

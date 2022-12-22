@@ -1,6 +1,6 @@
-package simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.config
+package simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.config
 
-import simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.config.ConfigStore._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.config.ConfigStore._
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint

@@ -1,4 +1,4 @@
-package simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.udfs
+package simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.udfs
 
 import _root_.io.prophecy.abinitio.ScalaFunctions._
 import _root_.io.prophecy.libs._
@@ -9,6 +9,7 @@ import org.apache.spark.sql._
 object UDFs extends Serializable {
 
   def registerUDFs(spark: SparkSession) =
-    simpledatalabs_27.applicationprojectext2.functions.registerFunctions(spark)
+    simpledatalabs_27.applicationprojectext2dev.functions
+      .registerFunctions(spark)
 
 }

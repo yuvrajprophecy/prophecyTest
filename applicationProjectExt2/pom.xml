@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <!--Take specifing  the project name in the group id-->
 
-    <groupId>simpledatalabs_27.applicationprojectext2</groupId>
-    <artifactId>applicationprojectext2</artifactId>
+    <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
+    <artifactId>applicationprojectext2dev</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
     <name>ApplicationProjectExt2</name>
@@ -26,7 +26,7 @@
         <scalaBaseVersion>2.12</scalaBaseVersion>
         <scalaVersion>2.12.15</scalaVersion>
         <sparkVersion>3.3.0</sparkVersion>
-        <prophecyLibsVersion>6.3.2.4-SNAPSHOT</prophecyLibsVersion>
+        <prophecyLibsVersion>6.3.7.1-SNAPSHOT</prophecyLibsVersion>
         <revision>0.0.1</revision>
     </properties>
     <repositories>

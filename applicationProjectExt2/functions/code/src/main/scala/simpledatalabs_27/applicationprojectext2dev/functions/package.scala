@@ -1,4 +1,4 @@
-package simpledatalabs_27.applicationprojectext2
+package simpledatalabs_27.applicationprojectext2dev
 
 import org.apache.spark.sql._
 package object functions {

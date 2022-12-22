@@ -1,4 +1,4 @@
-package simpledatalabs_27.applicationprojectext2.functions
+package simpledatalabs_27.applicationprojectext2dev.functions
 
 import _root_.io.prophecy.abinitio.ScalaFunctions._
 import _root_.io.prophecy.libs._
@@ -7,5 +7,5 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
 object Square4 extends Serializable {
-  def square4 = udf((i42: Int) => i42 * i42)
+  def square4 = udf((i41: Int) => i41 * i41)
 }

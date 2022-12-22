@@ -1,7 +1,7 @@
-package simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.graph
+package simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.graph
 
 import io.prophecy.libs._
-import simpledatalabs_27.applicationprojectext2.pipeline.pipeline1.config.ConfigStore._
+import simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1.config.ConfigStore._
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._

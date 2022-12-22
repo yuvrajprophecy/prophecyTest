@@ -5,10 +5,11 @@ author: rohitjain+27@simpledatalabs.com
 language: scala
 buildSystem: ''
 buildSystemDetails:
-  packageName: ApplicationProjectExt2
+  artefactID: applicationprojectext2dev
+  parentArtefactID: simpledatalabs_27
   buildSystem: maven
   author: null
-  createdAt: '2022-12-15 18:02:27'
+  createdAt: '2022-12-22 12:24:56'
 pipelines:
   pipelines/Pipeline1:
     name: Pipeline1
@@ -23,8 +24,7 @@ pipelines:
       - datasets/d1
       outputs:
       - datasets/d2
-    subgraphs:
-    - subgraphs/appSG1
+    subgraphs: []
     dependencies: {}
 datasets:
   datasets/d1:
@@ -103,4 +103,3 @@ sqlPipeline: null
 dependencies: []
 projectDependencies: {}
 pipelineConfigurations: {}
-artefactID: ApplicationProjectExt2

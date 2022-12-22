@@ -1,4 +1,4 @@
-package simpledatalabs_27.applicationprojectext2.functions
+package simpledatalabs_27.applicationprojectext2dev.functions
 
 import _root_.io.prophecy.abinitio.ScalaFunctions._
 import _root_.io.prophecy.libs._

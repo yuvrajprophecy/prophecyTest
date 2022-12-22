@@ -8,7 +8,7 @@
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
-      "functionPackageName" : "simpledatalabs_27.applicationprojectext2.functions",
+      "functionPackageName" : "simpledatalabs_27.applicationprojectext2dev.functions",
       "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
@@ -52,7 +52,7 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2.pipeline.pipeline1",
+    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1",
     "configurationVersion" : "v1"
   },
   "connections" : [ {
@@ -107,8 +107,8 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 315.20054477685244,
-        "y" : 146.40000000000003,
+        "x" : 316.4005447768524,
+        "y" : 130.8,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -189,11 +189,7 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : {
-        "packageName" : "simpledatalabs_27.applicationprojectext2.subgraph.appsg1",
-        "externalId" : "subgraphs/appSG1",
-        "name" : "appSG1"
-      },
+      "properties" : { },
       "connections" : [ {
         "id" : "stB1pYue5zf3HBvrI-EYP",
         "source" : "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6",
