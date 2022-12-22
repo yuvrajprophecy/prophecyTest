@@ -2,7 +2,6 @@ package simpledatalabs_27.applicationprojectext2
 
 import org.apache.spark.sql._
 package object functions {
-  // dev
   val square  = Square.square
   val square2 = Square2.square2
 
