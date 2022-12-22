@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!--Take specifing  the project name in the group id-->
+    <!--Take specifing  the project name in the group id something here-->
 
     <groupId>rohitjain25simpledatalabs.com_team.baseprojectext3</groupId>
     <artifactId>baseprojectext3</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
     <name>BaseProjectExt3</name>
-<<<<<<< HEAD
-    <description>BaseProjectExt3 dev branch change</description>
-=======
     <description>BaseProjectExt3 main branch change</description>
->>>>>>> refs/remotes/local/main
     <modules>
       
         <module>pipelines/baseP/code</module>
