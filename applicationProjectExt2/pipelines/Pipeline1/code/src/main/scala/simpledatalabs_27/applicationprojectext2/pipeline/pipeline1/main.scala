@@ -19,7 +19,7 @@ object Main {
     val df_d1         = d1(spark)
     val df_Reformat_1 = Reformat_1(spark, df_d1)
     val df_Subgraph_1 = simpledatalabs_27.applicationprojectext2.subgraph.appsg1
-      .apply(spark, df_Reformat_1)
+      .apply(spark, ConfigStore.Config.Subgraph_1, df_Reformat_1)
     d2(spark,       df_Subgraph_1)
   }
 

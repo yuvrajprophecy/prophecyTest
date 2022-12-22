@@ -18,7 +18,15 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -44,7 +52,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2.pipeline.pipeline1"
+    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2.pipeline.pipeline1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "iSXSnkfVSElBvhNBxm1B4",
@@ -98,8 +107,8 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 320.00054477685245,
-        "y" : 120,
+        "x" : 315.20054477685244,
+        "y" : 146.40000000000003,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -127,6 +136,32 @@
           },
           "description" : ""
         } ]
+      }
+    },
+    "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG" : {
+      "id" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "d2",
+        "slug" : "d2",
+        "x" : 720.0008230599656,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1",
+          "slug" : "in"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/d2"
       }
     },
     "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6" : {
@@ -248,32 +283,6 @@
         }
       },
       "externalDependencies" : [ ]
-    },
-    "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG" : {
-      "id" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
-      "component" : "Target",
-      "metadata" : {
-        "label" : "d2",
-        "slug" : "d2",
-        "x" : 720.0008230599656,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1",
-          "slug" : "in"
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/d2"
-      }
     }
   },
   "ports" : {

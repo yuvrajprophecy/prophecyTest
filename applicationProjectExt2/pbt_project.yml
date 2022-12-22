@@ -1,4 +1,4 @@
-name: ApplicationProjectExt2
+name: ApplicationProjectExt2main
 description: remotechange_main
 version: 0.0.1
 author: rohitjain+27@simpledatalabs.com
@@ -62,13 +62,24 @@ functions:
       name: square
       description: ''
       tags:
-      - ''
+      - tagRemote
       inputs:
       - ''
       outputs:
       - ''
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2022-12-15 18:04:50'
+    udfs/square2:
+      name: square2
+      description: ''
+      tags:
+      - ''
+      inputs:
+      - ''
+      outputs:
+      - ''
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-20 08:24:58'
   udafs: {}
   expressions: {}
 subgraphs:
