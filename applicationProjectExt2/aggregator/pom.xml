@@ -1,8 +1,8 @@
 <project 
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
     <parent>
-        <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
-        <artifactId>applicationprojectext2dev</artifactId>
+        <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
+        <artifactId>applicationprojectext2dev2</artifactId>
         <version>${revision}</version>
     </parent>
     <packaging>pom</packaging>
@@ -12,12 +12,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <inceptionYear>2018</inceptionYear>
     <dependencies>
         <dependency>
-            <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
+            <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
             <artifactId>subgraph.appsg1</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
+            <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
             <artifactId>functions</artifactId>
             <version>${project.version}</version>
         </dependency>

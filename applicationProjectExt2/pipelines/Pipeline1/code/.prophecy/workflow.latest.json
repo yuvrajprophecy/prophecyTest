@@ -8,7 +8,7 @@
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
-      "functionPackageName" : "simpledatalabs_27.applicationprojectext2dev.functions",
+      "functionPackageName" : "simpledatalabs_27.applicationprojectext2dev2.functions",
       "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
@@ -52,7 +52,7 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2dev.pipeline.pipeline1",
+    "topLevelPackage" : "simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1",
     "configurationVersion" : "v1"
   },
   "connections" : [ {

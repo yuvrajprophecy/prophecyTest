@@ -10,7 +10,7 @@ xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.1 https://maven.apache.
             <unpack>true</unpack>
             <useTransitiveDependencies>false</useTransitiveDependencies>
             <includes>
-                <include>simpledatalabs_27.applicationprojectext2dev:*:*</include>
+                <include>simpledatalabs_27.applicationprojectext2dev2:*:*</include>
             </includes>
         </dependencySet>
     </dependencySets>

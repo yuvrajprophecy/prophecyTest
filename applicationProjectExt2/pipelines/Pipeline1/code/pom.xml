@@ -5,19 +5,19 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <description>workflow</description>
     <packaging>jar</packaging>
     <parent>
-        <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
-        <artifactId>applicationprojectext2dev</artifactId>
+        <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
+        <artifactId>applicationprojectext2dev2</artifactId>
         <version>${revision}</version>
         <relativePath>../../../pom.xml</relativePath>
     </parent>
     <dependencies>
         <dependency>
-            <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
+            <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
             <artifactId>subgraph.appsg1</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
+            <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
             <artifactId>functions</artifactId>
             <version>${project.version}</version>
         </dependency>

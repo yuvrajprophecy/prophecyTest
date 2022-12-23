@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <!--Take specifing  the project name in the group id-->
 
-    <groupId>simpledatalabs_27.applicationprojectext2dev</groupId>
-    <artifactId>applicationprojectext2dev</artifactId>
+    <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
+    <artifactId>applicationprojectext2dev2</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
     <name>ApplicationProjectExt2</name>

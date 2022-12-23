@@ -5,7 +5,7 @@ author: rohitjain+27@simpledatalabs.com
 language: scala
 buildSystem: ''
 buildSystemDetails:
-  artefactID: applicationprojectext2dev
+  artefactID: applicationprojectext2dev2
   parentArtefactID: simpledatalabs_27
   buildSystem: maven
   author: null
