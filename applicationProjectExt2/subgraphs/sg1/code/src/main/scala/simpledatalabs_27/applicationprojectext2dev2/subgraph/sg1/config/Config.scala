@@ -1,4 +1,4 @@
-package simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph.Subgraph_1.config
+package simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1.config
 
 import io.prophecy.libs._
 import pureconfig._

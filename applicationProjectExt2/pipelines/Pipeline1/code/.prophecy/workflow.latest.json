@@ -9,7 +9,8 @@
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "simpledatalabs_27.applicationprojectext2dev2.functions",
-      "sharedFunctionPackageNames" : [ ]
+      "sharedFunctionPackageNames" : [ "_simpledatalabs_25.baseproject2.functions" ],
+      "initialCode" : ""
     },
     "udafs" : {
       "language" : "scala",
@@ -43,7 +44,11 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "184",
+      "projectName" : "BaseProject2",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -81,7 +86,7 @@
       "metadata" : {
         "label" : "d1",
         "slug" : "d1",
-        "x" : 120.00062054553015,
+        "x" : 120.00039684750848,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -107,8 +112,8 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 316.4005447768524,
-        "y" : 130.8,
+        "x" : 320.00078418421947,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -132,7 +137,14 @@
           "target" : "id",
           "expression" : {
             "format" : "scala",
-            "expression" : "square(col(\"id\"))"
+            "expression" : "square(col(\"customer_id\"))"
+          },
+          "description" : ""
+        }, {
+          "target" : "id2",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "udfShared2(col(\"customer_id\"))"
           },
           "description" : ""
         } ]
@@ -144,7 +156,7 @@
       "metadata" : {
         "label" : "d2",
         "slug" : "d2",
-        "x" : 720.0008230599656,
+        "x" : 720.0008513802833,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -170,7 +182,7 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 520.0001899004155,
+        "x" : 520.0004381303047,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -189,7 +201,11 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : { },
+      "properties" : {
+        "externalId" : "subgraphs/sg1",
+        "name" : "sg1",
+        "packageName" : "simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1"
+      },
       "connections" : [ {
         "id" : "stB1pYue5zf3HBvrI-EYP",
         "source" : "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6",

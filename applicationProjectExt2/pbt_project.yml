@@ -98,8 +98,22 @@ subgraphs:
     language: scala
     artefactID: ''
     createdAt: '2022-12-15 19:16:17'
+  subgraphs/sg1:
+    name: sg1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: scala
+    artefactID: ''
+    createdAt: '2023-01-05 17:18:55'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
-projectDependencies: {}
+projectDependencies:
+  '184':
+    projectUID: 184
+    projectName: BaseProject2
+    repositoryPath: gitUri=http://gitserver:3000/aH3lOJfD_team_93/9yHRynRC_project_184.git&subPath=
+    version: BaseProject2/3.0
+    author: null
+    createdAt: '2023-01-05 13:36:08'
 pipelineConfigurations: {}

@@ -1,4 +1,4 @@
-package simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph
+package simpledatalabs_27.applicationprojectext2dev2.subgraph
 
 import io.prophecy.libs._
 import org.apache.spark._
@@ -7,8 +7,8 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.expressions._
 import java.time._
-import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph.Subgraph_1.config._
-package object Subgraph_1 {
+import simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1.config._
+package object sg1 {
 
   def apply(context: Context, in0: DataFrame): DataFrame = {
     val df_Reformat_2 = Reformat_2(context, in0)

@@ -1,8 +1,9 @@
-package simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph.Subgraph_1
+package simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1
 
 import io.prophecy.libs._
 import simpledatalabs_27.applicationprojectext2dev2.functions._
-import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph.Subgraph_1.config.Context
+import _simpledatalabs_25.baseproject2.functions._
+import simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1.config.Context
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._

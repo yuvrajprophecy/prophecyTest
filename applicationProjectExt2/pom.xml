@@ -16,6 +16,8 @@
       
         <module>subgraphs/appSG1/code</module>
       
+        <module>subgraphs/sg1/code</module>
+      
       
         <module>functions/code</module>
       
@@ -69,6 +71,13 @@
     <dependencies>
         
 
+        
+               <dependency>
+    			<groupId>_simpledatalabs_25.baseproject2</groupId>
+    			<artifactId>aggregator</artifactId>
+    			<version>3.0</version>
+            
+    </dependency>
         
         <dependency>
             <groupId>org.scala-lang</groupId>

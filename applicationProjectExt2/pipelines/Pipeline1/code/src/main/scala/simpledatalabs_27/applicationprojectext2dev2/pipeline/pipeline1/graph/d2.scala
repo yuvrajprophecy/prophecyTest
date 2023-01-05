@@ -16,7 +16,7 @@ object d2 {
       .format("csv")
       .option("header", true)
       .option("sep",    ",")
-      .mode("error")
+      .mode("overwrite")
       .save("d2")
 
 }
