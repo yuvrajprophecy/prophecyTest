@@ -202,9 +202,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1",
         "externalId" : "subgraphs/sg1",
-        "name" : "sg1",
-        "packageName" : "simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1"
+        "name" : "sg1"
       },
       "connections" : [ {
         "id" : "stB1pYue5zf3HBvrI-EYP",
@@ -219,13 +219,50 @@
         "target" : "W47Ps6Iz_OOGGwmLSVKll$$qguQvua-jXNhByYsw43aF",
         "targetPort" : "s7FEnk2kSr8otpnjUcTdX$$Li6f4j5YitcUlFqIZGjmw"
       }, {
-        "id" : "qAMeMlmPXXmZe0vLoUG_d",
+        "id" : "72k-MaenNf84ltYL1bVgu",
         "source" : "W47Ps6Iz_OOGGwmLSVKll$$qguQvua-jXNhByYsw43aF",
         "sourcePort" : "70lQ2eF03pAlUG0uDvc7v$$F-S1F_vgo1EUi1deag8WZ",
+        "target" : "i2UPPEbd9W7mh1iDIs6X9$$rNbUljip9j76ZPzLWEXAX",
+        "targetPort" : "Qb-83SiqZHMYfoGq1Plo2$$LPnjuFYpm6qiywd3W7f_Y"
+      }, {
+        "id" : "FoswvfsUZ_ttdKntoOaEg",
+        "source" : "i2UPPEbd9W7mh1iDIs6X9$$rNbUljip9j76ZPzLWEXAX",
+        "sourcePort" : "NrUmE98YnnJOCpgzqW__p$$RN6Ej1FXs55laNZC-Xv8b",
         "target" : "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6",
         "targetPort" : "i03nwWzNgDiQ7nRDtdW4C$$sDTkM6zAdg9rROTMIHPdU"
       } ],
       "processes" : {
+        "i2UPPEbd9W7mh1iDIs6X9$$rNbUljip9j76ZPzLWEXAX" : {
+          "id" : "i2UPPEbd9W7mh1iDIs6X9$$rNbUljip9j76ZPzLWEXAX",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "Script_1",
+            "slug" : "Script_1",
+            "x" : 1510.9999999999998,
+            "y" : 481.0000000000002,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "Qb-83SiqZHMYfoGq1Plo2$$LPnjuFYpm6qiywd3W7f_Y",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "NrUmE98YnnJOCpgzqW__p$$RN6Ej1FXs55laNZC-Xv8b",
+              "slug" : "out0"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true
+          },
+          "properties" : {
+            "script" : "val out0 = in0",
+            "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
+            "scriptMethodFooter" : "    out0\n}"
+          }
+        },
         "F9RbTSXWHo4YZq6MXRAO7$$R87CB1_2OP6c6r8UEiHBk" : {
           "id" : "F9RbTSXWHo4YZq6MXRAO7$$R87CB1_2OP6c6r8UEiHBk",
           "component" : "Reformat",

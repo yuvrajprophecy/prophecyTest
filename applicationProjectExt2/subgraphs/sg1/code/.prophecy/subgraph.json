@@ -46,13 +46,54 @@
     "target" : "W47Ps6Iz_OOGGwmLSVKll",
     "targetPort" : "s7FEnk2kSr8otpnjUcTdX"
   }, {
-    "id" : "qAMeMlmPXXmZe0vLoUG_d",
+    "id" : "72k-MaenNf84ltYL1bVgu",
     "source" : "W47Ps6Iz_OOGGwmLSVKll",
     "sourcePort" : "70lQ2eF03pAlUG0uDvc7v",
+    "target" : "i2UPPEbd9W7mh1iDIs6X9",
+    "targetPort" : "Qb-83SiqZHMYfoGq1Plo2"
+  }, {
+    "id" : "FoswvfsUZ_ttdKntoOaEg",
+    "source" : "i2UPPEbd9W7mh1iDIs6X9",
+    "sourcePort" : "NrUmE98YnnJOCpgzqW__p",
     "target" : "obV2YWPUV3NbT5w68CLHt",
     "targetPort" : "i03nwWzNgDiQ7nRDtdW4C"
   } ],
   "processes" : {
+    "i2UPPEbd9W7mh1iDIs6X9" : {
+      "id" : "i2UPPEbd9W7mh1iDIs6X9",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 1510.9999999999998,
+        "y" : 481.0000000000002,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Qb-83SiqZHMYfoGq1Plo2",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "NrUmE98YnnJOCpgzqW__p",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          }
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "val out0 = in0",
+        "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
+        "scriptMethodFooter" : "    out0\n}"
+      }
+    },
     "F9RbTSXWHo4YZq6MXRAO7" : {
       "id" : "F9RbTSXWHo4YZq6MXRAO7",
       "component" : "Reformat",
