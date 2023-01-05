@@ -1,1 +1,1 @@
-{"initCode":"","code":"udf((i: Int)=> i*i)"}
+{"initCode":"val x = 10","code":"udf((i: Int)=> i*i)"}
