@@ -3,7 +3,7 @@ package simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph.Su
 import io.prophecy.libs._
 import pureconfig._
 import pureconfig.generic.ProductHint
-object ConfigStore { implicit var Config: Config = _ }
+import org.apache.spark.sql.SparkSession
 
 object Config {
 
@@ -13,3 +13,4 @@ object Config {
 }
 
 case class Config() extends ConfigBase
+case class Context(spark: SparkSession, config: Config)

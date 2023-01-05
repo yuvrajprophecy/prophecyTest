@@ -1,7 +1,7 @@
 package simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1
 
 import io.prophecy.libs._
-import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.config.ConfigStore._
+import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.config.Context
 import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.config._
 import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.udfs.UDFs._
 import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.udfs._
@@ -16,16 +16,18 @@ import java.time._
 
 object Main {
 
-  def apply(spark: SparkSession): Unit = {
-    val df_d1         = d1(spark)
-    val df_Reformat_1 = Reformat_1(spark, df_d1)
-    val df_Subgraph_1 =
-      Subgraph_1.apply(spark, ConfigStore.Config.Subgraph_1, df_Reformat_1)
-    d2(spark,                 df_Subgraph_1)
+  def apply(context: Context): Unit = {
+    val df_d1         = d1(context)
+    val df_Reformat_1 = Reformat_1(context, df_d1)
+    val df_Subgraph_1 = Subgraph_1.apply(
+      Subgraph_1.config.Context(context.spark, context.config.Subgraph_1),
+      df_Reformat_1
+    )
+    d2(context, df_Subgraph_1)
   }
 
   def main(args: Array[String]): Unit = {
-    ConfigStore.Config = ConfigurationFactoryImpl.fromCLI(args)
+    val config = ConfigurationFactoryImpl.fromCLI(args)
     val spark: SparkSession = SparkSession
       .builder()
       .appName("Prophecy Pipeline")
@@ -34,13 +36,11 @@ object Main {
       .enableHiveSupport()
       .getOrCreate()
       .newSession()
+    val context = Context(spark, config)
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/Pipeline1")
     registerUDFs(spark)
-    MetricsCollector.start(
-      spark,
-      spark.conf.get("prophecy.project.id") + "/" + "pipelines/Pipeline1"
-    )
-    apply(spark)
+    MetricsCollector.start(spark, "pipelines/Pipeline1")
+    apply(context)
     MetricsCollector.end(spark)
   }
 

@@ -1,12 +1,12 @@
 package simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.config
 
-import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.config.ConfigStore._
+import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint
 import pureconfig.generic.auto._
 import io.prophecy.libs._
-object ConfigStore { implicit var Config: Config = _ }
+object ConfigStore
 
 object ConfigurationFactoryImpl extends ConfigurationFactory[Config] {
 

@@ -10,10 +10,9 @@ import java.time._
 import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph.Subgraph_1.config._
 package object Subgraph_1 {
 
-  def apply(spark: SparkSession, config: Config, in0: DataFrame): DataFrame = {
-    ConfigStore.Config = config
-    val df_Reformat_2 = Reformat_2(spark, in0)
-    val df_Reformat_3 = Reformat_3(spark, df_Reformat_2)
+  def apply(context: Context, in0: DataFrame): DataFrame = {
+    val df_Reformat_2 = Reformat_2(context, in0)
+    val df_Reformat_3 = Reformat_3(context, df_Reformat_2)
     df_Reformat_3
   }
 
