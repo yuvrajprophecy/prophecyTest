@@ -182,8 +182,8 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 520.0004381303047,
-        "y" : 120,
+        "x" : 515.2004381303046,
+        "y" : 136.8,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -238,8 +238,8 @@
           "metadata" : {
             "label" : "Script_1",
             "slug" : "Script_1",
-            "x" : 1510.9999999999998,
-            "y" : 481.0000000000002,
+            "x" : 1503.7999999999997,
+            "y" : 460.60000000000025,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
