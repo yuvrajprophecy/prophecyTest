@@ -6,6 +6,7 @@ import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.config._
 import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.udfs._
 import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.udfs.UDFs._
 import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph._
+import simpledatalabs_27.applicationprojectext2dev2.pipeline.pipeline1.graph.Subgraph_2
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -18,6 +19,10 @@ object Main {
   def apply(context: Context): Unit = {
     val df_d1         = d1(context)
     val df_Reformat_1 = Reformat_1(context, df_d1)
+    val df_Subgraph_2 = Subgraph_2.apply(
+      Subgraph_2.config.Context(context.spark, context.config.Subgraph_2),
+      df_Reformat_1
+    )
     val df_Subgraph_1 =
       simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1.apply(
         simpledatalabs_27.applicationprojectext2dev2.subgraph.sg1.config

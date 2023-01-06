@@ -27,6 +27,14 @@
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
+        }, {
+          "name" : "Subgraph_2",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
         } ]
       },
       "oldCommon" : {
@@ -78,6 +86,12 @@
     "sourcePort" : "i03nwWzNgDiQ7nRDtdW4C$$sDTkM6zAdg9rROTMIHPdU",
     "target" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
     "targetPort" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1"
+  }, {
+    "id" : "SJ2NLOWWhhJJ-drz2XpWs",
+    "source" : "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR",
+    "sourcePort" : "cRbgttT-qkjGNSmRbigaZ$$20W-S-AbVr0_eHMoQyktk",
+    "target" : "QtupUhLEwA7cMkXIs5ypZ$$Lgnfnjt1gg_wa7KT99Zms",
+    "targetPort" : "-X-5-zQksQWb2tjAAafR4$$hwNV75WHIme5NJUnJ_S6-"
   } ],
   "processes" : {
     "XJPM0QOEud3FQVseDBUyC$$zNjw-4BKvCQYJH9xEdk7K" : {
@@ -105,6 +119,116 @@
       "properties" : {
         "datasetId" : "datasets/d1"
       }
+    },
+    "QtupUhLEwA7cMkXIs5ypZ$$Lgnfnjt1gg_wa7KT99Zms" : {
+      "id" : "QtupUhLEwA7cMkXIs5ypZ$$Lgnfnjt1gg_wa7KT99Zms",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_2",
+        "slug" : "Subgraph_2",
+        "x" : 552.0006241138959,
+        "y" : 363.80000000000007,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-X-5-zQksQWb2tjAAafR4$$hwNV75WHIme5NJUnJ_S6-",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "fwRVIh8fx_PcfpmVRNqLY$$f6MPsk4WSg4ybfTjtZgEa",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : { },
+      "connections" : [ {
+        "id" : "imcNFjr73XUqP0dnHiWri",
+        "source" : "QtupUhLEwA7cMkXIs5ypZ$$Lgnfnjt1gg_wa7KT99Zms",
+        "sourcePort" : "-X-5-zQksQWb2tjAAafR4$$hwNV75WHIme5NJUnJ_S6-",
+        "target" : "I28-9JXekXCY1s5XNzkIe$$eS7PDIq4kxhjrCHXo4cC5",
+        "targetPort" : "dS4kMWmZRYTr8kXuqbP-1$$02hLeUQ-zpR5DDclBZYoZ"
+      }, {
+        "id" : "tVrnpF2au-tibU_JRAzAC",
+        "source" : "I28-9JXekXCY1s5XNzkIe$$eS7PDIq4kxhjrCHXo4cC5",
+        "sourcePort" : "09yD-_4-ldcfh3ZUcJjNw$$XmDPQsBAdfinKb9CcNWdG",
+        "target" : "0xmgRQ5qWMB6Nl8uQWxQF$$y2bX1fL-MKnXPk5nTxr7Y",
+        "targetPort" : "XM6C4DHLeKhlOxw0ml80i$$qrvc4RBq-JFEmPdLWwRpu"
+      }, {
+        "id" : "cyUis4XhuDg42jGhML3Wf",
+        "source" : "0xmgRQ5qWMB6Nl8uQWxQF$$y2bX1fL-MKnXPk5nTxr7Y",
+        "sourcePort" : "NgN59adxzUeCDmITPRqHL$$523MW_h5mgXCdvbXvBgiF",
+        "target" : "QtupUhLEwA7cMkXIs5ypZ$$Lgnfnjt1gg_wa7KT99Zms",
+        "targetPort" : "fwRVIh8fx_PcfpmVRNqLY$$f6MPsk4WSg4ybfTjtZgEa"
+      } ],
+      "processes" : {
+        "0xmgRQ5qWMB6Nl8uQWxQF$$y2bX1fL-MKnXPk5nTxr7Y" : {
+          "id" : "0xmgRQ5qWMB6Nl8uQWxQF$$y2bX1fL-MKnXPk5nTxr7Y",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "Script_2",
+            "slug" : "Script_2",
+            "x" : 1260.8,
+            "y" : 755.1999999999999,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "XM6C4DHLeKhlOxw0ml80i$$qrvc4RBq-JFEmPdLWwRpu",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "NgN59adxzUeCDmITPRqHL$$523MW_h5mgXCdvbXvBgiF",
+              "slug" : "out0"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true
+          },
+          "properties" : {
+            "script" : "val out0 = in0",
+            "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
+            "scriptMethodFooter" : "    out0\n}"
+          }
+        },
+        "I28-9JXekXCY1s5XNzkIe$$eS7PDIq4kxhjrCHXo4cC5" : {
+          "id" : "I28-9JXekXCY1s5XNzkIe$$eS7PDIq4kxhjrCHXo4cC5",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "Reformat_4",
+            "slug" : "Reformat_4",
+            "x" : 789.2,
+            "y" : 732.4,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "dS4kMWmZRYTr8kXuqbP-1$$02hLeUQ-zpR5DDclBZYoZ",
+              "slug" : "in"
+            } ],
+            "outputs" : [ {
+              "id" : "09yD-_4-ldcfh3ZUcJjNw$$XmDPQsBAdfinKb9CcNWdG",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ ]
+          }
+        }
+      },
+      "externalDependencies" : [ ]
     },
     "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR" : {
       "id" : "_P4rxUKfO4xpoULpuPr4q$$_M1kWKMWWQdC926o4_dwR",
@@ -148,32 +272,6 @@
           },
           "description" : ""
         } ]
-      }
-    },
-    "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG" : {
-      "id" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
-      "component" : "Target",
-      "metadata" : {
-        "label" : "d2",
-        "slug" : "d2",
-        "x" : 720.0008513802833,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1",
-          "slug" : "in"
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/d2"
       }
     },
     "obV2YWPUV3NbT5w68CLHt$$RaBmGK1L_JyZAIWwiykG6" : {
@@ -332,6 +430,32 @@
         }
       },
       "externalDependencies" : [ ]
+    },
+    "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG" : {
+      "id" : "rYGWcFHxKZ9yItJxu7kxI$$buU1J4Ck6bW-iSjB0d5vG",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "d2",
+        "slug" : "d2",
+        "x" : 720.0008513802833,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qTQZVqRuwbLC5RP0rArrz$$lwyyG0NBH6363ISc7e9y1",
+          "slug" : "in"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/d2"
+      }
     }
   },
   "ports" : {
