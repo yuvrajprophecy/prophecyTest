@@ -145,7 +145,11 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : { },
+      "properties" : {
+        "externalId" : "subgraphs/sg2",
+        "name" : "sg2",
+        "packageName" : "simpledatalabs_27.applicationprojectext2dev2.subgraph.sg2"
+      },
       "connections" : [ {
         "id" : "imcNFjr73XUqP0dnHiWri",
         "source" : "QtupUhLEwA7cMkXIs5ypZ$$Lgnfnjt1gg_wa7KT99Zms",

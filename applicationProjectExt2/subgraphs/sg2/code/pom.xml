@@ -1,8 +1,8 @@
 <project 
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>pipeline.pipeline1</artifactId>
-    <description>workflow</description>
+    <artifactId>subgraph.sg2</artifactId>
+    <description>sg2</description>
     <packaging>jar</packaging>
     <parent>
         <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
@@ -11,21 +11,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <relativePath>../../../pom.xml</relativePath>
     </parent>
     <dependencies>
-        <dependency>
-            <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
-            <artifactId>subgraph.appsg1</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
-            <artifactId>subgraph.sg1</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
-            <artifactId>subgraph.sg2</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>simpledatalabs_27.applicationprojectext2dev2</groupId>
             <artifactId>functions</artifactId>

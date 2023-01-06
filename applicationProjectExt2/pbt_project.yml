@@ -25,6 +25,7 @@ pipelines:
       outputs:
       - datasets/d2
     subgraphs:
+    - subgraphs/sg2
     - subgraphs/sg1
     dependencies: {}
 datasets:
@@ -106,6 +107,13 @@ subgraphs:
     language: scala
     artefactID: ''
     createdAt: '2023-01-05 17:18:55'
+  subgraphs/sg2:
+    name: sg2
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: scala
+    artefactID: ''
+    createdAt: '2023-01-06 05:14:14'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
