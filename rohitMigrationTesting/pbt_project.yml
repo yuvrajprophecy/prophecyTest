@@ -54,6 +54,22 @@ functions:
       outputs: []
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2023-01-26 07:44:36'
+    udfs/newUDF1:
+      name: newUDF1
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-01-26 07:47:22'
+    udfs/newUDF2:
+      name: newUDF2
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-01-26 07:47:22'
   udafs: {}
   expressions: {}
 subgraphs: {}
