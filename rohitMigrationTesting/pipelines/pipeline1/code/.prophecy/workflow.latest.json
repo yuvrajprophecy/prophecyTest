@@ -2,20 +2,14 @@
   "metainfo" : {
     "id" : "1",
     "language" : "scala",
-    "fabricId" : "48",
+    "fabricId" : "52",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
-      "udfs" : [ {
-        "name" : "trimString",
-        "code" : "udf((value: String) => value.trim())",
-        "language" : "scala"
-      }, {
-        "name" : "addNumbers",
-        "code" : "udf((value: Int, value2: Int) => value + value2)",
-        "language" : "scala"
-      } ],
+      "udfs" : [ ],
+      "functionPackageName" : "simpledatalabs_27.rohitmigrationtesting.functions",
+      "sharedFunctionPackageNames" : [ ],
       "initialCode" : "var x = 10"
     },
     "udafs" : {
@@ -42,6 +36,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -50,7 +45,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "io.prophecy.pipelines.pipeline1"
+    "topLevelPackage" : "simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "UnV66RDwyrgaPnlNavgJ-",
@@ -77,8 +73,7 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "aV8sZiCFWwx-sh4bQfm6g$$yRqOe_RbEh5rzT6CZorx-",
-          "slug" : "out",
-          "isStreaming" : false
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -103,13 +98,11 @@
       "ports" : {
         "inputs" : [ {
           "id" : "HFijjuX0lb3tOhOf_Q_Iv$$U-CWEafw_h_F5demR98Pi",
-          "slug" : "in",
-          "isStreaming" : false
+          "slug" : "in"
         } ],
         "outputs" : [ {
           "id" : "mUBZT1t-OOpePabfS-Y9B$$CmgaQ3z-sDgHWgHFTyM-b",
-          "slug" : "out",
-          "isStreaming" : false
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false

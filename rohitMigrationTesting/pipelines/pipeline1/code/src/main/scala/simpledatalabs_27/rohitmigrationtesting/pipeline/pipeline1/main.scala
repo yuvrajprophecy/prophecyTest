@@ -1,12 +1,11 @@
-package io.prophecy.pipelines.pipeline1
+package simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1
 
 import io.prophecy.libs._
-import io.prophecy.pipelines.pipeline1.config.ConfigStore._
-import io.prophecy.pipelines.pipeline1.config.Context
-import io.prophecy.pipelines.pipeline1.config._
-import io.prophecy.pipelines.pipeline1.udfs.UDFs._
-import io.prophecy.pipelines.pipeline1.udfs._
-import io.prophecy.pipelines.pipeline1.graph._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1.config.Context
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1.config._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1.udfs.UDFs._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1.udfs._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1.graph._
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -33,7 +32,8 @@ object Main {
       .newSession()
     val context = Context(spark, config)
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/pipeline1")
-    MetricsCollector.start(spark,                    "pipelines/pipeline1")
+    registerUDFs(spark)
+    MetricsCollector.start(spark, "pipelines/pipeline1")
     apply(context)
     MetricsCollector.end(spark)
   }

@@ -45,7 +45,23 @@ functions:
   author: null
   createdAt: '2023-01-26 07:34:41'
   gems: {}
-  udfs: {}
+  udfs:
+    udfs/trimString:
+      name: trimString
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-01-26 07:35:33'
+    udfs/addNumbers:
+      name: addNumbers
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-01-26 07:35:33'
   udafs: {}
   expressions: {}
 subgraphs: {}
