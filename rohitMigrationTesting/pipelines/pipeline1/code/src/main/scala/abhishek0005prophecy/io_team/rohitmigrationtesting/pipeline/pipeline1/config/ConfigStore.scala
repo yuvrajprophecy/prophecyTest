@@ -1,7 +1,6 @@
-package io.prophecy.pipelines.pipeline1.config
+package abhishek0005prophecy.io_team.rohitmigrationtesting.pipeline.pipeline1.config
 
-import io.prophecy.pipelines.pipeline1.config.ConfigStore._
-import io.prophecy.pipelines.pipeline1.config.Context
+import abhishek0005prophecy.io_team.rohitmigrationtesting.pipeline.pipeline1.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint

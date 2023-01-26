@@ -3,19 +3,27 @@ description: ''
 version: 0.0.1-SNAPSHOT
 author: rohitjain@simpledatalabs.com
 language: scala
-buildSystem: maven
+buildSystem: ''
+buildSystemDetails:
+  artefactID: rohitmigrationtesting
+  parentArtefactID: abhishek0005prophecy.io_team
+  buildSystem: maven
+  author: null
+  createdAt: '2023-01-26 07:02:21'
 pipelines:
   pipelines/pipeline1:
     name: pipeline1
     description: ''
     author: rohitjain@simpledatalabs.com
     mode: batch
+    artefactID: ''
     language: scala
     createdAt: '2023-01-26 06:58:31'
     datasets:
       inputs:
       - datasets/DS1
       outputs: []
+    subgraphs: []
     dependencies: {}
 datasets:
   datasets/DS1:
@@ -33,7 +41,13 @@ datasets:
         createdAt: '2023-01-26 06:59:22'
 templates: {}
 jobs: {}
-libraries: []
+functions:
+  author: null
+  createdAt: '2023-01-26 07:02:21'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
 subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
