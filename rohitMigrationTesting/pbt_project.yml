@@ -4,14 +4,39 @@ version: 0.0.1-SNAPSHOT
 author: rohitjain@simpledatalabs.com
 language: scala
 buildSystem: maven
-pipelines: {}
-datasets: {}
+pipelines:
+  pipelines/pipeline1:
+    name: pipeline1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-01-26 06:58:31'
+    datasets:
+      inputs:
+      - datasets/DS1
+      outputs: []
+    dependencies: {}
+datasets:
+  datasets/DS1:
+    name: DS1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-01-26 06:59:22'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 48
+        datasetType: File
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-01-26 06:59:22'
 templates: {}
 jobs: {}
 libraries: []
 subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
-dependencies: '[]'
+dependencies: []
 projectDependencies: {}
 pipelineConfigurations: {}
