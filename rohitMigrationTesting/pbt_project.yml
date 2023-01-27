@@ -17,6 +17,18 @@ pipelines:
       - datasets/DS1
       outputs: []
     dependencies: {}
+  pipelines/pipeline2:
+    name: pipeline2
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-01-27 06:11:43'
+    datasets:
+      inputs:
+      - datasets/DS1
+      outputs: []
+    dependencies: {}
 datasets:
   datasets/DS1:
     name: DS1

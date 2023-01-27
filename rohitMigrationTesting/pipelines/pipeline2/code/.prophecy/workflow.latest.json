@@ -1,0 +1,206 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "scala",
+    "fabricId" : "48",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ {
+        "name" : "trimString",
+        "code" : "udf((value: String) => value.trim())",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers",
+        "code" : "udf((value: Int, value2: Int) => value + value2)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers1",
+        "code" : "udf((value: Int, value1: Int) => value + value1)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers2",
+        "code" : "udf((value: Int, value2: Int) => value + value2)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers3",
+        "code" : "udf((value: Int, value3: Int) => value + value3)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers4",
+        "code" : "udf((value: Int, value4: Int) => value + value4)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers5",
+        "code" : "udf((value: Int, value5: Int) => value + value5)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers6",
+        "code" : "udf((value: Int, value6: Int) => value + value6)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers7",
+        "code" : "udf((value: Int, value7: Int) => value + value7)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers8",
+        "code" : "udf((value: Int, value8: Int) => value + value8)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers9",
+        "code" : "udf((value: Int, value9: Int) => value + value9)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers10",
+        "code" : "udf((value: Int, value10: Int) => value + value10)",
+        "language" : "scala"
+      }, {
+        "name" : "addNumbers11",
+        "code" : "udf((value: Int, value11: Int) => value + value11)",
+        "language" : "scala"
+      } ],
+      "initialCode" : "var x = 10"
+    },
+    "udafs" : {
+      "language" : "scala",
+      "code" : "package udfs\n\nimport org.apache.spark.sql.expressions._\nimport org.apache.spark.sql.types._\nimport org.apache.spark.sql._\n\n/**\n  * Here you can define your custom aggregate functions.\n  *\n  * Make sure to register your `udafs` in the register_udafs function below.\n  *\n  * Example:\n  *\n  * object GeometricMean extends UserDefinedAggregateFunction {\n  *   // This is the input fields for your aggregate function.\n  *   override def inputSchema: org.apache.spark.sql.types.StructType =\n  *     StructType(StructField(\"value\", DoubleType) :: Nil)\n  *\n  *   // This is the internal fields you keep for computing your aggregate.\n  *   override def bufferSchema: StructType = StructType(\n  *     StructField(\"count\", LongType) ::\n  *     StructField(\"product\", DoubleType) :: Nil\n  *   )\n  *\n  *   // This is the output type of your aggregatation function.\n  *   override def dataType: DataType = DoubleType\n  *\n  *   override def deterministic: Boolean = true\n  *\n  *   // This is the initial value for your buffer schema.\n  *   override def initialize(buffer: MutableAggregationBuffer): Unit = {\n  *     buffer(0) = 0L\n  *     buffer(1) = 1.0\n  *   }\n  *\n  *   // This is how to update your buffer schema given an input.\n  *   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {\n  *     buffer(0) = buffer.getAs[Long](0) + 1\n  *     buffer(1) = buffer.getAs[Double](1) * input.getAs[Double](0)\n  *   }\n  *\n  *   // This is how to merge two objects with the bufferSchema type.\n  *   override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = {\n  *     buffer1(0) = buffer1.getAs[Long](0) + buffer2.getAs[Long](0)\n  *     buffer1(1) = buffer1.getAs[Double](1) * buffer2.getAs[Double](1)\n  *   }\n  *\n  *   // This is where you output the final value, given the final value of your bufferSchema.\n  *   override def evaluate(buffer: Row): Any = {\n  *     math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0))\n  *   }\n  * }\n  *\n  */\n\n\nobject UDAFs {\n  /**\n    * Registers UDAFs with Spark SQL\n    */\n  def registerUDAFs(spark: SparkSession): Unit = {\n    /**\n      * Example:\n      *\n      * spark.udf.register(\"gm\", GeometricMean)\n      *\n      */\n\n\n  }\n}\n"
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "io.prophecy.pipelines.pipeline1"
+  },
+  "connections" : [ {
+    "id" : "UnV66RDwyrgaPnlNavgJ-",
+    "source" : "5pFerCFxKCr0k1zZ8WU2A$$UW7uwcPPPCyU-PbMJtdvQ",
+    "sourcePort" : "aV8sZiCFWwx-sh4bQfm6g$$yRqOe_RbEh5rzT6CZorx-",
+    "target" : "ATKlAJljGOPfmGnhonaHE$$3pgdf5J3oMyqWsPUW58Eu",
+    "targetPort" : "HFijjuX0lb3tOhOf_Q_Iv$$U-CWEafw_h_F5demR98Pi"
+  }, {
+    "id" : "skHGtShBW_Qs6-xVEjhwc",
+    "source" : "5pFerCFxKCr0k1zZ8WU2A$$UW7uwcPPPCyU-PbMJtdvQ",
+    "sourcePort" : "aV8sZiCFWwx-sh4bQfm6g$$yRqOe_RbEh5rzT6CZorx-",
+    "target" : "sayIWJ-LdZTMGb-mNfKw_$$CI2yE4ZLg1QzTbGBauhtu",
+    "targetPort" : "S0WmwR6Rw19YvsYivgf6W$$7XfATXWsDCOgJ2nACOr-_"
+  } ],
+  "processes" : {
+    "sayIWJ-LdZTMGb-mNfKw_$$CI2yE4ZLg1QzTbGBauhtu" : {
+      "id" : "sayIWJ-LdZTMGb-mNfKw_$$CI2yE4ZLg1QzTbGBauhtu",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : 820,
+        "y" : 620,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "S0WmwR6Rw19YvsYivgf6W$$7XfATXWsDCOgJ2nACOr-_",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "22qELEuEE6hzyq_wdWSNi$$hGRderr51GBk4TR2uIsXe",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : { },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "5pFerCFxKCr0k1zZ8WU2A$$UW7uwcPPPCyU-PbMJtdvQ" : {
+      "id" : "5pFerCFxKCr0k1zZ8WU2A$$UW7uwcPPPCyU-PbMJtdvQ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "DS1",
+        "slug" : "DS1",
+        "x" : 580,
+        "y" : 460,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "aV8sZiCFWwx-sh4bQfm6g$$yRqOe_RbEh5rzT6CZorx-",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/DS1"
+      }
+    },
+    "ATKlAJljGOPfmGnhonaHE$$3pgdf5J3oMyqWsPUW58Eu" : {
+      "id" : "ATKlAJljGOPfmGnhonaHE$$3pgdf5J3oMyqWsPUW58Eu",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 820,
+        "y" : 460,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HFijjuX0lb3tOhOf_Q_Iv$$U-CWEafw_h_F5demR98Pi",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "mUBZT1t-OOpePabfS-Y9B$$CmgaQ3z-sDgHWgHFTyM-b",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ],
+        "mdUsers" : null
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}
