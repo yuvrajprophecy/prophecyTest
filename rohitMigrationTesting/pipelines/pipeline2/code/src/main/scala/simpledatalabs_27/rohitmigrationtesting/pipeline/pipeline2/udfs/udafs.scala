@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.pipeline1.udfs
+package simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2.udfs
 
 import org.apache.spark.sql.expressions._
 import org.apache.spark.sql.types._
