@@ -1,13 +1,12 @@
-package io.prophecy.pipelines.pipeline1
+package simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2
 
 import io.prophecy.libs._
-import io.prophecy.pipelines.pipeline1.config.ConfigStore._
-import io.prophecy.pipelines.pipeline1.config.Context
-import io.prophecy.pipelines.pipeline1.config._
-import io.prophecy.pipelines.pipeline1.udfs.UDFs._
-import io.prophecy.pipelines.pipeline1.udfs._
-import io.prophecy.pipelines.pipeline1.graph._
-import io.prophecy.pipelines.pipeline1.graph.Subgraph_1
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2.config.Context
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2.config._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2.udfs.UDFs._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2.udfs._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2.graph._
+import simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline2.graph.Subgraph_1
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -18,9 +17,12 @@ import java.time._
 object Main {
 
   def apply(context: Context): Unit = {
-    val df_DS1        = DS1(context)
-    val df_Subgraph_1 = Subgraph_1.apply(context, df_DS1)
-    val df_Reformat_1 = Reformat_1(context,       df_DS1)
+    val df_DS1 = DS1(context)
+    val df_Subgraph_1 = Subgraph_1.apply(
+      Subgraph_1.config.Context(context.spark, context.config.Subgraph_1),
+      df_DS1
+    )
+    val df_Reformat_1 = Reformat_1(context, df_DS1)
   }
 
   def main(args: Array[String]): Unit = {
@@ -35,7 +37,8 @@ object Main {
       .newSession()
     val context = Context(spark, config)
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/pipeline2")
-    MetricsCollector.start(spark,                    "pipelines/pipeline2")
+    registerUDFs(spark)
+    MetricsCollector.start(spark, "pipelines/pipeline2")
     apply(context)
     MetricsCollector.end(spark)
   }
