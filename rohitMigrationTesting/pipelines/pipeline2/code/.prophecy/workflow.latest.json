@@ -10,11 +10,15 @@
       "udfs" : [ {
         "name" : "addNumbers10",
         "code" : "udf((value: Int, value10: Int) => value + value10)",
-        "language" : "scala"
+        "language" : "scala",
+        "initCode" : "var x = 10",
+        "isShared" : false
       }, {
         "name" : "addNumbers11",
         "code" : "udf((value: Int, value11: Int) => value + value11)",
-        "language" : "scala"
+        "language" : "scala",
+        "initCode" : "var x = 10",
+        "isShared" : false
       } ],
       "functionPackageName" : "simpledatalabs_27.rohitmigrationtesting.functions",
       "sharedFunctionPackageNames" : [ ],

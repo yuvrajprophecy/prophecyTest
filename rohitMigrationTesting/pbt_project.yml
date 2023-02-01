@@ -76,6 +76,14 @@ functions:
       outputs: []
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2023-02-01 15:12:57'
+    udfs/addNumber12:
+      name: addNumber12
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-02-01 15:16:16'
   udafs: {}
   expressions: {}
 subgraphs: {}
