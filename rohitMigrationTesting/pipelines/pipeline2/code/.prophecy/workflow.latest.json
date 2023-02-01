@@ -82,8 +82,8 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 820,
-        "y" : 620,
+        "x" : 320,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -171,8 +171,7 @@
           },
           "properties" : {
             "columnsSelector" : [ ],
-            "expressions" : [ ],
-            "mdUsers" : null
+            "expressions" : [ ]
           }
         }
       }
@@ -183,8 +182,8 @@
       "metadata" : {
         "label" : "DS1",
         "slug" : "DS1",
-        "x" : 580,
-        "y" : 460,
+        "x" : 120,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -209,8 +208,8 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 820,
-        "y" : 460,
+        "x" : 320,
+        "y" : 320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -244,8 +243,7 @@
       },
       "properties" : {
         "columnsSelector" : [ ],
-        "expressions" : [ ],
-        "mdUsers" : null
+        "expressions" : [ ]
       }
     },
     "pE1XHPPQ-wMlbMkWyRK79$$H3NhFHy3BDGE_vwTXuRWj" : {
@@ -254,8 +252,8 @@
       "metadata" : {
         "label" : "Reformat_3",
         "slug" : "Reformat_3",
-        "x" : 980,
-        "y" : 480,
+        "x" : 520,
+        "y" : 320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

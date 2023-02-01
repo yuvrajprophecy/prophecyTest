@@ -15,8 +15,6 @@ package object functions {
   val trimString   = TrimString.trimString
   val addNumbers   = AddNumbers.addNumbers
   val addNumbers9  = AddNumbers9.addNumbers9
-  val addNumbers10 = AddNumbers10.addNumbers10
-  val addNumbers11 = AddNumbers11.addNumbers11
 
   def registerFunctions(spark: SparkSession) = {
     spark.udf.register("addNumbers11", addNumbers11)
@@ -32,8 +30,6 @@ package object functions {
     spark.udf.register("trimString",   trimString)
     spark.udf.register("addNumbers",   addNumbers)
     spark.udf.register("addNumbers9",  addNumbers9)
-    spark.udf.register("addNumbers10", addNumbers10)
-    spark.udf.register("addNumbers11", addNumbers11)
   }
 
 }
