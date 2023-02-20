@@ -40,7 +40,7 @@
       "job_cluster_key" : "appJob1_default_small",
       "spark_jar_task" : {
         "main_class_name" : "io.prophecy.pipelines.pipeline1.Main",
-        "parameters" : [ "-i", "io/prophecy/pipelines/pipeline1/config/default", "-O", "{}" ]
+        "parameters" : [ "-i", "config/io/prophecy/pipelines/pipeline1/config/default", "-O", "{}" ]
       },
       "libraries" : [ {
         "maven" : {
