@@ -1,0 +1,1 @@
+{"initCode":"","code":"udf((value2: Int) => value2 * value2)"}
