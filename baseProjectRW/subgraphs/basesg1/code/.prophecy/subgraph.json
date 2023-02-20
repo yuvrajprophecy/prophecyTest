@@ -13,7 +13,15 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "config1",
+          "kind" : {
+            "type" : "string",
+            "value" : "defaultvalue"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
+        } ]
       }
     },
     "configPathInPipelineConfig" : [ "Subgraph_1" ]

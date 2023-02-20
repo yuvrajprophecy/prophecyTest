@@ -22,7 +22,15 @@
           "name" : "Subgraph_1",
           "kind" : {
             "type" : "record",
-            "fields" : [ ]
+            "fields" : [ {
+              "name" : "config1",
+              "kind" : {
+                "type" : "string",
+                "value" : "defaultvalue"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false
+            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
@@ -34,7 +42,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default",
+      "selected" : "pipelineconf2",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },

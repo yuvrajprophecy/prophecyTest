@@ -12,5 +12,5 @@ object Config {
 
 }
 
-case class Config() extends ConfigBase
+case class Config(config1: String = "conf2value") extends ConfigBase
 case class Context(spark: SparkSession, config: Config)

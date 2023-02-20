@@ -1,4 +1,5 @@
 version: 1
-dependencies: []
 configurations:
 - default
+- pipelineconf2
+dependencies: []
