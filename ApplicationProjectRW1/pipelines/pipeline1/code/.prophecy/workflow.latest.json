@@ -30,7 +30,15 @@
           "name" : "basesg1_1",
           "kind" : {
             "type" : "record",
-            "fields" : [ ]
+            "fields" : [ {
+              "name" : "config1",
+              "kind" : {
+                "type" : "string",
+                "value" : "defaultvalue"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false
+            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
@@ -163,7 +171,7 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 500,
+        "x" : 520,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -310,7 +318,7 @@
       },
       "properties" : {
         "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
-        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/4.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
+        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/5.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
         "name" : "basesg1"
       },
       "connections" : [ {
