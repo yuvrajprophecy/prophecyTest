@@ -57,6 +57,16 @@
           "coordinates" : "org.apache.commons:commons-lang3:3.11",
           "exclusions" : [ ]
         }
+      }, {
+        "maven" : {
+          "coordinates" : "commons-io:commons-io:2.11.0",
+          "exclusions" : [ ]
+        }
+      }, {
+        "maven" : {
+          "coordinates" : "commons-io:commons-io:2.11.0",
+          "exclusions" : [ ]
+        }
       } ],
       "email_notifications" : { },
       "max_retries" : 0
