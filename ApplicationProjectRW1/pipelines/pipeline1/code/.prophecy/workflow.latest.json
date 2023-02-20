@@ -482,7 +482,7 @@
         "type" : "coordinates",
         "coordinates" : "org.apache.commons:commons-lang3:3.11",
         "name" : "commons",
-        "enabled" : true,
+        "enabled" : false,
         "id" : "EDPzF",
         "exclusions" : [ ]
       } ]

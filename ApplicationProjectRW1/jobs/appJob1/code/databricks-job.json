@@ -54,11 +54,6 @@
         "jar" : "dbfs:/FileStore/prophecy/artifacts/dev/ideteam/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/pipeline1.jar"
       }, {
         "maven" : {
-          "coordinates" : "org.apache.commons:commons-lang3:3.11",
-          "exclusions" : [ ]
-        }
-      }, {
-        "maven" : {
           "coordinates" : "commons-io:commons-io:2.11.0",
           "exclusions" : [ ]
         }
