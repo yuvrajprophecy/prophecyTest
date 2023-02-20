@@ -1,0 +1,110 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "52",
+    "jobId" : "jobs/appJob1",
+    "name" : "appJob1",
+    "schedule" : "0 0 0 1/1 * ? *",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "52",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    } ]
+  },
+  "processes" : {
+    "_64Pe2dl57mOltssTlptJ$$R35eKjqIl1lMzuJ10kYqG" : {
+      "id" : "_64Pe2dl57mOltssTlptJ$$R35eKjqIl1lMzuJ10kYqG",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : 940,
+        "y" : 680
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1fwmRUOlmfsv8JH7t73Gk$$YHhi5WaonNN1kfj-TbDho"
+        } ],
+        "outputs" : [ {
+          "id" : "Oi4_mE6OI-6Ws_lctmHHs$$jMXBvP0xVNQIdkeeGPVkw"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/pipeline1",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "Subgraph_1",
+            "kind" : {
+              "type" : "record",
+              "fields" : [ ]
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : true
+          }, {
+            "name" : "basesg1_1",
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "config1",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "defaultvalue"
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ],
+          "instances" : {
+            "ApplicationProjectRW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ ]
+}

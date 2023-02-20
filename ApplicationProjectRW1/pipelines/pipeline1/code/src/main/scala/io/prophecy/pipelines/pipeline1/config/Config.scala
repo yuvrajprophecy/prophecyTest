@@ -6,6 +6,5 @@ import io.prophecy.libs._
 import io.prophecy.pipelines.pipeline1.graph
 
 case class Config(
-  Subgraph_1: graph.Subgraph_1.config.Config = graph.Subgraph_1.config.Config(),
-  basesg1_1:  graph.basesg1_1.config.Config = graph.basesg1_1.config.Config()
+  Subgraph_1: graph.Subgraph_1.config.Config = graph.Subgraph_1.config.Config()
 ) extends ConfigBase

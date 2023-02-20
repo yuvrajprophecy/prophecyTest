@@ -9,7 +9,7 @@
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "simpledatalabs_27.pm3rework.functions",
-      "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions" ]
+      "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
       "language" : "scala",
@@ -23,22 +23,6 @@
           "kind" : {
             "type" : "record",
             "fields" : [ ]
-          },
-          "optional" : false,
-          "isWorkflowNodeConfiguration" : true
-        }, {
-          "name" : "basesg1_1",
-          "kind" : {
-            "type" : "record",
-            "fields" : [ {
-              "name" : "config1",
-              "kind" : {
-                "type" : "string",
-                "value" : "defaultvalue"
-              },
-              "optional" : false,
-              "isWorkflowNodeConfiguration" : false
-            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
@@ -58,12 +42,15 @@
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "228",
-      "projectName" : "BaseProjectRW",
-      "externalDependencies" : [ ]
+    "externalDependencies" : [ {
+      "type" : "coordinates",
+      "coordinates" : "org.apache.commons:commons-lang3:3.11",
+      "name" : "commons",
+      "enabled" : true,
+      "id" : "EDPzF",
+      "exclusions" : [ ]
     } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -87,12 +74,6 @@
     "sourcePort" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
     "target" : "gqfN6ESF09RaLXUMFIMns$$N6oGc6-ZC35lLKFTef-jw",
     "targetPort" : "0BxnN5zg4wRxFOQUG39F_$$UR_WWYqqCh719msKbiZXr"
-  }, {
-    "id" : "MCruoaRZtkjvJ1S1KX5Hm",
-    "source" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
-    "sourcePort" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
-    "target" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
-    "targetPort" : "xc1kwumkSN7T0hQ0TnCXO$$gEu54lqZl2I0CBziFtK2h"
   } ],
   "processes" : {
     "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD" : {
@@ -464,245 +445,14 @@
           }
         }
       },
-      "externalDependencies" : [ ]
-    },
-    "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI" : {
-      "id" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
-      "component" : "Subgraph",
-      "metadata" : {
-        "label" : "basesg1_1",
-        "slug" : "basesg1_1",
-        "x" : 520,
-        "y" : 320,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "xc1kwumkSN7T0hQ0TnCXO$$gEu54lqZl2I0CBziFtK2h",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "AjnbyqLDDXAgqR3dBKZ6Q$$9Faxj1HWg2XmYDC6wR47f",
-          "slug" : "out0"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
-        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/5.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
-        "name" : "basesg1"
-      },
-      "connections" : [ {
-        "id" : "zDTvA9bM42bUhAMWc1Xf_",
-        "source" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
-        "sourcePort" : "xc1kwumkSN7T0hQ0TnCXO$$gEu54lqZl2I0CBziFtK2h",
-        "target" : "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU",
-        "targetPort" : "DlKNiCwQPssX6s5RafTn0$$g2whKDP-VPE55Rta3rzQ7"
-      }, {
-        "id" : "9vHKv2j0QdkSnuoWnSvQO",
-        "source" : "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU",
-        "sourcePort" : "XX8l5IKZYUUwcgZryY4N3$$dAwx1RwkCLyosd7yox0lJ",
-        "target" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
-        "targetPort" : "AjnbyqLDDXAgqR3dBKZ6Q$$9Faxj1HWg2XmYDC6wR47f"
-      } ],
-      "processes" : {
-        "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU" : {
-          "id" : "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU",
-          "component" : "Reformat",
-          "metadata" : {
-            "label" : "Reformat_1",
-            "slug" : "Reformat_1",
-            "x" : 1180,
-            "y" : 800,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "DlKNiCwQPssX6s5RafTn0$$g2whKDP-VPE55Rta3rzQ7",
-              "slug" : "in",
-              "schema" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "customer_id",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "first_name",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "last_name",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "phone",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "email",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "country_code",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "account_open_date",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "account_flags",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "isStreaming" : false
-            } ],
-            "outputs" : [ {
-              "id" : "XX8l5IKZYUUwcgZryY4N3$$dAwx1RwkCLyosd7yox0lJ",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false
-          },
-          "properties" : {
-            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##customer_id" ],
-            "expressions" : [ {
-              "target" : "customer_id",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "square2(customer_id)"
-              },
-              "description" : ""
-            } ]
-          }
-        }
-      },
-      "externalDependencies" : [ ]
+      "externalDependencies" : [ {
+        "type" : "coordinates",
+        "coordinates" : "org.apache.commons:commons-lang3:3.11",
+        "name" : "commons",
+        "enabled" : true,
+        "id" : "EDPzF",
+        "exclusions" : [ ]
+      } ]
     }
   },
   "ports" : {
