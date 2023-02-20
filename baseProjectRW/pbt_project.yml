@@ -1,6 +1,6 @@
 name: BaseProjectRW
 description: ''
-version: '2.0'
+version: '7.0'
 author: rohitjain+27@simpledatalabs.com
 language: scala
 buildSystem: ''
@@ -68,6 +68,12 @@ subgraphs:
     createdAt: '2023-02-20 08:01:42'
 sqlModels: {}
 sqlPipeline: null
-dependencies: []
+dependencies:
+- type: coordinates
+  coordinates: commons-io:commons-io:2.11.0
+  name: commons io
+  enabled: false
+  id: 4jyWa
+  exclusions: []
 projectDependencies: {}
 pipelineConfigurations: {}

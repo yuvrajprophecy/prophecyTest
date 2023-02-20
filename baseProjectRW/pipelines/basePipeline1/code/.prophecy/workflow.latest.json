@@ -22,7 +22,15 @@
           "name" : "Subgraph_1",
           "kind" : {
             "type" : "record",
-            "fields" : [ ]
+            "fields" : [ {
+              "name" : "config1",
+              "kind" : {
+                "type" : "string",
+                "value" : "defaultvalue"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false
+            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
@@ -34,7 +42,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default",
+      "selected" : "pipelineconf2",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
@@ -42,7 +50,14 @@
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ ],
+    "externalDependencies" : [ {
+      "type" : "coordinates",
+      "coordinates" : "commons-io:commons-io:2.11.0",
+      "name" : "commons io",
+      "enabled" : true,
+      "id" : "4jyWa",
+      "exclusions" : [ ]
+    } ],
     "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
@@ -129,9 +144,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
         "externalId" : "subgraphs/basesg1",
-        "name" : "basesg1",
-        "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1"
+        "name" : "basesg1"
       },
       "connections" : [ {
         "id" : "zDTvA9bM42bUhAMWc1Xf_",
@@ -187,12 +202,26 @@
             "isCustomOutputSchema" : false
           },
           "properties" : {
-            "columnsSelector" : [ ],
-            "expressions" : [ ]
+            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##customer_id" ],
+            "expressions" : [ {
+              "target" : "customer_id",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "square2(customer_id)"
+              },
+              "description" : ""
+            } ]
           }
         }
       },
-      "externalDependencies" : [ ]
+      "externalDependencies" : [ {
+        "type" : "coordinates",
+        "coordinates" : "commons-io:commons-io:2.11.0",
+        "name" : "commons io",
+        "enabled" : true,
+        "id" : "4jyWa",
+        "exclusions" : [ ]
+      } ]
     }
   },
   "ports" : {

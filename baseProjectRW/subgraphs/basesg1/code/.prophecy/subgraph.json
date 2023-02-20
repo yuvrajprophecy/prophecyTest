@@ -13,7 +13,15 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "config1",
+          "kind" : {
+            "type" : "string",
+            "value" : "defaultvalue"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
+        } ]
       }
     },
     "configPathInPipelineConfig" : [ "Subgraph_1" ]
@@ -75,10 +83,25 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##customer_id" ],
+        "expressions" : [ {
+          "_row_id" : "c_13",
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "square2(customer_id)"
+          },
+          "description" : ""
+        } ]
       }
     }
   },
-  "externalDependencies" : [ ]
+  "externalDependencies" : [ {
+    "type" : "coordinates",
+    "coordinates" : "commons-io:commons-io:2.11.0",
+    "name" : "commons io",
+    "enabled" : true,
+    "id" : "4jyWa",
+    "exclusions" : [ ]
+  } ]
 }
