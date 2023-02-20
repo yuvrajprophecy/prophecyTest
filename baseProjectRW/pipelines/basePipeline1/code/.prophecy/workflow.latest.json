@@ -96,7 +96,7 @@
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
         "x" : 320,
-        "y" : 120,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
