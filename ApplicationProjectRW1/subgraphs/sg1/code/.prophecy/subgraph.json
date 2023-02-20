@@ -1,0 +1,84 @@
+{
+  "id" : "gqfN6ESF09RaLXUMFIMns",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "configPathInPipelineConfig" : [ "Subgraph_1" ]
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "0BxnN5zg4wRxFOQUG39F_",
+      "slug" : "in0",
+      "isStreaming" : false
+    } ],
+    "outputs" : [ {
+      "id" : "DsXRifXMdpMuCtHpCLarQ",
+      "slug" : "out0",
+      "isStreaming" : false
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "simpledatalabs_27.pm3rework.subgraph.sg1"
+  },
+  "connections" : [ {
+    "id" : "6rOAzchGyW3oLcWqxz_Qh",
+    "source" : "gqfN6ESF09RaLXUMFIMns",
+    "sourcePort" : "0BxnN5zg4wRxFOQUG39F_",
+    "target" : "23-O0RDVCnfT7jDsScTO6",
+    "targetPort" : "CZQwD6S_ZcmZHTQ-TFuA1"
+  }, {
+    "id" : "KFHI6oEDlvmbbM5SVDISK",
+    "source" : "23-O0RDVCnfT7jDsScTO6",
+    "sourcePort" : "6S_3mbT_rjv5PvTogr5Ug",
+    "target" : "gqfN6ESF09RaLXUMFIMns",
+    "targetPort" : "DsXRifXMdpMuCtHpCLarQ"
+  } ],
+  "processes" : {
+    "23-O0RDVCnfT7jDsScTO6" : {
+      "id" : "23-O0RDVCnfT7jDsScTO6",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : 1040,
+        "y" : 720,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CZQwD6S_ZcmZHTQ-TFuA1",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "6S_3mbT_rjv5PvTogr5Ug",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    }
+  },
+  "externalDependencies" : [ ]
+}

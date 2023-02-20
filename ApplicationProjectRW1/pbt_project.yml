@@ -1,0 +1,81 @@
+name: PM3ReWork
+description: ''
+version: 0.0.1
+author: rohitjain+27@simpledatalabs.com
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: pm3rework
+  parentArtefactID: simpledatalabs_27
+  buildSystem: maven
+  author: null
+  createdAt: '2023-02-20 06:55:59'
+pipelines:
+  pipelines/pipeline1:
+    name: pipeline1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-02-20 06:56:19'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    subgraphs:
+    - subgraphs/sg1
+    dependencies: {}
+datasets:
+  datasets/ds1:
+    name: ds1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2023-02-20 06:59:58'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2023-02-20 06:59:58'
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-02-20 06:55:59'
+  gems: {}
+  udfs:
+    udfs/square:
+      name: square
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-02-20 07:44:41'
+    udfs/trim:
+      name: trim
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-02-20 07:44:41'
+  udafs: {}
+  expressions: {}
+subgraphs:
+  subgraphs/sg1:
+    name: sg1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: scala
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-02-20 07:00:29'
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}
