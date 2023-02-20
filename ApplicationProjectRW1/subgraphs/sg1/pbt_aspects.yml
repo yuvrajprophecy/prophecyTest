@@ -1,5 +1,2 @@
 version: 1
-dependencies:
-- id: EDPzF
-  name: commons
-  enabled: true
+dependencies: []
