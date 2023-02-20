@@ -9,4 +9,10 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.expressions._
 import java.time._
-object Reformat_1 { def apply(context: Context, in: DataFrame): DataFrame = in }
+
+object Reformat_1 {
+
+  def apply(context: Context, in: DataFrame): DataFrame =
+    in.select(square2(col("customer_id")).as("customer_id"))
+
+}

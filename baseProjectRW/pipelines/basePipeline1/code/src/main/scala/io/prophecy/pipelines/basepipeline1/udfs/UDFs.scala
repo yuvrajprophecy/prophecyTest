@@ -12,7 +12,7 @@ object UDFs extends Serializable {
     spark.udf.register("square2", square2)
 
   def square2 =
-    udf((value2: Int) => value2 * value2)
+    udf((value2: String) => value2 + value2)
 
 }
 
