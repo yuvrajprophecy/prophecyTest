@@ -96,5 +96,12 @@
       }
     }
   },
-  "externalDependencies" : [ ]
+  "externalDependencies" : [ {
+    "type" : "coordinates",
+    "coordinates" : "commons-io:commons-io:2.11.0",
+    "name" : "commons io",
+    "enabled" : true,
+    "id" : "4jyWa",
+    "exclusions" : [ ]
+  } ]
 }

@@ -50,7 +50,14 @@
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ ],
+    "externalDependencies" : [ {
+      "type" : "coordinates",
+      "coordinates" : "commons-io:commons-io:2.11.0",
+      "name" : "commons io",
+      "enabled" : true,
+      "id" : "4jyWa",
+      "exclusions" : [ ]
+    } ],
     "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
@@ -104,7 +111,7 @@
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
         "x" : 320,
-        "y" : 220,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -207,7 +214,14 @@
           }
         }
       },
-      "externalDependencies" : [ ]
+      "externalDependencies" : [ {
+        "type" : "coordinates",
+        "coordinates" : "commons-io:commons-io:2.11.0",
+        "name" : "commons io",
+        "enabled" : true,
+        "id" : "4jyWa",
+        "exclusions" : [ ]
+      } ]
     }
   },
   "ports" : {
