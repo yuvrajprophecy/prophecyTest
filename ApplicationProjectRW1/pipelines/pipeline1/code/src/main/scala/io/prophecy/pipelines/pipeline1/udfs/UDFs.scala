@@ -25,7 +25,7 @@ object UDFs extends Serializable {
   }
 
   def square2 =
-    udf((value2: Int) => value2 * value2)
+    udf((value2: String) => value2 + value2)
 
 }
 
