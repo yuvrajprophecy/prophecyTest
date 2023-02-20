@@ -23,3 +23,7 @@
 *** Release notes for version: 6.0 ***
 
 6.0
+
+*** Release notes for version: 7.0 ***
+
+7.0
