@@ -57,7 +57,7 @@ functions:
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2023-02-20 07:44:41'
     udfs/trim:
-      name: trim
+      name: trimUDF
       description: ''
       tags: []
       inputs: []

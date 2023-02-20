@@ -75,8 +75,16 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "columnsSelector" : [ "CZQwD6S_ZcmZHTQ-TFuA1$$55Z_06GdGj3w-Dl8x3F0K##customer_id" ],
+        "expressions" : [ {
+          "_row_id" : "c_18",
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "trimUDF(customer_id)"
+          },
+          "description" : ""
+        } ]
       }
     }
   },
