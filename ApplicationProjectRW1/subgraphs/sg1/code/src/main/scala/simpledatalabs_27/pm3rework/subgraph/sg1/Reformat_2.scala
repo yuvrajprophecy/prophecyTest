@@ -2,7 +2,6 @@ package simpledatalabs_27.pm3rework.subgraph.sg1
 
 import io.prophecy.libs._
 import simpledatalabs_27.pm3rework.subgraph.sg1.udfs.UDFs._
-import simpledatalabs_27.baseprojectrw.functions._
 import simpledatalabs_27.pm3rework.subgraph.sg1.config.Context
 import org.apache.spark._
 import org.apache.spark.sql._
