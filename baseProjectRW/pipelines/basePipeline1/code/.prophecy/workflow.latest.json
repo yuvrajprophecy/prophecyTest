@@ -129,9 +129,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
         "externalId" : "subgraphs/basesg1",
-        "name" : "basesg1",
-        "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1"
+        "name" : "basesg1"
       },
       "connections" : [ {
         "id" : "zDTvA9bM42bUhAMWc1Xf_",
