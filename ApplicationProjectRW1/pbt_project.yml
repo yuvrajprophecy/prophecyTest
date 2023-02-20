@@ -25,6 +25,7 @@ pipelines:
       outputs: []
     subgraphs:
     - subgraphs/sg1
+    - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/3.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1
     dependencies: {}
 datasets:
   datasets/ds1:
@@ -77,5 +78,12 @@ subgraphs:
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
-projectDependencies: {}
+projectDependencies:
+  '228':
+    projectUID: 228
+    projectName: BaseProjectRW
+    repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW
+    version: BaseProjectRW/3.0
+    author: null
+    createdAt: '2023-02-20 08:37:09'
 pipelineConfigurations: {}

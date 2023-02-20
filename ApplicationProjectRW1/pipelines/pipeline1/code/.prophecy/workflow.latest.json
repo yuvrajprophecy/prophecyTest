@@ -9,7 +9,7 @@
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "simpledatalabs_27.pm3rework.functions",
-      "sharedFunctionPackageNames" : [ ]
+      "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions" ]
     },
     "udafs" : {
       "language" : "scala",
@@ -20,6 +20,14 @@
         "type" : "record",
         "fields" : [ {
           "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        }, {
+          "name" : "basesg1_1",
           "kind" : {
             "type" : "record",
             "fields" : [ ]
@@ -43,7 +51,11 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "228",
+      "projectName" : "BaseProjectRW",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -67,6 +79,12 @@
     "sourcePort" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
     "target" : "gqfN6ESF09RaLXUMFIMns$$N6oGc6-ZC35lLKFTef-jw",
     "targetPort" : "0BxnN5zg4wRxFOQUG39F_$$UR_WWYqqCh719msKbiZXr"
+  }, {
+    "id" : "MCruoaRZtkjvJ1S1KX5Hm",
+    "source" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
+    "sourcePort" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
+    "target" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
+    "targetPort" : "xc1kwumkSN7T0hQ0TnCXO$$gEu54lqZl2I0CBziFtK2h"
   } ],
   "processes" : {
     "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD" : {
@@ -231,6 +249,111 @@
             } ],
             "outputs" : [ {
               "id" : "6S_3mbT_rjv5PvTogr5Ug$$iCZQ9ftj5CPytfC428UqK",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ ]
+          }
+        }
+      },
+      "externalDependencies" : [ ]
+    },
+    "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI" : {
+      "id" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "basesg1_1",
+        "slug" : "basesg1_1",
+        "x" : 1420,
+        "y" : 980,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xc1kwumkSN7T0hQ0TnCXO$$gEu54lqZl2I0CBziFtK2h",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "AjnbyqLDDXAgqR3dBKZ6Q$$9Faxj1HWg2XmYDC6wR47f",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
+        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/3.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
+        "name" : "basesg1"
+      },
+      "connections" : [ {
+        "id" : "G2qDssQKSrnCAu1Yt09MW",
+        "source" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
+        "sourcePort" : "xc1kwumkSN7T0hQ0TnCXO$$gEu54lqZl2I0CBziFtK2h",
+        "target" : "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU",
+        "targetPort" : "DlKNiCwQPssX6s5RafTn0$$g2whKDP-VPE55Rta3rzQ7"
+      }, {
+        "id" : "HFR2pFds5jHI_HI48WUfp",
+        "source" : "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU",
+        "sourcePort" : "XX8l5IKZYUUwcgZryY4N3$$dAwx1RwkCLyosd7yox0lJ",
+        "target" : "sXzqmzzPGUafo06IkYBcT$$2Fwhy4mvfMlycMkZFrErI",
+        "targetPort" : "AjnbyqLDDXAgqR3dBKZ6Q$$9Faxj1HWg2XmYDC6wR47f"
+      } ],
+      "processes" : {
+        "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU" : {
+          "id" : "OOzV-k9BC8BfljAmbpkRp$$Iii0Ow7pEC77LpZGrIWsU",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "Reformat_1",
+            "slug" : "Reformat_1",
+            "x" : 1200,
+            "y" : 820,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "DlKNiCwQPssX6s5RafTn0$$g2whKDP-VPE55Rta3rzQ7",
+              "slug" : "in",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "XX8l5IKZYUUwcgZryY4N3$$dAwx1RwkCLyosd7yox0lJ",
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ],
