@@ -1,0 +1,29 @@
+name: BaseProjectRW
+description: ''
+version: 0.0.1
+author: rohitjain+27@simpledatalabs.com
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: baseprojectrw
+  parentArtefactID: simpledatalabs_27
+  buildSystem: maven
+  author: null
+  createdAt: '2023-02-20 07:59:20'
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-02-20 07:59:20'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
