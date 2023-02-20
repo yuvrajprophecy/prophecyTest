@@ -19,3 +19,7 @@
 *** Release notes for version: 5.0 ***
 
 5.0
+
+*** Release notes for version: 6.0 ***
+
+6.0
