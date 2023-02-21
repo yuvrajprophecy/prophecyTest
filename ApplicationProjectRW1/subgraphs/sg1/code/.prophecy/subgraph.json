@@ -214,7 +214,7 @@
   },
   "externalDependencies" : [ {
     "type" : "coordinates",
-    "coordinates" : "org.apache.commons:commons-lang3:3.11",
+    "coordinates" : "org.apache.commons:commons-lang3:3.12.0",
     "name" : "commons",
     "enabled" : false,
     "id" : "EDPzF",
