@@ -1,2 +1,6 @@
 version: 1
-dependencies: []
+dependencies:
+- type: workflow
+  id: EDPzF
+  name: commons
+  enabled: true
