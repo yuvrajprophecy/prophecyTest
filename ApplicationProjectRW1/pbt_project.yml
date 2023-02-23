@@ -24,8 +24,8 @@ pipelines:
       - datasets/ds1
       outputs: []
     subgraphs:
-    - subgraphs/sg1
     - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/7.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1
+    - subgraphs/sg1
     dependencies: {}
 datasets:
   datasets/ds1:
@@ -59,7 +59,7 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
-    - pipelines/pipeline1
+    - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/7.0&projectSubscriptionProjectId=228&path=pipelines/basePipeline1
     jobClusterMode:
       clusterMode:
         Single: {}
@@ -88,6 +88,14 @@ functions:
       outputs: []
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2023-02-20 07:44:41'
+    udfs/square2:
+      name: square21
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-02-23 07:25:01'
   udafs: {}
   expressions: {}
 subgraphs:
@@ -116,4 +124,17 @@ projectDependencies:
     version: BaseProjectRW/7.0
     author: null
     createdAt: '2023-02-20 16:39:14'
-pipelineConfigurations: {}
+pipelineConfigurations:
+  pipelineConfigurations/BaseProjectRW/basePipeline1:
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2023-02-21 12:19:47'
+    configurations:
+      pipelineConfigurations/BaseProjectRW/basePipeline1/default:
+        name: default
+        author: null
+        createdAt: '2023-02-21 12:19:47'
+      pipelineConfigurations/BaseProjectRW/basePipeline1/dev:
+        name: dev
+        author: null
+        createdAt: '2023-02-21 12:19:48'
+    basePipeline: 228/pipelines/basePipeline1
