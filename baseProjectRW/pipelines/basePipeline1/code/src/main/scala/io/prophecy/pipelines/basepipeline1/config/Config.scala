@@ -3,8 +3,9 @@ package io.prophecy.pipelines.basepipeline1.config
 import pureconfig._
 import pureconfig.generic.ProductHint
 import io.prophecy.libs._
-import io.prophecy.pipelines.basepipeline1.graph
+import io.prophecy.pipelines.basepipeline1.graph.Subgraph_1.config.{
+  Config => Subgraph_1_Config
+}
 
-case class Config(
-  Subgraph_1: graph.Subgraph_1.config.Config = graph.Subgraph_1.config.Config()
-) extends ConfigBase
+case class Config(Subgraph_1: Subgraph_1_Config = Subgraph_1_Config())
+    extends ConfigBase
