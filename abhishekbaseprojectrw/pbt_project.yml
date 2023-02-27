@@ -1,0 +1,53 @@
+name: baseProjectRW
+description: ''
+version: 0.0.1
+author: ''
+language: scala
+buildSystem: maven
+pipelines:
+  pipelines/basepipeline1:
+    name: basepipeline1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-02-27 05:50:15'
+    modifiedAt: '2023-02-27 05:58:00'
+    datasets:
+      inputs:
+      - datasets/baseDS1
+      outputs: []
+    dependencies: {}
+datasets:
+  datasets/baseDS1:
+    name: baseDS1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-02-27 05:55:55'
+    modifiedAt: '2023-02-27 05:56:06'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 44
+        datasetType: File
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-02-27 05:55:56'
+        modifiedAt: '2023-02-27 05:55:56'
+templates: {}
+jobs: {}
+libraries: []
+subgraphs:
+  subgraphs/baseSubgraph1:
+    name: baseSubgraph1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    language: scala
+    mode: batch
+    createdAt: '2023-02-27 05:57:18'
+    modifiedAt: '2023-02-27 05:57:19'
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}
