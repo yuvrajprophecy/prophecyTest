@@ -8,7 +8,7 @@
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
-      "functionPackageName" : "simpledatalabs_27.pm3rework.functions",
+      "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
       "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions" ],
       "initialCode" : "val x = 10"
     },
@@ -218,11 +218,7 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : {
-        "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
-        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/7.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
-        "name" : "basesg1"
-      },
+      "properties" : { },
       "connections" : [ {
         "id" : "zDTvA9bM42bUhAMWc1Xf_",
         "source" : "sXzqmzzPGUafo06IkYBcT$$TzwfGtTynh8z4B0uV-GTU",

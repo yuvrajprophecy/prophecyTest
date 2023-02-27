@@ -158,11 +158,7 @@ class Reformat_1Test extends FunSuite with DataFrameSuiteBase {
 
     val config = ConfigurationFactoryImpl.fromCLI(
       Array("--confFile",
-            getClass
-              .getResource(
-                s"/io/prophecy/pipelines/pipeline1/config/${fabricName}.json"
-              )
-              .getPath
+            getClass.getResource(s"/config/${fabricName}.json").getPath
       )
     )
 

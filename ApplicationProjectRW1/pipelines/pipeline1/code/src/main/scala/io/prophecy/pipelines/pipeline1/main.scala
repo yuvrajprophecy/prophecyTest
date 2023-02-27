@@ -8,6 +8,12 @@ import io.prophecy.pipelines.pipeline1.udfs._
 import io.prophecy.pipelines.pipeline1.graph._
 import io.prophecy.pipelines.pipeline1.graph.basesg1_1
 import io.prophecy.pipelines.pipeline1.graph.Subgraph_1
+import io.prophecy.pipelines.pipeline1.graph.basesg1_1.config.{
+  Context => basesg1_1_Context
+}
+import io.prophecy.pipelines.pipeline1.graph.Subgraph_1.config.{
+  Context => Subgraph_1_Context
+}
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -21,11 +27,11 @@ object Main {
     val df_ds1        = ds1(context)
     val df_Reformat_1 = Reformat_1(context, df_ds1)
     val df_basesg1_1 = basesg1_1.apply(
-      basesg1_1.config.Context(context.spark, context.config.basesg1_1),
+      basesg1_1_Context(context.spark, context.config.basesg1_1),
       df_Reformat_1
     )
     val df_Subgraph_1 = Subgraph_1.apply(
-      Subgraph_1.config.Context(context.spark, context.config.Subgraph_1),
+      Subgraph_1_Context(context.spark, context.config.Subgraph_1),
       df_Reformat_1
     )
     val df_Script_1 = Script_1(context, df_Reformat_1)
