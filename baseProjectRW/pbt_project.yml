@@ -1,6 +1,6 @@
 name: BaseProjectRW
 description: ''
-version: '7.0'
+version: '34.0'
 author: rohitjain+27@simpledatalabs.com
 language: scala
 buildSystem: ''
@@ -9,7 +9,8 @@ buildSystemDetails:
   parentArtefactID: simpledatalabs_27
   buildSystem: maven
   author: null
-  createdAt: '2023-02-20 07:59:20'
+  createdAt: '2023-02-27 10:56:49'
+  modifiedAt: '2023-02-27 10:56:49'
 pipelines:
   pipelines/basePipeline1:
     name: basePipeline1
@@ -19,6 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 08:00:32'
+    modifiedAt: '2023-02-27 14:07:23'
     datasets:
       inputs:
       - datasets/baseDS1
@@ -32,6 +34,7 @@ datasets:
     description: ''
     author: rohitjain+27@simpledatalabs.com
     createdAt: '2023-02-20 08:02:47'
+    modifiedAt: '2023-02-27 14:07:23'
     mode: batch
     physicalDatasets:
       dev:
@@ -40,11 +43,13 @@ datasets:
         description: ''
         author: rohitjain+27@simpledatalabs.com
         createdAt: '2023-02-20 08:02:47'
+        modifiedAt: '2023-02-20 08:02:47'
 templates: {}
 jobs: {}
 functions:
   author: null
   createdAt: '2023-02-20 07:59:20'
+  modifiedAt: '2023-02-27 14:07:23'
   gems: {}
   udfs:
     udfs/square2:
@@ -55,6 +60,16 @@ functions:
       outputs: []
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2023-02-20 08:01:13'
+      modifiedAt: '2023-02-20 08:01:13'
+    udfs/square22:
+      name: square22
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-02-27 13:52:44'
+      modifiedAt: '2023-02-27 13:52:44'
   udafs: {}
   expressions: {}
 subgraphs:
@@ -66,6 +81,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 08:01:42'
+    modifiedAt: '2023-02-27 14:07:23'
 sqlModels: {}
 sqlPipeline: null
 dependencies:

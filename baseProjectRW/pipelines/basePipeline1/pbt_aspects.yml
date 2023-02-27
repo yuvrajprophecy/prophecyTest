@@ -1,9 +1,9 @@
 version: 1
+configurations:
+- pipelineconf2
+- default
 dependencies:
 - type: workflow
   id: 4jyWa
   name: commons io
   enabled: true
-configurations:
-- pipelineconf2
-- default
