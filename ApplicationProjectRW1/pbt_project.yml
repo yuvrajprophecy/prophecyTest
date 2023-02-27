@@ -37,7 +37,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-27 14:41:11'
-    modifiedAt: '2023-02-27 14:42:23'
+    modifiedAt: '2023-02-27 14:44:48'
     datasets:
       inputs:
       - datasets/ds1
@@ -105,7 +105,7 @@ jobs:
 functions:
   author: null
   createdAt: '2023-02-27 14:43:24'
-  modifiedAt: '2023-02-27 14:43:24'
+  modifiedAt: '2023-02-27 14:44:48'
   gems: {}
   udfs:
     udfs/trim:
@@ -146,7 +146,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
-    modifiedAt: '2023-02-27 14:37:17'
+    modifiedAt: '2023-02-27 14:44:47'
 sqlModels: {}
 sqlPipeline: null
 dependencies:

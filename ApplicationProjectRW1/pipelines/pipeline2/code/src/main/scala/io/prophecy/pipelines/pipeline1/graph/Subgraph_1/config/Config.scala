@@ -1,4 +1,4 @@
-package simpledatalabs_27.pm3rework.subgraph.sg1.config
+package io.prophecy.pipelines.pipeline1.graph.Subgraph_1.config
 
 import io.prophecy.libs._
 import pureconfig._

@@ -7,6 +7,6 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
 object Square extends Serializable {
-  val x      = 10
-  def square = udf((value: Int) => value * value)
+  val pipeline2 = "ldme"
+  def square    = udf((value: Int) => value * value)
 }
