@@ -711,7 +711,7 @@
       },
       "properties" : {
         "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
-        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/33.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
+        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/34.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
         "name" : "basesg1"
       },
       "connections" : [ {

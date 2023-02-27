@@ -150,6 +150,92 @@ class Reformat_1Test extends FunSuite with DataFrameSuiteBase {
     Assert.assertTrue(msg, res.isRight)
   }
 
+  test("Unit Test 3") {
+
+    val dfIn = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/in/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/in/data/unit_test_3.json",
+      "in"
+    )
+    val dfOut = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/out/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/out/data/unit_test_3.json",
+      "out"
+    )
+
+    val dfOutComputed =
+      io.prophecy.pipelines.pipeline1.graph.Reformat_1(context, dfIn)
+    val res = assertDFEquals(
+      dfOut.select("customer_id",
+                   "first_name",
+                   "last_name",
+                   "phone",
+                   "email",
+                   "country_code",
+                   "account_open_date",
+                   "account_flags"
+      ),
+      dfOutComputed.select("customer_id",
+                           "first_name",
+                           "last_name",
+                           "phone",
+                           "email",
+                           "country_code",
+                           "account_open_date",
+                           "account_flags"
+      ),
+      maxUnequalRowsToShow,
+      1.0
+    )
+    val msg = if (res.isLeft) res.left.get.getMessage else ""
+    Assert.assertTrue(msg, res.isRight)
+  }
+
+  test("Unit Test 4") {
+
+    val dfIn = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/in/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/in/data/unit_test_4.json",
+      "in"
+    )
+    val dfOut = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/out/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Reformat_1/out/data/unit_test_4.json",
+      "out"
+    )
+
+    val dfOutComputed =
+      io.prophecy.pipelines.pipeline1.graph.Reformat_1(context, dfIn)
+    val res = assertDFEquals(
+      dfOut.select("customer_id",
+                   "first_name",
+                   "last_name",
+                   "phone",
+                   "email",
+                   "country_code",
+                   "account_open_date",
+                   "account_flags"
+      ),
+      dfOutComputed.select("customer_id",
+                           "first_name",
+                           "last_name",
+                           "phone",
+                           "email",
+                           "country_code",
+                           "account_open_date",
+                           "account_flags"
+      ),
+      maxUnequalRowsToShow,
+      1.0
+    )
+    val msg = if (res.isLeft) res.left.get.getMessage else ""
+    Assert.assertTrue(msg, res.isRight)
+  }
+
   override def beforeAll() = {
     super.beforeAll()
     spark.conf.set("spark.sql.legacy.allowUntypedScalaUDF", "true")

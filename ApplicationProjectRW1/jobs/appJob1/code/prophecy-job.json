@@ -70,12 +70,30 @@
         }
       },
       "properties" : {
-        "pipelineId" : "pipelines/pipeline1",
+        "pipelineId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/34.0&projectSubscriptionProjectId=228&path=pipelines/basePipeline1",
         "configurations" : {
-          "schema" : [ ],
-          "instances" : { },
+          "schema" : [ {
+            "name" : "Subgraph_1",
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "config1",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "defaultvalue"
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ],
+          "instances" : {
+            "ApplicationProjectRW" : [ "dev" ]
+          },
           "overrides" : { },
-          "selectedInstance" : "default"
+          "selectedInstance" : "dev"
         }
       }
     }

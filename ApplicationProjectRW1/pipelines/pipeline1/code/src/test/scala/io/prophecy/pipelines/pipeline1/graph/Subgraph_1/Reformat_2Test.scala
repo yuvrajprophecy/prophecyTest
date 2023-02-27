@@ -111,6 +111,66 @@ class Reformat_2Test extends FunSuite with DataFrameSuiteBase {
     Assert.assertTrue(msg, res.isRight)
   }
 
+  test("Unit Test 3") {
+
+    val dfIn = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/in/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/in/data/unit_test_3.json",
+      "in"
+    )
+    val dfOut = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/out/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/out/data/unit_test_3.json",
+      "out"
+    )
+
+    val dfOutComputed =
+      io.prophecy.pipelines.pipeline1.graph.Subgraph_1.Reformat_2(
+        io.prophecy.pipelines.pipeline1.graph.Subgraph_1.config
+          .Context(context.spark, context.config.Subgraph_1),
+        dfIn
+      )
+    val res = assertDFEquals(dfOut.select("customer_id"),
+                             dfOutComputed.select("customer_id"),
+                             maxUnequalRowsToShow,
+                             1.0
+    )
+    val msg = if (res.isLeft) res.left.get.getMessage else ""
+    Assert.assertTrue(msg, res.isRight)
+  }
+
+  test("Unit Test 4") {
+
+    val dfIn = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/in/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/in/data/unit_test_4.json",
+      "in"
+    )
+    val dfOut = createDfFromResourceFiles(
+      spark,
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/out/schema.json",
+      "/data/io/prophecy/pipelines/pipeline1/graph/Subgraph_1/Reformat_2/out/data/unit_test_4.json",
+      "out"
+    )
+
+    val dfOutComputed =
+      io.prophecy.pipelines.pipeline1.graph.Subgraph_1.Reformat_2(
+        io.prophecy.pipelines.pipeline1.graph.Subgraph_1.config
+          .Context(context.spark, context.config.Subgraph_1),
+        dfIn
+      )
+    val res = assertDFEquals(dfOut.select("customer_id"),
+                             dfOutComputed.select("customer_id"),
+                             maxUnequalRowsToShow,
+                             1.0
+    )
+    val msg = if (res.isLeft) res.left.get.getMessage else ""
+    Assert.assertTrue(msg, res.isRight)
+  }
+
   override def beforeAll() = {
     super.beforeAll()
     spark.conf.set("spark.sql.legacy.allowUntypedScalaUDF", "true")
