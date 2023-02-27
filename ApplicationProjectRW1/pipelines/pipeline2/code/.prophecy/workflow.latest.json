@@ -7,19 +7,7 @@
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
-      "udfs" : [ {
-        "name" : "trimUDF",
-        "code" : "udf((value: String) => value.trim())",
-        "language" : "scala",
-        "initCode" : "val pipeline2 = \"ldme\"",
-        "isShared" : false
-      }, {
-        "name" : "square",
-        "code" : "udf((value: Int) => value * value)",
-        "language" : "scala",
-        "initCode" : "val pipeline2 = \"ldme\"",
-        "isShared" : false
-      } ],
+      "udfs" : [ ],
       "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
       "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions" ],
       "initialCode" : "val pipeline2 = \"ldme\""
@@ -739,38 +727,5 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.metainfo.udfs.udfs[3].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Found multiple definition of trimUDF",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.metainfo.udfs.udfs[4].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Found multiple definition of square",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }
