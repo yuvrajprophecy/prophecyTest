@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.pipeline1.graph.basesg1_1.config
+package io.prophecy.pipelines.pipeline1.graph.basesg1.config
 
 import io.prophecy.libs._
 import pureconfig._

@@ -20,13 +20,14 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-02-27 13:55:29'
+    modifiedAt: '2023-02-27 14:00:28'
     datasets:
       inputs:
       - datasets/ds1
       outputs: []
     subgraphs:
     - subgraphs/sg1
+    - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/33.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1
     dependencies: {}
 datasets:
   datasets/ds1:
@@ -34,7 +35,7 @@ datasets:
     description: ''
     author: rohitjain+27@simpledatalabs.com
     createdAt: '2023-02-20 06:59:58'
-    modifiedAt: '2023-02-20 06:59:58'
+    modifiedAt: '2023-02-27 14:00:26'
     mode: batch
     physicalDatasets:
       dev:
@@ -62,19 +63,19 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
-    - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/7.0&projectSubscriptionProjectId=228&path=pipelines/basePipeline1
+    - pipelines/pipeline1
     jobClusterMode:
       clusterMode:
         Single: {}
       clusterId: null
     enabled: null
     createdAt: '2023-02-20 12:54:12'
-    modifiedAt: '2023-02-20 12:54:12'
+    modifiedAt: '2023-02-27 14:07:03'
     author: rohitjain+27@simpledatalabs.com
 functions:
   author: null
   createdAt: '2023-02-20 06:55:59'
-  modifiedAt: '2023-02-27 13:55:29'
+  modifiedAt: '2023-02-27 14:00:28'
   gems: {}
   udfs:
     udfs/trim:
@@ -115,7 +116,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
-    modifiedAt: '2023-02-27 13:55:29'
+    modifiedAt: '2023-02-27 14:00:28'
 sqlModels: {}
 sqlPipeline: null
 dependencies:
@@ -130,10 +131,10 @@ projectDependencies:
     projectUID: 228
     projectName: BaseProjectRW
     repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW
-    version: BaseProjectRW/7.0
+    version: BaseProjectRW/33.0
     author: null
-    createdAt: '2023-02-27 11:05:52'
-    modifiedAt: '2023-02-27 11:05:52'
+    createdAt: '2023-02-27 13:55:58'
+    modifiedAt: '2023-02-27 13:55:58'
 pipelineConfigurations:
   pipelineConfigurations/BaseProjectRW/basePipeline1:
     author: rohitjain+27@simpledatalabs.com

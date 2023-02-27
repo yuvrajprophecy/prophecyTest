@@ -13,6 +13,7 @@ object UDFs extends Serializable {
     spark.udf.register("square",    square)
     spark.udf.register("square212", square212)
     spark.udf.register("square2",   square2)
+    spark.udf.register("square22",  square22)
   }
 
   def trimUDF = {
@@ -32,6 +33,11 @@ object UDFs extends Serializable {
 
   def square2 =
     udf((value2: String) => value2 + value2)
+
+  def square22 = {
+    val x = "square22"
+    udf((value2: String) => value2 + value2)
+  }
 
 }
 
