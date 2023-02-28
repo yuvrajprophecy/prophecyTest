@@ -1,0 +1,29 @@
+name: testing
+description: ''
+version: 0.0.1
+author: ''
+language: scala
+buildSystem: maven
+pipelines:
+  pipelines/ppppp:
+    name: ppppp
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-02-28 11:48:18'
+    modifiedAt: '2023-02-28 11:48:22'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+libraries: []
+subgraphs: {}
+sqlModels: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
