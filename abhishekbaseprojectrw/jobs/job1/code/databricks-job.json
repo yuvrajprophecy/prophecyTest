@@ -48,7 +48,7 @@
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.4.2"
+          "package" : "prophecy-libs==1.4.0"
         }
       }, {
         "jar" : "dbfs:/FileStore/prophecy/artifacts/dev/abhishek/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/basepipeline1.jar"
