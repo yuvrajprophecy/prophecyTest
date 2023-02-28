@@ -12,7 +12,7 @@ pipelines:
     mode: batch
     language: scala
     createdAt: '2023-02-27 05:50:15'
-    modifiedAt: '2023-02-27 06:36:58'
+    modifiedAt: '2023-02-28 13:03:58'
     datasets:
       inputs:
       - datasets/baseDS1
@@ -59,7 +59,7 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2023-02-28 12:58:58'
-    modifiedAt: '2023-02-28 12:59:56'
+    modifiedAt: '2023-02-28 13:02:14'
     author: rohitjain@simpledatalabs.com
 libraries: []
 subgraphs:
