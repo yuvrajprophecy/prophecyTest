@@ -12,7 +12,7 @@ pipelines:
     mode: batch
     language: scala
     createdAt: '2023-02-27 05:50:15'
-    modifiedAt: '2023-02-28 13:29:15'
+    modifiedAt: '2023-02-28 15:10:18'
     datasets:
       inputs:
       - datasets/baseDS1
