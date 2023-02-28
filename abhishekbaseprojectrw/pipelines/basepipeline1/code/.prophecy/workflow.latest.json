@@ -36,7 +36,14 @@
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ ],
+    "externalDependencies" : [ {
+      "type" : "coordinates",
+      "coordinates" : "x:y:z",
+      "name" : "maven",
+      "enabled" : true,
+      "id" : "xipRS",
+      "exclusions" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,

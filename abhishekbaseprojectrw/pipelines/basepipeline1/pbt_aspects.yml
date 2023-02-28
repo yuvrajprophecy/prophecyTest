@@ -1,5 +1,9 @@
 version: 1
-dependencies: []
+dependencies:
+- type: workflow
+  id: xipRS
+  name: maven
+  enabled: true
 configurations:
 - dev
 - default
