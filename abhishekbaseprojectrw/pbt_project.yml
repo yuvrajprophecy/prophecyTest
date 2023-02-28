@@ -12,7 +12,7 @@ pipelines:
     mode: batch
     language: scala
     createdAt: '2023-02-27 05:50:15'
-    modifiedAt: '2023-02-27 05:58:00'
+    modifiedAt: '2023-02-27 06:36:58'
     datasets:
       inputs:
       - datasets/baseDS1
@@ -35,7 +35,32 @@ datasets:
         createdAt: '2023-02-27 05:55:56'
         modifiedAt: '2023-02-27 05:55:56'
 templates: {}
-jobs: {}
+jobs:
+  jobs/job1:
+    name: job1
+    description: ''
+    fabricUID: 44
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0 1/1 * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/basepipeline1
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-02-28 12:58:58'
+    modifiedAt: '2023-02-28 12:59:16'
+    author: rohitjain@simpledatalabs.com
 libraries: []
 subgraphs:
   subgraphs/baseSubgraph1:

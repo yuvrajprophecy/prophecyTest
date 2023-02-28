@@ -1,0 +1,80 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "44",
+    "jobId" : "jobs/job1",
+    "name" : "job1",
+    "schedule" : "0 0 0 1/1 * ? *",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "44",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "XtJgM3BEyioBzrxCUUFeR$$k0LzvJPE1TjVMcWJ0zadD" : {
+      "id" : "XtJgM3BEyioBzrxCUUFeR$$k0LzvJPE1TjVMcWJ0zadD",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : 580,
+        "y" : 520
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EXVyxBT2DLpY-s0XBkPjJ$$OS0dA5r0q6o0L3JWVpBKc"
+        } ],
+        "outputs" : [ {
+          "id" : "GoXmBE9bvkURpYYy9YyD3$$zeeRwV4d3nhJM91wMYL5-"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/basepipeline1",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "baseProjectRW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ ]
+}
