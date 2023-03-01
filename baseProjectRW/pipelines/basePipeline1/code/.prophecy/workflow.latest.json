@@ -231,7 +231,7 @@
       "properties" : {
         "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
         "externalId" : "subgraphs/basesg1",
-        "name" : "basesg1"
+        "name" : "createFullName"
       },
       "connections" : [ {
         "id" : "zDTvA9bM42bUhAMWc1Xf_",
