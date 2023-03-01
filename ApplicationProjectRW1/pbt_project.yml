@@ -20,14 +20,14 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-02-28 05:54:51'
+    modifiedAt: '2023-03-01 05:27:07'
     datasets:
       inputs:
       - datasets/ds1
       outputs: []
     subgraphs:
     - subgraphs/sg1
-    - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/34.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1
+    - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/36.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1
     dependencies: {}
 datasets:
   datasets/ds1:
@@ -35,7 +35,7 @@ datasets:
     description: ''
     author: rohitjain+27@simpledatalabs.com
     createdAt: '2023-02-20 06:59:58'
-    modifiedAt: '2023-02-27 14:00:26'
+    modifiedAt: '2023-03-01 05:25:18'
     mode: batch
     physicalDatasets:
       dev:
@@ -75,7 +75,7 @@ jobs:
 functions:
   author: null
   createdAt: '2023-02-27 14:43:24'
-  modifiedAt: '2023-02-28 05:54:51'
+  modifiedAt: '2023-03-01 05:27:07'
   gems: {}
   udfs:
     udfs/trimUDF:
@@ -96,51 +96,6 @@ functions:
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2023-02-20 07:44:41'
       modifiedAt: '2023-02-20 07:44:41'
-    udfs/square2:
-      name: square212
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-23 07:25:01'
-      modifiedAt: '2023-02-23 07:25:01'
-    udfs/trimUDF1:
-      name: trimUDF1
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-27 14:47:22'
-      modifiedAt: '2023-02-27 14:47:22'
-    udfs/square1:
-      name: square1
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-27 14:47:22'
-      modifiedAt: '2023-02-27 14:47:22'
-    udfs/trimUDF2:
-      name: trimUDF2
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-27 14:52:04'
-      modifiedAt: '2023-02-27 14:52:04'
-    udfs/square3:
-      name: square3
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-27 14:52:04'
-      modifiedAt: '2023-02-27 14:52:04'
   udafs: {}
   expressions: {}
 subgraphs:
@@ -152,7 +107,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
-    modifiedAt: '2023-02-28 05:54:50'
+    modifiedAt: '2023-03-01 05:27:07'
 sqlModels: {}
 sqlPipeline: null
 dependencies:
@@ -167,10 +122,10 @@ projectDependencies:
     projectUID: 228
     projectName: BaseProjectRW
     repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW
-    version: BaseProjectRW/34.0
+    version: BaseProjectRW/36.0
     author: null
-    createdAt: '2023-02-27 14:22:58'
-    modifiedAt: '2023-02-27 14:22:58'
+    createdAt: '2023-03-01 05:12:14'
+    modifiedAt: '2023-03-01 05:12:14'
 pipelineConfigurations:
   pipelineConfigurations/BaseProjectRW/basePipeline1:
     author: rohitjain+27@simpledatalabs.com

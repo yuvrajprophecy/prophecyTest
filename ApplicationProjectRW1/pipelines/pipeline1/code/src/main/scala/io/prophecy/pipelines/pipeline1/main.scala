@@ -7,12 +7,12 @@ import io.prophecy.pipelines.pipeline1.udfs.UDFs._
 import io.prophecy.pipelines.pipeline1.udfs._
 import io.prophecy.pipelines.pipeline1.graph._
 import io.prophecy.pipelines.pipeline1.graph.Subgraph_1
-import io.prophecy.pipelines.pipeline1.graph.basesg1
+import io.prophecy.pipelines.pipeline1.graph.createFullName
 import io.prophecy.pipelines.pipeline1.graph.Subgraph_1.config.{
   Context => Subgraph_1_Context
 }
-import io.prophecy.pipelines.pipeline1.graph.basesg1.config.{
-  Context => basesg1_Context
+import io.prophecy.pipelines.pipeline1.graph.createFullName.config.{
+  Context => createFullName_Context
 }
 import org.apache.spark._
 import org.apache.spark.sql._
@@ -30,9 +30,8 @@ object Main {
       Subgraph_1_Context(context.spark, context.config.Subgraph_1),
       df_Reformat_1
     )
-    val df_Script_1 = Script_1(context, df_Reformat_1)
-    val df_basesg1 = basesg1.apply(
-      basesg1_Context(context.spark, context.config.basesg1),
+    val df_createFullName = createFullName.apply(
+      createFullName_Context(context.spark, context.config.createFullName),
       df_Reformat_1
     )
   }

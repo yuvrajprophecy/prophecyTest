@@ -28,7 +28,7 @@
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
         }, {
-          "name" : "basesg1",
+          "name" : "createFullName",
           "kind" : {
             "type" : "record",
             "fields" : [ {
@@ -103,17 +103,11 @@
     "target" : "gqfN6ESF09RaLXUMFIMns$$N6oGc6-ZC35lLKFTef-jw",
     "targetPort" : "0BxnN5zg4wRxFOQUG39F_$$UR_WWYqqCh719msKbiZXr"
   }, {
-    "id" : "1RECXVPoo_9Nx8QtH4BsN",
+    "id" : "k9Tmm8sAQMySn-1LxFViv",
     "source" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
     "sourcePort" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
-    "target" : "Ap0pcMHS9BBP97UCa_OZQ$$xouwGNWF0j0tLKptqJfK9",
-    "targetPort" : "k_IuscDQKzcB6iaPwsCsz$$fYLLMG9nysS3OVLfDObQ5"
-  }, {
-    "id" : "Qq0rxtgv93WaVbdrQby-O",
-    "source" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
-    "sourcePort" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
-    "target" : "sXzqmzzPGUafo06IkYBcT$$vTMNsoZYq5lXf_uNxqGIZ",
-    "targetPort" : "xc1kwumkSN7T0hQ0TnCXO$$5-xC4eCflciduEIHbb9Ic"
+    "target" : "sXzqmzzPGUafo06IkYBcT$$5uUCnK-LDzKUuoZII84M1",
+    "targetPort" : "xc1kwumkSN7T0hQ0TnCXO$$0VvEzMNyt0RnEP5C0vLsS"
   } ],
   "processes" : {
     "gqfN6ESF09RaLXUMFIMns$$N6oGc6-ZC35lLKFTef-jw" : {
@@ -368,7 +362,7 @@
         "label" : "ds1",
         "slug" : "ds1",
         "x" : 120,
-        "y" : 320,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -387,119 +381,6 @@
         "datasetId" : "datasets/ds1"
       }
     },
-    "Ap0pcMHS9BBP97UCa_OZQ$$xouwGNWF0j0tLKptqJfK9" : {
-      "id" : "Ap0pcMHS9BBP97UCa_OZQ$$xouwGNWF0j0tLKptqJfK9",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "Script_1",
-        "slug" : "Script_1",
-        "x" : 520,
-        "y" : 520,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "k_IuscDQKzcB6iaPwsCsz$$fYLLMG9nysS3OVLfDObQ5",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "-4zvv0LAcNoymoT-j-ufM$$BU-eW59SRaVZVsuWb5SyR",
-          "slug" : "out0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true
-      },
-      "properties" : {
-        "script" : "val out0 = in0",
-        "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
-        "scriptMethodFooter" : "    out0\n}"
-      }
-    },
     "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ" : {
       "id" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
       "component" : "Reformat",
@@ -507,7 +388,7 @@
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
         "x" : 320,
-        "y" : 320,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -603,17 +484,73 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "columnsSelector" : [ "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##customer_id", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##first_name", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##last_name", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##phone", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##email", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##country_code", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##account_open_date", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##account_flags" ],
+        "expressions" : [ {
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customer_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "first_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "last_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "phone",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "phone"
+          },
+          "description" : ""
+        }, {
+          "target" : "email",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "email"
+          },
+          "description" : ""
+        }, {
+          "target" : "country_code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "country_code"
+          },
+          "description" : ""
+        }, {
+          "target" : "account_open_date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "account_open_date"
+          },
+          "description" : ""
+        }, {
+          "target" : "account_flags",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "account_flags"
+          },
+          "description" : ""
+        } ]
       }
     },
-    "sXzqmzzPGUafo06IkYBcT$$vTMNsoZYq5lXf_uNxqGIZ" : {
-      "id" : "sXzqmzzPGUafo06IkYBcT$$vTMNsoZYq5lXf_uNxqGIZ",
+    "sXzqmzzPGUafo06IkYBcT$$5uUCnK-LDzKUuoZII84M1" : {
+      "id" : "sXzqmzzPGUafo06IkYBcT$$5uUCnK-LDzKUuoZII84M1",
       "component" : "Subgraph",
       "metadata" : {
-        "label" : "basesg1",
-        "slug" : "basesg1",
-        "x" : 640,
+        "label" : "createFullName",
+        "slug" : "createFullName",
+        "x" : 540,
         "y" : 320,
         "phase" : 0,
         "cache" : false,
@@ -622,7 +559,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "xc1kwumkSN7T0hQ0TnCXO$$5-xC4eCflciduEIHbb9Ic",
+          "id" : "xc1kwumkSN7T0hQ0TnCXO$$0VvEzMNyt0RnEP5C0vLsS",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
@@ -703,7 +640,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "AjnbyqLDDXAgqR3dBKZ6Q$$2oH7a0GCWKeIJjrx5P3lm",
+          "id" : "AjnbyqLDDXAgqR3dBKZ6Q$$utV1hifAeTA7Ea63SZojr",
           "slug" : "out0"
         } ],
         "selectedInputFields" : [ ],
@@ -711,25 +648,25 @@
       },
       "properties" : {
         "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
-        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/34.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
-        "name" : "basesg1"
+        "externalId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/36.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1",
+        "name" : "createFullName"
       },
       "connections" : [ {
         "id" : "zDTvA9bM42bUhAMWc1Xf_",
-        "source" : "sXzqmzzPGUafo06IkYBcT$$vTMNsoZYq5lXf_uNxqGIZ",
-        "sourcePort" : "xc1kwumkSN7T0hQ0TnCXO$$5-xC4eCflciduEIHbb9Ic",
-        "target" : "OOzV-k9BC8BfljAmbpkRp$$WJNyb8JHf0LHgDE9ts303",
-        "targetPort" : "DlKNiCwQPssX6s5RafTn0$$uBuYxRnOn8aeZwfIx-RsD"
+        "source" : "sXzqmzzPGUafo06IkYBcT$$5uUCnK-LDzKUuoZII84M1",
+        "sourcePort" : "xc1kwumkSN7T0hQ0TnCXO$$0VvEzMNyt0RnEP5C0vLsS",
+        "target" : "OOzV-k9BC8BfljAmbpkRp$$Bll9eNJLOp1bFgi6Bpht0",
+        "targetPort" : "DlKNiCwQPssX6s5RafTn0$$3Ilwb8Sn9uciye9hzMWaD"
       }, {
         "id" : "9vHKv2j0QdkSnuoWnSvQO",
-        "source" : "OOzV-k9BC8BfljAmbpkRp$$WJNyb8JHf0LHgDE9ts303",
-        "sourcePort" : "XX8l5IKZYUUwcgZryY4N3$$kS66yMhf_soPWAeVuo1Pe",
-        "target" : "sXzqmzzPGUafo06IkYBcT$$vTMNsoZYq5lXf_uNxqGIZ",
-        "targetPort" : "AjnbyqLDDXAgqR3dBKZ6Q$$2oH7a0GCWKeIJjrx5P3lm"
+        "source" : "OOzV-k9BC8BfljAmbpkRp$$Bll9eNJLOp1bFgi6Bpht0",
+        "sourcePort" : "XX8l5IKZYUUwcgZryY4N3$$Pj3WPbgOSAbddX6YdxgkT",
+        "target" : "sXzqmzzPGUafo06IkYBcT$$5uUCnK-LDzKUuoZII84M1",
+        "targetPort" : "AjnbyqLDDXAgqR3dBKZ6Q$$utV1hifAeTA7Ea63SZojr"
       } ],
       "processes" : {
-        "OOzV-k9BC8BfljAmbpkRp$$WJNyb8JHf0LHgDE9ts303" : {
-          "id" : "OOzV-k9BC8BfljAmbpkRp$$WJNyb8JHf0LHgDE9ts303",
+        "OOzV-k9BC8BfljAmbpkRp$$Bll9eNJLOp1bFgi6Bpht0" : {
+          "id" : "OOzV-k9BC8BfljAmbpkRp$$Bll9eNJLOp1bFgi6Bpht0",
           "component" : "Reformat",
           "metadata" : {
             "label" : "Reformat_1",
@@ -743,7 +680,7 @@
           },
           "ports" : {
             "inputs" : [ {
-              "id" : "DlKNiCwQPssX6s5RafTn0$$uBuYxRnOn8aeZwfIx-RsD",
+              "id" : "DlKNiCwQPssX6s5RafTn0$$3Ilwb8Sn9uciye9hzMWaD",
               "slug" : "in",
               "schema" : {
                 "type" : "struct",
@@ -824,19 +761,19 @@
               "isStreaming" : false
             } ],
             "outputs" : [ {
-              "id" : "XX8l5IKZYUUwcgZryY4N3$$kS66yMhf_soPWAeVuo1Pe",
+              "id" : "XX8l5IKZYUUwcgZryY4N3$$Pj3WPbgOSAbddX6YdxgkT",
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ],
             "isCustomOutputSchema" : false
           },
           "properties" : {
-            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##customer_id" ],
+            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##first_name", "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##last_name" ],
             "expressions" : [ {
-              "target" : "customer_id",
+              "target" : "full_name",
               "expression" : {
-                "format" : "sql",
-                "expression" : "square2(customer_id)"
+                "format" : "scala",
+                "expression" : "createFullName(col(\"first_name\"), col(\"last_name\"))"
               },
               "description" : ""
             } ]
