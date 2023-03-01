@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.pipeline1.graph.basesg1_1
+package simpledatalabs_27.pm3rework.subgraph.sg1.pipelines.pipeline1.graph.Subgraph_1
 
 import io.prophecy.libs._
 import io.prophecy.pipelines.pipeline1.config.ConfigStore._
@@ -12,9 +12,9 @@ import org.apache.spark.sql.types._
 import org.apache.spark.sql.expressions._
 import java.time._
 
-object Reformat_1 {
+object Reformat_2 {
 
   def apply(context: Context, in: DataFrame): DataFrame =
-    in.select(square2(col("customer_id")).as("customer_id"))
+    in.select(trimUDF(col("customer_id")).as("customer_id"))
 
 }
