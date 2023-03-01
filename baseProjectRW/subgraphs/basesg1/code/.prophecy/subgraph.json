@@ -88,8 +88,8 @@
           "_row_id" : "c_13",
           "target" : "customer_id",
           "expression" : {
-            "format" : "sql",
-            "expression" : "square2(customer_id)"
+            "format" : "scala",
+            "expression" : "square2(col(\"customer_id\"))"
           },
           "description" : ""
         } ]
