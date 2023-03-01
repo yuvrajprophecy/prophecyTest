@@ -1,1 +1,0 @@
-{"initCode":"val x = \"square22\"","code":"udf((value2: String) => value2 + value2)"}

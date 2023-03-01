@@ -13,6 +13,8 @@ import java.time._
 object Reformat_1 {
 
   def apply(context: Context, in: DataFrame): DataFrame =
-    in.select(square2(col("customer_id")).as("customer_id"))
+    in.select(
+      createFullName(col("first_name"), col("last_name")).as("full_name")
+    )
 
 }

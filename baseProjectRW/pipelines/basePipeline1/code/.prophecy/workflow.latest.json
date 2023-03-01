@@ -87,23 +87,17 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "PLMGJUfsPONz08KNgD_jm$$Ke1qeFS6GydwuIsJ08iwv",
-    "source" : "sXzqmzzPGUafo06IkYBcT$$KQPAF4sWY9hCX8IwTo0ch",
-    "sourcePort" : "AjnbyqLDDXAgqR3dBKZ6Q$$cRNT4ofA2yS9eJ62CdOnI",
-    "target" : "9lcd3ma5m_7AqTSG9sRjn$$cA12ZjUbpL2DCio9_-M7R",
-    "targetPort" : "G9yvopPx-HvbTlYdJRQSo$$hrR99idKhFhDy8Qg77bDX"
-  }, {
-    "id" : "d5V8fvPXH0rjQGkzRvv6J",
+    "id" : "CtkER4v-LbH8f8g54Iko3",
     "source" : "ekInmONHb3V5_DRH5z5i9$$YITaB3Y2jNzFcShCg9kZb",
     "sourcePort" : "T2snZMNbRpAp3SCqbsRqT$$0dsZVw5Iz3m3BoIF_89pf",
-    "target" : "LJu0UIQWc4gKKDcAktUJB$$NZlt__SXZRANvPtOu3I98",
-    "targetPort" : "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64"
-  }, {
-    "id" : "Gq3yBEYItZIklGht5vRF8",
-    "source" : "LJu0UIQWc4gKKDcAktUJB$$NZlt__SXZRANvPtOu3I98",
-    "sourcePort" : "ch8wzE_cL-jsjU08tGY-e$$2dwNRYi57SMppAxS5PPcJ",
     "target" : "sXzqmzzPGUafo06IkYBcT$$KQPAF4sWY9hCX8IwTo0ch",
     "targetPort" : "xc1kwumkSN7T0hQ0TnCXO$$Fypx7s4tApo9SfHZXeJBS"
+  }, {
+    "id" : "_EMGObByz1mAbnUNpzcIe$$-PdyZFG9071XWUTgrimlq",
+    "source" : "sXzqmzzPGUafo06IkYBcT$$KQPAF4sWY9hCX8IwTo0ch",
+    "sourcePort" : "AjnbyqLDDXAgqR3dBKZ6Q$$cRNT4ofA2yS9eJ62CdOnI",
+    "target" : "iksJXu3plQaKbNaBMIWRU$$r3ZtFxMDbRchF76flKAz1",
+    "targetPort" : "EjXAls5hrOh0PL1ucu3bF$$ycfyIaUqGecRrIqm24Xgf"
   } ],
   "processes" : {
     "ekInmONHb3V5_DRH5z5i9$$YITaB3Y2jNzFcShCg9kZb" : {
@@ -138,7 +132,7 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 520,
+        "x" : 360,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -218,15 +212,6 @@
               "name" : "account_flags",
               "type" : "string",
               "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "lla",
-              "type" : "string",
-              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -353,15 +338,6 @@
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
-                }, {
-                  "name" : "lla",
-                  "type" : "string",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
                 } ]
               },
               "isStreaming" : false
@@ -374,12 +350,12 @@
             "isCustomOutputSchema" : false
           },
           "properties" : {
-            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##customer_id" ],
+            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##first_name", "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##last_name" ],
             "expressions" : [ {
-              "target" : "customer_id",
+              "target" : "full_name",
               "expression" : {
                 "format" : "scala",
-                "expression" : "square2(col(\"customer_id\"))"
+                "expression" : "createFullName(col(\"first_name\"), col(\"last_name\"))"
               },
               "description" : ""
             } ]
@@ -395,13 +371,13 @@
         "exclusions" : [ ]
       } ]
     },
-    "9lcd3ma5m_7AqTSG9sRjn$$cA12ZjUbpL2DCio9_-M7R" : {
-      "id" : "9lcd3ma5m_7AqTSG9sRjn$$cA12ZjUbpL2DCio9_-M7R",
-      "component" : "Limit",
+    "iksJXu3plQaKbNaBMIWRU$$r3ZtFxMDbRchF76flKAz1" : {
+      "id" : "iksJXu3plQaKbNaBMIWRU$$r3ZtFxMDbRchF76flKAz1",
+      "component" : "Target",
       "metadata" : {
-        "label" : "Limit_1",
-        "slug" : "Limit_1",
-        "x" : 720,
+        "label" : "baseDS2",
+        "slug" : "baseDS2",
+        "x" : 620,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -410,12 +386,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "G9yvopPx-HvbTlYdJRQSo$$hrR99idKhFhDy8Qg77bDX",
+          "id" : "EjXAls5hrOh0PL1ucu3bF$$ycfyIaUqGecRrIqm24Xgf",
           "slug" : "in",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "customer_id",
+              "name" : "full_name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -427,185 +403,12 @@
           },
           "isStreaming" : false
         } ],
-        "outputs" : [ {
-          "id" : "sxobKJKzQMt3-WmRhVvpv$$iJUACGtuIIsZdbhOw1P94",
-          "slug" : "out"
-        } ],
+        "outputs" : [ ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "limit" : "Config.limit_count"
-      }
-    },
-    "LJu0UIQWc4gKKDcAktUJB$$NZlt__SXZRANvPtOu3I98" : {
-      "id" : "LJu0UIQWc4gKKDcAktUJB$$NZlt__SXZRANvPtOu3I98",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_2",
-        "slug" : "Reformat_2",
-        "x" : 320,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64",
-          "slug" : "in",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "ch8wzE_cL-jsjU08tGY-e$$2dwNRYi57SMppAxS5PPcJ",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##customer_id", "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##first_name", "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##last_name", "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##phone", "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##email", "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##country_code", "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##account_open_date", "YpObpVszyJ_jWKn_jBlG0$$dUx5ZblrLTj3eqOAL0V64##account_flags" ],
-        "expressions" : [ {
-          "target" : "customer_id",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"customer_id\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "first_name",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"first_name\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "last_name",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"last_name\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "phone",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"phone\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "email",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"email\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "country_code",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"country_code\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "account_open_date",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"account_open_date\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "account_flags",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "col(\"account_flags\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "lla",
-          "expression" : {
-            "format" : "scala",
-            "expression" : "lit(Config.string_conf)"
-          },
-          "description" : ""
-        } ]
+        "datasetId" : "datasets/baseDS2"
       }
     }
   },
