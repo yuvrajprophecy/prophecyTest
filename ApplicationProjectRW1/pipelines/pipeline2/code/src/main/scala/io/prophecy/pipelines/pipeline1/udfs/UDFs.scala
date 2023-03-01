@@ -8,12 +8,19 @@ import org.apache.spark.sql._
 
 object UDFs extends Serializable {
 
-  def registerUDFs(spark: SparkSession) =
-    spark.udf.register("trimUDF", trimUDF)
+  def registerUDFs(spark: SparkSession) = {
+    spark.udf.register("trimUDF",  trimUDF)
+    spark.udf.register("trimUDF2", trimUDF2)
+  }
 
   def trimUDF = {
     val pipeline1 = "ldme"
     udf((value1: String) => value1.trim())
+  }
+
+  def trimUDF2 = {
+    val pipeline2 = "ldme"
+    udf((value2: String) => value2.trim())
   }
 
 }
