@@ -7,10 +7,13 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
 object UDFs extends Serializable {
-  val pipeline3 = "ldme"
 
   def registerUDFs(spark: SparkSession) =
     spark.udf.register("trimUDF", trimUDF)
 
-  def trimUDF = udf((value3: String) => value3.trim())
+  def trimUDF =
+    udf((value3: String) => value3.trim())
+
 }
+
+object PipelineInitCode extends Serializable { val pipeline3 = "ldme" }
