@@ -3,29 +3,46 @@ description: ''
 version: '2.0'
 author: rohitjain+27@simpledatalabs.com
 language: scala
-buildSystem: ''
-buildSystemDetails:
-  artefactID: pm3rework
-  parentArtefactID: simpledatalabs_27
-  buildSystem: maven
-  author: null
-  createdAt: '2023-02-20 06:55:59'
+buildSystem: maven
 pipelines:
   pipelines/pipeline1:
     name: pipeline1
     description: ''
     author: rohitjain+27@simpledatalabs.com
     mode: batch
-    artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
+    modifiedAt: '2023-02-20 06:56:19'
     datasets:
       inputs:
       - datasets/ds1
       outputs: []
-    subgraphs:
-    - subgraphs/sg1
-    - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/7.0&projectSubscriptionProjectId=228&path=subgraphs/basesg1
+    dependencies: {}
+  pipelines/pipeline2:
+    name: pipeline2
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-02-27 14:41:11'
+    modifiedAt: '2023-02-27 14:42:23'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    dependencies: {}
+  pipelines/pipeline3:
+    name: pipeline3
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-02-27 14:42:40'
+    modifiedAt: '2023-02-27 14:42:55'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
     dependencies: {}
 datasets:
   datasets/ds1:
@@ -33,6 +50,7 @@ datasets:
     description: ''
     author: rohitjain+27@simpledatalabs.com
     createdAt: '2023-02-20 06:59:58'
+    modifiedAt: '2023-02-20 06:59:58'
     mode: batch
     physicalDatasets:
       dev:
@@ -41,6 +59,7 @@ datasets:
         description: ''
         author: rohitjain+27@simpledatalabs.com
         createdAt: '2023-02-20 06:59:58'
+        modifiedAt: '2023-02-20 06:59:58'
 templates: {}
 jobs:
   jobs/appJob1:
@@ -66,39 +85,18 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2023-02-20 12:54:12'
+    modifiedAt: '2023-02-20 12:54:12'
     author: rohitjain+27@simpledatalabs.com
-functions:
-  author: null
-  createdAt: '2023-02-20 06:55:59'
-  gems: {}
-  udfs:
-    udfs/square:
-      name: square
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-20 07:44:41'
-    udfs/trim:
-      name: trimUDF
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-20 07:44:41'
-  udafs: {}
-  expressions: {}
+libraries: []
 subgraphs:
   subgraphs/sg1:
     name: sg1
     description: ''
     author: rohitjain+27@simpledatalabs.com
     language: scala
-    artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
+    modifiedAt: '2023-02-20 07:00:29'
 sqlModels: {}
 sqlPipeline: null
 dependencies:
@@ -108,12 +106,5 @@ dependencies:
   enabled: false
   id: EDPzF
   exclusions: []
-projectDependencies:
-  '228':
-    projectUID: 228
-    projectName: BaseProjectRW
-    repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW
-    version: BaseProjectRW/7.0
-    author: null
-    createdAt: '2023-02-20 16:39:14'
+projectDependencies: {}
 pipelineConfigurations: {}
