@@ -39,3 +39,7 @@ frsfe
 *** Release notes for version: 35.0 ***
 
 fs
+
+*** Release notes for version: 36.0 ***
+
+ffrfr
