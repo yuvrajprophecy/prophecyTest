@@ -12,22 +12,46 @@ object UDFs extends Serializable {
     spark.udf.register("trimUDF",   trimUDF)
     spark.udf.register("square",    square)
     spark.udf.register("square212", square212)
+    spark.udf.register("trimUDF1",  trimUDF1)
+    spark.udf.register("square1",   square1)
+    spark.udf.register("trimUDF2",  trimUDF2)
+    spark.udf.register("square3",   square3)
     spark.udf.register("square2",   square2)
     spark.udf.register("square22",  square22)
   }
 
   def trimUDF = {
-    val y = 10
+    val pipeline2 = "ldme"
     udf((value: String) => value.trim())
   }
 
   def square = {
-    val x = 10
+    val pipeline2 = "ldme"
     udf((value: Int) => value * value)
   }
 
   def square212 = {
     val x1 = 11
+    udf((value: Int) => value * value)
+  }
+
+  def trimUDF1 = {
+    val pipeline2 = "ldme"
+    udf((value: String) => value.trim())
+  }
+
+  def square1 = {
+    val pipeline2 = "ldme"
+    udf((value: Int) => value * value)
+  }
+
+  def trimUDF2 = {
+    val pipeline3 = "ldme"
+    udf((value: String) => value.trim())
+  }
+
+  def square3 = {
+    val pipeline3 = "ldme"
     udf((value: Int) => value * value)
   }
 
