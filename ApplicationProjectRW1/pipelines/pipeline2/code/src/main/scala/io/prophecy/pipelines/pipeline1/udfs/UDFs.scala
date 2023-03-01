@@ -12,5 +12,5 @@ object UDFs extends Serializable {
   def registerUDFs(spark: SparkSession) =
     spark.udf.register("trimUDF", trimUDF)
 
-  def trimUDF = udf((value1: String) => value1.trim())
+  def trimUDF = udf((value2: String) => value2.trim())
 }
