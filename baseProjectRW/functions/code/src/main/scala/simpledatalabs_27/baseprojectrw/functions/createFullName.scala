@@ -6,6 +6,9 @@ import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
-object Square2 extends Serializable {
-  def square2 = udf((value2: String) => value2 + value2)
+object CreateFullName extends Serializable {
+
+  def createFullName =
+    udf((value1: String, value2: String) => value1 + value2)
+
 }

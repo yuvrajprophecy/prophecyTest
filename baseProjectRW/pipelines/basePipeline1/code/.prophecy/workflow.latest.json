@@ -3,7 +3,7 @@
     "id" : "1",
     "language" : "scala",
     "fabricId" : "52",
-    "frontEndLanguage" : "sql",
+    "frontEndLanguage" : "scala",
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
@@ -34,6 +34,22 @@
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
+        }, {
+          "name" : "limit_count",
+          "kind" : {
+            "type" : "int",
+            "value" : 10
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
+        }, {
+          "name" : "string_conf",
+          "kind" : {
+            "type" : "string",
+            "value" : "eddea"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
         } ]
       },
       "oldCommon" : {
@@ -42,7 +58,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "pipelineconf2",
+      "selected" : "default",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
@@ -71,11 +87,17 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "qiQ8iAcmuLL-bDfVh5tpR",
+    "id" : "CtkER4v-LbH8f8g54Iko3",
     "source" : "ekInmONHb3V5_DRH5z5i9$$YITaB3Y2jNzFcShCg9kZb",
     "sourcePort" : "T2snZMNbRpAp3SCqbsRqT$$0dsZVw5Iz3m3BoIF_89pf",
     "target" : "sXzqmzzPGUafo06IkYBcT$$KQPAF4sWY9hCX8IwTo0ch",
     "targetPort" : "xc1kwumkSN7T0hQ0TnCXO$$Fypx7s4tApo9SfHZXeJBS"
+  }, {
+    "id" : "_EMGObByz1mAbnUNpzcIe$$-PdyZFG9071XWUTgrimlq",
+    "source" : "sXzqmzzPGUafo06IkYBcT$$KQPAF4sWY9hCX8IwTo0ch",
+    "sourcePort" : "AjnbyqLDDXAgqR3dBKZ6Q$$cRNT4ofA2yS9eJ62CdOnI",
+    "target" : "iksJXu3plQaKbNaBMIWRU$$r3ZtFxMDbRchF76flKAz1",
+    "targetPort" : "EjXAls5hrOh0PL1ucu3bF$$ycfyIaUqGecRrIqm24Xgf"
   } ],
   "processes" : {
     "ekInmONHb3V5_DRH5z5i9$$YITaB3Y2jNzFcShCg9kZb" : {
@@ -110,7 +132,7 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 320,
+        "x" : 360,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -209,7 +231,7 @@
       "properties" : {
         "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1",
         "externalId" : "subgraphs/basesg1",
-        "name" : "basesg1"
+        "name" : "createFullName"
       },
       "connections" : [ {
         "id" : "zDTvA9bM42bUhAMWc1Xf_",
@@ -328,12 +350,12 @@
             "isCustomOutputSchema" : false
           },
           "properties" : {
-            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##customer_id" ],
+            "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##first_name", "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##last_name" ],
             "expressions" : [ {
-              "target" : "customer_id",
+              "target" : "full_name",
               "expression" : {
-                "format" : "sql",
-                "expression" : "square2(customer_id)"
+                "format" : "scala",
+                "expression" : "createFullName(col(\"first_name\"), col(\"last_name\"))"
               },
               "description" : ""
             } ]
@@ -348,6 +370,46 @@
         "id" : "4jyWa",
         "exclusions" : [ ]
       } ]
+    },
+    "iksJXu3plQaKbNaBMIWRU$$r3ZtFxMDbRchF76flKAz1" : {
+      "id" : "iksJXu3plQaKbNaBMIWRU$$r3ZtFxMDbRchF76flKAz1",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "baseDS2",
+        "slug" : "baseDS2",
+        "x" : 620,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EjXAls5hrOh0PL1ucu3bF$$ycfyIaUqGecRrIqm24Xgf",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "full_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/baseDS2"
+      }
     }
   },
   "ports" : {

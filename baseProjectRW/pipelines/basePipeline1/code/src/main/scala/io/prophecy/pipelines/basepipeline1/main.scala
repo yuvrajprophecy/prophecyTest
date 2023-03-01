@@ -25,6 +25,7 @@ object Main {
       Subgraph_1_Context(context.spark, context.config.Subgraph_1),
       df_baseDS1
     )
+    baseDS2(context, df_Subgraph_1)
   }
 
   def main(args: Array[String]): Unit = {

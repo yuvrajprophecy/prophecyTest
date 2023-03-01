@@ -1,6 +1,6 @@
 name: BaseProjectRW
 description: ''
-version: '34.0'
+version: '36.0'
 author: rohitjain+27@simpledatalabs.com
 language: scala
 buildSystem: ''
@@ -20,11 +20,12 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 08:00:32'
-    modifiedAt: '2023-02-27 14:07:23'
+    modifiedAt: '2023-03-01 05:08:41'
     datasets:
       inputs:
       - datasets/baseDS1
-      outputs: []
+      outputs:
+      - datasets/baseDS2
     subgraphs:
     - subgraphs/basesg1
     dependencies: {}
@@ -34,7 +35,7 @@ datasets:
     description: ''
     author: rohitjain+27@simpledatalabs.com
     createdAt: '2023-02-20 08:02:47'
-    modifiedAt: '2023-02-27 14:07:23'
+    modifiedAt: '2023-03-01 05:07:21'
     mode: batch
     physicalDatasets:
       dev:
@@ -44,16 +45,31 @@ datasets:
         author: rohitjain+27@simpledatalabs.com
         createdAt: '2023-02-20 08:02:47'
         modifiedAt: '2023-02-20 08:02:47'
+  datasets/baseDS2:
+    name: baseDS2
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2023-03-01 05:07:56'
+    modifiedAt: '2023-03-01 05:07:58'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2023-03-01 05:07:56'
+        modifiedAt: '2023-03-01 05:07:56'
 templates: {}
 jobs: {}
 functions:
   author: null
   createdAt: '2023-02-20 07:59:20'
-  modifiedAt: '2023-02-27 14:07:23'
+  modifiedAt: '2023-03-01 05:08:41'
   gems: {}
   udfs:
     udfs/square2:
-      name: square2
+      name: createFullName
       description: ''
       tags: []
       inputs: []
@@ -61,27 +77,18 @@ functions:
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2023-02-20 08:01:13'
       modifiedAt: '2023-02-20 08:01:13'
-    udfs/square22:
-      name: square22
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2023-02-27 13:52:44'
-      modifiedAt: '2023-02-27 13:52:44'
   udafs: {}
   expressions: {}
 subgraphs:
   subgraphs/basesg1:
-    name: basesg1
+    name: createFullName
     description: ''
     author: rohitjain+27@simpledatalabs.com
     language: scala
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 08:01:42'
-    modifiedAt: '2023-02-27 14:07:23'
+    modifiedAt: '2023-03-01 05:08:41'
 sqlModels: {}
 sqlPipeline: null
 dependencies:

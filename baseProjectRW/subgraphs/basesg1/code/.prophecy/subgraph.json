@@ -83,13 +83,13 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##customer_id" ],
+        "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##first_name", "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##last_name" ],
         "expressions" : [ {
           "_row_id" : "c_13",
-          "target" : "customer_id",
+          "target" : "full_name",
           "expression" : {
-            "format" : "sql",
-            "expression" : "square2(customer_id)"
+            "format" : "scala",
+            "expression" : "createFullName(col(\"first_name\"), col(\"last_name\"))"
           },
           "description" : ""
         } ]
