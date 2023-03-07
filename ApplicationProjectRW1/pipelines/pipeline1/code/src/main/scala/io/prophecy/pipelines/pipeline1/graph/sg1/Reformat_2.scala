@@ -1,10 +1,8 @@
-package simpledatalabs_27.pm3rework.subgraph.sg1.pipelines.pipeline1.graph.Subgraph_1
+package io.prophecy.pipelines.pipeline1.graph.sg1
 
 import io.prophecy.libs._
-import io.prophecy.pipelines.pipeline1.config.ConfigStore._
-import io.prophecy.pipelines.pipeline1.config.Context
 import io.prophecy.pipelines.pipeline1.udfs.UDFs._
-import io.prophecy.pipelines.pipeline1.udfs._
+import io.prophecy.pipelines.pipeline1.graph.sg1.config.Context
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._

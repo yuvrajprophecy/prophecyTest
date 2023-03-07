@@ -20,12 +20,13 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-01 07:09:37'
+    modifiedAt: '2023-03-07 09:24:54'
     datasets:
       inputs:
       - datasets/ds1
       outputs: []
-    subgraphs: []
+    subgraphs:
+    - subgraphs/sg1
     dependencies: {}
   pipelines/pipeline2:
     name: pipeline2
@@ -144,7 +145,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
-    modifiedAt: '2023-03-01 06:13:18'
+    modifiedAt: '2023-03-07 09:24:53'
 sqlModels: {}
 sqlPipeline: null
 dependencies:

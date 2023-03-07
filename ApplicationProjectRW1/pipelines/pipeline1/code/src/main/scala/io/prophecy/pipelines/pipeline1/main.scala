@@ -6,6 +6,8 @@ import io.prophecy.pipelines.pipeline1.config._
 import io.prophecy.pipelines.pipeline1.udfs.UDFs._
 import io.prophecy.pipelines.pipeline1.udfs._
 import io.prophecy.pipelines.pipeline1.graph._
+import io.prophecy.pipelines.pipeline1.graph.sg1
+import io.prophecy.pipelines.pipeline1.graph.sg1.config.{Context => sg1_Context}
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -18,6 +20,8 @@ object Main {
   def apply(context: Context): Unit = {
     val df_ds1        = ds1(context)
     val df_Reformat_1 = Reformat_1(context, df_ds1)
+    val df_sg1 =
+      sg1.apply(sg1_Context(context.spark, context.config.sg1), df_Reformat_1)
   }
 
   def main(args: Array[String]): Unit = {

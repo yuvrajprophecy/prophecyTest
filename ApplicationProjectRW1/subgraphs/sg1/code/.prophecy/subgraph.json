@@ -9,16 +9,25 @@
     "phase" : 0,
     "cache" : false,
     "detailedStats" : false,
-    "isImported" : false
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "configPathInPipelineConfig" : [ "sg1" ]
   },
   "ports" : {
     "inputs" : [ {
       "id" : "0BxnN5zg4wRxFOQUG39F_",
-      "slug" : "in0"
+      "slug" : "in0",
+      "isStreaming" : false
     } ],
     "outputs" : [ {
       "id" : "DsXRifXMdpMuCtHpCLarQ",
-      "slug" : "out0"
+      "slug" : "out0",
+      "isStreaming" : false
     } ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
@@ -27,13 +36,13 @@
     "packageName" : "simpledatalabs_27.pm3rework.subgraph.sg1"
   },
   "connections" : [ {
-    "id" : "6rOAzchGyW3oLcWqxz_Qh",
+    "id" : "LZ87KR8kGKLaV19Yo6Q_4",
     "source" : "gqfN6ESF09RaLXUMFIMns",
     "sourcePort" : "0BxnN5zg4wRxFOQUG39F_",
     "target" : "23-O0RDVCnfT7jDsScTO6",
     "targetPort" : "CZQwD6S_ZcmZHTQ-TFuA1"
   }, {
-    "id" : "KFHI6oEDlvmbbM5SVDISK",
+    "id" : "VV8m_WxaJh4GEPPhOlIUd",
     "source" : "23-O0RDVCnfT7jDsScTO6",
     "sourcePort" : "6S_3mbT_rjv5PvTogr5Ug",
     "target" : "gqfN6ESF09RaLXUMFIMns",
@@ -202,5 +211,13 @@
         "language" : "scala"
       }
     }
-  }
+  },
+  "externalDependencies" : [ {
+    "type" : "coordinates",
+    "coordinates" : "org.apache.commons:commons-lang3:3.11",
+    "name" : "commons",
+    "enabled" : false,
+    "id" : "EDPzF",
+    "exclusions" : [ ]
+  } ]
 }
