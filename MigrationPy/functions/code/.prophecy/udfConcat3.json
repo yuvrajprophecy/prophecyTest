@@ -1,0 +1,1 @@
+{"initCode":"delimitter3 = ''","code":"@udf(returnType = StringType())\ndef concat(value: str, value2: str):\n    return value + delimitter3 + value2"}

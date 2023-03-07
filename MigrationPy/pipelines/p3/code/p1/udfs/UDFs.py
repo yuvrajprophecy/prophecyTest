@@ -16,7 +16,38 @@ delimitter3 = ''
 
 def registerUDFs(spark: SparkSession):
     spark.udf.register("udfConcat", udfConcat)
+    spark.udf.register("udfConcat2", udfConcat2)
+    spark.udf.register("udfConcat3", udfConcat3)
 
-@udf(returnType = StringType())
-def udfConcat(value: str, value2: str):
-    return value + delimitter3 + value2
+def udfConcatGenerator():
+    delimitter1 = ''
+
+    @udf(returnType = StringType())
+    def func(value: str, value2: str):
+        return value + delimitter1 + value2
+
+    return func
+
+udfConcat = udfConcatGenerator()
+
+def udfConcat2Generator():
+    delimitter2 = ''
+
+    @udf(returnType = StringType())
+    def func(value: str, value2: str):
+        return value + delimitter2 + value2
+
+    return func
+
+udfConcat2 = udfConcat2Generator()
+
+def udfConcat3Generator():
+    delimitter3 = ''
+
+    @udf(returnType = StringType())
+    def func(value: str, value2: str):
+        return value + delimitter3 + value2
+
+    return func
+
+udfConcat3 = udfConcat3Generator()

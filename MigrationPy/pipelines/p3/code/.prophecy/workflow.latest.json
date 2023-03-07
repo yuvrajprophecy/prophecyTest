@@ -2,16 +2,12 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "48",
+    "fabricId" : "44",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
-      "udfs" : [ {
-        "name" : "udfConcat",
-        "code" : "@udf(returnType = StringType())\ndef concat(value: str, value2: str):\n    return value + delimitter3 + value2",
-        "language" : "python"
-      } ],
+      "udfs" : [ ],
       "functionPackageName" : "rohitjainsimpledatalabs.com_team.migrationpy.functions",
       "sharedFunctionPackageNames" : [ ],
       "initialCode" : "delimitter3 = ''"
@@ -49,7 +45,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "p1"
+    "topLevelPackage" : "p1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "h0HhrSullUGDreMPWVctH$$UdXvvynUymYtLMyF-l4od",
