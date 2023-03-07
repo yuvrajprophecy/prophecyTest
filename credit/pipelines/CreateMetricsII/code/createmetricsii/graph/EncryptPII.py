@@ -13,7 +13,6 @@ def EncryptPII(spark: SparkSession, in0: DataFrame) -> DataFrame:
         col("FICO.ValidFrom").alias("ValidFrom"), 
         col("FICO.ValidTo").alias("ValidTo"), 
         col("Name"), 
-        expr("aes_encrypt(SSN, secret('anyascopeUC', 'AESkey'))").alias("SSN"), 
         col("Trades"), 
         col("Trades.Trade").alias("Trade"), 
         col("Trades.Trade.AccountNumber").alias("AccountNumber"), 

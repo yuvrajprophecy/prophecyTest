@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "1609",
+    "fabricId" : "693",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -160,13 +160,11 @@
       "ports" : {
         "inputs" : [ {
           "id" : "uhGeqHBWBEEtSTRjgOzlq$$RT_EsuKSzLn2SpR3B2q_E",
-          "slug" : "in0",
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "BYU9amYi9VNtOxrcdK6f0$$nKMBuuV6KkxAEoB2n8Eei",
-          "slug" : "out",
-          "isStreaming" : false
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -297,8 +295,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "FlZSlmbEAYzHDSLbEqYq4$$Px27znQJ8L5vw8KgBxUh6",
-          "slug" : "in0",
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -446,8 +443,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "y_i2Cwda-7x7pcLLgBirv$$chxdfFxiC4_RPyby3TFsw",
-          "slug" : "in0",
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -509,8 +505,7 @@
         } ],
         "outputs" : [ {
           "id" : "vNnILdtR3JGD9tEss48DC$$z7BXuPk9ckXDLsoib8EUl",
-          "slug" : "out",
-          "isStreaming" : false
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -798,17 +793,10 @@
             "expression" : "FICO.ValidTo"
           },
           "description" : ""
-        }, {
-          "target" : "SSN",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "SSN"
-          },
-          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##Name", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO.ValidFrom", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##Trades", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##Trades.Trade", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##REPORTED_INCOME", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO.ValidTo", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##SSN", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO.Score" ]
+        "columnsSelector" : [ "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##Name", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##Trades.Trade", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO.Score", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO.ValidTo", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##Trades", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##FICO.ValidFrom", "ar0M8oXLTJcIYCHdcYXvi$$wmRwvwSk4baGD7kWEqsO6##REPORTED_INCOME" ]
       }
     },
     "x30qk1Z08MFSYPUeEzatn$$gi4B0qVoxN74AV01cep70" : {
@@ -1235,13 +1223,6 @@
           },
           "description" : ""
         }, {
-          "target" : "SSN",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "call_func('aes_encrypt', SSN, secret('anyascopeUC', 'AESkey'))"
-          },
-          "description" : ""
-        }, {
           "target" : "Trades",
           "expression" : {
             "format" : "sql",
@@ -1293,7 +1274,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.Balance", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.PastDue", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Name", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO.Score", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO.ValidTo", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.Terms", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.AccountNumber", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Address", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##SSN", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO.ValidFrom", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.DateOpened" ]
+        "columnsSelector" : [ "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO.Score", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Address", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.PastDue", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO.ValidTo", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.AccountNumber", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Name", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO.ValidFrom", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##FICO", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.DateOpened", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.Balance", "wn7HPHcwCEO1fw4giBtpl$$tbec6GEQOqXQHYbytVXyO##Trades.Trade.Terms" ]
       }
     },
     "KhKGpWIjs4Cl8SPLZTLfq$$-POKihJ5Q8C6wyL38xNAA" : {
@@ -1339,8 +1320,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "TcXBtrVeQOzu5i8_ru4dX$$6q9DIrRYpCd9gSpOnStW7",
-          "slug" : "in0",
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -1356,5 +1336,262 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.PljjcJUf8ZVdCz2i6m6-Q$$ov3rbKk-hmWOZ957Ea8mk.properties.expressions[8].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.SSN [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column Name",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column ReportedIncome",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column BNPLLoanAmount",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column TradLoanAmount",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column FicoScore",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[4].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column FicoValidFrom",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column FicoValidTo",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column BNPLLoanAmount",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column ReportedIncome",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column TradLoanAmount",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aPeYATByh614Gjj3qZQrE$$3SwhqmSqJelTVAgOHywkS.properties.expressions[10].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column SSN",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.YrSKxHsmlSh_dqYaITZ9o$$QzMhUL3qaTck61GywsvIS",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.FxovwBfBGjkzoBMIRCXtt$$5q4K5mHoTK4v2kivfJz4K",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.wnKgtu9TEyf_w-LfaEfGh$$TDBEilguGoMG0kwvUQ4gC",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

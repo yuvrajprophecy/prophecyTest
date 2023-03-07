@@ -12,6 +12,5 @@ def ParseLoanAmount(spark: SparkSession, in0: DataFrame) -> DataFrame:
         split(col("trades.trade")[0].getField("terms"), "M")[1].cast(LongType()).alias("TULoanAmount"), 
         col("FICO.Score").alias("Score"), 
         col("FICO.ValidFrom").alias("ValidFrom"), 
-        col("FICO.ValidTo").alias("ValidTo"), 
-        col("SSN")
+        col("FICO.ValidTo").alias("ValidTo")
     )
