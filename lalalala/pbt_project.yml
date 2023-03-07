@@ -1,0 +1,45 @@
+name: sfefef
+description: ''
+version: 1.0.1
+author: ''
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: sfefef
+  parentArtefactID: simpledatalabs_27
+  buildSystem: maven
+  author: null
+  createdAt: '2023-02-28 11:47:08'
+  modifiedAt: '2023-02-28 11:47:08'
+pipelines:
+  pipelines/pppp:
+    name: pppp
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-02-28 11:47:08'
+    modifiedAt: '2023-02-28 11:47:15'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-02-28 11:47:08'
+  modifiedAt: '2023-02-28 11:47:15'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}

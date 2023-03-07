@@ -2,20 +2,14 @@
   "metainfo" : {
     "id" : "1",
     "language" : "scala",
-    "fabricId" : "48",
+    "fabricId" : "52",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
-      "udfs" : [  {
-        "name" : "addNumbers10",
-        "code" : "udf((value: Int, value10: Int) => value + value10)",
-        "language" : "scala"
-      }, {
-        "name" : "addNumbers11",
-        "code" : "udf((value: Int, value11: Int) => value + value11)",
-        "language" : "scala"
-      } ],
+      "udfs" : [ ],
+      "functionPackageName" : "simpledatalabs_27.rohitmigrationtesting.functions",
+      "sharedFunctionPackageNames" : [ ],
       "initialCode" : "var x = 10"
     },
     "udafs" : {
@@ -25,7 +19,15 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -42,6 +44,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -50,7 +53,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "io.prophecy.pipelines.pipeline1"
+    "topLevelPackage" : "simpledatalabs_27.rohitmigrationtesting.pipeline.pipeline1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "UnV66RDwyrgaPnlNavgJ-",
@@ -82,7 +86,21 @@
       "ports" : {
         "inputs" : [ {
           "id" : "S0WmwR6Rw19YvsYivgf6W$$7XfATXWsDCOgJ2nACOr-_",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "22qELEuEE6hzyq_wdWSNi$$hGRderr51GBk4TR2uIsXe",
@@ -137,7 +155,21 @@
       "ports" : {
         "inputs" : [ {
           "id" : "HFijjuX0lb3tOhOf_Q_Iv$$U-CWEafw_h_F5demR98Pi",
-          "slug" : "in"
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "mUBZT1t-OOpePabfS-Y9B$$CmgaQ3z-sDgHWgHFTyM-b",
