@@ -1,0 +1,206 @@
+{
+  "id" : "gqfN6ESF09RaLXUMFIMns",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "0BxnN5zg4wRxFOQUG39F_",
+      "slug" : "in0"
+    } ],
+    "outputs" : [ {
+      "id" : "DsXRifXMdpMuCtHpCLarQ",
+      "slug" : "out0"
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "simpledatalabs_27.pm3rework.subgraph.sg1"
+  },
+  "connections" : [ {
+    "id" : "6rOAzchGyW3oLcWqxz_Qh",
+    "source" : "gqfN6ESF09RaLXUMFIMns",
+    "sourcePort" : "0BxnN5zg4wRxFOQUG39F_",
+    "target" : "23-O0RDVCnfT7jDsScTO6",
+    "targetPort" : "CZQwD6S_ZcmZHTQ-TFuA1"
+  }, {
+    "id" : "KFHI6oEDlvmbbM5SVDISK",
+    "source" : "23-O0RDVCnfT7jDsScTO6",
+    "sourcePort" : "6S_3mbT_rjv5PvTogr5Ug",
+    "target" : "gqfN6ESF09RaLXUMFIMns",
+    "targetPort" : "DsXRifXMdpMuCtHpCLarQ"
+  } ],
+  "processes" : {
+    "23-O0RDVCnfT7jDsScTO6" : {
+      "id" : "23-O0RDVCnfT7jDsScTO6",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : 1040,
+        "y" : 720,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CZQwD6S_ZcmZHTQ-TFuA1",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "6S_3mbT_rjv5PvTogr5Ug",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "CZQwD6S_ZcmZHTQ-TFuA1$$55Z_06GdGj3w-Dl8x3F0K##customer_id" ],
+        "expressions" : [ {
+          "_row_id" : "c_18",
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "trimUDF(customer_id)"
+          },
+          "description" : ""
+        } ]
+      },
+      "test" : {
+        "unitTests" : [ {
+          "data" : {
+            "CZQwD6S_ZcmZHTQ-TFuA1" : {
+              "values" : [ [ "1" ], [ "2" ], [ "3" ], [ "4" ], [ "5" ], [ "6" ], [ "7" ], [ "8" ], [ "9" ], [ "10" ] ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "predicates" : [ ]
+            },
+            "6S_3mbT_rjv5PvTogr5Ug" : {
+              "values" : [ [ "1" ], [ "2" ], [ "3" ], [ "4" ], [ "5" ], [ "6" ], [ "7" ], [ "8" ], [ "9" ], [ "10" ] ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "predicates" : [ ]
+            }
+          },
+          "name" : "Unit Test 0",
+          "testType" : "outputRow",
+          "language" : "scala"
+        }, {
+          "data" : {
+            "CZQwD6S_ZcmZHTQ-TFuA1" : {
+              "values" : [ [ "1" ], [ "2" ], [ "3" ], [ "4" ], [ "5" ], [ "6" ], [ "7" ], [ "8" ], [ "9" ], [ "10" ] ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "predicates" : [ ]
+            },
+            "6S_3mbT_rjv5PvTogr5Ug" : {
+              "values" : [ [ "1" ], [ "2" ], [ "3" ], [ "4" ], [ "5" ], [ "6" ], [ "7" ], [ "8" ], [ "9" ], [ "10" ] ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "predicates" : [ ]
+            }
+          },
+          "name" : "Unit Test 1",
+          "testType" : "outputRow",
+          "language" : "scala"
+        }, {
+          "data" : {
+            "CZQwD6S_ZcmZHTQ-TFuA1" : {
+              "values" : [ [ "1" ], [ "2" ], [ "3" ], [ "4" ], [ "5" ], [ "6" ], [ "7" ], [ "8" ], [ "9" ], [ "10" ] ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "predicates" : [ ]
+            },
+            "6S_3mbT_rjv5PvTogr5Ug" : {
+              "values" : [ [ "1" ], [ "2" ], [ "3" ], [ "4" ], [ "5" ], [ "6" ], [ "7" ], [ "8" ], [ "9" ], [ "10" ] ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "predicates" : [ ]
+            }
+          },
+          "name" : "Unit Test 2",
+          "testType" : "outputRow",
+          "language" : "scala"
+        } ],
+        "language" : "scala"
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id" : "sXzqmzzPGUafo06IkYBcT",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "config1",
+          "kind" : {
+            "type" : "string",
+            "value" : "defaultvalue"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
+        } ]
+      }
+    },
+    "configPathInPipelineConfig" : [ "Subgraph_1" ]
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "xc1kwumkSN7T0hQ0TnCXO",
+      "slug" : "in0",
+      "isStreaming" : false
+    } ],
+    "outputs" : [ {
+      "id" : "AjnbyqLDDXAgqR3dBKZ6Q",
+      "slug" : "out0",
+      "isStreaming" : false
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1"
+  },
+  "connections" : [ {
+    "id" : "zDTvA9bM42bUhAMWc1Xf_",
+    "source" : "sXzqmzzPGUafo06IkYBcT",
+    "sourcePort" : "xc1kwumkSN7T0hQ0TnCXO",
+    "target" : "OOzV-k9BC8BfljAmbpkRp",
+    "targetPort" : "DlKNiCwQPssX6s5RafTn0"
+  }, {
+    "id" : "9vHKv2j0QdkSnuoWnSvQO",
+    "source" : "OOzV-k9BC8BfljAmbpkRp",
+    "sourcePort" : "XX8l5IKZYUUwcgZryY4N3",
+    "target" : "sXzqmzzPGUafo06IkYBcT",
+    "targetPort" : "AjnbyqLDDXAgqR3dBKZ6Q"
+  } ],
+  "processes" : {
+    "OOzV-k9BC8BfljAmbpkRp" : {
+      "id" : "OOzV-k9BC8BfljAmbpkRp",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 1180,
+        "y" : 800,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DlKNiCwQPssX6s5RafTn0",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "XX8l5IKZYUUwcgZryY4N3",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##first_name", "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##last_name" ],
+        "expressions" : [ {
+          "_row_id" : "c_13",
+          "target" : "full_name",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "createFullName(col(\"first_name\"), col(\"last_name\"))"
+          },
+          "description" : ""
+        } ]
+      }
+    }
+  },
+  "externalDependencies" : [ {
+    "type" : "coordinates",
+    "coordinates" : "commons-io:commons-io:2.11.0",
+    "name" : "commons io",
+    "enabled" : true,
+    "id" : "4jyWa",
+    "exclusions" : [ ]
+  } ]
+}

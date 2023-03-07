@@ -1,0 +1,110 @@
+name: PM3ReWork
+description: ''
+version: '2.0'
+author: rohitjain+27@simpledatalabs.com
+language: scala
+buildSystem: maven
+pipelines:
+  pipelines/pipeline1:
+    name: pipeline1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-02-20 06:56:19'
+    modifiedAt: '2023-03-01 06:26:35'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    dependencies: {}
+  pipelines/pipeline2:
+    name: pipeline2
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-02-27 14:41:11'
+    modifiedAt: '2023-03-01 06:26:44'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    dependencies: {}
+  pipelines/pipeline3:
+    name: pipeline3
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-02-27 14:42:40'
+    modifiedAt: '2023-03-01 06:26:55'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    dependencies: {}
+datasets:
+  datasets/ds1:
+    name: ds1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2023-02-20 06:59:58'
+    modifiedAt: '2023-03-01 06:14:11'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2023-02-20 06:59:58'
+        modifiedAt: '2023-02-20 06:59:58'
+templates: {}
+jobs:
+  jobs/appJob1:
+    name: appJob1
+    description: ''
+    fabricUID: 52
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0 1/1 * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/pipeline1
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-02-20 12:54:12'
+    modifiedAt: '2023-02-20 12:54:12'
+    author: rohitjain+27@simpledatalabs.com
+libraries: []
+subgraphs:
+  subgraphs/sg1:
+    name: sg1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: scala
+    mode: batch
+    createdAt: '2023-02-20 07:00:29'
+    modifiedAt: '2023-03-01 06:13:18'
+sqlModels: {}
+sqlPipeline: null
+dependencies:
+- type: coordinates
+  coordinates: org.apache.commons:commons-lang3:3.11
+  name: commons
+  enabled: false
+  id: EDPzF
+  exclusions: []
+projectDependencies: {}
+pipelineConfigurations: {}

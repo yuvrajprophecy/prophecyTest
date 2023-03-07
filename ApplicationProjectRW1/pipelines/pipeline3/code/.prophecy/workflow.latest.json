@@ -1,0 +1,169 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "scala",
+    "fabricId" : "869",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ {
+        "name" : "trimUDF",
+        "code" : "udf((value3: String) => value3.trim())",
+        "language" : "scala"
+      } ],
+      "initialCode" : "val pipeline3 = \"ldme\""
+    },
+    "udafs" : {
+      "language" : "scala",
+      "code" : "package udfs\n\nimport org.apache.spark.sql.expressions._\nimport org.apache.spark.sql.types._\nimport org.apache.spark.sql._\n\n/**\n  * Here you can define your custom aggregate functions.\n  *\n  * Make sure to register your `udafs` in the register_udafs function below.\n  *\n  * Example:\n  *\n  * object GeometricMean extends UserDefinedAggregateFunction {\n  *   // This is the input fields for your aggregate function.\n  *   override def inputSchema: org.apache.spark.sql.types.StructType =\n  *     StructType(StructField(\"value\", DoubleType) :: Nil)\n  *\n  *   // This is the internal fields you keep for computing your aggregate.\n  *   override def bufferSchema: StructType = StructType(\n  *     StructField(\"count\", LongType) ::\n  *     StructField(\"product\", DoubleType) :: Nil\n  *   )\n  *\n  *   // This is the output type of your aggregatation function.\n  *   override def dataType: DataType = DoubleType\n  *\n  *   override def deterministic: Boolean = true\n  *\n  *   // This is the initial value for your buffer schema.\n  *   override def initialize(buffer: MutableAggregationBuffer): Unit = {\n  *     buffer(0) = 0L\n  *     buffer(1) = 1.0\n  *   }\n  *\n  *   // This is how to update your buffer schema given an input.\n  *   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {\n  *     buffer(0) = buffer.getAs[Long](0) + 1\n  *     buffer(1) = buffer.getAs[Double](1) * input.getAs[Double](0)\n  *   }\n  *\n  *   // This is how to merge two objects with the bufferSchema type.\n  *   override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = {\n  *     buffer1(0) = buffer1.getAs[Long](0) + buffer2.getAs[Long](0)\n  *     buffer1(1) = buffer1.getAs[Double](1) * buffer2.getAs[Double](1)\n  *   }\n  *\n  *   // This is where you output the final value, given the final value of your bufferSchema.\n  *   override def evaluate(buffer: Row): Any = {\n  *     math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0))\n  *   }\n  * }\n  *\n  */\n\n\nobject UDAFs {\n  /**\n    * Registers UDAFs with Spark SQL\n    */\n  def registerUDAFs(spark: SparkSession): Unit = {\n    /**\n      * Example:\n      *\n      * spark.udf.register(\"gm\", GeometricMean)\n      *\n      */\n\n\n  }\n}\n"
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false
+        }, {
+          "name" : "basesg1_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "config1",
+              "kind" : {
+                "type" : "string",
+                "value" : "defaultvalue"
+              },
+              "optional" : false
+            } ]
+          },
+          "optional" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ {
+      "type" : "coordinates",
+      "coordinates" : "org.apache.commons:commons-lang3:3.11",
+      "name" : "commons",
+      "enabled" : false,
+      "id" : "EDPzF",
+      "exclusions" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "io.prophecy.pipelines.pipeline1"
+  },
+  "connections" : [ {
+    "id" : "PFdJFfskd5JltjnForMel",
+    "source" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
+    "sourcePort" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
+    "target" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
+    "targetPort" : "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ"
+  } ],
+  "processes" : {
+    "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD" : {
+      "id" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ds1",
+        "slug" : "ds1",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds1"
+      }
+    },
+    "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ" : {
+      "id" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 320,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ",
+          "slug" : "in",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996._\n                ^\n<console>:35: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.UDFs._\n                ^\n<console>:36: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.UDAFs._\n                ^\n<console>:37: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.ConfigStoreValues._\n                ^\n<console>:38: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.ContextStore._\n                ^\n<console>:64: error: not found: type Context\n         object Reformat_1 { def apply(context: Context, in: DataFrame): DataFrame = in }\n                                                ^\n<console>:66: error: not found: value context\n         val result = Reformat_1(context, inGOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ)\n                                 ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}
