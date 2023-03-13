@@ -8,5 +8,5 @@ import org.apache.spark.sql._
 
 object TrimUDF2 extends Serializable {
   val x        = 1
-  def trimUDF2 = udf((value1: String) => value1.trim())
+  def trimUDF2 = udf((value1: String) => value1.trim() + "")
 }
