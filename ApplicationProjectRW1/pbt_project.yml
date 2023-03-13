@@ -20,12 +20,10 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-13 10:08:24'
+    modifiedAt: '2023-03-13 11:04:22'
     datasets:
       inputs:
       - datasets/ds1
-      - gitUri=http://gitserver:3000/FbAJ3f4S_team_92/2E6pIkqi_project_263.git&subPath=&tag=baseProjectRW2/1.0&projectSubscriptionProjectId=263&path=datasets/baseprojectrw2ds1
-      - gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/36.0&projectSubscriptionProjectId=228&path=datasets/baseDS1
       outputs: []
     subgraphs:
     - subgraphs/sg1
