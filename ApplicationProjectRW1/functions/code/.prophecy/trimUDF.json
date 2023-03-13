@@ -1,1 +1,1 @@
-{"initCode":"val pipeline1 = \"ldme\"","code":"udf((value1: String) => value1.trim())"}
+{"initCode":"","code":"udf((value1: String) => value1.trim())"}

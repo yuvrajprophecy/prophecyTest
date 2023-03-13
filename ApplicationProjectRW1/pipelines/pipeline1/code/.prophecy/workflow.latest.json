@@ -9,7 +9,7 @@
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
-      "sharedFunctionPackageNames" : [ ],
+      "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions", "rohitjain25simpledatalabs.com_team.baseprojectrw2.functions" ],
       "initialCode" : "val pipeline1 = \"ldme\""
     },
     "udafs" : {
@@ -75,7 +75,22 @@
       "id" : "EDPzF",
       "exclusions" : [ ]
     } ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "228",
+      "projectName" : "BaseProjectRW",
+      "externalDependencies" : [ {
+        "type" : "coordinates",
+        "coordinates" : "commons-io:commons-io:2.11.0",
+        "name" : "commons io",
+        "enabled" : false,
+        "id" : "4jyWa",
+        "exclusions" : [ ]
+      } ]
+    }, {
+      "projectUID" : "263",
+      "projectName" : "baseProjectRW2",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -101,14 +116,14 @@
     "targetPort" : "0BxnN5zg4wRxFOQUG39F_$$drbmnz6Dn73b_yj7vHL7G"
   } ],
   "processes" : {
-    "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD" : {
-      "id" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
+    "jLPYZuDyGRKTlodQ3PDj_$$uvJnZBboi9gI3jv65_pyr" : {
+      "id" : "jLPYZuDyGRKTlodQ3PDj_$$uvJnZBboi9gI3jv65_pyr",
       "component" : "Source",
       "metadata" : {
-        "label" : "ds1",
-        "slug" : "ds1",
+        "label" : "baseprojectrw2ds1",
+        "slug" : "baseprojectrw2ds1",
         "x" : 120,
-        "y" : 220,
+        "y" : 380,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -117,121 +132,14 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
+          "id" : "Proi1JACKkA8y4cZgg7pE$$PYib6SvY-I_sg7CEXYDKd",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "datasets/ds1"
-      }
-    },
-    "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ" : {
-      "id" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_11",
-        "slug" : "Reformat_11",
-        "x" : 320,
-        "y" : 220,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ",
-          "slug" : "in",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "datasetId" : "gitUri=http://gitserver:3000/FbAJ3f4S_team_92/2E6pIkqi_project_263.git&subPath=&tag=baseProjectRW2/1.0&projectSubscriptionProjectId=263&path=datasets/baseprojectrw2ds1"
       }
     },
     "gqfN6ESF09RaLXUMFIMns$$jKnpwhcy4bgPV-XhiprOZ" : {
@@ -478,6 +386,165 @@
         "id" : "EDPzF",
         "exclusions" : [ ]
       } ]
+    },
+    "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD" : {
+      "id" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ds1",
+        "slug" : "ds1",
+        "x" : 120,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds1"
+      }
+    },
+    "UZp93SAbP00stVrXmPog9$$26XjnB_i8coGpVT6xL1Yt" : {
+      "id" : "UZp93SAbP00stVrXmPog9$$26XjnB_i8coGpVT6xL1Yt",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "baseDS1",
+        "slug" : "baseDS1",
+        "x" : 120,
+        "y" : 80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "VDQLH_nETtg-sW9gqTDNh$$BjCVgN6Eamy95Yz_6HwHW",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW&tag=BaseProjectRW/36.0&projectSubscriptionProjectId=228&path=datasets/baseDS1"
+      }
+    },
+    "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ" : {
+      "id" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_11",
+        "slug" : "Reformat_11",
+        "x" : 320,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
     }
   },
   "ports" : {
