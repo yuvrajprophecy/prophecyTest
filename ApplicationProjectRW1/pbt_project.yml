@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-13 10:05:07'
+    modifiedAt: '2023-03-13 10:07:33'
     datasets:
       inputs:
       - datasets/ds1
@@ -109,15 +109,6 @@ functions:
   modifiedAt: '2023-03-13 10:05:07'
   gems: {}
   udfs:
-    udfs/trimUDF4:
-      name: trimUDF4
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
     udfs/trimUDF1:
       name: trimUDF1
       description: ''
