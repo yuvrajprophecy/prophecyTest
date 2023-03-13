@@ -1,1 +1,1 @@
-{"initCode":"val x =0","code":"udf((value: String) => value.trim())"}
+{"initCode":"val x =0","code":"udf((value: String) => value.trim() + \"\")"}

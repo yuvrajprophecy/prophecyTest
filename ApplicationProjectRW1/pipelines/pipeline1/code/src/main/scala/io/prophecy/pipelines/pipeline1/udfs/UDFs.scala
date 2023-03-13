@@ -17,7 +17,7 @@ object UDFs extends Serializable {
 
   def trimUDF = {
     val x = 0
-    udf((value: String) => value.trim())
+    udf((value: String) => value.trim() + "")
   }
 
   def trimUDF2 = {
