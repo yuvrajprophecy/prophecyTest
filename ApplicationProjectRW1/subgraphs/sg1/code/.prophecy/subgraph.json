@@ -26,7 +26,8 @@
     } ],
     "outputs" : [ {
       "id" : "DsXRifXMdpMuCtHpCLarQ",
-      "slug" : "out0"
+      "slug" : "out0",
+      "isStreaming" : false
     } ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
@@ -80,7 +81,7 @@
           "target" : "customer_id",
           "expression" : {
             "format" : "sql",
-            "expression" : "trimUDF1(customer_id)"
+            "expression" : "trimUDF(customer_id)"
           },
           "description" : ""
         } ]

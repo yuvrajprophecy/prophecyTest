@@ -371,7 +371,7 @@
               "target" : "customer_id",
               "expression" : {
                 "format" : "sql",
-                "expression" : "trimUDF1(customer_id)"
+                "expression" : "trimUDF(customer_id)"
               },
               "description" : ""
             } ]
@@ -552,86 +552,5 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.gqfN6ESF09RaLXUMFIMns$$jKnpwhcy4bgPV-XhiprOZ",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Gems inside subgraph are broken",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.gqfN6ESF09RaLXUMFIMns$$jKnpwhcy4bgPV-XhiprOZ.processes.23-O0RDVCnfT7jDsScTO6$$SBQjHQ8X3BGcoJ3r_fJ-y",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "not found: value trimUDF1\n         object Reformat_2 { def apply(context: Context, in: DataFrame): DataFrame = in.select(trimUDF1(col(\"customer_id\")).as(\"customer_id\")) }\n                                                                                               ^",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.gqfN6ESF09RaLXUMFIMns$$jKnpwhcy4bgPV-XhiprOZ.processes.23-O0RDVCnfT7jDsScTO6$$SBQjHQ8X3BGcoJ3r_fJ-y.test.unitTests[0].data.6S_3mbT_rjv5PvTogr5Ug$$uoQsCrImjgZ4Lgc_6l8et.schema.fields[0].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Column out.customer_id used within the test Unit Test 0 is not defined.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.gqfN6ESF09RaLXUMFIMns$$jKnpwhcy4bgPV-XhiprOZ.processes.23-O0RDVCnfT7jDsScTO6$$SBQjHQ8X3BGcoJ3r_fJ-y.test.unitTests[1].data.6S_3mbT_rjv5PvTogr5Ug$$uoQsCrImjgZ4Lgc_6l8et.schema.fields[0].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Column out.customer_id used within the test Unit Test 1 is not defined.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.gqfN6ESF09RaLXUMFIMns$$jKnpwhcy4bgPV-XhiprOZ.processes.23-O0RDVCnfT7jDsScTO6$$SBQjHQ8X3BGcoJ3r_fJ-y.test.unitTests[2].data.6S_3mbT_rjv5PvTogr5Ug$$uoQsCrImjgZ4Lgc_6l8et.schema.fields[0].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Column out.customer_id used within the test Unit Test 2 is not defined.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

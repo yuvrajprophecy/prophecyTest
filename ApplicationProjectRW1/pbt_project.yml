@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-13 06:14:07'
+    modifiedAt: '2023-03-13 06:21:53'
     datasets:
       inputs:
       - datasets/ds1
@@ -106,9 +106,36 @@ jobs:
 functions:
   author: null
   createdAt: '2023-03-01 07:05:28'
-  modifiedAt: '2023-03-13 06:15:08'
+  modifiedAt: '2023-03-13 06:21:36'
   gems: {}
-  udfs: {}
+  udfs:
+    udfs/trimUDF:
+      name: trimUDF
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-03-13 06:21:36'
+      modifiedAt: '2023-03-13 06:21:36'
+    udfs/trimUDF2:
+      name: trimUDF2
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-03-13 06:21:36'
+      modifiedAt: '2023-03-13 06:21:36'
+    udfs/trimUDF3:
+      name: trimUDF3
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2023-03-13 06:21:36'
+      modifiedAt: '2023-03-13 06:21:36'
   udafs: {}
   expressions: {}
 subgraphs:
@@ -120,7 +147,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
-    modifiedAt: '2023-03-13 06:13:22'
+    modifiedAt: '2023-03-13 06:21:53'
 sqlModels: {}
 sqlPipeline: null
 dependencies:
