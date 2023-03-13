@@ -9,14 +9,14 @@ import org.apache.spark.sql._
 object UDFs extends Serializable {
 
   def registerUDFs(spark: SparkSession) = {
-    spark.udf.register("trimUDF3",       trimUDF3)
+    spark.udf.register("trimUDF2",       trimUDF2)
     spark.udf.register("trimUDF",        trimUDF)
     spark.udf.register("trimUDF1",       trimUDF1)
-    spark.udf.register("trimUDF2",       trimUDF2)
+    spark.udf.register("trimUDF22",      trimUDF22)
     spark.udf.register("createFullName", createFullName)
   }
 
-  def trimUDF3 = {
+  def trimUDF2 = {
     val x = 3
     udf((value3: String) => value3.trim())
   }
@@ -31,9 +31,9 @@ object UDFs extends Serializable {
     udf((value1: String) => value1.trim())
   }
 
-  def trimUDF2 = {
-    val x = 2
-    udf((value2: String) => value2.trim())
+  def trimUDF22 = {
+    val x = 22
+    udf((value22: String) => value22.trim())
   }
 
   def createFullName =
