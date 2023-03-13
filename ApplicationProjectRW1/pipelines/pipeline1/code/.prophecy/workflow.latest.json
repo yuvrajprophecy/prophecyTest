@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "scala",
-    "fabricId" : "52",
+    "fabricId" : "58",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
