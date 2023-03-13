@@ -13,6 +13,6 @@ import java.time._
 object Reformat_2 {
 
   def apply(context: Context, in: DataFrame): DataFrame =
-    in.select(trimUDF(col("customer_id")).as("customer_id"))
+    in.select(trimUDF1(col("customer_id")).as("customer_id"))
 
 }
