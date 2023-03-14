@@ -6,7 +6,7 @@ import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
-object TrimUDF extends Serializable {
-  val pipeline1 = "ldme"
-  def trimUDF   = udf((value1: String) => value1.trim())
+object TrimUDF2 extends Serializable {
+  val pipeline3 = "ldme"
+  def trimUDF2  = udf((value3: String) => value3.trim())
 }

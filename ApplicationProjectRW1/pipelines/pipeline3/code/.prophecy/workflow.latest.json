@@ -7,11 +7,7 @@
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
-      "udfs" : [ {
-        "name" : "trimUDF",
-        "code" : "udf((value3: String) => value3.trim())",
-        "language" : "scala"
-      } ],
+      "udfs" : [ ],
       "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
       "sharedFunctionPackageNames" : [ ],
       "initialCode" : "val pipeline3 = \"ldme\""
@@ -230,22 +226,5 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.metainfo.udfs.udfs[1].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Found multiple definition of trimUDF",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }
