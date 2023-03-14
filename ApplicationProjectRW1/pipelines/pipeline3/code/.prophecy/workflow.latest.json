@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "scala",
-    "fabricId" : "869",
+    "fabricId" : "52",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -12,6 +12,8 @@
         "code" : "udf((value3: String) => value3.trim())",
         "language" : "scala"
       } ],
+      "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
+      "sharedFunctionPackageNames" : [ ],
       "initialCode" : "val pipeline3 = \"ldme\""
     },
     "udafs" : {
@@ -27,7 +29,8 @@
             "type" : "record",
             "fields" : [ ]
           },
-          "optional" : false
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
         }, {
           "name" : "basesg1_1",
           "kind" : {
@@ -38,10 +41,12 @@
                 "type" : "string",
                 "value" : "defaultvalue"
               },
-              "optional" : false
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false
             } ]
           },
-          "optional" : false
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
         } ]
       },
       "oldCommon" : {
@@ -66,6 +71,7 @@
       "id" : "EDPzF",
       "exclusions" : [ ]
     } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -74,7 +80,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "io.prophecy.pipelines.pipeline1"
+    "topLevelPackage" : "io.prophecy.pipelines.pipeline1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "PFdJFfskd5JltjnForMel",
@@ -101,8 +108,7 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
-          "slug" : "out",
-          "isStreaming" : false
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -128,6 +134,82 @@
         "inputs" : [ {
           "id" : "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ",
           "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
           "isStreaming" : false
         } ],
         "outputs" : [ {
@@ -150,7 +232,7 @@
     "isCustomOutputSchema" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
+    "property" : "$.workflow.metainfo.udfs.udfs[1].name",
     "range" : {
       "start" : {
         "line" : 0,
@@ -162,7 +244,7 @@
       }
     },
     "severity" : 1,
-    "message" : "not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996._\n                ^\n<console>:35: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.UDFs._\n                ^\n<console>:36: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.UDAFs._\n                ^\n<console>:37: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.ConfigStoreValues._\n                ^\n<console>:38: error: not found: value SchemaAnalyzerContext786914996\n         import SchemaAnalyzerContext786914996.ContextStore._\n                ^\n<console>:64: error: not found: type Context\n         object Reformat_1 { def apply(context: Context, in: DataFrame): DataFrame = in }\n                                                ^\n<console>:66: error: not found: value context\n         val result = Reformat_1(context, inGOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ)\n                                 ^",
+    "message" : "Found multiple definition of trimUDF",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]
