@@ -10,6 +10,7 @@ def pipeline(spark: SparkSession) -> None:
     df_ds1 = ds1(spark)
     df_Reformat_1 = Reformat_1(spark, df_ds1)
     df_Subgraph_1 = Subgraph_1(spark, Config.Subgraph_1, df_Reformat_1)
+    df_Subgraph_2 = Subgraph_2(spark, Config.Subgraph_2, df_Reformat_1)
 
 def main():
     spark = SparkSession.builder\

@@ -27,6 +27,14 @@
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : true
+        }, {
+          "name" : "Subgraph_2",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
         } ]
       },
       "oldCommon" : {
@@ -68,6 +76,12 @@
     "sourcePort" : "43X9PC40IN1pO3_ru3G7b$$7ObldrOs1e5RqtlUhiLHt",
     "target" : "fdl8WU_f9T_l5lzyki7Kg$$FYZvyUb78U_BY9rEAQo9r",
     "targetPort" : "l_xKsh6RPjxcDj6dfMv5g$$isUYRnkHf8uKNe4_tBjiS"
+  }, {
+    "id" : "EqeWzL3GUpPRPiwLxz97o",
+    "source" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
+    "sourcePort" : "43X9PC40IN1pO3_ru3G7b$$7ObldrOs1e5RqtlUhiLHt",
+    "target" : "dy_zNFWEZyUZHQMggf1bJ$$029H3GdZjycWIJsikfwRs",
+    "targetPort" : "Zabu5WVW07vheTbL_criZ$$0klv8_jFx2T1inUP2peZR"
   } ],
   "processes" : {
     "XcfnXBg8qSoyx85NHGQsc$$6j365oVMu8mPUUdpvbAU1" : {
@@ -76,8 +90,8 @@
       "metadata" : {
         "label" : "ds1",
         "slug" : "ds1",
-        "x" : 780,
-        "y" : 600,
+        "x" : 120,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -102,8 +116,8 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 1000,
-        "y" : 600,
+        "x" : 320,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -155,8 +169,8 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 1160,
-        "y" : 600,
+        "x" : 520,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -198,9 +212,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "sg1",
         "externalId" : "subgraphs/sg1",
-        "name" : "sg1",
-        "packageName" : "sg1"
+        "name" : "sg1"
       },
       "connections" : [ {
         "id" : "OVBmFH1r5xyYLXGIUMnNL",
@@ -332,6 +346,129 @@
             "script" : "y=x\nout0 = in0.withColumn(\"x\",lit(x))",
             "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
             "scriptMethodFooter" : "    return out0"
+          }
+        }
+      },
+      "externalDependencies" : [ ]
+    },
+    "dy_zNFWEZyUZHQMggf1bJ$$029H3GdZjycWIJsikfwRs" : {
+      "id" : "dy_zNFWEZyUZHQMggf1bJ$$029H3GdZjycWIJsikfwRs",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_2",
+        "slug" : "Subgraph_2",
+        "x" : 520,
+        "y" : 320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Zabu5WVW07vheTbL_criZ$$0klv8_jFx2T1inUP2peZR",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "suAqe5Ml8Uc25kf3DCAEH$$sh1ViMvgYV-NXWk68kCnV",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "externalId" : "subgraphs/sg2",
+        "name" : "sg2",
+        "packageName" : "sg2"
+      },
+      "connections" : [ {
+        "id" : "sQ2nwt5uwTf8UoVXf8UJk",
+        "source" : "dy_zNFWEZyUZHQMggf1bJ$$029H3GdZjycWIJsikfwRs",
+        "sourcePort" : "Zabu5WVW07vheTbL_criZ$$0klv8_jFx2T1inUP2peZR",
+        "target" : "wjKggvybmxftEx0w4ukH3$$Zq7XPtxLRgcPoTEMmuHx_",
+        "targetPort" : "z6751wN3hC-pgwBHmP9eb$$YyFSP5TbCwh-Hm0I2iOjr"
+      }, {
+        "id" : "Oc-KJ1S6yuUcvbByTNe6e",
+        "source" : "wjKggvybmxftEx0w4ukH3$$Zq7XPtxLRgcPoTEMmuHx_",
+        "sourcePort" : "bniXV4ikjsyjCJUTkSwwA$$LeIwYr9vqLpcuP6CI0Atq",
+        "target" : "dy_zNFWEZyUZHQMggf1bJ$$029H3GdZjycWIJsikfwRs",
+        "targetPort" : "suAqe5Ml8Uc25kf3DCAEH$$sh1ViMvgYV-NXWk68kCnV"
+      } ],
+      "processes" : {
+        "wjKggvybmxftEx0w4ukH3$$Zq7XPtxLRgcPoTEMmuHx_" : {
+          "id" : "wjKggvybmxftEx0w4ukH3$$Zq7XPtxLRgcPoTEMmuHx_",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "Reformat_3",
+            "slug" : "Reformat_3",
+            "x" : 760,
+            "y" : 700,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "z6751wN3hC-pgwBHmP9eb$$YyFSP5TbCwh-Hm0I2iOjr",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "first_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "bniXV4ikjsyjCJUTkSwwA$$LeIwYr9vqLpcuP6CI0Atq",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ ]
           }
         }
       },

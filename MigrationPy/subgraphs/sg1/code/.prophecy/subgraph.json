@@ -15,8 +15,7 @@
         "type" : "record",
         "fields" : [ ]
       }
-    },
-    "configPathInPipelineConfig" : [ "Subgraph_1" ]
+    }
   },
   "ports" : {
     "inputs" : [ {

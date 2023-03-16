@@ -20,13 +20,14 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2023-03-07 10:01:40'
-    modifiedAt: '2023-03-16 13:42:34'
+    modifiedAt: '2023-03-16 13:57:41'
     datasets:
       inputs:
       - datasets/ds1
       outputs: []
     subgraphs:
     - subgraphs/sg1
+    - subgraphs/sg2
     dependencies: {}
   pipelines/p2:
     name: p2
@@ -102,7 +103,16 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-03-16 13:40:20'
-    modifiedAt: '2023-03-16 13:42:34'
+    modifiedAt: '2023-03-16 13:57:11'
+  subgraphs/sg2:
+    name: sg2
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-03-16 13:57:36'
+    modifiedAt: '2023-03-16 13:57:37'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
