@@ -20,12 +20,13 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2023-03-07 10:01:40'
-    modifiedAt: '2023-03-07 10:04:29'
+    modifiedAt: '2023-03-16 13:42:34'
     datasets:
       inputs:
       - datasets/ds1
       outputs: []
-    subgraphs: []
+    subgraphs:
+    - subgraphs/sg1
     dependencies: {}
   pipelines/p2:
     name: p2
@@ -63,7 +64,7 @@ datasets:
     description: ''
     author: rohitjain@simpledatalabs.com
     createdAt: '2023-03-07 10:03:47'
-    modifiedAt: '2023-03-07 10:03:47'
+    modifiedAt: '2023-03-16 13:39:52'
     mode: batch
     physicalDatasets:
       dev:
@@ -78,12 +79,30 @@ jobs: {}
 functions:
   author: null
   createdAt: '2023-03-07 10:01:40'
-  modifiedAt: '2023-03-07 10:01:40'
+  modifiedAt: '2023-03-16 13:33:03'
   gems: {}
-  udfs: {}
+  udfs:
+    udfs/udfConcat:
+      name: udfConcat
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
   udafs: {}
   expressions: {}
-subgraphs: {}
+subgraphs:
+  subgraphs/sg1:
+    name: sg1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-03-16 13:40:20'
+    modifiedAt: '2023-03-16 13:42:34'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
