@@ -59,6 +59,20 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
+  pipelines/p4:
+    name: p4
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-03-17 07:00:16'
+    modifiedAt: '2023-03-17 07:00:23'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/ds1:
     name: ds1
