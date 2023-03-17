@@ -400,9 +400,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "sg2",
         "externalId" : "subgraphs/sg2",
-        "name" : "sg2",
-        "packageName" : "sg2"
+        "name" : "sg2"
       },
       "connections" : [ {
         "id" : "sQ2nwt5uwTf8UoVXf8UJk",

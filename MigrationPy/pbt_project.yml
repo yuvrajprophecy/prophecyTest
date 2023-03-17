@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2023-03-07 10:01:40'
-    modifiedAt: '2023-03-16 13:57:41'
+    modifiedAt: '2023-03-17 04:59:56'
     datasets:
       inputs:
       - datasets/ds1
@@ -112,7 +112,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-03-16 13:57:36'
-    modifiedAt: '2023-03-16 13:57:37'
+    modifiedAt: '2023-03-17 04:59:55'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
