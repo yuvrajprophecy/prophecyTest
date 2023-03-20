@@ -10,7 +10,7 @@
       "udfs" : [ ],
       "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
       "sharedFunctionPackageNames" : [ ],
-      "initialCode" : "val pipeline1 = \"ldme\""
+      "initialCode" : ""
     },
     "udafs" : {
       "language" : "scala",
@@ -19,31 +19,7 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ {
-          "name" : "Subgraph_1",
-          "kind" : {
-            "type" : "record",
-            "fields" : [ ]
-          },
-          "optional" : false,
-          "isWorkflowNodeConfiguration" : false
-        }, {
-          "name" : "basesg1_1",
-          "kind" : {
-            "type" : "record",
-            "fields" : [ {
-              "name" : "config1",
-              "kind" : {
-                "type" : "string",
-                "value" : "defaultvalue"
-              },
-              "optional" : false,
-              "isWorkflowNodeConfiguration" : false
-            } ]
-          },
-          "optional" : false,
-          "isWorkflowNodeConfiguration" : false
-        } ]
+        "fields" : [ ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -76,7 +52,7 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "basetest.pipeline2",
+    "topLevelPackage" : "basetest.pipeline4",
     "configurationVersion" : "v1"
   },
   "connections" : [ {
@@ -131,8 +107,8 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 300,
-        "y" : 240,
+        "x" : 320,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -294,8 +270,8 @@
       "metadata" : {
         "label" : "Script_1",
         "slug" : "Script_1",
-        "x" : 460,
-        "y" : 240,
+        "x" : 520,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -408,7 +384,7 @@
         "label" : "Lookup_1",
         "slug" : "Lookup_1",
         "x" : 320,
-        "y" : 80,
+        "y" : 320,
         "phase" : -1,
         "cache" : false,
         "detailedStats" : false,

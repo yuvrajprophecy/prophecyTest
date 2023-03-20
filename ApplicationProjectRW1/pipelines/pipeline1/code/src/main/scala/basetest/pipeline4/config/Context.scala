@@ -1,4 +1,4 @@
-package basetest.pipeline2.config
+package basetest.pipeline4.config
 
 import org.apache.spark.sql.SparkSession
 case class Context(spark: SparkSession, config: Config)

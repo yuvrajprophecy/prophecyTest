@@ -1,4 +1,4 @@
-package rohitjain27simpledatalabs.com_team.pm3rework.functions
+package basetest.pipeline4.udfs
 
 import _root_.io.prophecy.abinitio.ScalaFunctions._
 import _root_.io.prophecy.libs._
@@ -6,7 +6,11 @@ import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
-object TrimUDF extends Serializable {
-  val pipeline1 = "ldme"
-  def trimUDF   = udf((value1: String) => value1.trim())
+object UDFs extends Serializable {
+
+  def registerUDFs(spark: SparkSession) =
+    registerAllUDFs(spark)
+
 }
+
+object PipelineInitCode extends Serializable
