@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.pipeline1.config
+package basetest.pipeline2.config
 
 import org.apache.spark.sql.SparkSession
 case class Context(spark: SparkSession, config: Config)

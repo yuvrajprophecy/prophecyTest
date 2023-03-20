@@ -1,7 +1,7 @@
-package io.prophecy.pipelines.pipeline1.graph
+package basetest.pipeline2.graph
 
 import io.prophecy.libs._
-import io.prophecy.pipelines.pipeline1.config.Context
+import basetest.pipeline2.config.Context
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._

@@ -1,6 +1,6 @@
-package io.prophecy.pipelines.pipeline1.config
+package basetest.pipeline2.config
 
-import io.prophecy.pipelines.pipeline1.config.Context
+import basetest.pipeline2.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint

@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.pipeline1.udfs
+package basetest.pipeline2.udfs
 
 import org.apache.spark.sql.expressions._
 import org.apache.spark.sql.types._
