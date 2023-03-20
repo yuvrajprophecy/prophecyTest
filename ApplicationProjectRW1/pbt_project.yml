@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-20 15:23:16'
+    modifiedAt: '2023-03-20 15:35:02'
     datasets:
       inputs:
       - datasets/ds1

@@ -52,7 +52,7 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "basetest.pipeline4",
+    "topLevelPackage" : "basetest.pipeline5",
     "configurationVersion" : "v1"
   },
   "connections" : [ {
