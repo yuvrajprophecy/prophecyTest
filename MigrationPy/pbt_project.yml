@@ -1,0 +1,120 @@
+name: MigrationPy
+description: ''
+version: '4.0'
+author: rohitjain@simpledatalabs.com
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: migrationpy
+  parentArtefactID: rohitjainsimpledatalabs.com_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-03-07 10:01:40'
+  modifiedAt: '2023-03-07 10:01:40'
+pipelines:
+  pipelines/p1:
+    name: p1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-03-07 10:01:40'
+    modifiedAt: '2023-03-16 13:57:41'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    subgraphs:
+    - subgraphs/sg1
+    - subgraphs/sg2
+    dependencies: {}
+  pipelines/p2:
+    name: p2
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-03-07 10:04:39'
+    modifiedAt: '2023-03-07 10:04:59'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/p3:
+    name: p3
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-03-07 10:05:04'
+    modifiedAt: '2023-03-07 10:05:20'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/ds1:
+    name: ds1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-03-07 10:03:47'
+    modifiedAt: '2023-03-16 13:39:52'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 48
+        datasetType: File
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-03-07 10:03:47'
+        modifiedAt: '2023-03-07 10:03:47'
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-03-07 10:01:40'
+  modifiedAt: '2023-03-16 13:33:03'
+  gems: {}
+  udfs:
+    udfs/udfConcat:
+      name: udfConcat
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+  udafs: {}
+  expressions: {}
+subgraphs:
+  subgraphs/sg1:
+    name: sg1
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-03-16 13:40:20'
+    modifiedAt: '2023-03-16 13:57:11'
+  subgraphs/sg2:
+    name: sg2
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-03-16 13:57:36'
+    modifiedAt: '2023-03-16 13:57:37'
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}

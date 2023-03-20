@@ -1,0 +1,125 @@
+{
+  "id" : "fdl8WU_f9T_l5lzyki7Kg",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "l_xKsh6RPjxcDj6dfMv5g",
+      "slug" : "in0",
+      "isStreaming" : false
+    } ],
+    "outputs" : [ {
+      "id" : "pDdKCqFJ4OJRP5PL3jPc6",
+      "slug" : "out0",
+      "isStreaming" : false
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "sg1"
+  },
+  "connections" : [ {
+    "id" : "OVBmFH1r5xyYLXGIUMnNL",
+    "source" : "fdl8WU_f9T_l5lzyki7Kg",
+    "sourcePort" : "l_xKsh6RPjxcDj6dfMv5g",
+    "target" : "hzOvzToP9UH21PMUxXnzJ",
+    "targetPort" : "vIfE6-JTtL_46RzY7QqU4"
+  }, {
+    "id" : "G9rqc9lkzwEe8PhmU4YXe$$Q7McGRs58B0fzZf6majUX",
+    "source" : "hzOvzToP9UH21PMUxXnzJ",
+    "sourcePort" : "OzzirJlTuWh1G3rp2nU9d",
+    "target" : "4QBl8_LoYHOaPSRx438wI",
+    "targetPort" : "P9b9IRb4cjs3hmzfPElnr"
+  }, {
+    "id" : "Tkl52X_69hVJhdT0LHKkF",
+    "source" : "4QBl8_LoYHOaPSRx438wI",
+    "sourcePort" : "otFDuMmMEnUnXIwn_KIvE",
+    "target" : "fdl8WU_f9T_l5lzyki7Kg",
+    "targetPort" : "pDdKCqFJ4OJRP5PL3jPc6"
+  } ],
+  "processes" : {
+    "hzOvzToP9UH21PMUxXnzJ" : {
+      "id" : "hzOvzToP9UH21PMUxXnzJ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : 220,
+        "y" : 440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vIfE6-JTtL_46RzY7QqU4",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "OzzirJlTuWh1G3rp2nU9d",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "4QBl8_LoYHOaPSRx438wI" : {
+      "id" : "4QBl8_LoYHOaPSRx438wI",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 420,
+        "y" : 440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "P9b9IRb4cjs3hmzfPElnr",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "otFDuMmMEnUnXIwn_KIvE",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "y=x\nout0 = in0.withColumn(\"x\",lit(x))",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    }
+  },
+  "externalDependencies" : [ ]
+}

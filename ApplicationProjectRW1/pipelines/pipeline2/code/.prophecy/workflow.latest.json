@@ -5,14 +5,14 @@
     "fabricId" : "869",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
-    "udfs" : {
+   "udfs" : {
       "language" : "scala",
       "udfs" : [ {
         "name" : "trimUDF",
-        "code" : "udf((value2: String) => value2.trim())",
+        "code" : "udf((value1: String) => value1.trim())",
         "language" : "scala"
       } ],
-      "initialCode" : "val pipeline2 = \"ldme\""
+      "initialCode" : "val pipeline1 = \"ldme\""
     },
     "udafs" : {
       "language" : "scala",

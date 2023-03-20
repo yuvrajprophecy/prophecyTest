@@ -1,0 +1,148 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "48",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ {
+        "name" : "udfConcat",
+        "code" : "@udf(returnType = StringType())\ndef concat(value: str, value2: str):\n    return value + delimitter3 + value2",
+        "language" : "python"
+      } ],
+      "functionPackageName" : "rohitjainsimpledatalabs.com_team.migrationpy.functions",
+      "sharedFunctionPackageNames" : [ ],
+      "initialCode" : "delimitter3 = ''"
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "p1"
+  },
+  "connections" : [ {
+    "id" : "h0HhrSullUGDreMPWVctH$$UdXvvynUymYtLMyF-l4od",
+    "source" : "XcfnXBg8qSoyx85NHGQsc$$6j365oVMu8mPUUdpvbAU1",
+    "sourcePort" : "5T2pMWEMaa8JYM7m2rXz5$$wcNjl-9YjzsYcqQ7Vj48i",
+    "target" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
+    "targetPort" : "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-"
+  } ],
+  "processes" : {
+    "XcfnXBg8qSoyx85NHGQsc$$6j365oVMu8mPUUdpvbAU1" : {
+      "id" : "XcfnXBg8qSoyx85NHGQsc$$6j365oVMu8mPUUdpvbAU1",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ds1",
+        "slug" : "ds1",
+        "x" : 780,
+        "y" : 600,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "5T2pMWEMaa8JYM7m2rXz5$$wcNjl-9YjzsYcqQ7Vj48i",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds1"
+      }
+    },
+    "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK" : {
+      "id" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 1000,
+        "y" : 600,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "id2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "43X9PC40IN1pO3_ru3G7b$$7ObldrOs1e5RqtlUhiLHt",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

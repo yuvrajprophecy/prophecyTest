@@ -1,0 +1,100 @@
+{
+  "id" : "y_59s4DnTe4CY0XGuPpSs",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "configPathInPipelineConfig" : [ "Subgraph_1" ]
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "I80Fwnm6CaM0L4RGG_r03",
+      "slug" : "in0",
+      "isStreaming" : false
+    } ],
+    "outputs" : [ {
+      "id" : "VBo5iYVV2XKGZhOZiFdKw",
+      "slug" : "out0",
+      "isStreaming" : false
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "sg1"
+  },
+  "connections" : [ {
+    "id" : "s3zxKNbz5TSmanzpIEvJD",
+    "source" : "y_59s4DnTe4CY0XGuPpSs",
+    "sourcePort" : "I80Fwnm6CaM0L4RGG_r03",
+    "target" : "SKtZ5jS8OzkTqTiTLNuwC",
+    "targetPort" : "uF1sdxmlomT-D9BZa3f9M"
+  }, {
+    "id" : "JCG9wcwb2J6KcDwgcQ_8M",
+    "source" : "SKtZ5jS8OzkTqTiTLNuwC",
+    "sourcePort" : "i5pMBUJcBPw8m2hZW7Hdj",
+    "target" : "y_59s4DnTe4CY0XGuPpSs",
+    "targetPort" : "VBo5iYVV2XKGZhOZiFdKw"
+  } ],
+  "processes" : {
+    "SKtZ5jS8OzkTqTiTLNuwC" : {
+      "id" : "SKtZ5jS8OzkTqTiTLNuwC",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : 960,
+        "y" : 620,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "uF1sdxmlomT-D9BZa3f9M",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "i5pMBUJcBPw8m2hZW7Hdj",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "uF1sdxmlomT-D9BZa3f9M$$jNIB9EjXtEHzHvQ_oIvBP##first_name", "uF1sdxmlomT-D9BZa3f9M$$jNIB9EjXtEHzHvQ_oIvBP##last_name" ],
+        "expressions" : [ {
+          "target" : "name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "udfConcat(first_name, last_name)"
+          },
+          "description" : "",
+          "_row_id" : "c_13"
+        }, {
+          "target" : "nameold",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "udfConcatold(first_name, last_name)"
+          },
+          "description" : "",
+          "_row_id" : "c_14"
+        } ]
+      }
+    }
+  },
+  "externalDependencies" : [ ]
+}
