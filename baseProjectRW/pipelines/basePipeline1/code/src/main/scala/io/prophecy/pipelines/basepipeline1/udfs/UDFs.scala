@@ -29,22 +29,22 @@ object UDFs extends Serializable {
   }
 
   def createFullName3 = {
-    val x = 4
+    val x = 3
     udf((value: String, value2: String) => value + value2)
   }
 
   def createFullName4 = {
-    val x = 5
+    val x = 4
     udf((value: String, value2: String) => value + value2)
   }
 
   def createFullName5 = {
-    val x = 6
+    val x = 5
     udf((value: String, value2: String) => value + value2)
   }
 
   def createFullName6 = {
-    val x = 7
+    val x = 6
     udf((value: String, value2: String) => value + value2)
   }
 
