@@ -13,7 +13,6 @@ object UDFs extends Serializable {
     spark.udf.register("createFullName2", createFullName2)
     spark.udf.register("createFullName3", createFullName3)
     spark.udf.register("createFullName4", createFullName4)
-    spark.udf.register("createFullName6", createFullName6)
     registerAllUDFs(spark)
   }
 
@@ -28,17 +27,12 @@ object UDFs extends Serializable {
   }
 
   def createFullName3 = {
-    val x = 3
-    udf((value: String, value2: String) => value + value2)
-  }
-
-  def createFullName4 = {
     val x = 4
     udf((value: String, value2: String) => value + value2)
   }
 
-  def createFullName6 = {
-    val x = 6
+  def createFullName4 = {
+    val x = 5
     udf((value: String, value2: String) => value + value2)
   }
 
