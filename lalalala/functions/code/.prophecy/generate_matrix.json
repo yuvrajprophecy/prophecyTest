@@ -1,1 +1,0 @@
-{"initCode":"import org.apache.spark.ml.linalg.{Matrix, Matrices}","code":"udf(() => Matrices.dense(3, 2, Array(1.0, 3.0, 5.0, 2.0, 4.0, 6.0)))"}

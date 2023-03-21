@@ -1,1 +1,0 @@
-{"initCode":"import org.apache.spark.mllib.linalg.Vector","code":"udf((value: Vector) => value.toArray)"}

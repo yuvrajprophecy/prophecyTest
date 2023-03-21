@@ -1,1 +1,0 @@
-{"initCode":"import org.apache.spark.ml.linalg.{Matrix, Matrices}","code":"udf((mat: Matrix) => mat.numCols)"}

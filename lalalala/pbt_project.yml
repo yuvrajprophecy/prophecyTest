@@ -20,10 +20,12 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-28 11:47:08'
-    modifiedAt: '2023-02-28 11:47:15'
+    modifiedAt: '2023-03-21 07:31:59'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - _datasetID
+      outputs:
+      - _datasetID
     subgraphs: []
     dependencies: {}
   pipelines/lineageRegression:
@@ -78,7 +80,7 @@ jobs: {}
 functions:
   author: null
   createdAt: '2023-02-28 11:47:08'
-  modifiedAt: '2023-03-20 14:30:32'
+  modifiedAt: '2023-03-21 07:31:58'
   gems: {}
   udfs:
     udfs/vector_to_array:
