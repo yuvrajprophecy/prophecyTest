@@ -38,7 +38,7 @@ object UDFs extends Serializable {
   }
 
   def createFullName5 = {
-    val x = 6
+    val x = 5
     udf((value: String, value2: String) => value + value2)
   }
 
