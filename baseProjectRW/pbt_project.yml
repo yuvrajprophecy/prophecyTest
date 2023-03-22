@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 08:00:32'
-    modifiedAt: '2023-03-22 05:59:07'
+    modifiedAt: '2023-03-22 06:03:58'
     datasets:
       inputs:
       - datasets/baseDS1
@@ -37,7 +37,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-21 19:43:08'
-    modifiedAt: '2023-03-22 06:01:34'
+    modifiedAt: '2023-03-22 06:03:42'
     datasets:
       inputs: []
       outputs: []
@@ -82,15 +82,6 @@ functions:
   modifiedAt: '2023-03-22 06:02:22'
   gems: {}
   udfs:
-    udfs/createFullName7:
-      name: createFullName7
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
     udfs/createFullName8:
       name: createFullName8
       description: ''
@@ -100,44 +91,8 @@ functions:
       author: rohitjain+27@simpledatalabs.com
       createdAt: '2022-12-15 18:04:50'
       modifiedAt: '2022-12-15 18:04:50'
-    udfs/createFullName1:
-      name: createFullName1
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
-    udfs/createFullName2:
-      name: createFullName2
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
-    udfs/createFullName3:
-      name: createFullName3
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
     udfs/createFullName4:
       name: createFullName4
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
-    udfs/createFullName5:
-      name: createFullName5
       description: ''
       tags: []
       inputs: []
