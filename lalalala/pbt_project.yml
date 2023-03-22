@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-20 10:16:43'
-    modifiedAt: '2023-03-22 11:03:55'
+    modifiedAt: '2023-03-22 11:05:19'
     datasets:
       inputs:
       - datasets/normalization
@@ -83,15 +83,6 @@ functions:
   modifiedAt: '2023-03-22 11:03:55'
   gems: {}
   udfs:
-    udfs/vector_to_array:
-      name: vector_to_array
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
     udfs/matrix_col_count:
       name: matrix_col_count
       description: ''

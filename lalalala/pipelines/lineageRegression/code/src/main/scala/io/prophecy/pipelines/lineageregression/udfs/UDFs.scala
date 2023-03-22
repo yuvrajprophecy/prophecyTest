@@ -9,16 +9,10 @@ import org.apache.spark.sql._
 object UDFs extends Serializable {
 
   def registerUDFs(spark: SparkSession) = {
-    spark.udf.register("vector_to_array",  vector_to_array)
     spark.udf.register("matrix_col_count", matrix_col_count)
     spark.udf.register("generate_matrix",  generate_matrix)
     spark.udf.register("generate_vector",  generate_vector)
     registerAllUDFs(spark)
-  }
-
-  def vector_to_array = {
-    import org.apache.spark.ml.linalg.Matrix
-    udf((mat: Matrix) => mat.numCols)
   }
 
   def matrix_col_count = {
