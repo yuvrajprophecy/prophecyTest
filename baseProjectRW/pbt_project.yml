@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 08:00:32'
-    modifiedAt: '2023-03-22 06:03:58'
+    modifiedAt: '2023-03-22 06:12:39'
     datasets:
       inputs:
       - datasets/baseDS1
@@ -37,7 +37,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-21 19:43:08'
-    modifiedAt: '2023-03-22 06:03:42'
+    modifiedAt: '2023-03-22 06:04:37'
     datasets:
       inputs: []
       outputs: []
@@ -81,34 +81,7 @@ functions:
   createdAt: '2023-02-20 07:59:20'
   modifiedAt: '2023-03-22 06:02:22'
   gems: {}
-  udfs:
-    udfs/createFullName8:
-      name: createFullName8
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
-    udfs/createFullName4:
-      name: createFullName4
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
-    udfs/createFullName6:
-      name: createFullName6
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
+  udfs: {}
   udafs: {}
   expressions: {}
 subgraphs:
