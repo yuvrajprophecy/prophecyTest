@@ -2,13 +2,13 @@
   "metainfo" : {
     "id" : "graphs",
     "language" : "scala",
-    "fabricId" : "1025",
+    "fabricId" : "52",
     "frontEndLanguage" : "scala",
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
-      "functionPackageName" : "abhishek0001prophecy.io_team.ipoc2.functions",
+      "functionPackageName" : "simpledatalabs_27.sfefef.functions",
       "sharedFunctionPackageNames" : [ ]
     },
     "configuration" : {
@@ -10217,7 +10217,7 @@
     "isCustomOutputSchema" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.V_VOYAGE.properties.datasetType",
+    "property" : "$.workflow.processes.V_VOYAGE.properties.path",
     "range" : {
       "start" : {
         "line" : 0,
@@ -10229,7 +10229,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please select a valid dataset type",
+    "message" : "path variable cannot be empty [Location]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -10409,7 +10409,7 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.VA_SALES_PRODUCT_OVERRIDES.properties.datasetType",
+    "property" : "$.workflow.processes.VA_SALES_PRODUCT_OVERRIDES.properties.path",
     "range" : {
       "start" : {
         "line" : 0,
@@ -10421,7 +10421,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please select a valid dataset type",
+    "message" : "path variable cannot be empty [Location]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -17977,7 +17977,7 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.VA_VOYAGE.properties.datasetType",
+    "property" : "$.workflow.processes.VA_VOYAGE.properties.path",
     "range" : {
       "start" : {
         "line" : 0,
@@ -17989,7 +17989,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please select a valid dataset type",
+    "message" : "path variable cannot be empty [Location]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -20249,7 +20249,7 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.ERR_DIM_VOYAGE_Insert.properties.datasetType",
+    "property" : "$.workflow.processes.ERR_DIM_VOYAGE_Insert.properties.path",
     "range" : {
       "start" : {
         "line" : 0,
@@ -20261,7 +20261,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please select a valid dataset type",
+    "message" : "path variable cannot be empty [Location]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -22405,7 +22405,7 @@
       }
     },
     "severity" : 1,
-    "message" : "",
+    "message" : null,
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -31769,7 +31769,7 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.DIM_VOYAGE_Insert.properties.datasetType",
+    "property" : "$.workflow.processes.DIM_VOYAGE_Insert.properties.path",
     "range" : {
       "start" : {
         "line" : 0,
@@ -31781,7 +31781,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please select a valid dataset type",
+    "message" : "path variable cannot be empty [Location]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -31817,7 +31817,7 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.DIM_VOYAGE_Update.properties.datasetType",
+    "property" : "$.workflow.processes.DIM_VOYAGE_Update.properties.path",
     "range" : {
       "start" : {
         "line" : 0,
@@ -31829,7 +31829,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please select a valid dataset type",
+    "message" : "path variable cannot be empty [Location]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -31929,7 +31929,7 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.TempInput.properties.datasetType",
+    "property" : "$.workflow.processes.TempInput.properties.path",
     "range" : {
       "start" : {
         "line" : 0,
@@ -31941,7 +31941,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please select a valid dataset type",
+    "message" : "path variable cannot be empty [Location]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
