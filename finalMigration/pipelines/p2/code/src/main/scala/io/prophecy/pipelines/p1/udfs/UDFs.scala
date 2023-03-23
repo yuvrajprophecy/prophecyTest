@@ -11,6 +11,7 @@ object UDFs extends Serializable {
   def registerUDFs(spark: SparkSession) = {
     spark.udf.register("udf11", udf11)
     spark.udf.register("udf22", udf22)
+    spark.udf.register("udf33", udf33)
     registerAllUDFs(spark)
   }
 
@@ -20,6 +21,11 @@ object UDFs extends Serializable {
   }
 
   def udf22 = {
+    val x = 3
+    udf(() => "3")
+  }
+
+  def udf33 = {
     val x = 3
     udf(() => "3")
   }
