@@ -16,7 +16,6 @@ object UDFs extends Serializable {
     spark.udf.register("udf2",             udf2)
     spark.udf.register("udf3",             udf3)
     spark.udf.register("udf4",             udf4)
-    spark.udf.register("udf5",             udf5)
     registerAllUDFs(spark)
   }
 
@@ -53,11 +52,6 @@ object UDFs extends Serializable {
   def udf4 = {
     val x = 4
     udf(() => "4")
-  }
-
-  def udf5 = {
-    val x = 5
-    udf(() => "5")
   }
 
 }
