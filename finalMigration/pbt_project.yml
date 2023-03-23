@@ -3,26 +3,36 @@ description: ''
 version: 0.0.1
 author: rohitjain@simpledatalabs.com
 language: scala
-buildSystem: maven
+buildSystem: ''
+buildSystemDetails:
+  artefactID: udfmigration
+  parentArtefactID: simpledatalabs_27
+  buildSystem: maven
+  author: null
+  createdAt: '2023-03-23 08:30:28'
+  modifiedAt: '2023-03-23 08:30:28'
 pipelines:
   pipelines/p1:
     name: p1
     description: ''
     author: rohitjain@simpledatalabs.com
     mode: batch
+    artefactID: ''
     language: scala
     createdAt: '2023-03-23 06:13:23'
-    modifiedAt: '2023-03-23 06:14:09'
+    modifiedAt: '2023-03-23 08:30:35'
     datasets:
       inputs:
       - datasets/de
       outputs: []
+    subgraphs: []
     dependencies: {}
   pipelines/p2:
     name: p2
     description: ''
     author: rohitjain@simpledatalabs.com
     mode: batch
+    artefactID: ''
     language: scala
     createdAt: '2023-03-23 06:14:20'
     modifiedAt: '2023-03-23 06:14:26'
@@ -30,12 +40,14 @@ pipelines:
       inputs:
       - datasets/de
       outputs: []
+    subgraphs: []
     dependencies: {}
   pipelines/p3:
     name: p3
     description: ''
     author: rohitjain@simpledatalabs.com
     mode: batch
+    artefactID: ''
     language: scala
     createdAt: '2023-03-23 06:14:38'
     modifiedAt: '2023-03-23 06:14:49'
@@ -43,6 +55,7 @@ pipelines:
       inputs:
       - datasets/de
       outputs: []
+    subgraphs: []
     dependencies: {}
 datasets:
   datasets/de:
@@ -62,7 +75,41 @@ datasets:
         modifiedAt: '2023-03-23 06:13:41'
 templates: {}
 jobs: {}
-libraries: []
+functions:
+  author: null
+  createdAt: '2023-03-23 08:30:28'
+  modifiedAt: '2023-03-23 08:30:35'
+  gems: {}
+  udfs:
+    udfs/udf1:
+      name: udf1
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+    udfs/udf2:
+      name: udf2
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+    udfs/udf3:
+      name: udf3
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+  udafs: {}
+  expressions: {}
 subgraphs: {}
 sqlModels: {}
 sqlPipeline: null
