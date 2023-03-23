@@ -1,7 +1,6 @@
 package io.prophecy.pipelines.p1
 
 import io.prophecy.libs._
-import io.prophecy.pipelines.p1.config.ConfigStore._
 import io.prophecy.pipelines.p1.config.Context
 import io.prophecy.pipelines.p1.config._
 import io.prophecy.pipelines.p1.udfs.UDFs._
@@ -32,7 +31,8 @@ object Main {
       .newSession()
     val context = Context(spark, config)
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/p2")
-    MetricsCollector.start(spark,                    "pipelines/p2")
+    registerUDFs(spark)
+    MetricsCollector.start(spark, "pipelines/p2")
     apply(context)
     MetricsCollector.end(spark)
   }
