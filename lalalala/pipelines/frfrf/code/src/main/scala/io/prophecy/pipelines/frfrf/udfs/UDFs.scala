@@ -13,6 +13,7 @@ object UDFs extends Serializable {
     spark.udf.register("generate_matrix",  generate_matrix)
     spark.udf.register("generate_vector",  generate_vector)
     spark.udf.register("udf1",             udf1)
+    spark.udf.register("udf2",             udf2)
     registerAllUDFs(spark)
   }
 
@@ -33,6 +34,11 @@ object UDFs extends Serializable {
 
   def udf1 = {
     val x = 1
+    udf(() => "")
+  }
+
+  def udf2 = {
+    val x = 2
     udf(() => "")
   }
 
