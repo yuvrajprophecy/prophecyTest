@@ -7,15 +7,47 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql._
 
 object UDFs extends Serializable {
-  val x = 1
 
   def registerUDFs(spark: SparkSession) = {
-    spark.udf.register("udf1", udf1)
-    spark.udf.register("udf2", udf2)
-    spark.udf.register("udf3", udf3)
+    spark.udf.register("udf11", udf11)
+    spark.udf.register("udf22", udf22)
+    spark.udf.register("udf33", udf33)
+    spark.udf.register("udf1",  udf1)
+    spark.udf.register("udf2",  udf2)
+    spark.udf.register("udf3",  udf3)
+    registerAllUDFs(spark)
   }
 
-  def udf1 = udf(() => "")
-  def udf2 = udf(() => "")
-  def udf3 = udf(() => "")
+  def udf11 = {
+    val x = 3
+    udf(() => "")
+  }
+
+  def udf22 = {
+    val x = 3
+    udf(() => "")
+  }
+
+  def udf33 = {
+    val x = 3
+    udf(() => "")
+  }
+
+  def udf1 = {
+    val x = 1
+    udf(() => "")
+  }
+
+  def udf2 = {
+    val x = 1
+    udf(() => "")
+  }
+
+  def udf3 = {
+    val x = 1
+    udf(() => "")
+  }
+
 }
+
+object PipelineInitCode extends Serializable { val x = 1 }
