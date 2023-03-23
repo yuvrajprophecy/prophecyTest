@@ -1,1 +1,1 @@
-{"initCode":"val x = 2","code":"udf(() => \"\")"}
+{"initCode":"val x = 2","code":"udf(() => \"faf\")"}

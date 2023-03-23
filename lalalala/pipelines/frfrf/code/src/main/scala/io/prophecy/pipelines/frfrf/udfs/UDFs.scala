@@ -39,7 +39,7 @@ object UDFs extends Serializable {
 
   def udf2 = {
     val x = 2
-    udf(() => "")
+    udf(() => "faf")
   }
 
 }
