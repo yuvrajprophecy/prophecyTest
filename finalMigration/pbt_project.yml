@@ -12,7 +12,7 @@ pipelines:
     mode: batch
     language: scala
     createdAt: '2023-03-23 06:13:23'
-    modifiedAt: '2023-03-23 06:14:09'
+    modifiedAt: '2023-03-23 08:56:18'
     datasets:
       inputs:
       - datasets/de
@@ -25,7 +25,7 @@ pipelines:
     mode: batch
     language: scala
     createdAt: '2023-03-23 06:14:20'
-    modifiedAt: '2023-03-23 06:14:26'
+    modifiedAt: '2023-03-23 08:55:56'
     datasets:
       inputs:
       - datasets/de
@@ -38,7 +38,7 @@ pipelines:
     mode: batch
     language: scala
     createdAt: '2023-03-23 06:14:38'
-    modifiedAt: '2023-03-23 06:14:49'
+    modifiedAt: '2023-03-23 08:55:37'
     datasets:
       inputs:
       - datasets/de

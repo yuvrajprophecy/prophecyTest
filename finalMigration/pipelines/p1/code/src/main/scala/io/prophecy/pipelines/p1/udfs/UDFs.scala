@@ -15,7 +15,7 @@ object UDFs extends Serializable {
     spark.udf.register("udf3", udf3)
   }
 
-  def udf1 = udf(() => "")
-  def udf2 = udf(() => "")
-  def udf3 = udf(() => "")
+  def udf1 = udf(() => "1")
+  def udf2 = udf(() => "1")
+  def udf3 = udf(() => "1")
 }

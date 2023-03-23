@@ -9,15 +9,15 @@
       "language" : "scala",
       "udfs" : [ {
         "name" : "udf1",
-        "code" : "udf(() => \"\")",
+        "code" : "udf(() => \"3\")",
         "language" : "scala"
       }, {
         "name" : "udf2",
-        "code" : "udf(() => \"\")",
+        "code" : "udf(() => \"3\")",
         "language" : "scala"
       }, {
         "name" : "udf3",
-        "code" : "udf(() => \"\")",
+        "code" : "udf(() => \"3\")",
         "language" : "scala"
       } ],
       "initialCode" : "val x = 3"
