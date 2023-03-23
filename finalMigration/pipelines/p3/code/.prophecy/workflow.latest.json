@@ -7,19 +7,7 @@
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
-      "udfs" : [ {
-        "name" : "udf1",
-        "code" : "udf(() => \"3\")",
-        "language" : "scala"
-      }, {
-        "name" : "udf2",
-        "code" : "udf(() => \"3\")",
-        "language" : "scala"
-      }, {
-        "name" : "udf3",
-        "code" : "udf(() => \"3\")",
-        "language" : "scala"
-      } ],
+      "udfs" : [ ],
       "functionPackageName" : "simpledatalabs_27.udfmigration.functions",
       "sharedFunctionPackageNames" : [ ],
       "initialCode" : "val x = 3"
@@ -94,54 +82,5 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.metainfo.udfs.udfs[3].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Found multiple definition of udf1",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.metainfo.udfs.udfs[4].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Found multiple definition of udf2",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.metainfo.udfs.udfs[5].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Found multiple definition of udf3",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }
