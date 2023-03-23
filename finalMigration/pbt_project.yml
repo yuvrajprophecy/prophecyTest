@@ -1,0 +1,71 @@
+name: UDFMigration
+description: ''
+version: 0.0.1
+author: rohitjain@simpledatalabs.com
+language: scala
+buildSystem: maven
+pipelines:
+  pipelines/p1:
+    name: p1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-03-23 06:13:23'
+    modifiedAt: '2023-03-23 06:14:09'
+    datasets:
+      inputs:
+      - datasets/de
+      outputs: []
+    dependencies: {}
+  pipelines/p2:
+    name: p2
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-03-23 06:14:20'
+    modifiedAt: '2023-03-23 06:14:26'
+    datasets:
+      inputs:
+      - datasets/de
+      outputs: []
+    dependencies: {}
+  pipelines/p3:
+    name: p3
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    language: scala
+    createdAt: '2023-03-23 06:14:38'
+    modifiedAt: '2023-03-23 06:14:49'
+    datasets:
+      inputs:
+      - datasets/de
+      outputs: []
+    dependencies: {}
+datasets:
+  datasets/de:
+    name: de
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-03-23 06:13:41'
+    modifiedAt: '2023-03-23 06:13:41'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 693
+        datasetType: File
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-03-23 06:13:41'
+        modifiedAt: '2023-03-23 06:13:41'
+templates: {}
+jobs: {}
+libraries: []
+subgraphs: {}
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}
