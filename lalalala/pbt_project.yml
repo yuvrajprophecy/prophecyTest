@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-22 11:10:32'
-    modifiedAt: '2023-03-23 08:24:51'
+    modifiedAt: '2023-03-23 08:25:33'
     datasets:
       inputs:
       - datasets/de
@@ -35,7 +35,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-23 07:52:15'
-    modifiedAt: '2023-03-23 08:24:14'
+    modifiedAt: '2023-03-23 08:25:25'
     datasets:
       inputs: []
       outputs: []
@@ -92,7 +92,7 @@ jobs: {}
 functions:
   author: null
   createdAt: '2023-02-28 11:47:08'
-  modifiedAt: '2023-03-23 08:24:51'
+  modifiedAt: '2023-03-23 08:25:33'
   gems: {}
   udfs:
     udfs/matrix_col_count:
@@ -115,15 +115,6 @@ functions:
       modifiedAt: '2022-12-15 18:04:50'
     udfs/generate_vector:
       name: generate_vector
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
-    udfs/udf1:
-      name: udf1
       description: ''
       tags: []
       inputs: []

@@ -12,11 +12,9 @@ object UDFs extends Serializable {
     spark.udf.register("matrix_col_count", matrix_col_count)
     spark.udf.register("generate_matrix",  generate_matrix)
     spark.udf.register("generate_vector",  generate_vector)
-    spark.udf.register("udf1",             udf1)
     spark.udf.register("udf2",             udf2)
     spark.udf.register("udf3",             udf3)
     spark.udf.register("udf4",             udf4)
-    spark.udf.register("udf5",             udf5)
     registerAllUDFs(spark)
   }
 
@@ -35,11 +33,6 @@ object UDFs extends Serializable {
     udf(() => Vectors.dense(1.0d, 2.0d))
   }
 
-  def udf1 = {
-    val x = 1
-    udf(() => "1")
-  }
-
   def udf2 = {
     val x = 2
     udf(() => "2")
@@ -53,11 +46,6 @@ object UDFs extends Serializable {
   def udf4 = {
     val x = 4
     udf(() => "4")
-  }
-
-  def udf5 = {
-    val x = 5
-    udf(() => "5")
   }
 
 }
