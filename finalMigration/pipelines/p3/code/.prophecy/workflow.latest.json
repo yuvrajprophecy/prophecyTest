@@ -8,12 +8,6 @@
     "udfs" : {
       "language" : "scala",
       "udfs" : [ {
-        "name" : "udf1",
-        "code" : "udf(() => \"\")",
-        "language" : "scala",
-        "initCode" : "val x = 3",
-        "isShared" : false
-      }, {
         "name" : "udf2",
         "code" : "udf(() => \"\")",
         "language" : "scala",
@@ -102,22 +96,6 @@
     "isCustomOutputSchema" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.metainfo.udfs.udfs[3].name",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Found multiple definition of udf1",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
     "property" : "$.workflow.metainfo.udfs.udfs[4].name",
     "range" : {
       "start" : {
