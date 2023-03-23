@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-22 11:10:32'
-    modifiedAt: '2023-03-23 05:58:16'
+    modifiedAt: '2023-03-23 07:55:26'
     datasets:
       inputs:
       - datasets/de
@@ -133,15 +133,6 @@ functions:
       modifiedAt: '2022-12-15 18:04:50'
     udfs/udf2:
       name: udf2
-      description: ''
-      tags: []
-      inputs: []
-      outputs: []
-      author: rohitjain+27@simpledatalabs.com
-      createdAt: '2022-12-15 18:04:50'
-      modifiedAt: '2022-12-15 18:04:50'
-    udfs/udf3:
-      name: udf3
       description: ''
       tags: []
       inputs: []
