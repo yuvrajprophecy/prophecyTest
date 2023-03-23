@@ -9,11 +9,11 @@ import org.apache.spark.sql._
 object UDFs extends Serializable {
 
   def registerUDFs(spark: SparkSession) = {
-    spark.udf.register("udf7", udf7)
+    spark.udf.register("udf71", udf71)
     registerAllUDFs(spark)
   }
 
-  def udf7 =
+  def udf71 =
     udf(() => "7")
 
 }
