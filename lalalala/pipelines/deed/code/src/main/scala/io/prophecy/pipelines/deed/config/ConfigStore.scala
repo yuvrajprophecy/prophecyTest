@@ -1,6 +1,6 @@
-package io.prophecy.pipelines.lineageregression.config
+package io.prophecy.pipelines.deed.config
 
-import io.prophecy.pipelines.lineageregression.config.Context
+import io.prophecy.pipelines.deed.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint

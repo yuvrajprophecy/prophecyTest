@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.lineageregression.udfs
+package io.prophecy.pipelines.deed.udfs
 
 import _root_.io.prophecy.abinitio.ScalaFunctions._
 import _root_.io.prophecy.libs._

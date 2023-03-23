@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.lineageregression.udfs
+package io.prophecy.pipelines.deed.udfs
 
 import org.apache.spark.sql.expressions._
 import org.apache.spark.sql.types._

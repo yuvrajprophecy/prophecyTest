@@ -12,22 +12,6 @@ buildSystemDetails:
   createdAt: '2023-02-28 11:47:08'
   modifiedAt: '2023-02-28 11:47:08'
 pipelines:
-  pipelines/lineageRegression:
-    name: lineageRegression
-    description: ''
-    author: rohitjain+27@simpledatalabs.com
-    mode: batch
-    artefactID: ''
-    language: scala
-    createdAt: '2023-03-20 10:16:43'
-    modifiedAt: '2023-03-22 11:08:52'
-    datasets:
-      inputs:
-      - datasets/normalization
-      outputs:
-      - datasets/normalization_out
-    subgraphs: []
-    dependencies: {}
   pipelines/pppp:
     name: pppp
     description: ''
@@ -42,6 +26,21 @@ pipelines:
       - _datasetID
       outputs:
       - _datasetID
+    subgraphs: []
+    dependencies: {}
+  pipelines/deed:
+    name: deed
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-03-22 11:10:32'
+    modifiedAt: '2023-03-23 05:58:16'
+    datasets:
+      inputs:
+      - datasets/de
+      outputs: []
     subgraphs: []
     dependencies: {}
 datasets:
@@ -75,12 +74,27 @@ datasets:
         author: rohitjain+27@simpledatalabs.com
         createdAt: '2023-03-20 10:41:44'
         modifiedAt: '2023-03-20 10:41:44'
+  datasets/de:
+    name: de
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2023-03-23 05:57:40'
+    modifiedAt: '2023-03-23 05:57:40'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2023-03-23 05:57:40'
+        modifiedAt: '2023-03-23 05:57:40'
 templates: {}
 jobs: {}
 functions:
   author: null
   createdAt: '2023-02-28 11:47:08'
-  modifiedAt: '2023-03-22 11:08:16'
+  modifiedAt: '2023-03-22 11:12:13'
   gems: {}
   udfs:
     udfs/matrix_col_count:
