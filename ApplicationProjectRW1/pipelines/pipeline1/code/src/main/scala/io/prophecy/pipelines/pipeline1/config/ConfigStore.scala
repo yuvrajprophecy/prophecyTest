@@ -1,6 +1,5 @@
 package io.prophecy.pipelines.pipeline1.config
 
-import io.prophecy.pipelines.pipeline1.config.ConfigStore._
 import io.prophecy.pipelines.pipeline1.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
