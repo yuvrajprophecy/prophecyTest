@@ -1,0 +1,1918 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "scala",
+    "fabricId" : "52",
+    "frontEndLanguage" : "scala",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ ],
+      "functionPackageName" : "simpledatalabs_27.sfefef.functions",
+      "sharedFunctionPackageNames" : [ ]
+    },
+    "udafs" : {
+      "language" : "scala",
+      "code" : "package udfs\n\nimport org.apache.spark.sql.expressions._\nimport org.apache.spark.sql.types._\nimport org.apache.spark.sql._\n\n/**\n  * Here you can define your custom aggregate functions.\n  *\n  * Make sure to register your `udafs` in the register_udafs function below.\n  *\n  * Example:\n  *\n  * object GeometricMean extends UserDefinedAggregateFunction {\n  *   // This is the input fields for your aggregate function.\n  *   override def inputSchema: org.apache.spark.sql.types.StructType =\n  *     StructType(StructField(\"value\", DoubleType) :: Nil)\n  *\n  *   // This is the internal fields you keep for computing your aggregate.\n  *   override def bufferSchema: StructType = StructType(\n  *     StructField(\"count\", LongType) ::\n  *     StructField(\"product\", DoubleType) :: Nil\n  *   )\n  *\n  *   // This is the output type of your aggregatation function.\n  *   override def dataType: DataType = DoubleType\n  *\n  *   override def deterministic: Boolean = true\n  *\n  *   // This is the initial value for your buffer schema.\n  *   override def initialize(buffer: MutableAggregationBuffer): Unit = {\n  *     buffer(0) = 0L\n  *     buffer(1) = 1.0\n  *   }\n  *\n  *   // This is how to update your buffer schema given an input.\n  *   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {\n  *     buffer(0) = buffer.getAs[Long](0) + 1\n  *     buffer(1) = buffer.getAs[Double](1) * input.getAs[Double](0)\n  *   }\n  *\n  *   // This is how to merge two objects with the bufferSchema type.\n  *   override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = {\n  *     buffer1(0) = buffer1.getAs[Long](0) + buffer2.getAs[Long](0)\n  *     buffer1(1) = buffer1.getAs[Double](1) * buffer2.getAs[Double](1)\n  *   }\n  *\n  *   // This is where you output the final value, given the final value of your bufferSchema.\n  *   override def evaluate(buffer: Row): Any = {\n  *     math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0))\n  *   }\n  * }\n  *\n  */\n\n\nobject UDAFs {\n  /**\n    * Registers UDAFs with Spark SQL\n    */\n  def registerUDAFs(spark: SparkSession): Unit = {\n    /**\n      * Example:\n      *\n      * spark.udf.register(\"gm\", GeometricMean)\n      *\n      */\n\n\n  }\n}\n"
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "io.prophecy.pipelines.lineageregression",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "ct3ZFfYn_jeJ3buaLyoJZ",
+    "source" : "XgED8miWzH8bPKkslIwTI$$q4Rs2JnvZxSHC5TRz-9kq",
+    "sourcePort" : "jN7YFKCywBvYT8XLpAx6N$$5XEkQ3NuN7CbqFvSsJpcA",
+    "target" : "PFQGZaavPKRZin_uq9u3n$$20InSfbWUl1LyMyxW05ZG",
+    "targetPort" : "BuBifnQq37G8qPGeMvEcv$$T76FTmGLA4SwrUajMuVWq"
+  }, {
+    "id" : "-ZG2gufifSWS-X2O9L2BH",
+    "source" : "f1mB4Yx7ux93SzpJpsSHi$$GCdsojOXCt7HjKqdAC54B",
+    "sourcePort" : "UzeVAuef4WCRpD3rez7F-$$kBkFUYNWcnuKyQqG29Wcf",
+    "target" : "HUYalkPVs-_ShxjGH8ljy$$4TXAYfGowIIYpKB7s4oMk",
+    "targetPort" : "UF3nOgpFs1FHQEEcKo36B$$s8bxN_dFE04b_JdtrB3Ug"
+  }, {
+    "id" : "yRn1PJQbgeRQ8v3OsGb0G",
+    "source" : "PFQGZaavPKRZin_uq9u3n$$20InSfbWUl1LyMyxW05ZG",
+    "sourcePort" : "Fo2UV_nutbsjj8ZZC_y4z$$-5V7XxWriRi6rIX5R8cVw",
+    "target" : "f1mB4Yx7ux93SzpJpsSHi$$GCdsojOXCt7HjKqdAC54B",
+    "targetPort" : "knNWDKqm41L-QNWVkn-E0$$i24gnExq5jie3B9Qycdso"
+  }, {
+    "id" : "-dqAIhMjbIg-15_CBK2Hx",
+    "source" : "PFQGZaavPKRZin_uq9u3n$$20InSfbWUl1LyMyxW05ZG",
+    "sourcePort" : "Fo2UV_nutbsjj8ZZC_y4z$$-5V7XxWriRi6rIX5R8cVw",
+    "target" : "MAptsgxsT4B5swUzK2asx$$WgORUcFMb7gMqHKcLRAxd",
+    "targetPort" : "H0u3zVJa48qiUZrUd77XX$$EZ_kWoYd6ihMb3BqQBXVQ"
+  }, {
+    "id" : "qSZ_PlMmAvWDvju1nHh0P",
+    "source" : "PFQGZaavPKRZin_uq9u3n$$20InSfbWUl1LyMyxW05ZG",
+    "sourcePort" : "Fo2UV_nutbsjj8ZZC_y4z$$-5V7XxWriRi6rIX5R8cVw",
+    "target" : "UU5IlX5smsJ6EUu5jYgNk$$Q2DUa4P2lo9A-C1oGvjpR",
+    "targetPort" : "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L"
+  }, {
+    "id" : "_R3GKxPmPzAk-Sesm-VNl",
+    "source" : "UU5IlX5smsJ6EUu5jYgNk$$Q2DUa4P2lo9A-C1oGvjpR",
+    "sourcePort" : "IR7Whkjfe9hXnINUlsCrJ$$_oEgtv9AkttTJY6Mi4wJq",
+    "target" : "T6Wm9i9kK__wRoAXDARYn$$0Jlgc5kK8rqUdHcxRo6Ty",
+    "targetPort" : "BsQaydMDSYtTDogfbGVUC$$41VKmn8Ny7BSMH8ygCoxH"
+  }, {
+    "id" : "4xPNjo_AzzbRgpsDsareS$$NlqaFHK8sUqmyxZkpSfQ-",
+    "source" : "T6Wm9i9kK__wRoAXDARYn$$0Jlgc5kK8rqUdHcxRo6Ty",
+    "sourcePort" : "mMRYmUuUSWXEXbFyo3nYj$$1O1s9lPBsmYQNJTmsfPUQ",
+    "target" : "rfUDm1lrNhi6JIzWpRmYL$$BWtKnxXh4pa19otN7I5yS",
+    "targetPort" : "RpdzKsIKO4ki4VYcjxtBd$$lrmChxVOQwpyuZJlwNfG1"
+  } ],
+  "processes" : {
+    "rfUDm1lrNhi6JIzWpRmYL$$BWtKnxXh4pa19otN7I5yS" : {
+      "id" : "rfUDm1lrNhi6JIzWpRmYL$$BWtKnxXh4pa19otN7I5yS",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_3",
+        "slug" : "Reformat_3",
+        "x" : 860,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RpdzKsIKO4ki4VYcjxtBd$$lrmChxVOQwpyuZJlwNfG1",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "mat_num",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "I6xPwKfc983E2_UiVyRHT$$fT_5dHBWvKkHbc1iHxzXg",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "HUYalkPVs-_ShxjGH8ljy$$4TXAYfGowIIYpKB7s4oMk" : {
+      "id" : "HUYalkPVs-_ShxjGH8ljy$$4TXAYfGowIIYpKB7s4oMk",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "normalization_out",
+        "slug" : "normalization_out",
+        "x" : 720,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UF3nOgpFs1FHQEEcKo36B$$s8bxN_dFE04b_JdtrB3Ug",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/normalization_out"
+      }
+    },
+    "f1mB4Yx7ux93SzpJpsSHi$$GCdsojOXCt7HjKqdAC54B" : {
+      "id" : "f1mB4Yx7ux93SzpJpsSHi$$GCdsojOXCt7HjKqdAC54B",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "SchemaTransform_1",
+        "slug" : "SchemaTransform_1",
+        "x" : 500,
+        "y" : 100,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "knNWDKqm41L-QNWVkn-E0$$i24gnExq5jie3B9Qycdso",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "features",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.VectorUDT",
+                "pyClass" : "pyspark.ml.linalg.VectorUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "size",
+                    "type" : "integer",
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "indices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "UzeVAuef4WCRpD3rez7F-$$kBkFUYNWcnuKyQqG29Wcf",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "knNWDKqm41L-QNWVkn-E0$$i24gnExq5jie3B9Qycdso##features" ],
+        "transformations" : [ {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "features"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "format" : "scala",
+              "expression" : ""
+            }
+          }
+        } ]
+      }
+    },
+    "T6Wm9i9kK__wRoAXDARYn$$0Jlgc5kK8rqUdHcxRo6Ty" : {
+      "id" : "T6Wm9i9kK__wRoAXDARYn$$0Jlgc5kK8rqUdHcxRo6Ty",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_2",
+        "slug" : "Reformat_2",
+        "x" : 660,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BsQaydMDSYtTDogfbGVUC$$41VKmn8Ny7BSMH8ygCoxH",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "features",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.VectorUDT",
+                "pyClass" : "pyspark.ml.linalg.VectorUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "size",
+                    "type" : "integer",
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "indices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction2",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.VectorUDT",
+                "pyClass" : "pyspark.ml.linalg.VectorUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "size",
+                    "type" : "integer",
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "indices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction3",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.MatrixUDT",
+                "pyClass" : "pyspark.ml.linalg.MatrixUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "numRows",
+                    "type" : "integer",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "numCols",
+                    "type" : "integer",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "colPtrs",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "rowIndices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "isTransposed",
+                    "type" : "boolean",
+                    "nullable" : false,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "mMRYmUuUSWXEXbFyo3nYj$$1O1s9lPBsmYQNJTmsfPUQ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "BsQaydMDSYtTDogfbGVUC$$41VKmn8Ny7BSMH8ygCoxH##prediction3" ],
+        "expressions" : [ {
+          "target" : "mat_num",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "matrix_col_count(col(\"prediction3\"))"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "XgED8miWzH8bPKkslIwTI$$q4Rs2JnvZxSHC5TRz-9kq" : {
+      "id" : "XgED8miWzH8bPKkslIwTI$$q4Rs2JnvZxSHC5TRz-9kq",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "normalization",
+        "slug" : "normalization",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "jN7YFKCywBvYT8XLpAx6N$$5XEkQ3NuN7CbqFvSsJpcA",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/normalization"
+      }
+    },
+    "PFQGZaavPKRZin_uq9u3n$$20InSfbWUl1LyMyxW05ZG" : {
+      "id" : "PFQGZaavPKRZin_uq9u3n$$20InSfbWUl1LyMyxW05ZG",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Linear_Regression",
+        "slug" : "Linear_Regression",
+        "x" : 320,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BuBifnQq37G8qPGeMvEcv$$T76FTmGLA4SwrUajMuVWq",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Fo2UV_nutbsjj8ZZC_y4z$$-5V7XxWriRi6rIX5R8cVw",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "features",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.VectorUDT",
+                "pyClass" : "pyspark.ml.linalg.VectorUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "size",
+                    "type" : "integer",
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "indices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "// Import Spark.ml libraries\nimport org.apache.spark.ml.regression.LinearRegression\nimport org.apache.spark.ml.feature.VectorAssembler\n\n// Prepare the data by assembling features into a single vector column\n\nval assembler = new VectorAssembler()\n  .setInputCols(Array(\"Crime_Rate\", \"Residential_Land_Zone\", \"Non_retail_Business_acres\", \"Charles_River\", \"Nitric_Oxide\", \"Average_Rooms\", \"Owner_Occupied_Units\", \"Distance_to_Employment_Centers\", \"Accessibility_to_Highways\", \"Property_Tax_Rate\", \"Pupil_Teacher_Ratio\", \"Lower_Status\"))\n  .setOutputCol(\"features\")\n\nval df = assembler.transform(in0)\n\n// Split data into training and test\nval Array(train, test) = df.randomSplit(Array(0.7, 0.3))\n\n// create linear regression model\nval lr = new LinearRegression()\n  .setLabelCol(\"Y_Value_of_Occupied_Homes\")\n  .setFeaturesCol(\"features\")\n\n  // fit the model to the training data\nval model = lr.fit(train)\n\n// Make predictions on the test data\nval predictions = model.transform(test)\n\n//Dropping \"features\" vector column will result in dataframe output working\n// val predictions2 = predictions.drop(\"features\")\n\nval out0 = predictions",
+        "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
+        "scriptMethodFooter" : "    out0\n}"
+      }
+    },
+    "UU5IlX5smsJ6EUu5jYgNk$$Q2DUa4P2lo9A-C1oGvjpR" : {
+      "id" : "UU5IlX5smsJ6EUu5jYgNk$$Q2DUa4P2lo9A-C1oGvjpR",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 500,
+        "y" : 380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "features",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.VectorUDT",
+                "pyClass" : "pyspark.ml.linalg.VectorUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "size",
+                    "type" : "integer",
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "indices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "IR7Whkjfe9hXnINUlsCrJ$$_oEgtv9AkttTJY6Mi4wJq",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Y_Value_of_Occupied_Homes", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Crime_Rate", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Residential_Land_Zone", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Non_retail_Business_acres", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Charles_River", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Nitric_Oxide", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Average_Rooms", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Owner_Occupied_Units", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Distance_to_Employment_Centers", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Accessibility_to_Highways", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Property_Tax_Rate", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Pupil_Teacher_Ratio", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##Lower_Status", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##features", "FObJwuurwnW5AdZ7WcVfE$$9WRnwiy1762Xx9KVGSe1L##prediction" ],
+        "expressions" : [ {
+          "target" : "Y_Value_of_Occupied_Homes",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Y_Value_of_Occupied_Homes\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Crime_Rate",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Crime_Rate\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Residential_Land_Zone",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Residential_Land_Zone\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Non_retail_Business_acres",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Non_retail_Business_acres\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Charles_River",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Charles_River\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Nitric_Oxide",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Nitric_Oxide\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Average_Rooms",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Average_Rooms\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Owner_Occupied_Units",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Owner_Occupied_Units\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Distance_to_Employment_Centers",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Distance_to_Employment_Centers\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Accessibility_to_Highways",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Accessibility_to_Highways\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Property_Tax_Rate",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Property_Tax_Rate\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Pupil_Teacher_Ratio",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Pupil_Teacher_Ratio\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "Lower_Status",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"Lower_Status\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "features",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"features\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "prediction",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"prediction\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "prediction2",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "generate_vector()"
+          },
+          "description" : ""
+        }, {
+          "target" : "prediction3",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "generate_matrix()"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "MAptsgxsT4B5swUzK2asx$$WgORUcFMb7gMqHKcLRAxd" : {
+      "id" : "MAptsgxsT4B5swUzK2asx$$WgORUcFMb7gMqHKcLRAxd",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 580,
+        "y" : 280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "H0u3zVJa48qiUZrUd77XX$$EZ_kWoYd6ihMb3BqQBXVQ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "features",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.VectorUDT",
+                "pyClass" : "pyspark.ml.linalg.VectorUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "size",
+                    "type" : "integer",
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "indices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "am5bcvmJ_EgUZx2x3i9r1$$XCmwWkMgiQVI20aCr5mHm",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Y_Value_of_Occupied_Homes",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Crime_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Residential_Land_Zone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Non_retail_Business_acres",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Charles_River",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Nitric_Oxide",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Average_Rooms",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Owner_Occupied_Units",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Distance_to_Employment_Centers",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Accessibility_to_Highways",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Property_Tax_Rate",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pupil_Teacher_Ratio",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Lower_Status",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "features",
+              "type" : {
+                "type" : "udt",
+                "class" : "org.apache.spark.ml.linalg.VectorUDT",
+                "pyClass" : "pyspark.ml.linalg.VectorUDT",
+                "sqlType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "type",
+                    "type" : "byte",
+                    "nullable" : false,
+                    "metadata" : { }
+                  }, {
+                    "name" : "size",
+                    "type" : "integer",
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "indices",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "integer",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  }, {
+                    "name" : "values",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "double",
+                      "containsNull" : false
+                    },
+                    "nullable" : true,
+                    "metadata" : { }
+                  } ]
+                }
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "prediction1",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "import org.apache.spark.mllib.linalg.{Vector, Vectors}\n\nval out0 = in0.withColumn(\"prediction1\", lit(Vectors.dense(1.0, 0.0, 3.0)))",
+        "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
+        "scriptMethodFooter" : "    out0\n}"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

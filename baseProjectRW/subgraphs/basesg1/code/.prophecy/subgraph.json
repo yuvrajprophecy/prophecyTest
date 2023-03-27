@@ -23,8 +23,7 @@
           "isWorkflowNodeConfiguration" : false
         } ]
       }
-    },
-    "configPathInPipelineConfig" : [ "Subgraph_1" ]
+    }
   },
   "ports" : {
     "inputs" : [ {
@@ -35,22 +34,35 @@
     "outputs" : [ {
       "id" : "AjnbyqLDDXAgqR3dBKZ6Q",
       "slug" : "out0",
+      "schema" : {
+        "type" : "struct",
+        "fields" : [ {
+          "name" : "full_name2",
+          "type" : "string",
+          "nullable" : true,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        } ]
+      },
       "isStreaming" : false
     } ],
     "selectedInputFields" : [ ],
-    "isCustomOutputSchema" : false
+    "isCustomOutputSchema" : true
   },
   "properties" : {
     "packageName" : "simpledatalabs_27.baseprojectrw.subgraph.basesg1"
   },
   "connections" : [ {
-    "id" : "zDTvA9bM42bUhAMWc1Xf_",
+    "id" : "k344qmtaVBn3Q5Hig4v7a",
     "source" : "sXzqmzzPGUafo06IkYBcT",
     "sourcePort" : "xc1kwumkSN7T0hQ0TnCXO",
     "target" : "OOzV-k9BC8BfljAmbpkRp",
     "targetPort" : "DlKNiCwQPssX6s5RafTn0"
   }, {
-    "id" : "9vHKv2j0QdkSnuoWnSvQO",
+    "id" : "InlDpvuGZthss-BAtbCFs",
     "source" : "OOzV-k9BC8BfljAmbpkRp",
     "sourcePort" : "XX8l5IKZYUUwcgZryY4N3",
     "target" : "sXzqmzzPGUafo06IkYBcT",
@@ -77,10 +89,24 @@
         } ],
         "outputs" : [ {
           "id" : "XX8l5IKZYUUwcgZryY4N3",
-          "slug" : "out"
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "full_name2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : true
       },
       "properties" : {
         "columnsSelector" : [ "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##first_name", "DlKNiCwQPssX6s5RafTn0$$BZYn5jJntUh0dDq7xp539##last_name" ],
@@ -88,20 +114,39 @@
           "_row_id" : "c_13",
           "target" : "full_name",
           "expression" : {
-            "format" : "scala",
-            "expression" : "createFullName(col(\"first_name\"), col(\"last_name\"))"
+            "format" : "sql",
+            "expression" : "createFullName(first_name, last_name)"
           },
           "description" : ""
         } ]
+      },
+      "test" : {
+        "unitTests" : [ {
+          "data" : {
+            "DlKNiCwQPssX6s5RafTn0" : {
+              "values" : [ ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ ]
+              },
+              "predicates" : [ ]
+            },
+            "XX8l5IKZYUUwcgZryY4N3" : {
+              "values" : [ ],
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ ]
+              },
+              "predicates" : [ ]
+            }
+          },
+          "name" : "Unit Test 0",
+          "testType" : "outputRow",
+          "language" : "scala"
+        } ],
+        "language" : "scala"
       }
     }
   },
-  "externalDependencies" : [ {
-    "type" : "coordinates",
-    "coordinates" : "commons-io:commons-io:2.11.0",
-    "name" : "commons io",
-    "enabled" : true,
-    "id" : "4jyWa",
-    "exclusions" : [ ]
-  } ]
+  "externalDependencies" : [ ]
 }

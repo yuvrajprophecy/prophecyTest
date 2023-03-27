@@ -1,1 +1,1 @@
-{"initCode":"","code":"udf((value1: String, value2: String) => value1 + value2)"}
+{"initCode":"","code":"udf((a: String, b: String) => a + ' ' + b)"}

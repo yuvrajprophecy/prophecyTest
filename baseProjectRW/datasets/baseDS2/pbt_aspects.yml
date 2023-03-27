@@ -2,7 +2,7 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: full_name
+  - name: full_name2
     type: string
     nullable: true
     metadata:

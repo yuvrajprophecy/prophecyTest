@@ -2,14 +2,14 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: id1
+  - name: id
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: id2
+  - name: first_name
     type: string
     nullable: true
     metadata:
