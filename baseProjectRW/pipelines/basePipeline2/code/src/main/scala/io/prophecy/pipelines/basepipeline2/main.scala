@@ -14,9 +14,12 @@ import org.apache.spark.sql.expressions._
 import java.time._
 
 object Main {
-  def apply(context: Context): Unit = {}
 
-  def main(args:     Array[String]): Unit = {
+  def apply(context: Context): Unit = {
+    val df_baseDS1 = baseDS1(context)
+  }
+
+  def main(args: Array[String]): Unit = {
     val config = ConfigurationFactoryImpl.fromCLI(args)
     val spark: SparkSession = SparkSession
       .builder()

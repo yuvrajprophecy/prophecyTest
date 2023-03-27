@@ -48,7 +48,34 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ ],
-  "processes" : { },
+  "processes" : {
+    "8VV0svC20Mjv265-oCR0g$$F8QRPG2s3pDw_vCuiQAlT" : {
+      "id" : "8VV0svC20Mjv265-oCR0g$$F8QRPG2s3pDw_vCuiQAlT",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "baseDS1",
+        "slug" : "baseDS1",
+        "x" : 140,
+        "y" : 160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "q7jAeetHIHtyA_Ks9BllN$$NWJYxozC2AaPwMDWZfYE8",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/baseDS1"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],

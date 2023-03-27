@@ -37,9 +37,10 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-21 19:43:08'
-    modifiedAt: '2023-03-22 06:04:37'
+    modifiedAt: '2023-03-27 09:36:40'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/baseDS1
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -79,7 +80,7 @@ jobs: {}
 functions:
   author: null
   createdAt: '2023-02-20 07:59:20'
-  modifiedAt: '2023-03-22 06:02:22'
+  modifiedAt: '2023-03-27 09:36:06'
   gems: {}
   udfs: {}
   udafs: {}
