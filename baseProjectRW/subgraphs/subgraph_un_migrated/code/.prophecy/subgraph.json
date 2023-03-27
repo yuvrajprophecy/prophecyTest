@@ -1,0 +1,83 @@
+{
+  "id" : "LLaWZxu-Hvq3ZjqaYY8IL",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "jMARXwSh82Ikmx_XZEU0x",
+      "slug" : "in0",
+      "isStreaming" : false
+    } ],
+    "outputs" : [ {
+      "id" : "wMPGaVFRBWCjvwPZ2xahu",
+      "slug" : "out0",
+      "isStreaming" : false
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "subgraph_un_migrated"
+  },
+  "connections" : [ {
+    "id" : "iqvkq1W-fEYThnLyTvTFk",
+    "source" : "LLaWZxu-Hvq3ZjqaYY8IL",
+    "sourcePort" : "jMARXwSh82Ikmx_XZEU0x",
+    "target" : "mc88SKfW-Umg7tfZLDN11",
+    "targetPort" : "iFwW9bYbgDaj9oSYQZfTA"
+  }, {
+    "id" : "9yPZqTpzo-1qubSGjaDpy",
+    "source" : "mc88SKfW-Umg7tfZLDN11",
+    "sourcePort" : "jLDPp-oxyCM_4NK2_ZyGZ",
+    "target" : "LLaWZxu-Hvq3ZjqaYY8IL",
+    "targetPort" : "wMPGaVFRBWCjvwPZ2xahu"
+  } ],
+  "processes" : {
+    "mc88SKfW-Umg7tfZLDN11" : {
+      "id" : "mc88SKfW-Umg7tfZLDN11",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 340,
+        "y" : 560,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "iFwW9bYbgDaj9oSYQZfTA",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "jLDPp-oxyCM_4NK2_ZyGZ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    }
+  },
+  "externalDependencies" : [ ]
+}
