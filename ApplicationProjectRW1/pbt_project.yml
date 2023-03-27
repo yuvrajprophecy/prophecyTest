@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-20 15:49:14'
+    modifiedAt: '2023-03-27 14:35:50'
     datasets:
       inputs:
       - datasets/ds1
@@ -51,6 +51,21 @@ pipelines:
     language: scala
     createdAt: '2023-02-27 14:42:40'
     modifiedAt: '2023-03-14 08:31:50'
+    datasets:
+      inputs:
+      - datasets/ds1
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/kaajri12312:
+    name: kaajri12312
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-03-27 14:42:15'
+    modifiedAt: '2023-03-27 14:42:23'
     datasets:
       inputs:
       - datasets/ds1
@@ -118,6 +133,15 @@ subgraphs:
     mode: batch
     createdAt: '2023-02-20 07:00:29'
     modifiedAt: '2023-03-01 06:13:18'
+  subgraphs/sdfsd:
+    name: sdfsd
+    description: fsd
+    author: rohitjain+27@simpledatalabs.com
+    language: scala
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-03-27 14:40:11'
+    modifiedAt: '2023-03-27 14:40:11'
 sqlModels: {}
 sqlPipeline: null
 dependencies:
@@ -132,8 +156,8 @@ projectDependencies:
     projectUID: 228
     projectName: BaseProjectRW
     repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW
-    version: BaseProjectRW/62.0
+    version: BaseProjectRW/37.0
     author: null
-    createdAt: '2023-03-27 09:43:13'
-    modifiedAt: '2023-03-27 09:43:13'
+    createdAt: '2023-03-27 14:44:25'
+    modifiedAt: '2023-03-27 14:44:25'
 pipelineConfigurations: {}

@@ -1,0 +1,43 @@
+{
+  "id" : "FB2o8Gvhm3Lb1_pDPiyeE",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "wni0stZFfYt_i1LfJwAsT",
+      "slug" : "in0"
+    } ],
+    "outputs" : [ {
+      "id" : "UxcBrI50bLQmM21AIFSSe",
+      "slug" : "out0"
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : { },
+  "connections" : [ ],
+  "processes" : { },
+  "externalDependencies" : [ {
+    "type" : "coordinates",
+    "coordinates" : "org.apache.commons:commons-lang3:3.11",
+    "name" : "commons",
+    "enabled" : false,
+    "id" : "EDPzF",
+    "exclusions" : [ ]
+  } ]
+}
