@@ -1,0 +1,89 @@
+name: BaseProjectPY
+description: ''
+version: '1.05'
+author: ''
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: baseprojectpy
+  parentArtefactID: rohitjainsimpledatalabs.com_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-03-02 11:45:43'
+  modifiedAt: '2023-03-02 11:45:43'
+pipelines:
+  pipelines/basePipeline1:
+    name: basePipeline1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-03-02 11:45:43'
+    modifiedAt: '2023-03-07 10:36:40'
+    datasets:
+      inputs:
+      - datasets/baseDS1
+      outputs: []
+    subgraphs:
+    - subgraphs/sg1
+    dependencies: {}
+datasets:
+  datasets/baseDS1:
+    name: baseDS1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-03-02 11:51:40'
+    modifiedAt: '2023-03-07 08:13:25'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 44
+        datasetType: File
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-03-02 11:51:40'
+        modifiedAt: '2023-03-02 11:51:40'
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-03-02 11:45:43'
+  modifiedAt: '2023-03-07 08:15:36'
+  gems: {}
+  udfs:
+    udfs/udfConcat:
+      name: udfConcat
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain@simpledatalabs.com
+      createdAt: '2023-03-02 11:48:03'
+      modifiedAt: '2023-03-02 11:48:03'
+    udfs/udfConcatold:
+      name: udfConcatold
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain@simpledatalabs.com
+      createdAt: '2023-03-07 08:14:09'
+      modifiedAt: '2023-03-07 08:14:09'
+  udafs: {}
+  expressions: {}
+subgraphs:
+  subgraphs/sg1:
+    name: sg1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-03-07 10:36:34'
+    modifiedAt: '2023-03-07 10:36:35'
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}

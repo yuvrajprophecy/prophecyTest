@@ -1,0 +1,127 @@
+name: sfefef
+description: ''
+version: 1.0.1
+author: ''
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: sfefef
+  parentArtefactID: simpledatalabs_27
+  buildSystem: maven
+  author: null
+  createdAt: '2023-02-28 11:47:08'
+  modifiedAt: '2023-02-28 11:47:08'
+pipelines:
+  pipelines/pppp:
+    name: pppp
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-02-28 11:47:08'
+    modifiedAt: '2023-02-28 11:47:15'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/lineageRegression:
+    name: lineageRegression
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-03-20 10:16:43'
+    modifiedAt: '2023-03-20 14:30:32'
+    datasets:
+      inputs:
+      - datasets/normalization
+      outputs:
+      - datasets/normalization_out
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/normalization:
+    name: normalization
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2023-03-20 10:17:32'
+    modifiedAt: '2023-03-20 12:36:26'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2023-03-20 10:17:32'
+        modifiedAt: '2023-03-20 10:17:32'
+  datasets/normalization_out:
+    name: normalization_out
+    description: ''
+    author: rohitjain+27@simpledatalabs.com
+    createdAt: '2023-03-20 10:41:44'
+    modifiedAt: '2023-03-20 14:23:45'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 52
+        datasetType: File
+        description: ''
+        author: rohitjain+27@simpledatalabs.com
+        createdAt: '2023-03-20 10:41:44'
+        modifiedAt: '2023-03-20 10:41:44'
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-02-28 11:47:08'
+  modifiedAt: '2023-03-20 14:30:32'
+  gems: {}
+  udfs:
+    udfs/vector_to_array:
+      name: vector_to_array
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+    udfs/generate_vector:
+      name: generate_vector
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+    udfs/generate_matrix:
+      name: generate_matrix
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+    udfs/matrix_col_count:
+      name: matrix_col_count
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: rohitjain+27@simpledatalabs.com
+      createdAt: '2022-12-15 18:04:50'
+      modifiedAt: '2022-12-15 18:04:50'
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}

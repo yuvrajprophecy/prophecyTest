@@ -9,25 +9,16 @@
     "phase" : 0,
     "cache" : false,
     "detailedStats" : false,
-    "isImported" : false,
-    "configuration" : {
-      "common" : {
-        "type" : "record",
-        "fields" : [ ]
-      }
-    },
-    "configPathInPipelineConfig" : [ "Subgraph_1" ]
+    "isImported" : false
   },
   "ports" : {
     "inputs" : [ {
       "id" : "0BxnN5zg4wRxFOQUG39F_",
-      "slug" : "in0",
-      "isStreaming" : false
+      "slug" : "in0"
     } ],
     "outputs" : [ {
       "id" : "DsXRifXMdpMuCtHpCLarQ",
-      "slug" : "out0",
-      "isStreaming" : false
+      "slug" : "out0"
     } ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
@@ -211,13 +202,5 @@
         "language" : "scala"
       }
     }
-  },
-  "externalDependencies" : [ {
-    "type" : "coordinates",
-    "coordinates" : "org.apache.commons:commons-lang3:3.11",
-    "name" : "commons",
-    "enabled" : false,
-    "id" : "EDPzF",
-    "exclusions" : [ ]
-  } ]
+  }
 }

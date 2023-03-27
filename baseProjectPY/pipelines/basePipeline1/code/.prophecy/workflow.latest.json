@@ -1,0 +1,458 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "44",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "rohitjainsimpledatalabs.com_team.baseprojectpy.functions",
+      "sharedFunctionPackageNames" : [ ],
+      "initialCode" : "y = 10"
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "basepipeline1",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "xVdEIrVn0RMKTNSnN-LOa$$mQ3levYx--QJ8cEabzzMB",
+    "source" : "b8auu_GwfnmjRIFnvgurP$$XP6aqWrBuoCTdq1Bs87eY",
+    "sourcePort" : "seQs4pp0Uy6RE0eXvO8hP$$LAJd4pLGMMT0VL8ZvPSTF",
+    "target" : "AUoXvKPvS17glLy6ViyRX$$6u4bL9wfOPMuGwhzrKJxy",
+    "targetPort" : "Uh7i2kMer8bng_fkG7YKa$$uq4PyMTu5iI1Y7q7y3N4_"
+  }, {
+    "id" : "_RSMw1yFlbIOBW_2FgrUm$$o6rcw3g9D0Sw9FxqsrM61",
+    "source" : "AUoXvKPvS17glLy6ViyRX$$6u4bL9wfOPMuGwhzrKJxy",
+    "sourcePort" : "CNRIaKEKQDXjtFkg0xw3C$$uVe0spMohBAqluFxpsDeI",
+    "target" : "y_59s4DnTe4CY0XGuPpSs$$bBjK_-TMxgPDStKZBa4BQ",
+    "targetPort" : "I80Fwnm6CaM0L4RGG_r03$$9G5swcvQUvOZR0vsvHaja"
+  } ],
+  "processes" : {
+    "b8auu_GwfnmjRIFnvgurP$$XP6aqWrBuoCTdq1Bs87eY" : {
+      "id" : "b8auu_GwfnmjRIFnvgurP$$XP6aqWrBuoCTdq1Bs87eY",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "baseDS1",
+        "slug" : "baseDS1",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "seQs4pp0Uy6RE0eXvO8hP$$LAJd4pLGMMT0VL8ZvPSTF",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/baseDS1"
+      }
+    },
+    "AUoXvKPvS17glLy6ViyRX$$6u4bL9wfOPMuGwhzrKJxy" : {
+      "id" : "AUoXvKPvS17glLy6ViyRX$$6u4bL9wfOPMuGwhzrKJxy",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 320,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Uh7i2kMer8bng_fkG7YKa$$uq4PyMTu5iI1Y7q7y3N4_",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "CNRIaKEKQDXjtFkg0xw3C$$uVe0spMohBAqluFxpsDeI",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "y_59s4DnTe4CY0XGuPpSs$$bBjK_-TMxgPDStKZBa4BQ" : {
+      "id" : "y_59s4DnTe4CY0XGuPpSs$$bBjK_-TMxgPDStKZBa4BQ",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : 520,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "I80Fwnm6CaM0L4RGG_r03$$9G5swcvQUvOZR0vsvHaja",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "VBo5iYVV2XKGZhOZiFdKw$$D0gqqD7NMntIW9qzR3YQy",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "externalId" : "subgraphs/sg1",
+        "name" : "sg1",
+        "packageName" : "sg1"
+      },
+      "connections" : [ {
+        "id" : "s3zxKNbz5TSmanzpIEvJD",
+        "source" : "y_59s4DnTe4CY0XGuPpSs$$bBjK_-TMxgPDStKZBa4BQ",
+        "sourcePort" : "I80Fwnm6CaM0L4RGG_r03$$9G5swcvQUvOZR0vsvHaja",
+        "target" : "SKtZ5jS8OzkTqTiTLNuwC$$ifrNOVDUL--uS6OE4_5yr",
+        "targetPort" : "uF1sdxmlomT-D9BZa3f9M$$jNIB9EjXtEHzHvQ_oIvBP"
+      }, {
+        "id" : "JCG9wcwb2J6KcDwgcQ_8M",
+        "source" : "SKtZ5jS8OzkTqTiTLNuwC$$ifrNOVDUL--uS6OE4_5yr",
+        "sourcePort" : "i5pMBUJcBPw8m2hZW7Hdj$$O4-OsgPflyB53zvaVgbes",
+        "target" : "y_59s4DnTe4CY0XGuPpSs$$bBjK_-TMxgPDStKZBa4BQ",
+        "targetPort" : "VBo5iYVV2XKGZhOZiFdKw$$D0gqqD7NMntIW9qzR3YQy"
+      } ],
+      "processes" : {
+        "SKtZ5jS8OzkTqTiTLNuwC$$ifrNOVDUL--uS6OE4_5yr" : {
+          "id" : "SKtZ5jS8OzkTqTiTLNuwC$$ifrNOVDUL--uS6OE4_5yr",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "Reformat_2",
+            "slug" : "Reformat_2",
+            "x" : 960,
+            "y" : 620,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "uF1sdxmlomT-D9BZa3f9M$$jNIB9EjXtEHzHvQ_oIvBP",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "first_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "last_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "phone",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "email",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "country_code",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "account_open_date",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "account_flags",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "i5pMBUJcBPw8m2hZW7Hdj$$O4-OsgPflyB53zvaVgbes",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ "uF1sdxmlomT-D9BZa3f9M$$jNIB9EjXtEHzHvQ_oIvBP##first_name", "uF1sdxmlomT-D9BZa3f9M$$jNIB9EjXtEHzHvQ_oIvBP##last_name" ],
+            "expressions" : [ {
+              "target" : "name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "udfConcat(first_name, last_name)"
+              },
+              "description" : ""
+            }, {
+              "target" : "nameold",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "udfConcatold(first_name, last_name)"
+              },
+              "description" : ""
+            } ]
+          }
+        }
+      },
+      "externalDependencies" : [ ]
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}
