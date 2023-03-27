@@ -24,7 +24,8 @@
           "prophecy.execution.service.url" : "wss://execution.dp.ideteam.dev.cloud.prophecy.io/eventws",
           "prophecy.packages.path" : "{\"pipelines/pipeline1\":\"dbfs:/FileStore/prophecy/artifacts/dev/ideteam/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/pipeline1.jar\"}",
           "prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
-          "prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__"
+          "prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
+          "prophecy.execution.metrics.disabled" : false
         },
         "num_workers" : 1,
         "aws_attributes" : {
@@ -39,29 +40,19 @@
       "task_key" : "Pipeline_0",
       "job_cluster_key" : "appJob1_default_small",
       "spark_jar_task" : {
-        "main_class_name" : "io.prophecy.pipelines.pipeline1.Main",
-        "parameters" : [ "-i", "io/prophecy/pipelines/pipeline1/config/default", "-O", "{}" ]
+        "main_class_name" : "basetest.pipeline9.Main",
+        "parameters" : [ "-i", "default", "-O", "{}" ]
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.2.0-7.0.8-pm1"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.2.0-7.0.11"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.4.0"
+          "package" : "prophecy-libs==1.4.7"
         }
       }, {
         "jar" : "dbfs:/FileStore/prophecy/artifacts/dev/ideteam/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/pipeline1.jar"
-      }, {
-        "maven" : {
-          "coordinates" : "commons-io:commons-io:2.11.0",
-          "exclusions" : [ ]
-        }
-      }, {
-        "maven" : {
-          "coordinates" : "commons-io:commons-io:2.11.0",
-          "exclusions" : [ ]
-        }
       } ],
       "email_notifications" : { },
       "max_retries" : 0

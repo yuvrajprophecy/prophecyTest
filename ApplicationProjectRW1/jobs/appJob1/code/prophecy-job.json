@@ -40,6 +40,19 @@
       "scalalibsResolutionMode" : {
         "PublicCentral" : { }
       }
+    }, {
+      "id" : "58",
+      "name" : "dev2",
+      "clusterSizes" : {
+        "default" : "Small",
+        "availableClusterSizes" : [ "Small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
     } ]
   },
   "processes" : {
@@ -54,10 +67,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "1fwmRUOlmfsv8JH7t73Gk$$YHhi5WaonNN1kfj-TbDho"
+          "id" : "1fwmRUOlmfsv8JH7t73Gk$$YHhi5WaonNN1kfj-TbDho",
+          "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "Oi4_mE6OI-6Ws_lctmHHs$$jMXBvP0xVNQIdkeeGPVkw"
+          "id" : "Oi4_mE6OI-6Ws_lctmHHs$$jMXBvP0xVNQIdkeeGPVkw",
+          "slug" : ""
         } ]
       },
       "settings" : {
@@ -72,31 +87,7 @@
       "properties" : {
         "pipelineId" : "pipelines/pipeline1",
         "configurations" : {
-          "schema" : [ {
-            "name" : "Subgraph_1",
-            "kind" : {
-              "type" : "record",
-              "fields" : [ ]
-            },
-            "optional" : false,
-            "isWorkflowNodeConfiguration" : true
-          }, {
-            "name" : "basesg1_1",
-            "kind" : {
-              "type" : "record",
-              "fields" : [ {
-                "name" : "config1",
-                "kind" : {
-                  "type" : "string",
-                  "value" : "defaultvalue"
-                },
-                "optional" : false,
-                "isWorkflowNodeConfiguration" : false
-              } ]
-            },
-            "optional" : false,
-            "isWorkflowNodeConfiguration" : true
-          } ],
+          "schema" : [ ],
           "instances" : {
             "ApplicationProjectRW" : [ "default" ]
           },

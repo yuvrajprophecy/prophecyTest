@@ -1,6 +1,6 @@
-package basetest.pipeline5.config
+package basetest.pipeline9.config
 
-import basetest.pipeline5.config.Context
+import basetest.pipeline9.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint

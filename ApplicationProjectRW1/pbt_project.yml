@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-20 15:35:02'
+    modifiedAt: '2023-03-20 15:49:14'
     datasets:
       inputs:
       - datasets/ds1
@@ -98,7 +98,7 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2023-02-20 12:54:12'
-    modifiedAt: '2023-02-20 12:54:12'
+    modifiedAt: '2023-03-27 11:56:10'
     author: rohitjain+27@simpledatalabs.com
 functions:
   author: null
@@ -127,5 +127,13 @@ dependencies:
   enabled: false
   id: EDPzF
   exclusions: []
-projectDependencies: {}
+projectDependencies:
+  '228':
+    projectUID: 228
+    projectName: BaseProjectRW
+    repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW
+    version: BaseProjectRW/62.0
+    author: null
+    createdAt: '2023-03-27 09:43:13'
+    modifiedAt: '2023-03-27 09:43:13'
 pipelineConfigurations: {}

@@ -1,4 +1,4 @@
-package basetest.pipeline5.config
+package basetest.pipeline9.config
 
 import pureconfig._
 import pureconfig.generic.ProductHint
