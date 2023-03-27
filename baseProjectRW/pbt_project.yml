@@ -1,6 +1,6 @@
 name: BaseProjectRW
 description: ''
-version: '61.0'
+version: '62.0'
 author: rohitjain+27@simpledatalabs.com
 language: scala
 buildSystem: ''
