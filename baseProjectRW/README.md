@@ -51,3 +51,7 @@ dekmdle
 *** Release notes for version: 62.0 ***
 
 d,e
+
+*** Release notes for version: 37.0 ***
+
+d,;de
