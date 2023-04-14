@@ -15,3 +15,7 @@ de
 *** Release notes for version: 5.0 ***
 
 swssw
+
+*** Release notes for version: 120.0 ***
+
+120.0
