@@ -71,12 +71,6 @@
     "target" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
     "targetPort" : "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-"
   }, {
-    "id" : "mbJ2xI_nHwu4ikNww3_JV$$_7lANd_1i6gBMcArIW2mU",
-    "source" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
-    "sourcePort" : "43X9PC40IN1pO3_ru3G7b$$7ObldrOs1e5RqtlUhiLHt",
-    "target" : "fdl8WU_f9T_l5lzyki7Kg$$FYZvyUb78U_BY9rEAQo9r",
-    "targetPort" : "l_xKsh6RPjxcDj6dfMv5g$$isUYRnkHf8uKNe4_tBjiS"
-  }, {
     "id" : "EqeWzL3GUpPRPiwLxz97o",
     "source" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
     "sourcePort" : "43X9PC40IN1pO3_ru3G7b$$7ObldrOs1e5RqtlUhiLHt",
@@ -91,7 +85,7 @@
         "label" : "ds1",
         "slug" : "ds1",
         "x" : 120,
-        "y" : 220,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -117,7 +111,7 @@
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
         "x" : 320,
-        "y" : 220,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -169,8 +163,8 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : 520,
-        "y" : 120,
+        "x" : 120,
+        "y" : 320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -179,30 +173,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "l_xKsh6RPjxcDj6dfMv5g$$isUYRnkHf8uKNe4_tBjiS",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "pDdKCqFJ4OJRP5PL3jPc6$$WheV-fUgOlUO9lk5U6Bu-",
@@ -217,12 +188,6 @@
         "name" : "sg1"
       },
       "connections" : [ {
-        "id" : "OVBmFH1r5xyYLXGIUMnNL",
-        "source" : "fdl8WU_f9T_l5lzyki7Kg$$FYZvyUb78U_BY9rEAQo9r",
-        "sourcePort" : "l_xKsh6RPjxcDj6dfMv5g$$isUYRnkHf8uKNe4_tBjiS",
-        "target" : "hzOvzToP9UH21PMUxXnzJ$$I_dmub31Nb5LKyUVMkI2m",
-        "targetPort" : "vIfE6-JTtL_46RzY7QqU4$$aWvcrzNdGRrKOp_2FEdb-"
-      }, {
         "id" : "G9rqc9lkzwEe8PhmU4YXe$$Q7McGRs58B0fzZf6majUX",
         "source" : "hzOvzToP9UH21PMUxXnzJ$$I_dmub31Nb5LKyUVMkI2m",
         "sourcePort" : "OzzirJlTuWh1G3rp2nU9d$$Xgq1GWwgIm2BTrHEiuDaQ",
@@ -234,6 +199,12 @@
         "sourcePort" : "otFDuMmMEnUnXIwn_KIvE$$J3aToxMV5ptrxe0U7Rftt",
         "target" : "fdl8WU_f9T_l5lzyki7Kg$$FYZvyUb78U_BY9rEAQo9r",
         "targetPort" : "pDdKCqFJ4OJRP5PL3jPc6$$WheV-fUgOlUO9lk5U6Bu-"
+      }, {
+        "id" : "epwIkOLt77oCKjB6MpU42",
+        "source" : "3FSDqvlPjY35mHryXI8mS$$Mlmcgv2CVYU9NJb88gfwa",
+        "sourcePort" : "BAPulndkWg9wQZQmdsRAs$$WUlLCytM2OCknBgixO8dW",
+        "target" : "hzOvzToP9UH21PMUxXnzJ$$I_dmub31Nb5LKyUVMkI2m",
+        "targetPort" : "vIfE6-JTtL_46RzY7QqU4$$aWvcrzNdGRrKOp_2FEdb-"
       } ],
       "processes" : {
         "hzOvzToP9UH21PMUxXnzJ$$I_dmub31Nb5LKyUVMkI2m" : {
@@ -242,8 +213,8 @@
           "metadata" : {
             "label" : "Reformat_2",
             "slug" : "Reformat_2",
-            "x" : 220,
-            "y" : 440,
+            "x" : 320,
+            "y" : 120,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -295,8 +266,8 @@
           "metadata" : {
             "label" : "Script_1",
             "slug" : "Script_1",
-            "x" : 420,
-            "y" : 440,
+            "x" : 520,
+            "y" : 120,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -347,6 +318,32 @@
             "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
             "scriptMethodFooter" : "    return out0"
           }
+        },
+        "3FSDqvlPjY35mHryXI8mS$$Mlmcgv2CVYU9NJb88gfwa" : {
+          "id" : "3FSDqvlPjY35mHryXI8mS$$Mlmcgv2CVYU9NJb88gfwa",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "ds1_1",
+            "slug" : "ds1_1",
+            "x" : 120,
+            "y" : 120,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "BAPulndkWg9wQZQmdsRAs$$WUlLCytM2OCknBgixO8dW",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/ds1"
+          }
         }
       },
       "externalDependencies" : [ ]
@@ -358,7 +355,7 @@
         "label" : "Subgraph_2",
         "slug" : "Subgraph_2",
         "x" : 520,
-        "y" : 320,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -400,9 +397,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "sg2",
         "externalId" : "subgraphs/sg2",
-        "name" : "sg2",
-        "packageName" : "sg2"
+        "name" : "sg2"
       },
       "connections" : [ {
         "id" : "sQ2nwt5uwTf8UoVXf8UJk",

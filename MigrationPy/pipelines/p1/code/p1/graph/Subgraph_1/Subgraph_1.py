@@ -7,7 +7,8 @@ from .config import *
 
 def Subgraph_1(spark: SparkSession, config: SubgraphConfig, in0: DataFrame) -> DataFrame:
     Config.update(config)
-    df_Reformat_2 = Reformat_2(spark, in0)
+    df_ds1_1 = ds1_1(spark)
+    df_Reformat_2 = Reformat_2(spark, df_ds1_1)
     df_Script_1 = Script_1(spark, df_Reformat_2)
 
     return df_Script_1
