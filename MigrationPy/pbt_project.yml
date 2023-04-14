@@ -12,23 +12,6 @@ buildSystemDetails:
   createdAt: '2023-03-07 10:01:40'
   modifiedAt: '2023-03-07 10:01:40'
 pipelines:
-  pipelines/p1:
-    name: p1
-    description: ''
-    author: rohitjain@simpledatalabs.com
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-03-07 10:01:40'
-    modifiedAt: '2023-04-14 09:23:16'
-    datasets:
-      inputs:
-      - datasets/ds1
-      outputs: []
-    subgraphs:
-    - subgraphs/sg1
-    - subgraphs/sg2
-    dependencies: {}
   pipelines/p2:
     name: p2
     description: ''
@@ -38,21 +21,6 @@ pipelines:
     language: python
     createdAt: '2023-03-07 10:04:39'
     modifiedAt: '2023-03-07 10:04:59'
-    datasets:
-      inputs:
-      - datasets/ds1
-      outputs: []
-    subgraphs: []
-    dependencies: {}
-  pipelines/p3:
-    name: p3
-    description: ''
-    author: rohitjain@simpledatalabs.com
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-03-07 10:05:04'
-    modifiedAt: '2023-03-07 10:05:20'
     datasets:
       inputs:
       - datasets/ds1
