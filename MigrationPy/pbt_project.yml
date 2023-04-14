@@ -1,6 +1,6 @@
 name: MigrationPy
 description: ''
-version: '121.0'
+version: '122.0'
 author: rohitjain@simpledatalabs.com
 language: python
 buildSystem: ''
@@ -82,6 +82,10 @@ subgraphs:
     createdAt: '2023-03-16 13:57:36'
     modifiedAt: '2023-04-14 09:22:44'
 sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies: []
 projectDependencies: {}
