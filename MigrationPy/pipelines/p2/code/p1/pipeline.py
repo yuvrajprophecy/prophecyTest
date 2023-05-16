@@ -9,6 +9,7 @@ from p1.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_ds1 = ds1(spark)
     df_Reformat_1 = Reformat_1(spark, df_ds1)
+    df_sg2 = sg2(spark, Config.sg2, df_Reformat_1)
 
 def main():
     spark = SparkSession.builder\

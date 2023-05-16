@@ -1,14 +1,13 @@
+from p1.graph.sg2.config.Config import SubgraphConfig as sg2_Config
 from prophecy.config import ConfigBase
-prophecy_spark_context = None
 
 
 class Config(ConfigBase):
 
-    def __init__(self, ):
+    def __init__(self, **kwargs):
         self.spark = None
         self.update()
 
-    def update(self, ):
-        global prophecy_spark_context
-        prophecy_spark_context = self.spark
+    def update(self, **kwargs):
+        prophecy_spark = self.spark
         pass

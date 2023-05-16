@@ -2,16 +2,12 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "48",
+    "fabricId" : "13",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
-      "udfs" : [ {
-        "name" : "udfConcat",
-        "code" : "@udf(returnType = StringType())\ndef concat(value: str, value2: str):\n    return value + delimitter2 + value2",
-        "language" : "python"
-      } ],
+      "udfs" : [ ],
       "functionPackageName" : "rohitjainsimpledatalabs.com_team.migrationpy.functions",
       "sharedFunctionPackageNames" : [ ],
       "initialCode" : "delimitter2 = ''"
@@ -23,7 +19,117 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "sg2",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "arrayofrec",
+              "kind" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "val1",
+                    "kind" : {
+                      "type" : "string",
+                      "value" : null
+                    },
+                    "optional" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  }, {
+                    "name" : "anotherarray",
+                    "kind" : {
+                      "type" : "array",
+                      "elementType" : {
+                        "type" : "record",
+                        "fields" : [ {
+                          "name" : "col",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false
+                        }, {
+                          "name" : "var2",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false
+                        } ]
+                      },
+                      "value" : null
+                    },
+                    "optional" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  } ]
+                },
+                "value" : [ {
+                  "val1" : "sdd "
+                }, {
+                  "val1" : "d "
+                }, {
+                  "val1" : "sdd"
+                } ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        }, {
+          "name" : "pipearray_of_rec",
+          "kind" : {
+            "type" : "array",
+            "elementType" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "cond",
+                "kind" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "arrayinsiderec",
+                "kind" : {
+                  "type" : "array",
+                  "elementType" : {
+                    "type" : "record",
+                    "fields" : [ {
+                      "name" : "val1",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false
+                    }, {
+                      "name" : "val2",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false
+                    } ]
+                  },
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "value" : null
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -49,7 +155,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "p1"
+    "topLevelPackage" : "p1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "h0HhrSullUGDreMPWVctH$$UdXvvynUymYtLMyF-l4od",
@@ -57,6 +164,12 @@
     "sourcePort" : "5T2pMWEMaa8JYM7m2rXz5$$wcNjl-9YjzsYcqQ7Vj48i",
     "target" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
     "targetPort" : "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-"
+  }, {
+    "id" : "O56qbq7AxTl22vWwaVG1D$$osJZTxYn520Zp7FxGXHma",
+    "source" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
+    "sourcePort" : "43X9PC40IN1pO3_ru3G7b$$7ObldrOs1e5RqtlUhiLHt",
+    "target" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+    "targetPort" : "Zabu5WVW07vheTbL_criZ$$V5DaNVLMXWHPtzhZLpwTW"
   } ],
   "processes" : {
     "XcfnXBg8qSoyx85NHGQsc$$6j365oVMu8mPUUdpvbAU1" : {
@@ -105,7 +218,7 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "id1",
+              "name" : "id",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -114,7 +227,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "id2",
+              "name" : "first_name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -134,9 +247,153 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "columnsSelector" : [ "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-##first_name", "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-##id" ],
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "id"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "first_name"
+          },
+          "description" : ""
+        } ]
       }
+    },
+    "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO" : {
+      "id" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "sg2",
+        "slug" : "sg2",
+        "x" : 1200,
+        "y" : 620,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Zabu5WVW07vheTbL_criZ$$V5DaNVLMXWHPtzhZLpwTW",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "suAqe5Ml8Uc25kf3DCAEH$$all4cvl7TGTxanUGSOfjd",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "packageName" : "sg2",
+        "externalId" : "subgraphs/sg2",
+        "name" : "sg2"
+      },
+      "connections" : [ {
+        "id" : "P8msqguHJ3KA59U6aIZy2",
+        "source" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+        "sourcePort" : "Zabu5WVW07vheTbL_criZ$$V5DaNVLMXWHPtzhZLpwTW",
+        "target" : "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l",
+        "targetPort" : "z6751wN3hC-pgwBHmP9eb$$W55m9XfS4B1bg3zdT0oYI"
+      }, {
+        "id" : "Q3zxRi4Utbi6ObYUl8eAb",
+        "source" : "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l",
+        "sourcePort" : "bniXV4ikjsyjCJUTkSwwA$$jJriKqHqXp4JEFlt4KyDO",
+        "target" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+        "targetPort" : "suAqe5Ml8Uc25kf3DCAEH$$all4cvl7TGTxanUGSOfjd"
+      } ],
+      "processes" : {
+        "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l" : {
+          "id" : "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "Reformat_3",
+            "slug" : "Reformat_3",
+            "x" : 760,
+            "y" : 700,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "z6751wN3hC-pgwBHmP9eb$$W55m9XfS4B1bg3zdT0oYI",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "first_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "bniXV4ikjsyjCJUTkSwwA$$jJriKqHqXp4JEFlt4KyDO",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ "z6751wN3hC-pgwBHmP9eb$$W55m9XfS4B1bg3zdT0oYI##first_name" ],
+            "expressions" : [ {
+              "target" : "first_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "first_name"
+              },
+              "description" : ""
+            } ]
+          }
+        }
+      },
+      "externalDependencies" : [ ]
     }
   },
   "ports" : {
@@ -144,5 +401,38 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.configuration.common.fields[0].kind.value",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "default values error for key: sg2 value: Validation Error in arrayofrec: Validation Error in anotherarray: null Default value",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.metainfo.configuration.common.fields[1].kind.value",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "default values error for key: pipearray_of_rec value: null Default value",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }
