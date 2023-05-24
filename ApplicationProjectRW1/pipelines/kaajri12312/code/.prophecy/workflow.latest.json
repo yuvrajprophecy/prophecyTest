@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "scala",
-    "fabricId" : "52",
+    "fabricId" : "869",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -44,7 +44,7 @@
       "exclusions" : [ ]
     } ],
     "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "228",
+      "projectUID" : "21759",
       "projectName" : "BaseProjectRW",
       "externalDependencies" : [ ]
     } ],
