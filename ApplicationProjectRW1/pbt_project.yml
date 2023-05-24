@@ -172,4 +172,20 @@ projectDependencies:
     author: null
     createdAt: '2023-03-27 15:01:21'
     modifiedAt: '2023-03-27 15:01:21'
-pipelineConfigurations: {}
+pipelineConfigurations:
+  pipelineConfigurations/BaseProjectRW/basePipeline1:
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-05-24 14:22:24'
+    modifiedAt: '2023-05-24 14:22:24'
+    configurations:
+      pipelineConfigurations/BaseProjectRW/basePipeline1/default:
+        name: default
+        author: null
+        createdAt: '2023-05-24 14:22:24'
+        modifiedAt: '2023-05-24 14:22:24'
+      pipelineConfigurations/BaseProjectRW/basePipeline1/newConfig:
+        name: newConfig
+        author: null
+        createdAt: '2023-05-24 14:22:25'
+        modifiedAt: '2023-05-24 14:22:25'
+    basePipeline: 21759/pipelines/basePipeline1
