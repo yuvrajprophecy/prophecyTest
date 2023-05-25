@@ -245,9 +245,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "io.prophecy.subgraphs.sdfsd",
         "externalId" : "subgraphs/sdfsd",
-        "name" : "sdfsd",
-        "packageName" : "io.prophecy.subgraphs.sdfsd"
+        "name" : "sdfsd"
       },
       "connections" : [ {
         "id" : "6fP_v5w0bZjQLMaWj9b9J",

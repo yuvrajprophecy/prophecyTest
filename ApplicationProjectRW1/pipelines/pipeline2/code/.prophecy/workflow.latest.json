@@ -9,7 +9,7 @@
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
-      "sharedFunctionPackageNames" : [ ],
+      "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions" ],
       "initialCode" : "val pipeline1 = \"ldme\""
     },
     "udafs" : {
@@ -67,7 +67,11 @@
       "id" : "EDPzF",
       "exclusions" : [ ]
     } ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "228",
+      "projectName" : "BaseProjectRW",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
