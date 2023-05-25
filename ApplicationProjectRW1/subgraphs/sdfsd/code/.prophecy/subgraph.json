@@ -13,14 +13,23 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        } ]
       }
     }
   },
   "ports" : {
     "inputs" : [ {
       "id" : "wni0stZFfYt_i1LfJwAsT",
-      "slug" : "in0"
+      "slug" : "in0",
+      "isStreaming" : false
     } ],
     "outputs" : [ {
       "id" : "UxcBrI50bLQmM21AIFSSe",
@@ -29,9 +38,54 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
   },
-  "properties" : { },
-  "connections" : [ ],
-  "processes" : { },
+  "properties" : {
+    "packageName" : "io.prophecy.subgraphs.sdfsd"
+  },
+  "connections" : [ {
+    "id" : "6fP_v5w0bZjQLMaWj9b9J",
+    "source" : "FB2o8Gvhm3Lb1_pDPiyeE",
+    "sourcePort" : "wni0stZFfYt_i1LfJwAsT",
+    "target" : "Wk-JSDKFO8nKk7wu5FUyu",
+    "targetPort" : "6OAFQSlULQtNYKF4XL8xm"
+  }, {
+    "id" : "qs19AKq0b-7so30Qg87QI",
+    "source" : "Wk-JSDKFO8nKk7wu5FUyu",
+    "sourcePort" : "ACdPpe86wD3v7EM9g2Hx8",
+    "target" : "FB2o8Gvhm3Lb1_pDPiyeE",
+    "targetPort" : "UxcBrI50bLQmM21AIFSSe"
+  } ],
+  "processes" : {
+    "Wk-JSDKFO8nKk7wu5FUyu" : {
+      "id" : "Wk-JSDKFO8nKk7wu5FUyu",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : 260,
+        "y" : 380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6OAFQSlULQtNYKF4XL8xm",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "ACdPpe86wD3v7EM9g2Hx8",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : { },
+      "connections" : [ ],
+      "processes" : { },
+      "externalDependencies" : [ ]
+    }
+  },
   "externalDependencies" : [ {
     "type" : "coordinates",
     "coordinates" : "org.apache.commons:commons-lang3:3.11",

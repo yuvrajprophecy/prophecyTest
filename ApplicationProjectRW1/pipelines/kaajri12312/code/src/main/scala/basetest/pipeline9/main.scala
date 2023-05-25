@@ -6,6 +6,8 @@ import basetest.pipeline9.config._
 import basetest.pipeline9.udfs.UDFs._
 import basetest.pipeline9.udfs._
 import basetest.pipeline9.graph._
+import basetest.pipeline9.graph.sdfsd
+import basetest.pipeline9.graph.sdfsd.config.{Context => sdfsd_Context}
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -20,6 +22,10 @@ object Main {
     Lookup_1(context, df_ds1)
     val df_Reformat_1 = Reformat_1(context, df_ds1)
     val df_Script_1   = Script_1(context,   df_Reformat_1)
+    val df_sdfsd = sdfsd.apply(
+      sdfsd_Context(context.spark, context.config.sdfsd),
+      df_Script_1
+    )
   }
 
   def main(args: Array[String]): Unit = {

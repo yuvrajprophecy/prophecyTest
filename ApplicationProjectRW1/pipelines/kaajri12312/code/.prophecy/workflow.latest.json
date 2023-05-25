@@ -19,7 +19,23 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "sdfsd",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "Subgraph_1",
+              "kind" : {
+                "type" : "record",
+                "fields" : [ ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : true
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -77,8 +93,221 @@
     "sourcePort" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
     "target" : "3X2FMp13Nl9FL5wUFurF3$$rYvrdmDHLiHOAMSYQyKaL",
     "targetPort" : "avwhYDiQTpeW-IAEohCvQ$$aq2WpqZCv1Q1X5lrQLY5u"
+  }, {
+    "id" : "p_m4eD4kN8XAYraybs-28$$mDqM5dOjTgBzOM8CcOAjN",
+    "source" : "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn",
+    "sourcePort" : "j6el_AVuKsZVAe_mh3kB8$$j-gECpGZk6TngQYpHMis7",
+    "target" : "FB2o8Gvhm3Lb1_pDPiyeE$$Hf0MQgaHqGQUDxyuS0ptd",
+    "targetPort" : "wni0stZFfYt_i1LfJwAsT$$kW_n6ALLLiJj2bx4-35n1"
   } ],
   "processes" : {
+    "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn" : {
+      "id" : "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 520,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "w6_4g7wfM8aIfU981E-uH$$DVnjOYgJ3lO0waNW6eE_e",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "j6el_AVuKsZVAe_mh3kB8$$j-gECpGZk6TngQYpHMis7",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "val out0 = in0",
+        "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
+        "scriptMethodFooter" : "    out0\n}"
+      }
+    },
+    "FB2o8Gvhm3Lb1_pDPiyeE$$Hf0MQgaHqGQUDxyuS0ptd" : {
+      "id" : "FB2o8Gvhm3Lb1_pDPiyeE$$Hf0MQgaHqGQUDxyuS0ptd",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "sdfsd",
+        "slug" : "sdfsd",
+        "x" : 640,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wni0stZFfYt_i1LfJwAsT$$kW_n6ALLLiJj2bx4-35n1",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "UxcBrI50bLQmM21AIFSSe$$Lea5-Hlz7QxM0ReFds8CX",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "externalId" : "subgraphs/sdfsd",
+        "name" : "sdfsd",
+        "packageName" : "io.prophecy.subgraphs.sdfsd"
+      },
+      "connections" : [ {
+        "id" : "6fP_v5w0bZjQLMaWj9b9J",
+        "source" : "FB2o8Gvhm3Lb1_pDPiyeE$$Hf0MQgaHqGQUDxyuS0ptd",
+        "sourcePort" : "wni0stZFfYt_i1LfJwAsT$$kW_n6ALLLiJj2bx4-35n1",
+        "target" : "Wk-JSDKFO8nKk7wu5FUyu$$LpCmb8SkyxNd5uigMEWl8",
+        "targetPort" : "6OAFQSlULQtNYKF4XL8xm$$_tHanqrbfBA1F61F9PjxT"
+      }, {
+        "id" : "qs19AKq0b-7so30Qg87QI",
+        "source" : "Wk-JSDKFO8nKk7wu5FUyu$$LpCmb8SkyxNd5uigMEWl8",
+        "sourcePort" : "ACdPpe86wD3v7EM9g2Hx8$$WxOk1g-yr75aoGbTxvMyf",
+        "target" : "FB2o8Gvhm3Lb1_pDPiyeE$$Hf0MQgaHqGQUDxyuS0ptd",
+        "targetPort" : "UxcBrI50bLQmM21AIFSSe$$Lea5-Hlz7QxM0ReFds8CX"
+      } ],
+      "processes" : {
+        "Wk-JSDKFO8nKk7wu5FUyu$$LpCmb8SkyxNd5uigMEWl8" : {
+          "id" : "Wk-JSDKFO8nKk7wu5FUyu$$LpCmb8SkyxNd5uigMEWl8",
+          "component" : "Subgraph",
+          "metadata" : {
+            "label" : "Subgraph_1",
+            "slug" : "Subgraph_1",
+            "x" : 260,
+            "y" : 380,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "6OAFQSlULQtNYKF4XL8xm$$_tHanqrbfBA1F61F9PjxT",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "ACdPpe86wD3v7EM9g2Hx8$$WxOk1g-yr75aoGbTxvMyf",
+              "slug" : "out0"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : { },
+          "connections" : [ ],
+          "processes" : { },
+          "externalDependencies" : [ ]
+        }
+      },
+      "externalDependencies" : [ {
+        "type" : "coordinates",
+        "coordinates" : "org.apache.commons:commons-lang3:3.11",
+        "name" : "commons",
+        "enabled" : false,
+        "id" : "EDPzF",
+        "exclusions" : [ ]
+      } ]
+    },
     "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD" : {
       "id" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
       "component" : "Source",
@@ -268,119 +497,6 @@
         } ]
       }
     },
-    "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn" : {
-      "id" : "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "Script_1",
-        "slug" : "Script_1",
-        "x" : 520,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "w6_4g7wfM8aIfU981E-uH$$DVnjOYgJ3lO0waNW6eE_e",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "j6el_AVuKsZVAe_mh3kB8$$j-gECpGZk6TngQYpHMis7",
-          "slug" : "out0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true
-      },
-      "properties" : {
-        "script" : "val out0 = in0",
-        "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
-        "scriptMethodFooter" : "    out0\n}"
-      }
-    },
     "3X2FMp13Nl9FL5wUFurF3$$rYvrdmDHLiHOAMSYQyKaL" : {
       "id" : "3X2FMp13Nl9FL5wUFurF3$$rYvrdmDHLiHOAMSYQyKaL",
       "component" : "Lookup",
@@ -493,5 +609,38 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.FB2o8Gvhm3Lb1_pDPiyeE$$Hf0MQgaHqGQUDxyuS0ptd",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Gems inside subgraph are broken",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.FB2o8Gvhm3Lb1_pDPiyeE$$Hf0MQgaHqGQUDxyuS0ptd.processes.Wk-JSDKFO8nKk7wu5FUyu$$LpCmb8SkyxNd5uigMEWl8",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Port \"out0\" needs to be connected to a gem inside subgraph",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

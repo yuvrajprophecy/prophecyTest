@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-27 14:35:50'
+    modifiedAt: '2023-03-31 11:25:50'
     datasets:
       inputs:
       - datasets/ds1
@@ -65,12 +65,13 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-27 14:42:15'
-    modifiedAt: '2023-03-27 14:42:23'
+    modifiedAt: '2023-04-18 04:45:48'
     datasets:
       inputs:
       - datasets/ds1
       outputs: []
-    subgraphs: []
+    subgraphs:
+    - subgraphs/sdfsd
     dependencies: {}
 datasets:
   datasets/ds1:
@@ -118,7 +119,7 @@ jobs:
 functions:
   author: null
   createdAt: '2023-03-14 08:28:42'
-  modifiedAt: '2023-03-20 15:21:21'
+  modifiedAt: '2023-03-31 11:25:50'
   gems: {}
   udfs: {}
   udafs: {}
@@ -141,7 +142,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-03-27 14:40:11'
-    modifiedAt: '2023-03-27 14:40:11'
+    modifiedAt: '2023-04-18 04:45:48'
 sqlModels: {}
 sqlPipeline: null
 dependencies:
