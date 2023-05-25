@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.pipeline111.config
+package io.prophecy.pipelines.pipeline1112.config
 
 import pureconfig._
 import pureconfig.generic.ProductHint
