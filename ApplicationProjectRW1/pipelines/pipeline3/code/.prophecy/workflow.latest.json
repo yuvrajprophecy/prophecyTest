@@ -80,7 +80,7 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "io.prophecy.pipelines.pipeline111",
+    "topLevelPackage" : "io.prophecy.pipelines.pipeline1112",
     "configurationVersion" : "v1"
   },
   "connections" : [ {
