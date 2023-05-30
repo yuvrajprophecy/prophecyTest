@@ -28,24 +28,11 @@
       }
     },
     "availableFabrics" : [ {
-      "id" : "52",
+      "id" : "869",
       "name" : "dev",
       "clusterSizes" : {
         "default" : "small",
         "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "58",
-      "name" : "dev2",
-      "clusterSizes" : {
-        "default" : "Small",
-        "availableClusterSizes" : [ "Small" ]
       },
       "pylibsResolutionMode" : {
         "PublicCentral" : { }
@@ -87,9 +74,69 @@
       "properties" : {
         "pipelineId" : "pipelines/pipeline1",
         "configurations" : {
-          "schema" : [ ],
+          "schema" : [ {
+            "name" : "boolean_config",
+            "kind" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "string_config",
+            "kind" : {
+              "type" : "string",
+              "value" : "default_str"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "double_config",
+            "kind" : {
+              "type" : "double",
+              "value" : 1
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "array_config",
+            "kind" : {
+              "type" : "array",
+              "elementType" : {
+                "type" : "string",
+                "value" : null
+              },
+              "value" : [ "1" ]
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "record_config",
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "record_string_config",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "record_string_config"
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "record_float_config",
+                "kind" : {
+                  "type" : "float",
+                  "value" : 2
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false
+          } ],
           "instances" : {
-            "ApplicationProjectRW" : [ "default" ]
+            "ApplicationProjectRW" : [ "dev", "default" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
