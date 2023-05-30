@@ -1,6 +1,6 @@
-package basetest.pipeline9.config
+package basetest.pipeline91.config
 
-import basetest.pipeline9.config.Context
+import basetest.pipeline91.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint
@@ -17,5 +17,8 @@ object ConfigurationFactoryImpl extends ConfigurationFactory[Config] {
       ProductHint[Config](ConfigFieldMapping(CamelCase, CamelCase))
     fileConfig.load[Config]
   }
+
+  def getConfig(args: Array[String]) =
+    fromCLI(args)
 
 }
