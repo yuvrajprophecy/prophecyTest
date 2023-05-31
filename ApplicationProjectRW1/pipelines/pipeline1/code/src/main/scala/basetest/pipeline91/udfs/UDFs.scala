@@ -18,4 +18,4 @@ object UDFs extends Serializable {
 
 }
 
-object PipelineInitCode extends Serializable
+object PipelineInitCode extends Serializable { val x = 10 }

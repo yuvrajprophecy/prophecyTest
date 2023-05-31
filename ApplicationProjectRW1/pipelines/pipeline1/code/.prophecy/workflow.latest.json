@@ -3,14 +3,14 @@
     "id" : "1",
     "language" : "scala",
     "fabricId" : "52",
-    "frontEndLanguage" : "sql",
+    "frontEndLanguage" : "scala",
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
       "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions" ],
-      "initialCode" : ""
+      "initialCode" : "val x = 10"
     },
     "udafs" : {
       "language" : "scala",
@@ -89,6 +89,12 @@
     "sourcePort" : "lCW5IFUt3neejIIZDpXdb$$DfSiqKgY26KkO-NN3HnSs",
     "target" : "5cWI0HM5Gyrm2zhKjgLed$$rzVZ8Mur1E_sei2WHly1E",
     "targetPort" : "7dV7TdKh2qTNa7AC74rN9$$lGTbDImGr1POdYo481qzE"
+  }, {
+    "id" : "rlL38NnkmcqxC0x36oU2M",
+    "source" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
+    "sourcePort" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
+    "target" : "UjHIrraUdqdVaU3Ar7pXu$$xpfh5UfuJ-IuzuC1slvgt",
+    "targetPort" : "V7jLymIeoMzU7tZvONIiU$$URw-i2jq2xojd0wS2oPgr"
   } ],
   "processes" : {
     "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn" : {
@@ -439,11 +445,117 @@
         "columnsSelector" : [ "RivMiqU8E1yt0_ykToV1a$$iup3kFy06AVgjsnTP0kxf##customer_id" ],
         "orders" : [ {
           "expression" : {
-            "format" : "sql",
-            "expression" : "customer_id"
+            "format" : "scala",
+            "expression" : "col(\"customer_id\")"
           },
           "sortType" : "asc"
         } ]
+      }
+    },
+    "UjHIrraUdqdVaU3Ar7pXu$$xpfh5UfuJ-IuzuC1slvgt" : {
+      "id" : "UjHIrraUdqdVaU3Ar7pXu$$xpfh5UfuJ-IuzuC1slvgt",
+      "component" : "Lookup",
+      "metadata" : {
+        "label" : "Lookup_2",
+        "slug" : "Lookup_2",
+        "x" : 220,
+        "y" : 400,
+        "phase" : -1,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V7jLymIeoMzU7tZvONIiU$$URw-i2jq2xojd0wS2oPgr",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "isRange" : false,
+        "processName" : "lookup_1",
+        "keyColumns" : [ "customer_id" ],
+        "valueColumns" : [ "first_name" ]
       }
     },
     "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ" : {
@@ -553,57 +665,57 @@
         "expressions" : [ {
           "target" : "customer_id",
           "expression" : {
-            "format" : "sql",
-            "expression" : "customer_id"
+            "format" : "scala",
+            "expression" : "col(\"customer_id\")"
           },
           "description" : ""
         }, {
           "target" : "first_name",
           "expression" : {
-            "format" : "sql",
-            "expression" : "first_name"
+            "format" : "scala",
+            "expression" : "col(\"first_name\")"
           },
           "description" : ""
         }, {
           "target" : "last_name",
           "expression" : {
-            "format" : "sql",
-            "expression" : "last_name"
+            "format" : "scala",
+            "expression" : "col(\"last_name\")"
           },
           "description" : ""
         }, {
           "target" : "phone",
           "expression" : {
-            "format" : "sql",
-            "expression" : "phone"
+            "format" : "scala",
+            "expression" : "col(\"phone\")"
           },
           "description" : ""
         }, {
           "target" : "email",
           "expression" : {
-            "format" : "sql",
-            "expression" : "email"
+            "format" : "scala",
+            "expression" : "col(\"email\")"
           },
           "description" : ""
         }, {
           "target" : "country_code",
           "expression" : {
-            "format" : "sql",
-            "expression" : "country_code"
+            "format" : "scala",
+            "expression" : "col(\"country_code\")"
           },
           "description" : ""
         }, {
           "target" : "account_open_date",
           "expression" : {
-            "format" : "sql",
-            "expression" : "account_open_date"
+            "format" : "scala",
+            "expression" : "col(\"account_open_date\")"
           },
           "description" : ""
         }, {
           "target" : "account_flags",
           "expression" : {
-            "format" : "sql",
-            "expression" : "account_flags"
+            "format" : "scala",
+            "expression" : "col(\"account_flags\")"
           },
           "description" : ""
         } ]

@@ -18,6 +18,7 @@ object Main {
 
   def apply(context: Context): Unit = {
     val df_ds1 = ds1(context)
+    Lookup_2(context, df_ds1)
     Lookup_1(context, df_ds1)
     val df_Reformat_1 = Reformat_1(context, df_ds1)
     val df_Script_1   = Script_1(context,   df_Reformat_1)
