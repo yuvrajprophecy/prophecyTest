@@ -26,7 +26,8 @@
             "fields" : [ ]
           },
           "optional" : false,
-          "isWorkflowNodeConfiguration" : false
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
         }, {
           "name" : "basesg1_1",
           "kind" : {
@@ -38,11 +39,13 @@
                 "value" : "defaultvalue"
               },
               "optional" : false,
-              "isWorkflowNodeConfiguration" : false
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
             } ]
           },
           "optional" : false,
-          "isWorkflowNodeConfiguration" : false
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
         } ]
       },
       "oldCommon" : {

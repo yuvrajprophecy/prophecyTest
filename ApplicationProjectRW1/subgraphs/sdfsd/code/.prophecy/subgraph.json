@@ -20,7 +20,8 @@
             "fields" : [ ]
           },
           "optional" : false,
-          "isWorkflowNodeConfiguration" : true
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
         } ]
       }
     }

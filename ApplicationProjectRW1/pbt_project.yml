@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-05-26 06:12:54'
+    modifiedAt: '2023-05-31 20:58:43'
     datasets:
       inputs:
       - datasets/ds1
@@ -36,7 +36,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-27 14:41:11'
-    modifiedAt: '2023-05-25 08:16:55'
+    modifiedAt: '2023-05-31 20:58:54'
     datasets:
       inputs:
       - datasets/ds1
@@ -51,7 +51,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-27 14:42:40'
-    modifiedAt: '2023-05-25 12:36:34'
+    modifiedAt: '2023-05-31 20:58:49'
     datasets:
       inputs:
       - datasets/ds1
@@ -66,7 +66,7 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-27 14:42:15'
-    modifiedAt: '2023-05-25 08:16:35'
+    modifiedAt: '2023-05-31 20:59:00'
     datasets:
       inputs:
       - datasets/ds1
