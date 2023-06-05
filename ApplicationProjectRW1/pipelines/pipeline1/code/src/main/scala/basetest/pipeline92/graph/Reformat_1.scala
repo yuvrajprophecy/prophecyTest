@@ -1,6 +1,7 @@
 package basetest.pipeline92.graph
 
 import io.prophecy.libs._
+import basetest.pipeline92.udfs.PipelineInitCode._
 import basetest.pipeline92.udfs.UDFs._
 import basetest.pipeline92.config.Context
 import org.apache.spark._

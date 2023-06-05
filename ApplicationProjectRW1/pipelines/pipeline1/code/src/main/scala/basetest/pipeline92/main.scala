@@ -5,6 +5,7 @@ import basetest.pipeline92.config.Context
 import basetest.pipeline92.config._
 import basetest.pipeline92.udfs.UDFs._
 import basetest.pipeline92.udfs._
+import basetest.pipeline92.udfs.PipelineInitCode._
 import basetest.pipeline92.graph._
 import org.apache.spark._
 import org.apache.spark.sql._
