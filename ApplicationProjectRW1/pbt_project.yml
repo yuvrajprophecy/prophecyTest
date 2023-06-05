@@ -178,11 +178,6 @@ pipelineConfigurations:
     createdAt: '2023-05-24 14:22:24'
     modifiedAt: '2023-05-24 14:22:24'
     configurations:
-      pipelineConfigurations/BaseProjectRW/basePipeline1/default:
-        name: default
-        author: null
-        createdAt: '2023-05-24 14:22:24'
-        modifiedAt: '2023-05-24 14:22:24'
       pipelineConfigurations/BaseProjectRW/basePipeline1/newConfig:
         name: newConfig
         author: null
@@ -198,4 +193,14 @@ pipelineConfigurations:
         author: null
         createdAt: '2023-06-05 18:44:32'
         modifiedAt: '2023-06-05 18:44:32'
+      pipelineConfigurations/BaseProjectRW/basePipeline1/default:
+        name: default
+        author: null
+        createdAt: '2023-05-24 14:22:24'
+        modifiedAt: '2023-05-24 14:22:24'
+      pipelineConfigurations/BaseProjectRW/basePipeline1/config_3_config_2_config_name_one:
+        name: config_3_config_2_config_name_one
+        author: null
+        createdAt: '2023-06-05 19:54:21'
+        modifiedAt: '2023-06-05 19:54:21'
     basePipeline: 21759/pipelines/basePipeline1
