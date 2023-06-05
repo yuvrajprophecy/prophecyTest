@@ -188,4 +188,9 @@ pipelineConfigurations:
         author: null
         createdAt: '2023-05-24 14:22:25'
         modifiedAt: '2023-05-24 14:22:25'
+      pipelineConfigurations/BaseProjectRW/basePipeline1/config_name_one:
+        name: config_name_one
+        author: null
+        createdAt: '2023-06-05 18:43:09'
+        modifiedAt: '2023-06-05 18:43:09'
     basePipeline: 21759/pipelines/basePipeline1
