@@ -20,8 +20,7 @@
   "ports" : {
     "inputs" : [ {
       "id" : "l_xKsh6RPjxcDj6dfMv5g",
-      "slug" : "in0",
-      "isStreaming" : false
+      "slug" : "in0"
     } ],
     "outputs" : [ {
       "id" : "pDdKCqFJ4OJRP5PL3jPc6",
@@ -35,12 +34,6 @@
     "packageName" : "sg1"
   },
   "connections" : [ {
-    "id" : "OVBmFH1r5xyYLXGIUMnNL",
-    "source" : "fdl8WU_f9T_l5lzyki7Kg",
-    "sourcePort" : "l_xKsh6RPjxcDj6dfMv5g",
-    "target" : "hzOvzToP9UH21PMUxXnzJ",
-    "targetPort" : "vIfE6-JTtL_46RzY7QqU4"
-  }, {
     "id" : "G9rqc9lkzwEe8PhmU4YXe$$Q7McGRs58B0fzZf6majUX",
     "source" : "hzOvzToP9UH21PMUxXnzJ",
     "sourcePort" : "OzzirJlTuWh1G3rp2nU9d",
@@ -52,6 +45,12 @@
     "sourcePort" : "otFDuMmMEnUnXIwn_KIvE",
     "target" : "fdl8WU_f9T_l5lzyki7Kg",
     "targetPort" : "pDdKCqFJ4OJRP5PL3jPc6"
+  }, {
+    "id" : "epwIkOLt77oCKjB6MpU42",
+    "source" : "3FSDqvlPjY35mHryXI8mS",
+    "sourcePort" : "BAPulndkWg9wQZQmdsRAs",
+    "target" : "hzOvzToP9UH21PMUxXnzJ",
+    "targetPort" : "vIfE6-JTtL_46RzY7QqU4"
   } ],
   "processes" : {
     "hzOvzToP9UH21PMUxXnzJ" : {
@@ -60,8 +59,8 @@
       "metadata" : {
         "label" : "Reformat_2",
         "slug" : "Reformat_2",
-        "x" : 220,
-        "y" : 440,
+        "x" : 320,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -90,8 +89,8 @@
       "metadata" : {
         "label" : "Script_1",
         "slug" : "Script_1",
-        "x" : 420,
-        "y" : 440,
+        "x" : 520,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -118,6 +117,166 @@
         "script" : "y=x\nout0 = in0.withColumn(\"x\",lit(x))",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "3FSDqvlPjY35mHryXI8mS" : {
+      "id" : "3FSDqvlPjY35mHryXI8mS",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ds1_1",
+        "slug" : "ds1_1",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "BAPulndkWg9wQZQmdsRAs",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "format" : "csv",
+        "refreshDataset" : false,
+        "datasetTypes" : [ {
+          "label" : "FILE",
+          "value" : "File",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "WAREHOUSE",
+          "value" : "Warehouse",
+          "icon" : "Database",
+          "width" : "220px"
+        }, {
+          "label" : "CATALOG TABLE",
+          "value" : "Database",
+          "icon" : "Table",
+          "width" : "220px"
+        } ],
+        "dataFormats" : [ {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "Csv",
+          "width" : "220px"
+        }, {
+          "label" : "PARQUET",
+          "value" : "parquet",
+          "icon" : "Parquet",
+          "width" : "220px"
+        }, {
+          "label" : "AVRO",
+          "value" : "avro",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "TEXT",
+          "value" : "text",
+          "icon" : "Document",
+          "width" : "220px"
+        }, {
+          "label" : "DELTA",
+          "value" : "delta",
+          "icon" : "Delta",
+          "width" : "220px"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "Json",
+          "width" : "220px"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "RANDOMDATACREATOR",
+          "value" : "RandomDataCreator",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "KAFKASTREAM",
+          "value" : "KafkaStream",
+          "icon" : "File",
+          "width" : "220px"
+        } ],
+        "datasetId" : "datasets/ds1",
+        "updated" : true,
+        "currentDatasetId" : "datasets/ds1",
+        "dataset" : {
+          "ignoreLeadingWhiteSpaceReading" : null,
+          "multiLine" : null,
+          "path" : "dbfs:/Prophecy/rohitjain+27@simpledatalabs.com/CustomersDatasetInput.csv",
+          "ignoreTrailingWhiteSpaceReading" : null,
+          "maxColumns" : null,
+          "writeMode" : "error",
+          "description" : "",
+          "separator" : ",",
+          "compression" : null,
+          "nullValue" : null,
+          "nanValue" : null,
+          "escapeQuotes" : null,
+          "charToEscapeQuoteEscaping" : null,
+          "encoding" : null,
+          "inferSchema" : null,
+          "enforceSchema" : null,
+          "quoteAll" : null,
+          "ignoreLeadingWhiteSpaceWriting" : null,
+          "locale" : null,
+          "quote" : null,
+          "timestampFormat" : null,
+          "emptyValue" : null,
+          "recursiveFileLookup" : null,
+          "partitionColumns" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "escape" : null,
+          "unescapedQuoteHandling" : null,
+          "positiveInf" : null,
+          "comment" : null,
+          "lineSep" : null,
+          "samplingRatio" : null,
+          "dateFormat" : null,
+          "mode" : null,
+          "header" : true,
+          "columnNameOfCorruptRecord" : null,
+          "modifiedBefore" : null,
+          "ignoreTrailingWhiteSpaceWriting" : null,
+          "maxCharsPerColumn" : null,
+          "negativeInf" : null,
+          "pathGlobFilter" : null,
+          "useSchema" : true,
+          "modifiedAfter" : null
+        },
+        "isNewDataset" : false,
+        "disabled" : false,
+        "datasetType" : "File"
       }
     }
   },
