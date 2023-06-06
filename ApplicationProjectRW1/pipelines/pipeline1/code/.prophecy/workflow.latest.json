@@ -108,7 +108,8 @@
       "name" : "commons",
       "enabled" : false,
       "id" : "EDPzF",
-      "exclusions" : [ ]
+      "exclusions" : [ ],
+      "repo" : "https://repo.maven.apache.org/maven2"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "21759",
