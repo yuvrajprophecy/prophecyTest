@@ -1,6 +1,6 @@
 name: MigrationPy
 description: ''
-version: '122.0'
+version: '23'
 author: rohitjain@simpledatalabs.com
 language: python
 buildSystem: ''
