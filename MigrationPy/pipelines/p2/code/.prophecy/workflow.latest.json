@@ -294,6 +294,32 @@
         "datasetId" : "datasets/ds1"
       }
     },
+    "kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs" : {
+      "id" : "kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "snow1_1",
+        "slug" : "snow1_1",
+        "x" : 80,
+        "y" : 280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Hf2ztjDborSnK2rKvwbzX$$nCx56fPecPIeRD9rbq7d9",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/snow1"
+      }
+    },
     "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK" : {
       "id" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
       "component" : "Reformat",
@@ -525,6 +551,38 @@
     "isCustomOutputSchema" : false
   },
   "diagnostics" : [ {
+    "property" : "$.workflow.processes.kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs.properties.credType",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Using hardcoded usernames and passwords is not recommended. This option produces unsafe code. Read on alternatives [here](https://www.google.com) https://www.google.com",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
     "property" : "$.workflow.processes.3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV.properties.dataset.schema",
     "range" : {
       "start" : {
