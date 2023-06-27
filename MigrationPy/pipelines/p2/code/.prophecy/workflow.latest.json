@@ -491,14 +491,14 @@
       },
       "externalDependencies" : [ ]
     },
-    "oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru" : {
-      "id" : "oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru",
+    "3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV" : {
+      "id" : "3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV",
       "component" : "Source",
       "metadata" : {
-        "label" : "snow",
-        "slug" : "snow",
-        "x" : 380,
-        "y" : 460,
+        "label" : "snow1",
+        "slug" : "snow1",
+        "x" : 180,
+        "y" : 340,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -507,14 +507,14 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "iDVwZPX2X1GBlTY85NJZ8$$bM2i8Pa7oVF8bEuzTBfGl",
+          "id" : "zuLp1pUb4Op_SFcKaeKX7$$FJJOEor-xSJA9Y6n6EZn8",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "datasets/snow"
+        "datasetId" : "datasets/snow1"
       }
     }
   },
@@ -525,7 +525,7 @@
     "isCustomOutputSchema" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru.properties.credType",
+    "property" : "$.workflow.processes.3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV.properties.dataset.schema",
     "range" : {
       "start" : {
         "line" : 0,
@@ -537,11 +537,11 @@
       }
     },
     "severity" : 2,
-    "message" : "Using hardcoded usernames and passwords is not recommended. This option produces unsafe code. Read on alternatives [here](https://www.google.com) https://www.google.com",
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru.properties.credType",
+    "property" : "$.workflow.processes.3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV.properties.credType",
     "range" : {
       "start" : {
         "line" : 0,

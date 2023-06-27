@@ -22,7 +22,7 @@ pipelines:
     datasets:
       inputs:
       - datasets/ds1
-      - datasets/snow
+      - datasets/snow1
       outputs: []
     subgraphs:
     - subgraphs/sg2
@@ -54,6 +54,19 @@ datasets:
         description: ''
         author: sony@prophecy.io
         createdAt: '2023-06-27 11:15:09'
+  datasets/snow1:
+    name: snow1
+    description: ''
+    author: sony@prophecy.io
+    createdAt: '2023-06-27 13:58:13'
+    mode: batch
+    physicalDatasets:
+      db:
+        fabricId: 13
+        datasetType: Warehouse
+        description: ''
+        author: sony@prophecy.io
+        createdAt: '2023-06-27 13:58:13'
 templates: {}
 jobs: {}
 functions:
