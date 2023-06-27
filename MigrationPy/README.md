@@ -27,3 +27,7 @@ swssw
 *** Release notes for version: 122.0 ***
 
 122.0
+
+*** Release notes for version: 23 ***
+
+sdds
