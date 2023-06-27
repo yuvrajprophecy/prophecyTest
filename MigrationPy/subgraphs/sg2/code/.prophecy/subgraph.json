@@ -26,7 +26,8 @@
                   "value" : null
                 },
                 "optional" : false,
-                "isWorkflowNodeConfiguration" : false
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
               }, {
                 "name" : "anotherarray",
                 "kind" : {
@@ -40,7 +41,8 @@
                         "value" : null
                       },
                       "optional" : false,
-                      "isWorkflowNodeConfiguration" : false
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
                     }, {
                       "name" : "var2",
                       "kind" : {
@@ -48,25 +50,48 @@
                         "value" : null
                       },
                       "optional" : false,
-                      "isWorkflowNodeConfiguration" : false
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "var3",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "var4",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
                     } ]
                   },
                   "value" : null
                 },
                 "optional" : false,
-                "isWorkflowNodeConfiguration" : false
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
               } ]
             },
             "value" : [ {
-              "val1" : "sdd "
-            }, {
-              "val1" : "d "
-            }, {
-              "val1" : "sdd"
+              "val1" : "test",
+              "anotherarray" : [ {
+                "col" : "tests",
+                "var2" : "jsd kjhdsf ",
+                "var3" : "sdfsdf",
+                "var4" : "test12"
+              } ]
             } ]
           },
           "optional" : false,
-          "isWorkflowNodeConfiguration" : false
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
         } ]
       }
     }
@@ -128,12 +153,12 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "z6751wN3hC-pgwBHmP9eb$$W55m9XfS4B1bg3zdT0oYI##first_name" ],
+        "columnsSelector" : [ ],
         "expressions" : [ {
           "target" : "first_name",
           "expression" : {
             "format" : "sql",
-            "expression" : "first_name"
+            "expression" : "'$arrayofrec[0].anotherarray[0].var2'"
           },
           "description" : "",
           "_row_id" : "350524226445300987"

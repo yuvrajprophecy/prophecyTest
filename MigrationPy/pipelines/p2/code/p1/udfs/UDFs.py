@@ -1,6 +1,7 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
+from prophecy.transpiler import ABIUtil, BigDecimal, ScalaUtil, getContentAsStream, call_spark_fcn, substring_scala
 from prophecy.lookups import (
     createLookup,
     createRangeLookup,
@@ -15,15 +16,4 @@ from prophecy.lookups import (
 delimitter2 = ''
 
 def registerUDFs(spark: SparkSession):
-    spark.udf.register("udfConcat", udfConcat)
-
-def udfConcatGenerator():
-    delimitter2 = ''
-
-    @udf(returnType = StringType())
-    def func(value: str, value2: str):
-        return value + delimitter2 + value2
-
-    return func
-
-udfConcat = udfConcatGenerator()
+    ScalaUtil.initializeUDFs(spark)

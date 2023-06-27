@@ -36,7 +36,8 @@
                       "value" : null
                     },
                     "optional" : false,
-                    "isWorkflowNodeConfiguration" : false
+                    "isWorkflowNodeConfiguration" : false,
+                    "isReferenced" : false
                   }, {
                     "name" : "anotherarray",
                     "kind" : {
@@ -50,7 +51,8 @@
                             "value" : null
                           },
                           "optional" : false,
-                          "isWorkflowNodeConfiguration" : false
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
                         }, {
                           "name" : "var2",
                           "kind" : {
@@ -58,29 +60,53 @@
                             "value" : null
                           },
                           "optional" : false,
-                          "isWorkflowNodeConfiguration" : false
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
+                        }, {
+                          "name" : "var3",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
+                        }, {
+                          "name" : "var4",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
                         } ]
                       },
                       "value" : null
                     },
                     "optional" : false,
-                    "isWorkflowNodeConfiguration" : false
+                    "isWorkflowNodeConfiguration" : false,
+                    "isReferenced" : false
                   } ]
                 },
                 "value" : [ {
-                  "val1" : "sdd "
-                }, {
-                  "val1" : "d "
-                }, {
-                  "val1" : "sdd"
+                  "val1" : "test",
+                  "anotherarray" : [ {
+                    "col" : "tests",
+                    "var2" : "jsd kjhdsf ",
+                    "var3" : "sdfsdf",
+                    "var4" : "test12"
+                  } ]
                 } ]
               },
               "optional" : false,
-              "isWorkflowNodeConfiguration" : false
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
             } ]
           },
           "optional" : false,
-          "isWorkflowNodeConfiguration" : true
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
         }, {
           "name" : "pipearray_of_rec",
           "kind" : {
@@ -94,7 +120,8 @@
                   "value" : null
                 },
                 "optional" : false,
-                "isWorkflowNodeConfiguration" : false
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
               }, {
                 "name" : "arrayinsiderec",
                 "kind" : {
@@ -108,7 +135,8 @@
                         "value" : null
                       },
                       "optional" : false,
-                      "isWorkflowNodeConfiguration" : false
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
                     }, {
                       "name" : "val2",
                       "kind" : {
@@ -116,19 +144,87 @@
                         "value" : null
                       },
                       "optional" : false,
-                      "isWorkflowNodeConfiguration" : false
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "val3",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
                     } ]
                   },
                   "value" : null
                 },
                 "optional" : false,
-                "isWorkflowNodeConfiguration" : false
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
               } ]
             },
-            "value" : null
+            "value" : [ {
+              "cond" : "wwer",
+              "arrayinsiderec" : [ {
+                "val1" : "ewsdf",
+                "val2" : "sdfsdf",
+                "val3" : "fsdfsdf"
+              } ]
+            } ]
           },
           "optional" : false,
-          "isWorkflowNodeConfiguration" : false
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pp",
+          "kind" : {
+            "type" : "array",
+            "elementType" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "cond",
+                "kind" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              }, {
+                "name" : "arrayin",
+                "kind" : {
+                  "type" : "array",
+                  "elementType" : {
+                    "type" : "record",
+                    "fields" : [ {
+                      "name" : "v1",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    } ]
+                  },
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              } ]
+            },
+            "value" : [ {
+              "cond" : "dddd",
+              "arrayin" : [ {
+                "v1" : "ddddsdad"
+              } ]
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
         } ]
       },
       "oldCommon" : {
@@ -247,12 +343,12 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-##first_name", "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-##id" ],
+        "columnsSelector" : [ "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-##first_name" ],
         "expressions" : [ {
           "target" : "id",
           "expression" : {
             "format" : "sql",
-            "expression" : "id"
+            "expression" : "'$pipearray_of_rec[0].arrayinsiderec[0].val3'"
           },
           "description" : ""
         }, {
@@ -287,7 +383,7 @@
             "fields" : [ {
               "name" : "id",
               "type" : "string",
-              "nullable" : true,
+              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -354,7 +450,7 @@
                 "fields" : [ {
                   "name" : "id",
                   "type" : "string",
-                  "nullable" : true,
+                  "nullable" : false,
                   "metadata" : {
                     "description" : "",
                     "mappings" : [ ],
@@ -381,12 +477,12 @@
             "isCustomOutputSchema" : false
           },
           "properties" : {
-            "columnsSelector" : [ "z6751wN3hC-pgwBHmP9eb$$W55m9XfS4B1bg3zdT0oYI##first_name" ],
+            "columnsSelector" : [ ],
             "expressions" : [ {
               "target" : "first_name",
               "expression" : {
                 "format" : "sql",
-                "expression" : "first_name"
+                "expression" : "'$arrayofrec[0].anotherarray[0].var2'"
               },
               "description" : ""
             } ]
@@ -394,6 +490,32 @@
         }
       },
       "externalDependencies" : [ ]
+    },
+    "oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru" : {
+      "id" : "oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "snow",
+        "slug" : "snow",
+        "x" : 380,
+        "y" : 460,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "iDVwZPX2X1GBlTY85NJZ8$$bM2i8Pa7oVF8bEuzTBfGl",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/snow"
+      }
     }
   },
   "ports" : {
@@ -403,7 +525,7 @@
     "isCustomOutputSchema" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.metainfo.configuration.common.fields[0].kind.value",
+    "property" : "$.workflow.processes.oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru.properties.credType",
     "range" : {
       "start" : {
         "line" : 0,
@@ -414,12 +536,12 @@
         "character" : 0
       }
     },
-    "severity" : 1,
-    "message" : "default values error for key: sg2 value: Validation Error in arrayofrec: Validation Error in anotherarray: null Default value",
+    "severity" : 2,
+    "message" : "Using hardcoded usernames and passwords is not recommended. This option produces unsafe code. Read on alternatives [here](https://www.google.com) https://www.google.com",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.metainfo.configuration.common.fields[1].kind.value",
+    "property" : "$.workflow.processes.oC0THxZxM7nJQsT7zKKzj$$fnibQERP-BK8m7Z11K-Ru.properties.credType",
     "range" : {
       "start" : {
         "line" : 0,
@@ -430,8 +552,8 @@
         "character" : 0
       }
     },
-    "severity" : 1,
-    "message" : "default values error for key: pipearray_of_rec value: null Default value",
+    "severity" : 2,
+    "message" : "Using hardcoded usernames and passwords is not recommended. This option produces unsafe code. Read on alternatives [here](https://www.google.com) https://www.google.com",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]

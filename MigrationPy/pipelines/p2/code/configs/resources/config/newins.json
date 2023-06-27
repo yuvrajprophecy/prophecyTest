@@ -1,0 +1,21 @@
+{
+  "sg2" : {
+    "arrayofrec" : [ {
+      "val1" : "override",
+      "anotherarray" : [ {
+        "var4" : "override 2",
+        "var3" : "override 333",
+        "var2" : "override var2",
+        "col" : "override 2"
+      } ]
+    } ]
+  },
+  "pipearray_of_rec" : [ {
+    "cond" : "tes",
+    "arrayinsiderec" : [ {
+      "val1" : "pver",
+      "val2" : "over2",
+      "val3" : "over33"
+    } ]
+  } ]
+}
