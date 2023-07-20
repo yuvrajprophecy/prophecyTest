@@ -8,6 +8,13 @@
       "language" : "scala",
       "pipelineId" : "pipelines/pipeline1"
     }
+  }, {
+    "DLTPipelineComponent" : {
+      "id" : "Al3_JDmB_qLPNDs7RMcVs$$z9em_84Y1dZtJd4lQsWJo",
+      "nodeName" : "DLTPipeline_1",
+      "language" : "python",
+      "content" : ""
+    }
   } ],
   "request" : {
     "format" : "MULTI_TASK",
@@ -28,11 +35,8 @@
           "prophecy.packages.path" : "{\"pipelines/pipeline1\":\"dbfs:/FileStore/prophecy/artifacts/prophecy/uitesting/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/pipeline1.jar\"}",
           "prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
+          "spark.databricks.isv.product" : "prophecy",
           "prophecy.execution.metrics.disabled" : false
-        },
-        "aws_attributes" : {
-          "first_on_demand" : 1,
-          "availability" : "SPOT_WITH_FALLBACK"
         }
       }
     } ],
@@ -41,20 +45,27 @@
       "task_key" : "Pipeline_0",
       "job_cluster_key" : "appJob1_default_small",
       "spark_jar_task" : {
-        "main_class_name" : "basetest.pipeline9.Main",
+        "main_class_name" : "basetest.pipeline92.Main",
         "parameters" : [ "-i", "default", "-O", "{}" ]
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.24"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.50"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.5.0"
+          "package" : "prophecy-libs==1.5.6"
         }
       }, {
         "jar" : "dbfs:/FileStore/prophecy/artifacts/prophecy/uitesting/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/pipeline1.jar"
       } ],
+      "email_notifications" : { },
+      "max_retries" : 0
+    }, {
+      "task_key" : "DLTPipeline_1",
+      "pipeline_task" : {
+        "pipeline_id" : ""
+      },
       "email_notifications" : { },
       "max_retries" : 0
     } ],
@@ -69,5 +80,5 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_2446",
-  "sorted_processes" : [ "_64Pe2dl57mOltssTlptJ$$R35eKjqIl1lMzuJ10kYqG" ]
+  "sorted_processes" : [ "_64Pe2dl57mOltssTlptJ$$R35eKjqIl1lMzuJ10kYqG", "Al3_JDmB_qLPNDs7RMcVs$$z9em_84Y1dZtJd4lQsWJo" ]
 }

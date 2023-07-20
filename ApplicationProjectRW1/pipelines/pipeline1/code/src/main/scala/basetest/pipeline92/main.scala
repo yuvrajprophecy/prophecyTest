@@ -7,6 +7,10 @@ import basetest.pipeline92.udfs.UDFs._
 import basetest.pipeline92.udfs._
 import basetest.pipeline92.udfs.PipelineInitCode._
 import basetest.pipeline92.graph._
+import basetest.pipeline92.graph.Subgraph_1
+import basetest.pipeline92.graph.Subgraph_1.config.{
+  Context => Subgraph_1_Context
+}
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
@@ -18,9 +22,12 @@ object Main {
 
   def apply(context: Context): Unit = {
     val df_ds1 = ds1(context)
-    Lookup_1(context, df_ds1)
-    val df_Reformat_1 = Reformat_1(context, df_ds1)
-    val df_Script_1   = Script_1(context,   df_Reformat_1)
+    val df_Subgraph_1 = Subgraph_1.apply(
+      Subgraph_1_Context(context.spark, context.config.Subgraph_1),
+      df_ds1,
+      df_ds1
+    )
+    val df_ReformatTest_1 = ReformatTest_1(context, df_ds1)
   }
 
   def main(args: Array[String]): Unit = {

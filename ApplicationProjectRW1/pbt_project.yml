@@ -10,7 +10,6 @@ buildSystemDetails:
   buildSystem: maven
   author: null
   createdAt: '2023-03-14 08:28:42'
-  modifiedAt: '2023-03-14 08:28:42'
 pipelines:
   pipelines/pipeline1:
     name: pipeline1
@@ -20,7 +19,6 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-06-06 07:58:52'
     datasets:
       inputs:
       - datasets/ds1
@@ -35,7 +33,6 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-27 14:41:11'
-    modifiedAt: '2023-05-30 21:15:47'
     datasets:
       inputs:
       - datasets/ds1
@@ -50,7 +47,6 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-27 14:42:40'
-    modifiedAt: '2023-05-30 21:15:41'
     datasets:
       inputs:
       - datasets/ds1
@@ -65,10 +61,23 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-27 14:42:15'
-    modifiedAt: '2023-05-30 21:15:54'
     datasets:
       inputs:
       - datasets/ds1
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/perf_pipeline:
+    name: perf_pipeline
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-06-08 19:17:15'
+    datasets:
+      inputs:
+      - datasets/largeDataset1
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -78,7 +87,6 @@ datasets:
     description: ''
     author: rohitjain+27@simpledatalabs.com
     createdAt: '2023-02-20 06:59:58'
-    modifiedAt: '2023-03-01 06:14:11'
     mode: batch
     physicalDatasets:
       dev:
@@ -87,7 +95,32 @@ datasets:
         description: ''
         author: rohitjain+27@simpledatalabs.com
         createdAt: '2023-02-20 06:59:58'
-        modifiedAt: '2023-02-20 06:59:58'
+  datasets/largeDataset1:
+    name: largeDataset1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-06-08 19:17:46'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 869
+        datasetType: File
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-06-08 19:17:46'
+  datasets/cascas:
+    name: cascas
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-06-14 10:15:44'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 869
+        datasetType: Database
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-06-14 10:15:45'
 templates: {}
 jobs:
   jobs/appJob1:
@@ -113,12 +146,10 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2023-02-20 12:54:12'
-    modifiedAt: '2023-05-24 14:24:23'
     author: rohitjain+27@simpledatalabs.com
 functions:
   author: null
   createdAt: '2023-03-14 08:28:42'
-  modifiedAt: '2023-03-27 15:01:37'
   gems: {}
   udfs: {}
   udafs: {}
@@ -132,7 +163,6 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
-    modifiedAt: '2023-03-01 06:13:18'
   subgraphs/sdfsd:
     name: sdfsd
     description: fsd
@@ -141,7 +171,6 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-03-27 14:40:11'
-    modifiedAt: '2023-03-27 14:40:11'
 sqlModels: {}
 sqlMacros: {}
 sqlSeeds: {}
@@ -164,7 +193,6 @@ projectDependencies:
     version: BaseProjectRW/37.0
     author: null
     createdAt: '2023-03-27 14:44:25'
-    modifiedAt: '2023-03-27 14:44:25'
   '21759':
     projectUID: 21759
     projectName: BaseProjectRW
@@ -172,31 +200,25 @@ projectDependencies:
     version: BaseProjectRW/110.0
     author: null
     createdAt: '2023-03-27 15:01:21'
-    modifiedAt: '2023-03-27 15:01:21'
 pipelineConfigurations:
   pipelineConfigurations/BaseProjectRW/basePipeline1:
     author: rohitjain@simpledatalabs.com
     createdAt: '2023-05-24 14:22:24'
-    modifiedAt: '2023-05-24 14:22:24'
     configurations:
       pipelineConfigurations/BaseProjectRW/basePipeline1/newConfig:
         name: newConfig
         author: null
         createdAt: '2023-05-24 14:22:25'
-        modifiedAt: '2023-05-24 14:22:25'
       pipelineConfigurations/BaseProjectRW/basePipeline1/config_name_one:
         name: config_name_one
         author: null
         createdAt: '2023-06-05 18:43:09'
-        modifiedAt: '2023-06-05 18:43:09'
       pipelineConfigurations/BaseProjectRW/basePipeline1/default:
         name: default
         author: null
         createdAt: '2023-05-24 14:22:24'
-        modifiedAt: '2023-05-24 14:22:24'
       pipelineConfigurations/BaseProjectRW/basePipeline1/config_3_config_2_config_name_one:
         name: config_3_config_2_config_name_one
         author: null
         createdAt: '2023-06-05 19:54:21'
-        modifiedAt: '2023-06-05 19:54:21'
     basePipeline: 21759/pipelines/basePipeline1

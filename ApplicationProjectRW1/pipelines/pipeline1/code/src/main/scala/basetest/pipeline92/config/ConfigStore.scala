@@ -19,6 +19,6 @@ object ConfigurationFactoryImpl extends ConfigurationFactory[Config] {
   }
 
   def getConfig(args: Array[String]) =
-    fromCLI(args)
+    fromCLI(args, "pipeline1.conf")
 
 }

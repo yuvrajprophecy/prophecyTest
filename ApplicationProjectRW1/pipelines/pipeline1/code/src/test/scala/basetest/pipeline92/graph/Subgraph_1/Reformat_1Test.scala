@@ -1,4 +1,4 @@
-package basetest.pipeline92.graph
+package basetest.pipeline92.graph.Subgraph_1
 
 import com.holdenkarau.spark.testing.DataFrameSuiteBase
 import basetest.pipeline92.config._
@@ -26,18 +26,22 @@ class Reformat_1Test extends FunSuite with DataFrameSuiteBase {
 
     val dfIn = createDfFromResourceFiles(
       spark,
-      "/data/basetest/pipeline92/graph/Reformat_1/in/schema.json",
-      "/data/basetest/pipeline92/graph/Reformat_1/in/data/unit_test_.json",
+      "/data/basetest/pipeline92/graph/Subgraph_1/Reformat_1/in/schema.json",
+      "/data/basetest/pipeline92/graph/Subgraph_1/Reformat_1/in/data/unit_test_.json",
       "in"
     )
     val dfOut = createDfFromResourceFiles(
       spark,
-      "/data/basetest/pipeline92/graph/Reformat_1/out/schema.json",
-      "/data/basetest/pipeline92/graph/Reformat_1/out/data/unit_test_.json",
+      "/data/basetest/pipeline92/graph/Subgraph_1/Reformat_1/out/schema.json",
+      "/data/basetest/pipeline92/graph/Subgraph_1/Reformat_1/out/data/unit_test_.json",
       "out"
     )
 
-    val dfOutComputed = basetest.pipeline92.graph.Reformat_1(context, dfIn)
+    val dfOutComputed = basetest.pipeline92.graph.Subgraph_1.Reformat_1(
+      basetest.pipeline92.graph.Subgraph_1.config
+        .Context(context.spark, context.config.Subgraph_1),
+      dfIn
+    )
     val res = assertDFEquals(dfOut.select("customer_id"),
                              dfOutComputed.select("customer_id"),
                              maxUnequalRowsToShow,

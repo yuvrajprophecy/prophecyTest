@@ -11,25 +11,11 @@ import java.time._
 
 object ds1 {
 
-  def apply(context: Context): DataFrame =
-    context.spark.read
-      .format("csv")
-      .option("header", true)
-      .option("sep",    ",")
-      .schema(
-        StructType(
-          Array(
-            StructField("customer_id",       StringType, true),
-            StructField("first_name",        StringType, true),
-            StructField("last_name",         StringType, true),
-            StructField("phone",             StringType, true),
-            StructField("email",             StringType, true),
-            StructField("country_code",      StringType, true),
-            StructField("account_open_date", StringType, true),
-            StructField("account_flags",     StringType, true)
-          )
-        )
-      )
-      .load("dbfs:/Prophecy/123kajari@prophecy.io/CustomersDatasetInput.csv")
+  def apply(context: Context): DataFrame = {
+    import org.apache.avro.Schema
+    var reader = context.spark.read.format("avro")
+    reader = reader
+    reader.load("ddwd")
+  }
 
 }

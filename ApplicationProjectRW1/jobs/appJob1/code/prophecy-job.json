@@ -76,30 +76,34 @@
         "configurations" : {
           "schema" : [ {
             "name" : "boolean_config",
+            "optional" : false,
             "kind" : {
               "type" : "boolean",
               "value" : true
             },
-            "optional" : false,
+            "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
           }, {
             "name" : "string_config",
+            "optional" : false,
             "kind" : {
               "type" : "string",
               "value" : "default_str"
             },
-            "optional" : false,
+            "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
           }, {
             "name" : "double_config",
+            "optional" : false,
             "kind" : {
               "type" : "double",
               "value" : 1
             },
-            "optional" : false,
+            "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
           }, {
             "name" : "array_config",
+            "optional" : false,
             "kind" : {
               "type" : "array",
               "elementType" : {
@@ -108,38 +112,152 @@
               },
               "value" : [ "1" ]
             },
-            "optional" : false,
+            "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
           }, {
             "name" : "record_config",
+            "optional" : false,
             "kind" : {
               "type" : "record",
               "fields" : [ {
                 "name" : "record_string_config",
+                "optional" : false,
                 "kind" : {
                   "type" : "string",
                   "value" : "record_string_config"
                 },
-                "optional" : false,
+                "isReferenced" : false,
                 "isWorkflowNodeConfiguration" : false
               }, {
                 "name" : "record_float_config",
+                "optional" : false,
                 "kind" : {
                   "type" : "float",
                   "value" : 2
                 },
-                "optional" : false,
+                "isReferenced" : false,
                 "isWorkflowNodeConfiguration" : false
               } ]
             },
-            "optional" : false,
+            "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "Subgraph_1",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "boolean_config",
+                "optional" : false,
+                "kind" : {
+                  "type" : "boolean",
+                  "value" : true
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "string_config",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "default_str"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "double_config",
+                "optional" : false,
+                "kind" : {
+                  "type" : "double",
+                  "value" : 1
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "array_config",
+                "optional" : false,
+                "kind" : {
+                  "type" : "array",
+                  "elementType" : {
+                    "type" : "string",
+                    "value" : null
+                  },
+                  "value" : [ "1" ]
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "record_config",
+                "optional" : false,
+                "kind" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "record_string_config",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "string",
+                      "value" : "record_string_config"
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  }, {
+                    "name" : "record_float_config",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "float",
+                      "value" : 2
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  } ]
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
             "ApplicationProjectRW" : [ "dev", "default" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
+        }
+      }
+    },
+    "Al3_JDmB_qLPNDs7RMcVs$$z9em_84Y1dZtJd4lQsWJo" : {
+      "id" : "Al3_JDmB_qLPNDs7RMcVs$$z9em_84Y1dZtJd4lQsWJo",
+      "component" : "DLTPipeline",
+      "metadata" : {
+        "label" : "DLTPipeline_1",
+        "slug" : "DLTPipeline_1",
+        "x" : 137.1999969482422,
+        "y" : 547.5999755859375
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HHIt5a3a-ggQi7X0qBvtC$$4dpmTeRZhnGe_0sxG86pS",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "Ox23u36hAz4GWejJc3Mui$$SXsemD8jVz_VwzluAIdPw",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "",
+        "configurations" : {
+          "instances" : { }
         }
       }
     }

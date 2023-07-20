@@ -1,6 +1,7 @@
 {
   "metainfo" : {
     "id" : "1",
+    "uri" : "pipelines/kaajri12312",
     "language" : "scala",
     "fabricId" : "869",
     "frontEndLanguage" : "sql",
@@ -19,7 +20,16 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "c1",
+          "kind" : {
+            "type" : "string",
+            "value" : "dd"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -27,7 +37,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default",
+      "selected" : "dede",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
@@ -41,7 +51,8 @@
       "name" : "commons",
       "enabled" : false,
       "id" : "EDPzF",
-      "exclusions" : [ ]
+      "exclusions" : [ ],
+      "repo" : "https://repo.maven.apache.org/maven2"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "21759",
@@ -60,33 +71,21 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "PFdJFfskd5JltjnForMel",
-    "source" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
-    "sourcePort" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
-    "target" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
-    "targetPort" : "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ"
-  }, {
-    "id" : "Fi8kHIjDjw97NVnKb20ZS$$srsdCfqFQ7PDBOy6Lw0jZ",
-    "source" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
-    "sourcePort" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
-    "target" : "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn",
-    "targetPort" : "w6_4g7wfM8aIfU981E-uH$$DVnjOYgJ3lO0waNW6eE_e"
-  }, {
-    "id" : "DDApSYDeWX14q9l87qiGU",
-    "source" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
-    "sourcePort" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
-    "target" : "3X2FMp13Nl9FL5wUFurF3$$rYvrdmDHLiHOAMSYQyKaL",
-    "targetPort" : "avwhYDiQTpeW-IAEohCvQ$$aq2WpqZCv1Q1X5lrQLY5u"
+    "id" : "YOCCry1D9PsSA6J7IXadF$$vArHO24eaeEUQQbfFks-d",
+    "source" : "RYQnrtN3ocY6_boAf7-HX$$2kX7OLlbNvV4-07_cW-kx",
+    "sourcePort" : "7HgZqmV9hcpmDeE3tJeXC$$f_L2YxzqZoneVuRsUJHdF",
+    "target" : "JyDMsNrosYkFO0fDZFN_e$$JZFXLetzwrJcBYNfJAtU4",
+    "targetPort" : "tAjYzxbxXQkXntRLli0oK$$puW7HF7EwYBaa6VrYzFwc"
   } ],
   "processes" : {
-    "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD" : {
-      "id" : "721n6ArSnZe1WprpeUytp$$F-pPZEa9uMjf2lkz9OfkD",
+    "RYQnrtN3ocY6_boAf7-HX$$2kX7OLlbNvV4-07_cW-kx" : {
+      "id" : "RYQnrtN3ocY6_boAf7-HX$$2kX7OLlbNvV4-07_cW-kx",
       "component" : "Source",
       "metadata" : {
         "label" : "ds1",
         "slug" : "ds1",
-        "x" : 120,
-        "y" : 220,
+        "x" : -480,
+        "y" : 380,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -95,7 +94,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "rDI95TY6jqcZMkuTHHvMO$$fMU32SfdqCYA6CAAYd1UB",
+          "id" : "7HgZqmV9hcpmDeE3tJeXC$$f_L2YxzqZoneVuRsUJHdF",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -105,14 +104,14 @@
         "datasetId" : "datasets/ds1"
       }
     },
-    "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ" : {
-      "id" : "gyZlYVNwHzo9tYu7yqEG5$$X0V4KTZfP7srYRfLZqSeJ",
+    "JyDMsNrosYkFO0fDZFN_e$$JZFXLetzwrJcBYNfJAtU4" : {
+      "id" : "JyDMsNrosYkFO0fDZFN_e$$JZFXLetzwrJcBYNfJAtU4",
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : 320,
-        "y" : 120,
+        "x" : -300,
+        "y" : 380,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -120,75 +119,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ",
+          "id" : "tAjYzxbxXQkXntRLli0oK$$puW7HF7EwYBaa6VrYzFwc",
           "slug" : "in",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
+              "name" : "s",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -201,290 +137,15 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "QPTvAQbKw0aY0HBi-xIMM$$vr9_dQ-un3vdfJKyP0XkV",
+          "id" : "KzTT7eEaOo_qqVQ0jYPBG$$rCMVi17g-CG1I1neWJJd1",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##customer_id", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##first_name", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##last_name", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##phone", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##email", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##country_code", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##account_open_date", "GOlFv8vHNH95xTSE7h8Qa$$0okRvSPTCNNvz6pfriQuQ##account_flags" ],
-        "expressions" : [ {
-          "target" : "customer_id",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "customer_id"
-          },
-          "description" : ""
-        }, {
-          "target" : "first_name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "first_name"
-          },
-          "description" : ""
-        }, {
-          "target" : "last_name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "last_name"
-          },
-          "description" : ""
-        }, {
-          "target" : "phone",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "phone"
-          },
-          "description" : ""
-        }, {
-          "target" : "email",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "email"
-          },
-          "description" : ""
-        }, {
-          "target" : "country_code",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "country_code"
-          },
-          "description" : ""
-        }, {
-          "target" : "account_open_date",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "account_open_date"
-          },
-          "description" : ""
-        }, {
-          "target" : "account_flags",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "account_flags"
-          },
-          "description" : ""
-        } ]
-      }
-    },
-    "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn" : {
-      "id" : "Dc4_9CZlgXPcbJP7_-X4V$$ZWgvEetACi7HyV0CRETfn",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "Script_1",
-        "slug" : "Script_1",
-        "x" : 520,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "w6_4g7wfM8aIfU981E-uH$$DVnjOYgJ3lO0waNW6eE_e",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "j6el_AVuKsZVAe_mh3kB8$$j-gECpGZk6TngQYpHMis7",
-          "slug" : "out0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true
-      },
-      "properties" : {
-        "script" : "val out0 = in0",
-        "scriptMethodHeader" : "def apply(spark: SparkSession, in0: DataFrame): DataFrame = {",
-        "scriptMethodFooter" : "    out0\n}"
-      }
-    },
-    "3X2FMp13Nl9FL5wUFurF3$$rYvrdmDHLiHOAMSYQyKaL" : {
-      "id" : "3X2FMp13Nl9FL5wUFurF3$$rYvrdmDHLiHOAMSYQyKaL",
-      "component" : "Lookup",
-      "metadata" : {
-        "label" : "Lookup_1",
-        "slug" : "Lookup_1",
-        "x" : 320,
-        "y" : 320,
-        "phase" : -1,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "avwhYDiQTpeW-IAEohCvQ$$aq2WpqZCv1Q1X5lrQLY5u",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "isRange" : false,
-        "processName" : "lk1",
-        "keyColumns" : [ "customer_id" ],
-        "valueColumns" : [ "first_name" ]
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
       }
     }
   },
