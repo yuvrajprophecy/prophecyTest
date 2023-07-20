@@ -61,8 +61,8 @@
     } ],
     "isImported" : false,
     "interimMode" : "Full",
-    "interimModeEnabled" : true,
-    "visualCodeInterimMode" : "Sources",
+    "interimModeEnabled" : false,
+    "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
       "enabled" : false,
       "value" : 1000
