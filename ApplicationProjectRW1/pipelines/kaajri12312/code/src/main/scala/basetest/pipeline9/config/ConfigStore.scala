@@ -1,12 +1,16 @@
 package basetest.pipeline9.config
 
+import org.apache.spark.sql._
 import basetest.pipeline9.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint
 import pureconfig.generic.auto._
 import io.prophecy.libs._
-object ConfigStore
+
+object ConfigStore {
+  implicit val interimOutput: InterimOutput = InterimOutputHive2("")
+}
 
 object ConfigurationFactoryImpl extends ConfigurationFactory[Config] {
 
