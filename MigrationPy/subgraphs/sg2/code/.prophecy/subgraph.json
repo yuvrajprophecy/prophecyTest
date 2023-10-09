@@ -9,7 +9,92 @@
     "phase" : 0,
     "cache" : false,
     "detailedStats" : false,
-    "isImported" : false
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "arrayofrec",
+          "kind" : {
+            "type" : "array",
+            "elementType" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "val1",
+                "kind" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              }, {
+                "name" : "anotherarray",
+                "kind" : {
+                  "type" : "array",
+                  "elementType" : {
+                    "type" : "record",
+                    "fields" : [ {
+                      "name" : "col",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "var2",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "var3",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "var4",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    } ]
+                  },
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              } ]
+            },
+            "value" : [ {
+              "val1" : "test",
+              "anotherarray" : [ {
+                "col" : "tests",
+                "var2" : "jsd kjhdsf ",
+                "var3" : "sdfsdf",
+                "var4" : "test12"
+              } ]
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      }
+    }
   },
   "ports" : {
     "inputs" : [ {
@@ -29,13 +114,13 @@
     "packageName" : "sg2"
   },
   "connections" : [ {
-    "id" : "sQ2nwt5uwTf8UoVXf8UJk",
+    "id" : "P8msqguHJ3KA59U6aIZy2",
     "source" : "dy_zNFWEZyUZHQMggf1bJ",
     "sourcePort" : "Zabu5WVW07vheTbL_criZ",
     "target" : "wjKggvybmxftEx0w4ukH3",
     "targetPort" : "z6751wN3hC-pgwBHmP9eb"
   }, {
-    "id" : "Oc-KJ1S6yuUcvbByTNe6e",
+    "id" : "Q3zxRi4Utbi6ObYUl8eAb",
     "source" : "wjKggvybmxftEx0w4ukH3",
     "sourcePort" : "bniXV4ikjsyjCJUTkSwwA",
     "target" : "dy_zNFWEZyUZHQMggf1bJ",
@@ -69,7 +154,15 @@
       },
       "properties" : {
         "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "expressions" : [ {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$arrayofrec[0].anotherarray[0].var2'"
+          },
+          "description" : "",
+          "_row_id" : "350524226445300987"
+        } ]
       }
     }
   },

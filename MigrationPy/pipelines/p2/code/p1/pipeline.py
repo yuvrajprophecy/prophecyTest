@@ -4,11 +4,16 @@ from pyspark.sql.types import *
 from p1.config.ConfigStore import *
 from p1.udfs.UDFs import *
 from prophecy.utils import *
+from prophecy.transpiler import call_spark_fcn
+from prophecy.transpiler.fixed_file_schema import *
 from p1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_ds1 = ds1(spark)
+    df_snow1_1 = snow1_1(spark)
     df_Reformat_1 = Reformat_1(spark, df_ds1)
+    df_sg2 = sg2(spark, Config.sg2, df_Reformat_1)
+    df_snow1 = snow1(spark)
 
 def main():
     spark = SparkSession.builder\
@@ -20,6 +25,7 @@ def main():
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/p2")
+    registerUDFs(spark)
     
     MetricsCollector.start(spark = spark, pipelineId = "pipelines/p2")
     pipeline(spark)

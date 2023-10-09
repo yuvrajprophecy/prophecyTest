@@ -2,16 +2,12 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "48",
+    "fabricId" : "13",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
-      "udfs" : [ {
-        "name" : "udfConcat",
-        "code" : "@udf(returnType = StringType())\ndef concat(value: str, value2: str):\n    return value + delimitter2 + value2",
-        "language" : "python"
-      } ],
+      "udfs" : [ ],
       "functionPackageName" : "rohitjainsimpledatalabs.com_team.migrationpy.functions",
       "sharedFunctionPackageNames" : [ ],
       "initialCode" : "delimitter2 = ''"
@@ -23,7 +19,213 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "sg2",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "arrayofrec",
+              "kind" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "val1",
+                    "kind" : {
+                      "type" : "string",
+                      "value" : null
+                    },
+                    "optional" : false,
+                    "isWorkflowNodeConfiguration" : false,
+                    "isReferenced" : false
+                  }, {
+                    "name" : "anotherarray",
+                    "kind" : {
+                      "type" : "array",
+                      "elementType" : {
+                        "type" : "record",
+                        "fields" : [ {
+                          "name" : "col",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
+                        }, {
+                          "name" : "var2",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
+                        }, {
+                          "name" : "var3",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
+                        }, {
+                          "name" : "var4",
+                          "kind" : {
+                            "type" : "string",
+                            "value" : null
+                          },
+                          "optional" : false,
+                          "isWorkflowNodeConfiguration" : false,
+                          "isReferenced" : false
+                        } ]
+                      },
+                      "value" : null
+                    },
+                    "optional" : false,
+                    "isWorkflowNodeConfiguration" : false,
+                    "isReferenced" : false
+                  } ]
+                },
+                "value" : [ {
+                  "val1" : "test",
+                  "anotherarray" : [ {
+                    "col" : "tests",
+                    "var2" : "jsd kjhdsf ",
+                    "var3" : "sdfsdf",
+                    "var4" : "test12"
+                  } ]
+                } ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        }, {
+          "name" : "pipearray_of_rec",
+          "kind" : {
+            "type" : "array",
+            "elementType" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "cond",
+                "kind" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              }, {
+                "name" : "arrayinsiderec",
+                "kind" : {
+                  "type" : "array",
+                  "elementType" : {
+                    "type" : "record",
+                    "fields" : [ {
+                      "name" : "val1",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "val2",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    }, {
+                      "name" : "val3",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    } ]
+                  },
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              } ]
+            },
+            "value" : [ {
+              "cond" : "wwer",
+              "arrayinsiderec" : [ {
+                "val1" : "ewsdf",
+                "val2" : "sdfsdf",
+                "val3" : "fsdfsdf"
+              } ]
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pp",
+          "kind" : {
+            "type" : "array",
+            "elementType" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "cond",
+                "kind" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              }, {
+                "name" : "arrayin",
+                "kind" : {
+                  "type" : "array",
+                  "elementType" : {
+                    "type" : "record",
+                    "fields" : [ {
+                      "name" : "v1",
+                      "kind" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "optional" : false,
+                      "isWorkflowNodeConfiguration" : false,
+                      "isReferenced" : false
+                    } ]
+                  },
+                  "value" : null
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false,
+                "isReferenced" : false
+              } ]
+            },
+            "value" : [ {
+              "cond" : "dddd",
+              "arrayin" : [ {
+                "v1" : "ddddsdad"
+              } ]
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -49,7 +251,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "p1"
+    "topLevelPackage" : "p1",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "h0HhrSullUGDreMPWVctH$$UdXvvynUymYtLMyF-l4od",
@@ -57,6 +260,12 @@
     "sourcePort" : "5T2pMWEMaa8JYM7m2rXz5$$wcNjl-9YjzsYcqQ7Vj48i",
     "target" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
     "targetPort" : "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-"
+  }, {
+    "id" : "O56qbq7AxTl22vWwaVG1D$$osJZTxYn520Zp7FxGXHma",
+    "source" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
+    "sourcePort" : "43X9PC40IN1pO3_ru3G7b$$7ObldrOs1e5RqtlUhiLHt",
+    "target" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+    "targetPort" : "Zabu5WVW07vheTbL_criZ$$V5DaNVLMXWHPtzhZLpwTW"
   } ],
   "processes" : {
     "XcfnXBg8qSoyx85NHGQsc$$6j365oVMu8mPUUdpvbAU1" : {
@@ -85,6 +294,32 @@
         "datasetId" : "datasets/ds1"
       }
     },
+    "kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs" : {
+      "id" : "kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "snow1_1",
+        "slug" : "snow1_1",
+        "x" : 80,
+        "y" : 280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Hf2ztjDborSnK2rKvwbzX$$nCx56fPecPIeRD9rbq7d9",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/snow1"
+      }
+    },
     "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK" : {
       "id" : "kZbX-Nlwc43M22Npc_awY$$AGPyxsdhBbP-8zwOGYSmK",
       "component" : "Reformat",
@@ -105,7 +340,7 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "id1",
+              "name" : "id",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -114,7 +349,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "id2",
+              "name" : "first_name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -134,8 +369,178 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
+        "columnsSelector" : [ "Aer453CdPvN-SXC7ze-xp$$ITcS-nQs7CthhUMSQ3Cq-##first_name" ],
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$pipearray_of_rec[0].arrayinsiderec[0].val3'"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "first_name"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO" : {
+      "id" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "sg2",
+        "slug" : "sg2",
+        "x" : 1200,
+        "y" : 620,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Zabu5WVW07vheTbL_criZ$$V5DaNVLMXWHPtzhZLpwTW",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "suAqe5Ml8Uc25kf3DCAEH$$all4cvl7TGTxanUGSOfjd",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "packageName" : "sg2",
+        "externalId" : "subgraphs/sg2",
+        "name" : "sg2"
+      },
+      "connections" : [ {
+        "id" : "P8msqguHJ3KA59U6aIZy2",
+        "source" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+        "sourcePort" : "Zabu5WVW07vheTbL_criZ$$V5DaNVLMXWHPtzhZLpwTW",
+        "target" : "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l",
+        "targetPort" : "z6751wN3hC-pgwBHmP9eb$$W55m9XfS4B1bg3zdT0oYI"
+      }, {
+        "id" : "Q3zxRi4Utbi6ObYUl8eAb",
+        "source" : "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l",
+        "sourcePort" : "bniXV4ikjsyjCJUTkSwwA$$jJriKqHqXp4JEFlt4KyDO",
+        "target" : "dy_zNFWEZyUZHQMggf1bJ$$UAEoQ4Od-OATaLUln0TPO",
+        "targetPort" : "suAqe5Ml8Uc25kf3DCAEH$$all4cvl7TGTxanUGSOfjd"
+      } ],
+      "processes" : {
+        "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l" : {
+          "id" : "wjKggvybmxftEx0w4ukH3$$WRZndKNQ7eU0Dm4oCf66l",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "Reformat_3",
+            "slug" : "Reformat_3",
+            "x" : 760,
+            "y" : 700,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "z6751wN3hC-pgwBHmP9eb$$W55m9XfS4B1bg3zdT0oYI",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "first_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "bniXV4ikjsyjCJUTkSwwA$$jJriKqHqXp4JEFlt4KyDO",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "first_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'$arrayofrec[0].anotherarray[0].var2'"
+              },
+              "description" : ""
+            } ]
+          }
+        }
+      },
+      "externalDependencies" : [ ]
+    },
+    "3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV" : {
+      "id" : "3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "snow1",
+        "slug" : "snow1",
+        "x" : 180,
+        "y" : 340,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "zuLp1pUb4Op_SFcKaeKX7$$FJJOEor-xSJA9Y6n6EZn8",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/snow1"
       }
     }
   },
@@ -144,5 +549,70 @@
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.kB0AkUsbrJEZ-U65wopMy$$MRgdYqnvUabvSf8vjePzs.properties.credType",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Using hardcoded usernames and passwords is not recommended. This option produces unsafe code. Read on alternatives [here](https://www.google.com) https://www.google.com",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.3mivScfeeTj1dSExB88BH$$20lP-81VE1kKqiwnxSeJV.properties.credType",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Using hardcoded usernames and passwords is not recommended. This option produces unsafe code. Read on alternatives [here](https://www.google.com) https://www.google.com",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

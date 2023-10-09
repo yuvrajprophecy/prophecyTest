@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "scala",
-    "fabricId" : "52",
+    "fabricId" : "869",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -803,9 +803,9 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
+        "packageName" : "subgraph_un_migrated",
         "externalId" : "subgraphs/subgraph_un_migrated",
-        "name" : "subgraph_un_migrated",
-        "packageName" : "subgraph_un_migrated"
+        "name" : "subgraph_un_migrated"
       },
       "connections" : [ {
         "id" : "iqvkq1W-fEYThnLyTvTFk",
