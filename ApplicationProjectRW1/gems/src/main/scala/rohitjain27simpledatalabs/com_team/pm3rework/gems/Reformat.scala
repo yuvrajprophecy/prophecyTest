@@ -13,7 +13,7 @@ import play.api.libs.json.{Format, OFormat, JsResult, JsValue, Json}
 class Reformat extends ComponentSpec {
 
   val name: String = "Reformat"
-  val category: String = "Transform2"
+  val category: String = "Transform3"
   type PropertiesType = ReformatProperties
   override def optimizeCode: Boolean = true
 
