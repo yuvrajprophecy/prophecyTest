@@ -2,14 +2,14 @@
   "metainfo" : {
     "id" : "1",
     "language" : "scala",
-    "fabricId" : "52",
+    "fabricId" : "869",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "scala",
       "udfs" : [ ],
       "functionPackageName" : "rohitjain27simpledatalabs.com_team.pm3rework.functions",
-      "sharedFunctionPackageNames" : [ ],
+      "sharedFunctionPackageNames" : [ "simpledatalabs_27.baseprojectrw.functions" ],
       "initialCode" : "val pipeline3 = \"ldme\""
     },
     "udafs" : {
@@ -67,7 +67,11 @@
       "id" : "EDPzF",
       "exclusions" : [ ]
     } ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "21761",
+      "projectName" : "baseP",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,

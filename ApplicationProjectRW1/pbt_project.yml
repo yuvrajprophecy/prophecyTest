@@ -10,7 +10,6 @@ buildSystemDetails:
   buildSystem: maven
   author: null
   createdAt: '2023-03-14 08:28:42'
-  modifiedAt: '2023-03-14 08:28:42'
 pipelines:
   pipelines/pipeline1:
     name: pipeline1
@@ -20,11 +19,11 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-20 06:56:19'
-    modifiedAt: '2023-03-27 14:35:50'
     datasets:
       inputs:
       - datasets/ds1
-      outputs: []
+      outputs:
+      - datasets/t1
     subgraphs: []
     dependencies: {}
   pipelines/pipeline2:
@@ -35,7 +34,6 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-27 14:41:11'
-    modifiedAt: '2023-03-14 08:30:18'
     datasets:
       inputs:
       - datasets/ds1
@@ -50,7 +48,6 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-02-27 14:42:40'
-    modifiedAt: '2023-03-14 08:31:50'
     datasets:
       inputs:
       - datasets/ds1
@@ -65,7 +62,6 @@ pipelines:
     artefactID: ''
     language: scala
     createdAt: '2023-03-27 14:42:15'
-    modifiedAt: '2023-03-27 14:42:23'
     datasets:
       inputs:
       - datasets/ds1
@@ -78,7 +74,6 @@ datasets:
     description: ''
     author: rohitjain+27@simpledatalabs.com
     createdAt: '2023-02-20 06:59:58'
-    modifiedAt: '2023-03-01 06:14:11'
     mode: batch
     physicalDatasets:
       dev:
@@ -87,7 +82,19 @@ datasets:
         description: ''
         author: rohitjain+27@simpledatalabs.com
         createdAt: '2023-02-20 06:59:58'
-        modifiedAt: '2023-02-20 06:59:58'
+  datasets/t1:
+    name: t1
+    description: ''
+    author: rohitjain@simpledatalabs.com
+    createdAt: '2023-08-28 08:11:07'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 869
+        datasetType: File
+        description: ''
+        author: rohitjain@simpledatalabs.com
+        createdAt: '2023-08-28 08:11:07'
 templates: {}
 jobs:
   jobs/appJob1:
@@ -113,13 +120,14 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2023-02-20 12:54:12'
-    modifiedAt: '2023-03-27 11:56:10'
     author: rohitjain+27@simpledatalabs.com
+gemContainer:
+  languageVersion: 2.12.15
+  gemLibsVersion: 1.0.4
+  gems: {}
 functions:
   author: null
   createdAt: '2023-03-14 08:28:42'
-  modifiedAt: '2023-03-20 15:21:21'
-  gems: {}
   udfs: {}
   udafs: {}
   expressions: {}
@@ -132,7 +140,6 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-02-20 07:00:29'
-    modifiedAt: '2023-03-01 06:13:18'
   subgraphs/sdfsd:
     name: sdfsd
     description: fsd
@@ -141,8 +148,11 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2023-03-27 14:40:11'
-    modifiedAt: '2023-03-27 14:40:11'
 sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
 - type: coordinates
@@ -157,7 +167,39 @@ projectDependencies:
     projectName: BaseProjectRW
     repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=/baseProjectRW
     version: BaseProjectRW/37.0
+    isDefault: false
     author: null
     createdAt: '2023-03-27 14:44:25'
-    modifiedAt: '2023-03-27 14:44:25'
+  '21761':
+    projectUID: 21761
+    projectName: baseP
+    repositoryPath: gitUri=https://github.com/aarjay00/prophecyTest&subPath=baseProjectRW
+    version: baseP/23143
+    isDefault: false
+    author: null
+    createdAt: '2023-03-27 15:11:49'
+  '34932':
+    projectUID: 34932
+    projectName: ProphecySparkBasicsScala
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34932.git&subPath=
+    version: 0.0.2
+    isDefault: true
+    author: null
+    createdAt: '2023-10-03 09:09:10'
+  '34933':
+    projectUID: 34933
+    projectName: ProphecyWarehouseScala
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34933.git&subPath=
+    version: 0.0.2
+    isDefault: true
+    author: null
+    createdAt: '2023-10-03 09:09:10'
+  '34934':
+    projectUID: 34934
+    projectName: ProphecyMaskingScala
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34934.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2023-09-10 20:03:55'
 pipelineConfigurations: {}
