@@ -127,7 +127,7 @@ gemContainer:
   gems:
     gems/Reformat:
       name: Reformat
-      category: Transform
+      category: Transform2
       subCategory: ''
       description: null
       author: rohitjain@simpledatalabs.com
