@@ -9,7 +9,7 @@ import io.prophecy.gems.uiSpec._
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import play.api.libs.json.{Json, OFormat}
 
-class Reformat extends ComponentSpec { 
+object Reformat extends ComponentSpec {
 
   val name: String = "ReformatCustom"
   val category: String = "Transform"
@@ -26,7 +26,9 @@ class Reformat extends ComponentSpec {
     @Property("Columns selector")
     columnsSelector: List[String] = Nil,
     @Property("Column expressions", "List of all the column expressions")
-    expressions: List[SColumnExpression] = Nil
+    expressions: List[SColumnExpression] = Nil,
+    @Property("new property")
+    newProperty: Option[String] = None,
   ) extends ComponentProperties
 
   implicit val reformatPropertiesFormat: OFormat[ReformatProperties] = Json.format[ReformatProperties]
@@ -195,4 +197,6 @@ class Reformat extends ComponentSpec {
 
   override def serializeProperty(props: ReformatProperties): String =
     Json.stringify(Json.toJson(props))
+
+  registerPropertyEvolution(AddNewProperty)
 }
