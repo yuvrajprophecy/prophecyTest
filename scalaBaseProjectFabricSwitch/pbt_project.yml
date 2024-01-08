@@ -6,17 +6,44 @@ language: scala
 buildSystem: ''
 buildSystemDetails:
   artefactID: scalabaseprojectfabricswitch
-  parentArtefactID: ''
+  parentArtefactID: rohitjainprophecyioteam
   buildSystem: maven
   author: null
   createdAt: '2024-01-08 08:35:34'
-pipelines: {}
-datasets: {}
+pipelines:
+  pipelines/p1:
+    name: p1
+    description: ''
+    author: rohitjain@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2024-01-08 08:36:46'
+    datasets:
+      inputs:
+      - datasets/dataset_old
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/dataset_old:
+    name: dataset_old
+    description: ''
+    author: rohitjain@prophecy.io
+    createdAt: '2024-01-08 08:37:12'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1
+        datasetType: File
+        description: ''
+        author: rohitjain@prophecy.io
+        createdAt: '2024-01-08 08:37:12'
 templates: {}
 jobs: {}
 gemContainer:
-  languageVersion: ''
-  gemLibsVersion: ''
+  languageVersion: 2.12.15
+  gemLibsVersion: 1.0.4
   gems: {}
   dependencies: null
 functions:
