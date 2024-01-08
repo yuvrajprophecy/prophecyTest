@@ -1,6 +1,6 @@
 name: scalaBaseProjectFabricSwitch
 description: ''
-version: 0.0.1
+version: '101'
 author: rohitjain@prophecy.io
 language: scala
 buildSystem: ''
