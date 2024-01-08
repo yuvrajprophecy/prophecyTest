@@ -1,0 +1,1 @@
+# scalaBaseProjectFabricSwitch Repository
