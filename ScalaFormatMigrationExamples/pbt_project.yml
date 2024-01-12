@@ -1,0 +1,68 @@
+name: ScalaFormatMigrationExamples
+description: ''
+version: 0.0.1
+author: rohitjain@prophecy.io
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: scalaformatmigrationexamples
+  parentArtefactID: rohitjainprophecyioteam
+  buildSystem: maven
+  author: null
+  createdAt: '2024-01-12 13:13:04'
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: 2.12.15
+  gemLibsVersion: 1.0.4
+  gems:
+    gems/CsvCustom:
+      name: CsvCustom
+      category: Source/Target
+      subCategory: File
+      description: null
+      author: rohitjain@prophecy.io
+      mode: batch
+      files:
+      - src/main/scala/rohitjainprophecyioteam/scalaformatmigrationexamples/gems/CsvCustom.scala
+      gemType: DatasetGem
+      dependencies: []
+      createdAt: '2024-01-12 13:14:59'
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-01-12 13:13:04'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '10':
+    projectUID: 10
+    projectName: ProphecyWarehouseScala
+    repositoryPath: gitUri=http://gitserver:3000/zRRrTuoN_team_5/b9ewggAW_project_10.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2024-01-12 13:12:03'
+  '9':
+    projectUID: 9
+    projectName: ProphecySparkBasicsScala
+    repositoryPath: gitUri=http://gitserver:3000/zRRrTuoN_team_5/b9ewggAW_project_9.git&subPath=
+    version: 0.0.6
+    isDefault: true
+    author: null
+    createdAt: '2024-01-12 13:12:03'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
