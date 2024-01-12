@@ -10,7 +10,20 @@ buildSystemDetails:
   buildSystem: maven
   author: null
   createdAt: '2024-01-12 13:13:04'
-pipelines: {}
+pipelines:
+  pipelines/p1:
+    name: p1
+    description: ''
+    author: rohitjain@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2024-01-12 13:48:04'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
@@ -29,7 +42,7 @@ gemContainer:
       - src/main/scala/rohitjainprophecyioteam/scalaformatmigrationexamples/gems/CsvCustom.scala
       gemType: DatasetGem
       dependencies: []
-      createdAt: '2024-01-12 13:14:59'
+      createdAt: '2024-01-12 13:47:52'
   dependencies: null
 functions:
   author: null

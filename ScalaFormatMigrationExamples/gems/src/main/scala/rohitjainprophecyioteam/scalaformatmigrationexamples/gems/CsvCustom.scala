@@ -13,7 +13,7 @@ import ai.x.play.json.Encoders.encoder
 import ai.x.play.json.Jsonx
 
 
-class CsvCustom extends DatasetSpec {
+object CsvCustom extends DatasetSpec {
 
   val name: String = "CsvCustom"
   val datasetType: String = "File"
@@ -181,7 +181,9 @@ class CsvCustom extends DatasetSpec {
     @Property("", "Skips n lines from top of the file. Currently supports only single files.")
     skipHeaders: Option[String] = None,
     @Property("", "Skips n lines from bottom of the file. Currently supports only single files.")
-    skipFooters: Option[String] = None
+    skipFooters: Option[String] = None,
+    @Property("new property")
+    newProperty: Option[String] = None
   ) extends DatasetProperties
   
   implicit val csvPropertiesFormat: Format[CsvProperties] = Jsonx.formatCaseClass[CsvProperties]

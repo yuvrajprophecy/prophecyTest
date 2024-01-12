@@ -3,7 +3,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <modelVersion>4.0.0</modelVersion>
     <groupId>rohitjainprophecyioteam</groupId>
     <artifactId>scalaformatmigrationexamples</artifactId>
-    <version>0.0.1</version>
+    <version>ScalaFormatMigrationExamples_10001</version>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -141,9 +141,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
                         <manifestEntries>
-                            <Plugin-Id>0.0.1</Plugin-Id>
+                            <Plugin-Id>ScalaFormatMigrationExamples_10001</Plugin-Id>
                             <Plugin-Provider>Decebal Suiu</Plugin-Provider>
-                            <Plugin-Version>0.0.1</Plugin-Version>
+                            <Plugin-Version>ScalaFormatMigrationExamples_10001</Plugin-Version>
                         </manifestEntries>
                     </archive>
                 </configuration>
