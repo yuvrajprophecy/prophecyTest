@@ -12,6 +12,7 @@ import play.api.libs.json.{Format, JsResult, JsValue, Json}
 import ai.x.play.json.Encoders.encoder
 import ai.x.play.json.Jsonx
 
+
 class CsvCustom extends DatasetSpec {
 
   val name: String = "CsvCustom"
