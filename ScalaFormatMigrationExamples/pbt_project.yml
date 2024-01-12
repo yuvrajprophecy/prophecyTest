@@ -1,6 +1,6 @@
 name: ScalaFormatMigrationExamples
 description: ''
-version: '10002'
+version: '10003'
 author: rohitjain@prophecy.io
 language: scala
 buildSystem: ''
