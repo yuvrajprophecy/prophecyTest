@@ -15,8 +15,11 @@ import ai.x.play.json.Jsonx
 
 object CsvCustom extends DatasetSpec {
 
-  val name: String = "CsvCustom"
+  val name: String = "CsvCustom" 
   val datasetType: String = "File"
+
+
+  
   val docUrl: String = "https://docs.prophecy.io/low-code-spark/gems/source-target/file/csv"
 
   type PropertiesType = CsvProperties
@@ -622,7 +625,8 @@ object CsvCustom extends DatasetSpec {
         }
       }
     }
-  }
+  } 
+  registerPropertyEvolution(AddNewProperty)
 }
 
 
