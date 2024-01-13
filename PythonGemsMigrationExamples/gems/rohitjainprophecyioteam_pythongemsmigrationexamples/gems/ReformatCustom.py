@@ -1,3 +1,5 @@
+import dataclasses
+
 from prophecy.cb.server.base.ComponentBuilderBase import *
 from pyspark.sql import *
 from pyspark.sql.functions import *
@@ -9,6 +11,7 @@ from prophecy.cb.util.CSVUtils import parse_escaped_csv, unparse_escaped_csv, CS
 from prophecy.cb.ui.uispec import *
 from prophecy.cb.util.StringUtils import isBlank
 from prophecy.cb.server.base import WorkflowContext
+from prophecy.cb.migration import PropertyMigrationObj
 
 class ReformatCustom(ComponentSpec):
     name: str = "ReformatCustom"
@@ -28,6 +31,7 @@ class ReformatCustom(ComponentSpec):
         activeTab: str = "expressions"
         importLanguage: str = "${$.workflow.metainfo.frontEndLanguage}"
         importString: str = ""
+        newProperty: str = ""
 
     def onClickFunc(self, portId: str, column: str, state: Component[ReformatProperties]):
         existingTargetNames = list(map(lambda exp: exp.target, state.properties.expressions))
@@ -171,3 +175,20 @@ class ReformatCustom(ComponentSpec):
                 return in0.select(*selectColumns)
             else:
                 return in0
+
+    def __init__(self):
+        super().__init__()
+        self.registerPropertyEvolution(ReformatNewPropertyMigration())
+
+class ReformatNewPropertyMigration(PropertyMigrationObj):
+
+    def migrationNumber(self) -> int:
+        return 1
+
+    def up(self, old_properties: ReformatCustom.ReformatProperties) -> ReformatCustom.ReformatProperties:
+        new_properties = dataclasses.replace(old_properties, newProperty="newProperty")
+        return new_properties
+
+    def down(self, new_properties: ReformatCustom.ReformatProperties) -> ReformatCustom.ReformatProperties:
+        old_properties = dataclasses.replace(new_properties, newProperty="")
+        return old_properties
