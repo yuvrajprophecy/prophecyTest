@@ -23,6 +23,7 @@ class CsvCustom(DatasetSpec):
     class CsvProperties(DatasetProperties):
         schema: Optional[StructType] = None
         description: Optional[str] = ""
+        newProperty: Optional[str] = ""
         useSchema: Optional[bool] = True
         path: str = ""
         separator: Optional[SString] = SString(",")
