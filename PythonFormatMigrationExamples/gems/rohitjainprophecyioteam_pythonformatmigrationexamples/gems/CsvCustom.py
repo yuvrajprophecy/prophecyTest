@@ -8,6 +8,7 @@ from prophecy.cb.ui.uispec import *
 from prophecy.cb.util.NumberUtils import parseFloat
 from prophecy.cb.server.base import WorkflowContext
 from prophecy.cb.migration import PropertyMigrationObj
+import dataclasses
 
 
 
