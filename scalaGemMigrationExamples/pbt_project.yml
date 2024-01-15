@@ -1,6 +1,6 @@
 name: ScalaGemsMigrationExamples
 description: ''
-version: '1002.0'
+version: '1003.0'
 author: rohitjain@prophecy.io
 language: scala
 buildSystem: ''
@@ -54,6 +54,7 @@ gemContainer:
       mode: batch
       files:
       - src/main/scala/rohitjainprophecyioteam/scalagemsmigrationexamples/gems/ReformatCustom.scala
+      gemType: ComponentGem
       dependencies: []
       createdAt: '2023-12-21 10:00:38'
   dependencies: null
