@@ -1,6 +1,6 @@
 name: PythonFormatMigrationExamples
 description: ''
-version: 0.0.1
+version: '30001'
 author: rohitjain@prophecy.io
 language: python
 buildSystem: ''
