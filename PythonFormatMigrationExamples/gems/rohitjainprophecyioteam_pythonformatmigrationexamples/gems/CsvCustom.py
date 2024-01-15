@@ -7,6 +7,8 @@ from prophecy.cb.server.base.datatypes import SString, SFloat
 from prophecy.cb.ui.uispec import *
 from prophecy.cb.util.NumberUtils import parseFloat
 from prophecy.cb.server.base import WorkflowContext
+from prophecy.cb.migration import PropertyMigrationObj
+
 
 
 class CsvCustom(DatasetSpec):
@@ -419,3 +421,20 @@ class CsvCustom(DatasetSpec):
                 writer = writer.partitionBy(*self.props.partitionColumns)
             writer.option("separator", self.props.separator.value).option("header", self.props.header).csv(
                 self.props.path)
+
+    def __init__(self):
+        super().__init__()
+        self.registerPropertyEvolution(CsvCustomNewPropertyMigration())
+
+class CsvCustomNewPropertyMigration(PropertyMigrationObj):
+
+    def migrationNumber(self) -> int:
+        return 1
+
+    def up(self, old_properties: CsvCustom.CsvProperties) -> CsvCustom.CsvProperties:
+        new_properties = dataclasses.replace(old_properties, newProperty="newProperty")
+        return new_properties
+
+    def down(self, new_properties: CsvCustom.CsvProperties) -> CsvCustom.CsvProperties:
+        old_properties = dataclasses.replace(new_properties, newProperty="")
+        return old_properties                
