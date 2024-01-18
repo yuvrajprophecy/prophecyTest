@@ -10,63 +10,8 @@ buildSystemDetails:
   buildSystem: maven
   author: null
   createdAt: '2024-01-16 07:16:02'
-pipelines:
-  pipelines/p1:
-    name: p1
-    description: ''
-    author: rohitjain@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: scala
-    createdAt: '2024-01-18 12:48:55'
-    datasets:
-      inputs:
-      - datasets/jdbc_databricks
-      - datasets/jdbc_environment_variables
-      - datasets/jdbc_username
-      outputs: []
-    subgraphs: []
-    dependencies: {}
-datasets:
-  datasets/jdbc_databricks:
-    name: jdbc_databricks
-    description: ''
-    author: rohitjain@prophecy.io
-    createdAt: '2024-01-18 12:53:04'
-    mode: batch
-    physicalDatasets:
-      dev3:
-        fabricId: 3
-        datasetType: Warehouse
-        description: ''
-        author: rohitjain@prophecy.io
-        createdAt: '2024-01-18 12:53:04'
-  datasets/jdbc_username:
-    name: jdbc_username
-    description: ''
-    author: rohitjain@prophecy.io
-    createdAt: '2024-01-18 12:53:54'
-    mode: batch
-    physicalDatasets:
-      dev3:
-        fabricId: 3
-        datasetType: Warehouse
-        description: ''
-        author: rohitjain@prophecy.io
-        createdAt: '2024-01-18 12:53:54'
-  datasets/jdbc_environment_variables:
-    name: jdbc_environment_variables
-    description: ''
-    author: rohitjain@prophecy.io
-    createdAt: '2024-01-18 12:55:05'
-    mode: batch
-    physicalDatasets:
-      dev3:
-        fabricId: 3
-        datasetType: Warehouse
-        description: ''
-        author: rohitjain@prophecy.io
-        createdAt: '2024-01-18 12:55:05'
+pipelines: {}
+datasets: {}
 templates: {}
 jobs: {}
 gemContainer:
