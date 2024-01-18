@@ -13,7 +13,7 @@ import io.prophecy.gems.copilot._
 import play.api.libs.json.{Format, JsResult, JsValue, Json, OFormat}
 import scala.util.Try
 
-class JdbcCustom extends DatasetSpec {
+object JdbcCustom extends DatasetSpec {
 
   val name: String = "JdbcCustom"
   val datasetType: String = "Warehouse"
@@ -620,4 +620,5 @@ class JdbcCustom extends DatasetSpec {
       }
     }
   }
+  registerPropertyEvolution(SecretPropertyMigration)
 }
