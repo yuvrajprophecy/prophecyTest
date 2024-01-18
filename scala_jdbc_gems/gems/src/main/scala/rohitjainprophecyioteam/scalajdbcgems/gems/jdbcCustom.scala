@@ -36,6 +36,10 @@ class JdbcCustom extends DatasetSpec {
                              textUsername: Option[String] = None,
                              @Property("Password")
                              textPassword: Option[String] = None,
+                             @Property("Secret Username")
+                             secretUsername: Option[SecretValue] = None,
+                             @Property("Secret Password")
+                             secretPassword: Option[SecretValue] = None,
                              @Property("jdbcUrl", "")
                              jdbcUrl: String = "",
                              @Property("readFromSource")
@@ -209,43 +213,12 @@ class JdbcCustom extends DatasetSpec {
         ColumnsLayout()
           .addColumn(
             StackLayout(direction = Some("vertical"), gap = Some("1rem"))
-              //            .addElement(TitleElement(title = "Credentials"))
               .addElement(
                 StackLayout()
                   .addElement(
-                    RadioGroup("Credentials")
-                      .addOption("Databricks Secrets", "databricksSecrets")
-                      .addOption("Username & Password", "userPwd")
-                      .addOption("Environment variables", "userPwdEnv")
-                      .bindProperty("credType")
-                  )
-                  .addElement(
-                    Condition()
-                      .ifEqual(PropExpr("component.properties.credType"), StringExpr("databricksSecrets"))
-                      .then(Credentials("").bindProperty("credentialScope"))
-                      .otherwise(
-                        StackLayout()
-                          .addElement(
-                            ColumnsLayout(gap = Some("1rem"))
-                              .addColumn(TextBox("Username").bindPlaceholder("username").bindProperty("textUsername"))
-                              .addColumn(
-                                TextBox("Password")
-                                  .isPassword()
-                                  .bindPlaceholder("password")
-                                  .bindProperty("textPassword")
-                              )
-                          )
-                          .addElement(
-                            ColumnsLayout()
-                              .addColumn(
-                                AlertBox(
-                                  children = List(
-                                    Markdown("Storing plain-text passwords poses a security risk and is not recommended. Please see [here](https://docs.prophecy.io/low-code-spark/best-practices/use-dbx-secrets) for suggested alternatives")
-                                  )
-                                )
-                              )
-                          )
-                      )
+                    ColumnsLayout(gap = Some("1rem"))
+                      .addColumn(SecretBox("Username").bindProperty("secretUsername"))
+                      .addColumn(SecretBox("Password").bindProperty("secretPassword"))
                   )
               )
               .addElement(TitleElement(title = "URL"))
@@ -307,43 +280,12 @@ class JdbcCustom extends DatasetSpec {
       ColumnsLayout()
         .addColumn(
           StackLayout(direction = Some("vertical"), gap = Some("1rem"))
-            //            .addElement(TitleElement(title = "Credentials"))
             .addElement(
               StackLayout()
                 .addElement(
-                  RadioGroup("Credentials")
-                    .addOption("Databricks Secrets", "databricksSecrets")
-                    .addOption("Username & Password", "userPwd")
-                    .addOption("Environment variables", "userPwdEnv")
-                    .bindProperty("credType")
-                )
-                .addElement(
-                  Condition()
-                    .ifEqual(PropExpr("component.properties.credType"), StringExpr("databricksSecrets"))
-                    .then(Credentials("").bindProperty("credentialScope"))
-                    .otherwise(
-                      StackLayout()
-                        .addElement(
-                          ColumnsLayout(gap = Some("1rem"))
-                            .addColumn(TextBox("Username").bindPlaceholder("username").bindProperty("textUsername"))
-                            .addColumn(
-                              TextBox("Password")
-                                .isPassword()
-                                .bindPlaceholder("password")
-                                .bindProperty("textPassword")
-                            )
-                        )
-                        .addElement(
-                          ColumnsLayout()
-                            .addColumn(
-                              AlertBox(
-                                children = List(
-                                  Markdown("Storing plain-text passwords poses a security risk and is not recommended. Please see [here](https://docs.prophecy.io/low-code-spark/best-practices/use-dbx-secrets) for suggested alternatives")
-                                )
-                              )
-                            )
-                        )
-                    )
+                  ColumnsLayout(gap = Some("1rem"))
+                    .addColumn(SecretBox("Username").bindProperty("secretUsername"))
+                    .addColumn(SecretBox("Password").bindProperty("secretPassword"))
                 )
             )
             .addElement(TitleElement(title = "URL"))
@@ -449,41 +391,19 @@ class JdbcCustom extends DatasetSpec {
     val diagnostics = ListBuffer[Diagnostic]()
     diagnostics ++= super.validate(component)
 
-    component.properties.credType match {
-      case "databricksSecrets" ⇒
-        if (component.properties.credentialScope.getOrElse("").trim.isEmpty) {
-          diagnostics += Diagnostic(
-            "properties.credentialScope",
-            "Credential Scope cannot be empty [Location]",
-            SeverityLevel.Error
-          )
-        }
-      case "userPwd" | "userPwdEnv" ⇒
-        if (
-          component.properties.credType == "userPwd" && !component.properties.textPassword
-            .getOrElse("")
-            .trim
-            .startsWith("${")
-        ) {
-          diagnostics += Diagnostic(
-            "properties.textPassword",
-            "Storing plain-text passwords poses a security risk and is not recommended.",
-            SeverityLevel.Warning
-          )
-        }
-        if (component.properties.textUsername.getOrElse("").trim.isEmpty) {
-          diagnostics += Diagnostic(
-            "properties.textUsername",
-            "Username cannot be empty [Location]",
-            SeverityLevel.Error
-          )
-        } else if (component.properties.textPassword.getOrElse("").trim.isEmpty) {
-          diagnostics += Diagnostic(
-            "properties.textPassword",
-            "Password cannot be empty [Location]",
-            SeverityLevel.Error
-          )
-        }
+    if (component.properties.secretUsername.forall(_.parts.isEmpty)) {
+      diagnostics += Diagnostic(
+        "properties.secretUsername",
+        "Username cannot be empty",
+        SeverityLevel.Error
+      )
+    }
+    if (component.properties.secretPassword.forall(_.parts.isEmpty)) {
+      diagnostics += Diagnostic(
+        "properties.secretPassword",
+        "Password cannot be empty",
+        SeverityLevel.Error
+      )
     }
 
     if (component.properties.jdbcUrl.trim.isEmpty) {
@@ -585,27 +505,8 @@ class JdbcCustom extends DatasetSpec {
   class JDBCFormatCode(props: JDBCCustomProperties) extends ComponentCode {
 
     def sourceApply(spark: SparkSession): DataFrame = {
-      val jdbc_username: String = if (props.credType == "databricksSecrets") {
-        import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-        dbutils.secrets.get(scope = props.credentialScope.get, key = "username")
-      } else if (props.credType == "userPwd") {
-        s"${props.textUsername.get}"
-      } else if (props.credType == "userPwdEnv") {
-        sys.env(s"${props.textUsername.get}")
-      } else {
-        throw new RuntimeException(s"Invalid credType: ${props.credType}")
-      }
-
-      val jdbc_password: String = if (props.credType == "databricksSecrets") {
-        import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-        dbutils.secrets.get(scope = props.credentialScope.get, key = "password")
-      } else if (props.credType == "userPwd") {
-        s"${props.textPassword.get}"
-      } else if (props.credType == "userPwdEnv") {
-        sys.env(s"${props.textPassword.get}")
-      } else {
-        throw new RuntimeException(s"Invalid credType: ${props.credType}")
-      }
+      val jdbc_username: String = if (props.secretUsername.isEmpty) "" else props.secretUsername.get.toString
+      val jdbc_password: String = if (props.secretPassword.isEmpty) "" else props.secretPassword.get.toString
 
       props.preSQL.foreach { sql =>
         import java.sql.{Connection, DriverManager}
@@ -664,27 +565,8 @@ class JdbcCustom extends DatasetSpec {
     }
 
     def targetApply(spark: SparkSession, in: DataFrame): Unit = {
-      val jdbc_username: String = if (props.credType == "databricksSecrets") {
-        import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-        dbutils.secrets.get(scope = props.credentialScope.get, key = "username")
-      } else if (props.credType == "userPwd") {
-        s"${props.textUsername.get}"
-      } else if (props.credType == "userPwdEnv") {
-        sys.env(s"${props.textUsername.get}")
-      } else {
-        throw new RuntimeException(s"Invalid credType: ${props.credType}")
-      }
-
-      val jdbc_password: String = if (props.credType == "databricksSecrets") {
-        import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-        dbutils.secrets.get(scope = props.credentialScope.get, key = "password")
-      } else if (props.credType == "userPwd") {
-        s"${props.textPassword.get}"
-      } else if (props.credType == "userPwdEnv") {
-        sys.env(s"${props.textPassword.get}")
-      } else {
-        throw new RuntimeException(s"Invalid credType: ${props.credType}")
-      }
+      val jdbc_username: String = if (props.secretUsername.isEmpty) "" else props.secretUsername.get.toString
+      val jdbc_password: String = if (props.secretPassword.isEmpty) "" else props.secretPassword.get.toString
 
       props.preSQL.foreach { sql =>
         import java.sql.{Connection, DriverManager}
