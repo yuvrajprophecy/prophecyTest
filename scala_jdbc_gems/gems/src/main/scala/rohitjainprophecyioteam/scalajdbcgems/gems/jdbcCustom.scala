@@ -11,10 +11,11 @@ import org.apache.spark.sql.types.StructType
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import io.prophecy.gems.copilot._
 import play.api.libs.json.{Format, JsResult, JsValue, Json, OFormat}
+import scala.util.Try
 
 class JdbcCustom extends DatasetSpec {
 
-  val name: String = "jdbc"
+  val name: String = "JdbcCustom"
   val datasetType: String = "Warehouse"
   val docUrl: String = "https://docs.prophecy.io/low-code-spark/gems/source-target/warehouse/jdbc"
 
