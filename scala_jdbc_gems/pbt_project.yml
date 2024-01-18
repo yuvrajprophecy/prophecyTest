@@ -6,7 +6,7 @@ language: scala
 buildSystem: ''
 buildSystemDetails:
   artefactID: scalajdbcgems
-  parentArtefactID: ''
+  parentArtefactID: rohitjainprophecyioteam
   buildSystem: maven
   author: null
   createdAt: '2024-01-16 07:16:02'
@@ -18,17 +18,18 @@ gemContainer:
   languageVersion: 2.12.15
   gemLibsVersion: 1.0.4
   gems:
-    gems/jdbcCustom:
-      name: jdbcCustom
+    gems/JdbcCustom:
+      name: JdbcCustom
       category: Source/Target
       subCategory: File
       description: null
       author: rohitjain@prophecy.io
       mode: batch
-      files: []
+      files:
+      - src/main/scala/rohitjainprophecyioteam/scalajdbcgems/gems/jdbcCustom.scala
       gemType: DatasetGem
-      dependencies: null
-      createdAt: '2024-01-16 07:17:01'
+      dependencies: []
+      createdAt: '2024-01-18 12:23:10'
   dependencies: null
 functions:
   author: null
