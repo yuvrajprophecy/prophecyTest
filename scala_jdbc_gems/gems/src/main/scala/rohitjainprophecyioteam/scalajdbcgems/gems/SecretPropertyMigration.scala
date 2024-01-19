@@ -54,7 +54,7 @@ object SecretPropertyMigration extends PropertyMigrationObj[JDBCCustomProperties
           case Some(secretPart: VaultSecret) =>
             secretPart.providerType match {
               case "Databricks" => newProperties.copy(credentialScope = secretPart.secretScope, secretUsername = None, credType = "databricksSecrets")
-              case "Environment" => newProperties.copy(credentialScope = None, textUsername = Some(secretPart.secretKey))
+              case "Environment" => newProperties.copy(credentialScope = None, textUsername = Some(secretPart.secretKey), credType = "userPwdEnv")
             }
 
           case Some(secretPart: TextSecret) =>
@@ -73,7 +73,7 @@ object SecretPropertyMigration extends PropertyMigrationObj[JDBCCustomProperties
           case Some(secretPart: VaultSecret) =>
             secretPart.providerType match {
               case "Databricks" => newPropertiesWithMigratedUsername.copy(credentialScope = secretPart.secretScope, secretUsername = None, credType = "databricksSecrets")
-              case "Environment" => newPropertiesWithMigratedUsername.copy(credentialScope = None, textPassword = Some(secretPart.secretKey))
+              case "Environment" => newPropertiesWithMigratedUsername.copy(credentialScope = None, textPassword = Some(secretPart.secretKey), credType = "userPwdEnv")
             }
           case Some(secretPart: TextSecret) =>
             newPropertiesWithMigratedUsername.copy(textPassword = Some(secretPart.value), secretPassword = None, credType = "userPwd")
