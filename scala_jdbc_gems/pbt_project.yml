@@ -29,7 +29,7 @@ templates: {}
 jobs: {}
 gemContainer:
   languageVersion: 2.12.15
-  gemLibsVersion: 1.0.4
+  gemLibsVersion: 1.1.1
   gems:
     gems/JdbcCustom:
       name: JdbcCustom
