@@ -34,8 +34,8 @@ object SecretPropertyMigration extends PropertyMigrationObj[JDBCCustomProperties
       case "userPwdEnv" =>
         oldProperties.copy(
           secretUsername =
-            Some(SecretValue(List(TextSecret(oldProperties.textUsername.getOrElse(""))))),
-          secretPassword = Some(SecretValue(List(TextSecret(oldProperties.textPassword.getOrElse(""))))),
+            Some(SecretValue(List(VaultSecret("Environment", Some(""), Some("0"), None, oldProperties.textUsername.getOrElse(""))))),
+          secretPassword = Some(SecretValue(List(VaultSecret("Environment", Some(""), Some("0"), None, oldProperties.textPassword.getOrElse(""))))),
           credentialScope = None,
           textUsername = None,
           textPassword = None,
@@ -52,7 +52,11 @@ object SecretPropertyMigration extends PropertyMigrationObj[JDBCCustomProperties
       case Some(secretValue) =>
         secretValue.parts.headOption match {
           case Some(secretPart: VaultSecret) =>
-            newProperties.copy(credentialScope = secretPart.secretScope, secretUsername = None, credType = "databricksSecrets")
+            secretPart.providerType match {
+              case "Databricks" => newProperties.copy(credentialScope = secretPart.secretScope, secretUsername = None, credType = "databricksSecrets")
+              case "Environment" => newProperties.copy(credentialScope = None, textUsername = Some(secretPart.secretKey))
+            }
+
           case Some(secretPart: TextSecret) =>
             newProperties.copy(textUsername = Some(secretPart.value), secretUsername = None, credType = "userPwd")
           case Some(secretPart: ConfigSecret) =>
@@ -67,16 +71,19 @@ object SecretPropertyMigration extends PropertyMigrationObj[JDBCCustomProperties
       case Some(secretValue) =>
         secretValue.parts.headOption match {
           case Some(secretPart: VaultSecret) =>
-            newProperties.copy(credentialScope = secretPart.secretScope, secretPassword = None, credType = "databricksSecrets")
+            secretPart.providerType match {
+              case "Databricks" => newPropertiesWithMigratedUsername.copy(credentialScope = secretPart.secretScope, secretUsername = None, credType = "databricksSecrets")
+              case "Environment" => newPropertiesWithMigratedUsername.copy(credentialScope = None, textPassword = Some(secretPart.secretKey))
+            }
           case Some(secretPart: TextSecret) =>
-            newProperties.copy(textPassword = Some(secretPart.value), secretPassword = None, credType = "userPwd")
+            newPropertiesWithMigratedUsername.copy(textPassword = Some(secretPart.value), secretPassword = None, credType = "userPwd")
           case Some(secretPart: ConfigSecret) =>
-            newProperties.copy(textPassword = Some(secretPart.value.mkString("")), secretPassword = None, credType = "userPwd")
+            newPropertiesWithMigratedUsername.copy(textPassword = Some(secretPart.value.mkString("")), secretPassword = None, credType = "userPwd")
           case None =>
-            newProperties.copy(textPassword = Some(""))
+            newPropertiesWithMigratedUsername.copy(textPassword = Some(""))
         }
       case None =>
-        newProperties.copy(textPassword = Some(""))
+        newPropertiesWithMigratedUsername.copy(textPassword = Some(""))
     }
   }
 }
