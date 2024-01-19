@@ -1,6 +1,6 @@
 name: scala_jdbc_gems
 description: ''
-version: '1.0'
+version: '2.0'
 author: rohitjain@prophecy.io
 language: scala
 buildSystem: ''

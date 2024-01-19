@@ -3,7 +3,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <modelVersion>4.0.0</modelVersion>
     <groupId>rohitjainprophecyioteam</groupId>
     <artifactId>scalajdbcgems</artifactId>
-    <version>scala_jdbc_gems_1.0</version>
+    <version>scala_jdbc_gems_2.0</version>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -141,7 +141,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
                         <manifestEntries>
-                            <Plugin-Id>scala_jdbc_gems_1.0</Plugin-Id>
+                            <Plugin-Id>scala_jdbc_gems_2.0</Plugin-Id>
                             <Plugin-Provider>Decebal Suiu</Plugin-Provider>
                             <Plugin-Version>scala_jdbc_gems_1.0</Plugin-Version>
                         </manifestEntries>
