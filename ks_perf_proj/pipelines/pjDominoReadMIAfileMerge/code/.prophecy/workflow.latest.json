@@ -1,0 +1,4866 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.82"
+      }
+    },
+    "id" : "pjDominoReadMIAfileMerge",
+    "uri" : "pipelines/pjDominoReadMIAfileMerge",
+    "language" : "scala",
+    "fabricId" : "3",
+    "frontEndLanguage" : "scala",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ ],
+      "functionPackageName" : "abhishekse2etestsprophecyioteam.automationdatastageldwhi2g19scala.functions",
+      "sharedFunctionPackageNames" : [ "io.prophecy.abiscalagems.functions", "io.prophecy.scalagems.functions", "io.prophecy.warehousegems.functions" ]
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "$APT_CONFIG_FILE",
+          "kind" : {
+            "type" : "string",
+            "value" : "$PROJDEF"
+          },
+          "optional" : false,
+          "comment" : "Configuration file",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$APT_DB2INSTANCE_HOME",
+          "kind" : {
+            "type" : "string",
+            "value" : "/home/ukdw_liv"
+          },
+          "optional" : false,
+          "comment" : "db2 instance home",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$APT_STRING_PADCHAR",
+          "kind" : {
+            "type" : "string",
+            "value" : "0x20"
+          },
+          "optional" : false,
+          "comment" : "Pad character",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$DB2_CLIENT_INSTANCE_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "cdwhd32"
+          },
+          "optional" : false,
+          "comment" : "DB2 Client Instance Name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$DB2_SERVER",
+          "kind" : {
+            "type" : "string",
+            "value" : "idwhu01"
+          },
+          "optional" : false,
+          "comment" : "DB2 Server",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWCJOBRUNID",
+          "kind" : {
+            "type" : "string",
+            "value" : "1"
+          },
+          "optional" : false,
+          "comment" : "Control Job Run ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWCJOBRRUNID",
+          "kind" : {
+            "type" : "string",
+            "value" : "0"
+          },
+          "optional" : false,
+          "comment" : "Control Job  Re Run ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWDATADATE",
+          "kind" : {
+            "type" : "string",
+            "value" : "2007-01-10"
+          },
+          "optional" : false,
+          "comment" : "The Data Date that  the Job is Running For",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pSHRDREFDATAPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "/ukdw/prd/shareddata"
+          },
+          "optional" : false,
+          "comment" : "The Directory which stores Common Reference Data Files such as Unloads from Xref tables into DataSet Files",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWTEMPFILEPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "/home/dwdv_per"
+          },
+          "optional" : false,
+          "comment" : "The Directory which stores Temporary Files Created Within the Job .Deleted after Run Successfully",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pCLEANSEDDATASET",
+          "kind" : {
+            "type" : "string",
+            "value" : "P2G00003CleansedDS"
+          },
+          "optional" : false,
+          "comment" : "The name of the cleansed data set",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pSUBJECT",
+          "kind" : {
+            "type" : "string",
+            "value" : "DOMINO"
+          },
+          "optional" : false,
+          "comment" : "The subject name for the batch",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWDATABASE",
+          "kind" : {
+            "type" : "string",
+            "value" : "DWHU01"
+          },
+          "optional" : false,
+          "comment" : "The DataBase Name.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWSCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "DWHL001"
+          },
+          "optional" : false,
+          "comment" : "The Schema Name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWUSERNAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "ukdw_liv"
+          },
+          "optional" : false,
+          "comment" : "The logon user name.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWPASSWORD",
+          "kind" : {
+            "type" : "string",
+            "value" : "LD:@09VA?93M0O4I=9J50KH6"
+          },
+          "optional" : false,
+          "comment" : "The logon password.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "DATE",
+          "kind" : {
+            "type" : "string",
+            "value" : "1711610067751"
+          },
+          "optional" : false,
+          "comment" : "Current Date time",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "10039",
+      "projectName" : "ProphecySparkAbinitioScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "39",
+      "projectName" : "ProphecySparkBasicsScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "40",
+      "projectName" : "ProphecyWarehouseScala",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : true,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "edge_1411",
+    "source" : "V0S829_filterV0S829P1",
+    "sourcePort" : "V0S829P1",
+    "target" : "V0S816",
+    "targetPort" : "V0S816P5"
+  }, {
+    "id" : "edge_1412",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P24",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P24"
+  }, {
+    "id" : "edge_1413",
+    "source" : "V0S833_V0S833P2_reformat",
+    "sourcePort" : "V0S833P2",
+    "target" : "V0S829_filterV0S829P4",
+    "targetPort" : "V0S829_filterV0S829P4"
+  }, {
+    "id" : "edge_1414",
+    "source" : "V65S1_V65S1P4_reformat",
+    "sourcePort" : "V65S1P4",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P1"
+  }, {
+    "id" : "edge_1415",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P42",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P42"
+  }, {
+    "id" : "edge_1416",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P21",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P21"
+  }, {
+    "id" : "edge_1417",
+    "source" : "V65S1_stage_var",
+    "sourcePort" : "V65S1_stage_varP1_out",
+    "target" : "V65S1_V65S1P4_reformat",
+    "targetPort" : "V65S1P4_reformat"
+  }, {
+    "id" : "edge_1418",
+    "source" : "V0S829_filterV0S829P4",
+    "sourcePort" : "V0S829P4",
+    "target" : "V77S2",
+    "targetPort" : "V77S2P1"
+  }, {
+    "id" : "edge_1419",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P27",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P27"
+  }, {
+    "id" : "edge_1420",
+    "source" : "V0S833_stage_var",
+    "sourcePort" : "V0S833_stage_varP1_out",
+    "target" : "V0S833_V0S833P2_reformat",
+    "targetPort" : "V0S833P2_reformat"
+  }, {
+    "id" : "edge_1421",
+    "source" : "V65S6_V65S6P2_reformat",
+    "sourcePort" : "V65S6P2",
+    "target" : "V65S5",
+    "targetPort" : "V65S5P1"
+  }, {
+    "id" : "edge_1422",
+    "source" : "V65S6_stage_var",
+    "sourcePort" : "V65S6_stage_varP1_out",
+    "target" : "V65S6_V65S6P2_constraint",
+    "targetPort" : "V65S6P2_constraint_in"
+  }, {
+    "id" : "edge_1423",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P43",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P43"
+  }, {
+    "id" : "edge_1424",
+    "source" : "V0S816",
+    "sourcePort" : "V0S816P1",
+    "target" : "V0S817",
+    "targetPort" : "V0S817P1"
+  }, {
+    "id" : "edge_1425",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P44",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P44"
+  }, {
+    "id" : "edge_1426",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P28",
+    "target" : "V0S816",
+    "targetPort" : "V0S816P3"
+  }, {
+    "id" : "edge_1427",
+    "source" : "V0S833_V0S833P2_reformat",
+    "sourcePort" : "V0S833P2",
+    "target" : "V0S829_filterV0S829P1",
+    "targetPort" : "V0S829_filterV0S829P1"
+  }, {
+    "id" : "edge_1428",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P41",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P41"
+  }, {
+    "id" : "edge_1429",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P40",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P40"
+  }, {
+    "id" : "edge_1430",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P22",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P22"
+  }, {
+    "id" : "edge_1431",
+    "source" : "V67S0",
+    "sourcePort" : "V67S0P1",
+    "target" : "V65S1_stage_var",
+    "targetPort" : "V65S1_stage_varP1_in"
+  }, {
+    "id" : "edge_1432",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P26",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P39"
+  }, {
+    "id" : "edge_1433",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P45",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P45"
+  }, {
+    "id" : "edge_1434",
+    "source" : "V65S5",
+    "sourcePort" : "V65S5P25",
+    "target" : "V65S4_union",
+    "targetPort" : "V65S4P25"
+  }, {
+    "id" : "edge_1435",
+    "source" : "V68S0",
+    "sourcePort" : "V68S0P1",
+    "target" : "V65S6_stage_var",
+    "targetPort" : "V65S6_stage_varP1_in"
+  }, {
+    "id" : "edge_1436",
+    "source" : "V65S4_sort",
+    "sourcePort" : "V65S4P28",
+    "target" : "V0S833_stage_var",
+    "targetPort" : "V0S833_stage_varP1_in"
+  }, {
+    "id" : "edge_1437",
+    "source" : "V65S6_V65S6P2_constraint",
+    "sourcePort" : "V65S6P2_constraint_out",
+    "target" : "V65S6_V65S6P2_reformat",
+    "targetPort" : "V65S6P2_reformat"
+  }, {
+    "id" : "edge_1438",
+    "source" : "V65S4_union",
+    "sourcePort" : "V65S4P28_union",
+    "target" : "V65S4_sort",
+    "targetPort" : "V65S4P28_sort"
+  } ],
+  "processes" : {
+    "V65S5" : {
+      "id" : "V65S5",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "swSplitData",
+        "slug" : "swSplitData",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S5P1",
+          "slug" : "lkSplitData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_VALUE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V65S5P21",
+          "slug" : "lkSessionID",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P22",
+          "slug" : "lkTimeStamp",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P24",
+          "slug" : "lkPageName",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P25",
+          "slug" : "lkPortletName",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P26",
+          "slug" : "lkAction",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P27",
+          "slug" : "lkAccount",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P40",
+          "slug" : "lkCustId",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P41",
+          "slug" : "lkID",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P42",
+          "slug" : "lkStaffNum",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P43",
+          "slug" : "lkChanlId",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P44",
+          "slug" : "lkAppNum",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P45",
+          "slug" : "lkGlblSessnId",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S5P28",
+          "slug" : "lkJoinNewMIAs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_VALUE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "script" : "\n // Could not generate the component\n // Name : swSplitData\n // Properties :\n /*\n Name -> Some(swSplitData)\nNextRecordID -> Some(0)\nAllowColumnMapping -> Some(0)\nNextID -> Some(46)\nInputPins -> Some(V65S5P1)\nkey -> Some(\\(2)\\(2)0\\(1)\\(3)key\\(2)ATTRIB_NAME\\(2)0)\nhashSelector -> None\nselection -> Some(user)\nifNotFound -> Some(allow)\nOutputPins -> Some(V65S5P21|V65S5P22|V65S5P24|V65S5P25|V65S5P26|V65S5P27|V65S5P40|V65S5P41|V65S5P42|V65S5P43|V65S5P44|V65S5P45|V65S5P28)\nStageType -> Some(PxSwitch)\ncase -> Some(\\(2)\\(2)0\\(1)\\(3)case\\(2)SESSION_ID=0\\(2)0\\(1)\\(3)case\\(2)TIME_STAMP=1\\(2)0\\(1)\\(3)case\\(2)PAGE_NAME=2\\(2)0\\(1)\\(3)case\\(2)PORTLET_NAME=3\\(2)0\\(1)\\(3)case\\(2)ACTION=4\\(2)0\\(1)\\(3)case\\(2)ACCOUNT=5\\(2)0\\(1)\\(3)case\\(2)CUST_ID=6\\(2)0\\(1)\\(3)case\\(2)ID=7\\(2)0\\(1)\\(3)case\\(2)STAF_NUM=8\\(2)0\\(1)\\(3)case\\(2)CHANL_ID=9\\(2)0\\(1)\\(3)case\\(2)APP_NUM=10\\(2)0\\(1)\\(3)case\\(2)GLOBL_SESSN_ID=11\\(2)0)\n */\n",
+        "scriptMethodHeader" : "",
+        "scriptMethodFooter" : ""
+      }
+    },
+    "V65S1_stage_var" : {
+      "id" : "V65S1_stage_var",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "lkParseRowNum_stage_var",
+        "slug" : "lkParseRowNum_stage_var",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S1_stage_varP1_in",
+          "slug" : "lkReadOrigData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V65S1_stage_varP1_out",
+          "slug" : "lkReadOrigData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V65S6_V65S6P2_reformat" : {
+      "id" : "V65S6_V65S6P2_reformat",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "trParseValues_V65S6P2_reformat",
+        "slug" : "trParseValues_V65S6P2_reformat",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S6P2_reformat",
+          "slug" : "lkLandDataToSF",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "svATTRIBNAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "svINFO",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V65S6P2",
+          "slug" : "lkSplitData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_VALUE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "RowNum",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "field3(col(\"RECORD\"), lit(\"~\"), lit(1.0))"
+          },
+          "description" : ""
+        }, {
+          "target" : "ATTRIB_NAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"svATTRIBNAME\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "ATTRIB_VALUE",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "field3(col(\"RECORD\"), lit(\"~\"), lit(3.0))"
+          },
+          "description" : ""
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V0S817" : {
+      "id" : "V0S817",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "dsNewMIAs_1",
+        "slug" : "dsNewMIAs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S817P1",
+          "slug" : "lkOutputNewMIAs"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dsNewMIAs_1"
+      }
+    },
+    "V65S6_V65S6P2_constraint" : {
+      "id" : "V65S6_V65S6P2_constraint",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "trParseValues_V65S6P2_constraint",
+        "slug" : "trParseValues_V65S6P2_constraint",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S6P2_constraint_in",
+          "slug" : "lkLandDataToSF",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "svATTRIBNAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "svINFO",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V65S6P2_constraint_out",
+          "slug" : "lkLandDataToSF",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "svATTRIBNAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "svINFO",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "scala",
+          "expression" : "ds_not(col(\"svINFO\"))"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V65S4_sort" : {
+      "id" : "V65S4_sort",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "mgAttributes_sort",
+        "slug" : "mgAttributes_sort",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S4P28_sort",
+          "slug" : "V65S4_union_sort"
+        } ],
+        "outputs" : [ {
+          "id" : "V65S4P28",
+          "slug" : "lkMergedRecords",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ {
+          "expression" : {
+            "format" : "scala",
+            "expression" : "lit(\"0(1)(3)key\")"
+          },
+          "sortType" : "asc"
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/OrderBy",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V0S816" : {
+      "id" : "V0S816",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "joNewMIAs",
+        "slug" : "joNewMIAs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S816P3",
+          "slug" : "lkJoinNewMIAs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_VALUE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V0S816P5",
+          "slug" : "lkNewMIAs"
+        } ],
+        "outputs" : [ {
+          "id" : "V0S816P1",
+          "slug" : "lkOutputNewMIAs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ATTRIB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_VALUE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "lkNewMIAs",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkJoinNewMIAs.RowNum\") === col(\"lkNewMIAs.RowNum\")"
+          },
+          "joinType" : "rightouter"
+        } ],
+        "expressions" : [ {
+          "_row_id" : "405093645",
+          "target" : "ATTRIB_NAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkJoinNewMIAs.ATTRIB_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1352347832",
+          "target" : "PIB_PAGE_NAM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.PIB_PAGE_NAM\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1431414260",
+          "target" : "APP_NUM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.APP_NUM\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1632673585",
+          "target" : "STAF_NUM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.STAF_NUM\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "240460874",
+          "target" : "SESSN_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.SESSN_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1492526718",
+          "target" : "RECORD",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.RECORD\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "149153451",
+          "target" : "RPS_ACCT_ID_14",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.RPS_ACCT_ID_14\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1979899875",
+          "target" : "PIB_MIA_COD",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.PIB_MIA_COD\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "672620463",
+          "target" : "GLOBL_SESSN_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.GLOBL_SESSN_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "317901500",
+          "target" : "RowNum",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.RowNum\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "256357606",
+          "target" : "ATTRIB_VALUE",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkJoinNewMIAs.ATTRIB_VALUE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "192531089",
+          "target" : "CIN",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.CIN\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1486247820",
+          "target" : "CHANL_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.CHANL_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "908985712",
+          "target" : "TIMESTAMP",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.TIMESTAMP\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1109869688",
+          "target" : "PIB_PTLT_NAM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"lkNewMIAs.PIB_PTLT_NAM\")"
+          },
+          "description" : ""
+        } ],
+        "hints" : [ {
+          "id" : "in0",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "in1",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "whereClause" : null,
+        "headAlias" : "lkJoinNewMIAs"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V0S833_stage_var" : {
+      "id" : "V0S833_stage_var",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "trHandleNulls_stage_var",
+        "slug" : "trHandleNulls_stage_var",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S833_stage_varP1_in",
+          "slug" : "lkMergedRecords"
+        } ],
+        "outputs" : [ {
+          "id" : "V0S833_stage_varP1_out",
+          "slug" : "lkMergedRecords",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V65S6_stage_var" : {
+      "id" : "V65S6_stage_var",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "trParseValues_stage_var",
+        "slug" : "trParseValues_stage_var",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S6_stage_varP1_in",
+          "slug" : "lkLandDataToSF",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V65S6_stage_varP1_out",
+          "slug" : "lkLandDataToSF",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "svATTRIBNAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "svINFO",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ {
+          "kind" : "AddReplaceColumn",
+          "AddReplaceColumn" : {
+            "sourceColumn" : "svATTRIBNAME",
+            "expression" : {
+              "format" : "scala",
+              "expression" : "upcase(field3(col(\"RECORD\"), lit(\"~\"), lit(2.0)))"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          }
+        }, {
+          "kind" : "AddReplaceColumn",
+          "AddReplaceColumn" : {
+            "sourceColumn" : "svINFO",
+            "expression" : {
+              "format" : "scala",
+              "expression" : "index(col(\"svATTRIBNAME\"), lit(\"[INFO]\"), lit(1.0)) > lit(0.0)"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          }
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V68S0" : {
+      "id" : "V68S0",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "awkP2G00003RevPivot_FF",
+        "slug" : "awkP2G00003RevPivot_FF",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "V68S0P1",
+          "slug" : "lkLandDataToSF",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "script" : "\n // Could not generate the component\n // Name : awkP2G00003RevPivot_FF\n // Properties :\n /*\n Name -> Some(awkP2G00003RevPivot_FF)\nNextRecordID -> Some(0)\nAllowColumnMapping -> Some(0)\nNextID -> Some(3)\nOutputPins -> Some(V68S0P1)\nStageType -> Some(PxExternalSource)\n */\n",
+        "scriptMethodHeader" : "",
+        "scriptMethodFooter" : ""
+      }
+    },
+    "V0S829_filterV0S829P1" : {
+      "id" : "V0S829_filterV0S829P1",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "fiValidation",
+        "slug" : "fiValidation",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S829_filterV0S829P1",
+          "slug" : "lkFilterData"
+        } ],
+        "outputs" : [ {
+          "id" : "V0S829P1",
+          "slug" : "lkNewMIAs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "scala",
+          "expression" : "(col(\"SESSN_ID\") =!= lit(\"\")) and (col(\"CIN\") =!= lit(\"\"))"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V65S4_union" : {
+      "id" : "V65S4_union",
+      "component" : "SetOperation",
+      "metadata" : {
+        "label" : "mgAttributes_union",
+        "slug" : "mgAttributes_union",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S4P1",
+          "slug" : "lkMergeOrigData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P21",
+          "slug" : "lkSessionID",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P22",
+          "slug" : "lkTimeStamp",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P24",
+          "slug" : "lkPageName",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P25",
+          "slug" : "lkPortletName",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P27",
+          "slug" : "lkAccount",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P39",
+          "slug" : "lkAction",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P40",
+          "slug" : "lkCustId",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P41",
+          "slug" : "lkID",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P42",
+          "slug" : "lkStaffNum",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P43",
+          "slug" : "lkChanlId",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P44",
+          "slug" : "lkAppNum",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "V65S4P45",
+          "slug" : "lkGlblSessnId",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V65S4P28_union",
+          "slug" : "V65S4_union_sort",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "operationType" : "unionAll",
+        "allowMissingColumns" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SetOperation",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V65S1_V65S1P4_reformat" : {
+      "id" : "V65S1_V65S1P4_reformat",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "lkParseRowNum_V65S1P4_reformat",
+        "slug" : "lkParseRowNum_V65S1P4_reformat",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V65S1P4_reformat",
+          "slug" : "lkReadOrigData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V65S1P4",
+          "slug" : "lkMergeOrigData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "RowNum",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "field3(col(\"RECORD\"), lit(\"|\"), lit(1.0))"
+          },
+          "description" : ""
+        }, {
+          "target" : "RECORD",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RECORD\")"
+          },
+          "description" : ""
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V77S2" : {
+      "id" : "V77S2",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "sfDOM00001Rejects",
+        "slug" : "sfDOM00001Rejects",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V77S2P1",
+          "slug" : "lkRejectsOut"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/sfDOM00001Rejects"
+      }
+    },
+    "V67S0" : {
+      "id" : "V67S0",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "awkP2G00003OrigWithRowNum_FF",
+        "slug" : "awkP2G00003OrigWithRowNum_FF",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "V67S0P1",
+          "slug" : "lkReadOrigData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RowNum",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "script" : "\n // Could not generate the component\n // Name : awkP2G00003OrigWithRowNum_FF\n // Properties :\n /*\n Name -> Some(awkP2G00003OrigWithRowNum_FF)\nNextRecordID -> Some(0)\nAllowColumnMapping -> Some(0)\nNextID -> Some(2)\nOutputPins -> Some(V67S0P1)\nStageType -> Some(PxExternalSource)\n */\n",
+        "scriptMethodHeader" : "",
+        "scriptMethodFooter" : ""
+      }
+    },
+    "V0S833_V0S833P2_reformat" : {
+      "id" : "V0S833_V0S833P2_reformat",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "trHandleNulls_V0S833P2_reformat",
+        "slug" : "trHandleNulls_V0S833P2_reformat",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S833P2_reformat",
+          "slug" : "lkMergedRecords"
+        } ],
+        "outputs" : [ {
+          "id" : "V0S833P2",
+          "slug" : "lkFilterData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "PIB_PAGE_NAM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"PIB_PAGE_NAM\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "nulltoempty(col(\"ID\"))"
+          },
+          "description" : ""
+        }, {
+          "target" : "APP_NUM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"APP_NUM\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "STAF_NUM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"STAF_NUM\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "SESSN_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "nulltoempty(col(\"SESSN_ID\"))"
+          },
+          "description" : ""
+        }, {
+          "target" : "RECORD",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RECORD\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "RPS_ACCT_ID_14",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RPS_ACCT_ID_14\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "PIB_MIA_COD",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"PIB_MIA_COD\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "GLOBL_SESSN_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"GLOBL_SESSN_ID\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "RowNum",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RowNum\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "CIN",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "nulltoempty(col(\"CIN\"))"
+          },
+          "description" : ""
+        }, {
+          "target" : "CHANL_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"CHANL_ID\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "TIMESTAMP",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"TIMESTAMP\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "PIB_PTLT_NAM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"PIB_PTLT_NAM\")"
+          },
+          "description" : ""
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V0S829_filterV0S829P4" : {
+      "id" : "V0S829_filterV0S829P4",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "fiValidation",
+        "slug" : "fiValidation",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S829_filterV0S829P4",
+          "slug" : "lkFilterData"
+        } ],
+        "outputs" : [ {
+          "id" : "V0S829P4",
+          "slug" : "lkRejectsOut",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_MIA_COD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "scala",
+          "expression" : "(col(\"SESSN_ID\") =!= lit(\"\")) and (col(\"CIN\") =!= lit(\"\"))"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.udfs.udfs[0].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[1].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[2].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[3].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[4].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[5].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[6].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[7].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[8].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[9].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[10].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[11].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[12].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[13].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[14].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[15].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[16].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[17].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[18].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[19].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[20].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[21].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[22].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[23].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[24].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[25].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[26].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[27].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[28].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[29].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[30].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[31].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[32].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[33].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[34].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[35].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[36].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[37].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[38].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[39].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[40].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[41].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[42].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[43].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[44].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[45].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[46].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[47].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[48].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[49].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[50].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[51].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[52].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[53].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[54].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[55].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.configuration.default.fields",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Configuration key 'PROJDEF' not found",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V65S4_union.ports.inputs",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Mismatch in columns found. All inputs must have the same columns.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V65S4_sort",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_stage_var",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column PIB_PAGE_NAM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column ID",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column APP_NUM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column STAF_NUM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[4].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column SESSN_ID",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column RECORD",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[6].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column RPS_ACCT_ID_14",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[7].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column PIB_MIA_COD",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[8].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column GLOBL_SESSN_ID",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column RowNum",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[10].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column CIN",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[11].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column CHANL_ID",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[12].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column TIMESTAMP",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S833_V0S833P2_reformat.properties.expressions[13].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column PIB_PTLT_NAM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S829_filterV0S829P1",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.RowNum [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.PIB_PAGE_NAM [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.APP_NUM [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.STAF_NUM [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[4].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.SESSN_ID [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.RECORD [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[6].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.RPS_ACCT_ID_14 [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[7].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.PIB_MIA_COD [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[8].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.GLOBL_SESSN_ID [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.RowNum [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[11].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.CIN [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[12].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.CHANL_ID [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[13].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.TIMESTAMP [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S816.properties.expressions[14].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column lkNewMIAs.PIB_PTLT_NAM [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S817",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S829_filterV0S829P4",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V77S2",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
+}

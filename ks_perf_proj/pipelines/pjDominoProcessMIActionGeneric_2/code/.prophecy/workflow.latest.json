@@ -1,0 +1,1050 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.82"
+      }
+    },
+    "id" : "pjDominoProcessMIActionGeneric_2",
+    "uri" : "pipelines/pjDominoProcessMIActionGeneric_2",
+    "language" : "scala",
+    "fabricId" : "3",
+    "frontEndLanguage" : "scala",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ ],
+      "functionPackageName" : "abhishekse2etestsprophecyioteam.automationdatastageldwhi2g19scala.functions",
+      "sharedFunctionPackageNames" : [ "io.prophecy.abiscalagems.functions", "io.prophecy.scalagems.functions", "io.prophecy.warehousegems.functions" ]
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "$APT_CONFIG_FILE",
+          "kind" : {
+            "type" : "string",
+            "value" : "$PROJDEF"
+          },
+          "optional" : false,
+          "comment" : "Configuration file",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$APT_DB2INSTANCE_HOME",
+          "kind" : {
+            "type" : "string",
+            "value" : "/home/ukdw_liv"
+          },
+          "optional" : false,
+          "comment" : "db2 instance home",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$APT_STRING_PADCHAR",
+          "kind" : {
+            "type" : "string",
+            "value" : "0x20"
+          },
+          "optional" : false,
+          "comment" : "Pad character",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$DB2_CLIENT_INSTANCE_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "cdwhd32"
+          },
+          "optional" : false,
+          "comment" : "DB2 Client Instance Name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$DB2_SERVER",
+          "kind" : {
+            "type" : "string",
+            "value" : "idwhd01"
+          },
+          "optional" : false,
+          "comment" : "DB2 Server",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWCJOBRUNID",
+          "kind" : {
+            "type" : "string",
+            "value" : "1"
+          },
+          "optional" : false,
+          "comment" : "Control Job Run ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWCJOBRRUNID",
+          "kind" : {
+            "type" : "string",
+            "value" : "0"
+          },
+          "optional" : false,
+          "comment" : "Control Job  Re Run ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWDATADATE",
+          "kind" : {
+            "type" : "string",
+            "value" : "2007-01-10"
+          },
+          "optional" : false,
+          "comment" : "The Data Date that  the Job is Running For",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pSHRDREFDATAPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "/ukdw/prd/shareddata"
+          },
+          "optional" : false,
+          "comment" : "The Directory which stores Common Reference Data Files such as Unloads from Xref tables into DataSet Files",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWTEMPFILEPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "/tmp"
+          },
+          "optional" : false,
+          "comment" : "The Directory which stores Temporary Files Created Within the Job .Deleted after Run Successfully",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pCLEANSEDDATASET",
+          "kind" : {
+            "type" : "string",
+            "value" : "P2G00003CleansedDS"
+          },
+          "optional" : false,
+          "comment" : "The name of the cleansed data set",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pSUBJECT",
+          "kind" : {
+            "type" : "string",
+            "value" : "P2G00003"
+          },
+          "optional" : false,
+          "comment" : "The subject name for the batch",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWDATABASE",
+          "kind" : {
+            "type" : "string",
+            "value" : "DWHD01"
+          },
+          "optional" : false,
+          "comment" : "The DataBase Name.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWSCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "DWHD038"
+          },
+          "optional" : false,
+          "comment" : "The Schema Name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWUSERNAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "ukdw_dev"
+          },
+          "optional" : false,
+          "comment" : "The logon user name.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWPASSWORD",
+          "kind" : {
+            "type" : "string",
+            "value" : "LL9@1KVHN93>0OEI=9J<BKI7"
+          },
+          "optional" : false,
+          "comment" : "The logon password.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "DATE",
+          "kind" : {
+            "type" : "string",
+            "value" : "1711610067977"
+          },
+          "optional" : false,
+          "comment" : "Current Date time",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "10039",
+      "projectName" : "ProphecySparkAbinitioScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "39",
+      "projectName" : "ProphecySparkBasicsScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "40",
+      "projectName" : "ProphecyWarehouseScala",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : true,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "edge_1439",
+    "source" : "V0S1027",
+    "sourcePort" : "V0S1027P1",
+    "target" : "V0S1022_stage_var",
+    "targetPort" : "V0S1022_stage_varP1_in"
+  }, {
+    "id" : "edge_1440",
+    "source" : "V0S1022_stage_var",
+    "sourcePort" : "V0S1022_stage_varP1_out",
+    "target" : "V0S1022_V0S1022P2_reformat",
+    "targetPort" : "V0S1022P2_reformat"
+  }, {
+    "id" : "edge_1441",
+    "source" : "V0S1022_V0S1022P2_reformat",
+    "sourcePort" : "V0S1022P2",
+    "target" : "V154S0",
+    "targetPort" : "V154S0P2"
+  } ],
+  "processes" : {
+    "V0S1027" : {
+      "id" : "V0S1027",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "sfInputData",
+        "slug" : "sfInputData",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "V0S1027P1",
+          "slug" : "lkRecsCombined",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "GENERIC_ITEM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "REC_ACDT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRAN_RNK_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IP_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/sfInputData"
+      }
+    },
+    "V0S1022_stage_var" : {
+      "id" : "V0S1022_stage_var",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "trFormatGenericDesc_stage_var",
+        "slug" : "trFormatGenericDesc_stage_var",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S1022_stage_varP1_in",
+          "slug" : "lkRecsCombined",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "GENERIC_ITEM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "REC_ACDT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRAN_RNK_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IP_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V0S1022_stage_varP1_out",
+          "slug" : "lkRecsCombined",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "GENERIC_ITEM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "REC_ACDT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRAN_RNK_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IP_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V0S1022_V0S1022P2_reformat" : {
+      "id" : "V0S1022_V0S1022P2_reformat",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "trFormatGenericDesc_V0S1022P2_reformat",
+        "slug" : "trFormatGenericDesc_V0S1022P2_reformat",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S1022P2_reformat",
+          "slug" : "lkRecsCombined",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "GENERIC_ITEM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "REC_ACDT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRAN_RNK_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IP_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V0S1022P2",
+          "slug" : "lkOutputData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "GENERIC_ITEM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "REC_ACDT",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRAN_RNK_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IP_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "GENERIC_ITEM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"GENERIC_ITEM\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "REC_ACDT",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"pUKDWDATADATE\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "RowNum",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RowNum\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "PIB_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"PIB_ID\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "TRAN_RNK_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"TRAN_RNK_ID\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "IP_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"IP_ID\")"
+          },
+          "description" : ""
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V154S0" : {
+      "id" : "V154S0",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "dsOutputData_2",
+        "slug" : "dsOutputData",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V154S0P2",
+          "slug" : "lkOutputData"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dsOutputData_2"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.udfs.udfs[0].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[1].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[2].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[3].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[4].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[5].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[6].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[7].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[8].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[9].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[10].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[11].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[12].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[13].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[14].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[15].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.configuration.default.fields",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Configuration key 'PROJDEF' not found",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V0S1022_V0S1022P2_reformat.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column pUKDWDATADATE",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V154S0",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
+}

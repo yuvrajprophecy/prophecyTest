@@ -1,0 +1,587 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.82"
+      }
+    },
+    "id" : "pjGenericDB2LoadRCP_P2G",
+    "uri" : "pipelines/pjGenericDB2LoadRCP_P2G",
+    "language" : "scala",
+    "fabricId" : "3",
+    "frontEndLanguage" : "scala",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ ],
+      "functionPackageName" : "abhishekse2etestsprophecyioteam.automationdatastageldwhi2g19scala.functions",
+      "sharedFunctionPackageNames" : [ "io.prophecy.abiscalagems.functions", "io.prophecy.scalagems.functions", "io.prophecy.warehousegems.functions" ]
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "$DB2_SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "dwhd001"
+          },
+          "optional" : false,
+          "comment" : "db2 schema name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$DB2_DATABASE",
+          "kind" : {
+            "type" : "string",
+            "value" : "dwhd01"
+          },
+          "optional" : false,
+          "comment" : "database name\\(20)",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$TDPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "$PROJDEF"
+          },
+          "optional" : false,
+          "comment" : "Teradata Path",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$APT_CONFIG_FILE",
+          "kind" : {
+            "type" : "string",
+            "value" : "$PROJDEF"
+          },
+          "optional" : false,
+          "comment" : "Configuration file",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pTABLE_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "INA_BD_MTH_SNAP"
+          },
+          "optional" : false,
+          "comment" : "pTABLE_NAME",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWPASSWORD",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "comment" : "UKDW Password",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWSCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "UKDWHDEV"
+          },
+          "optional" : false,
+          "comment" : "UKDW Server Name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWUSERNAME",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "comment" : "UKDW UserName",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWTEMPFILEPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "/data/ds/dpr_ukdwdev_tddev/working/DWH00101_20080930"
+          },
+          "optional" : false,
+          "comment" : "pUKDWTEMPFILEPATH",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pSUBJECT",
+          "kind" : {
+            "type" : "string",
+            "value" : "DWH00101"
+          },
+          "optional" : false,
+          "comment" : "pSUBJECT",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWTERASYNC",
+          "kind" : {
+            "type" : "string",
+            "value" : "TPT_TERASYNC"
+          },
+          "optional" : false,
+          "comment" : "Sync table",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pIDENT",
+          "kind" : {
+            "type" : "string",
+            "value" : "12345678"
+          },
+          "optional" : false,
+          "comment" : "Unique ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pPIB_ID",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "comment" : "PIB_ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pMaxSession",
+          "kind" : {
+            "type" : "string",
+            "value" : "1"
+          },
+          "optional" : false,
+          "comment" : "pMaxSession",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "DATE",
+          "kind" : {
+            "type" : "string",
+            "value" : "1711610067668"
+          },
+          "optional" : false,
+          "comment" : "Current Date time",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "10039",
+      "projectName" : "ProphecySparkAbinitioScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "39",
+      "projectName" : "ProphecySparkBasicsScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "40",
+      "projectName" : "ProphecyWarehouseScala",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : true,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "edge_1410",
+    "source" : "V4S0",
+    "sourcePort" : "V4S0P3",
+    "target" : "V0S22",
+    "targetPort" : "V0S22P1"
+  } ],
+  "processes" : {
+    "V4S0" : {
+      "id" : "V4S0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "dsLoadData",
+        "slug" : "dsLoadData",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "V4S0P3",
+          "slug" : "lkLoadData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/test1711610102427"
+      }
+    },
+    "V0S22" : {
+      "id" : "V0S22",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "TeradataLoad",
+        "slug" : "TeradataLoad",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V0S22P1",
+          "slug" : "lkLoadData",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/test1711610090632"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.udfs.udfs[0].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[1].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[2].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[3].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[4].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[5].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[6].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[7].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[8].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[9].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[10].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[11].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[12].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[13].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[14].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[15].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.configuration.default.fields",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Configuration key 'PROJDEF' not found",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
+}

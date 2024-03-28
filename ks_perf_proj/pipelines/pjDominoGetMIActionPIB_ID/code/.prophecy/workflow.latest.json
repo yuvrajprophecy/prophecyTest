@@ -1,0 +1,5991 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.82"
+      }
+    },
+    "id" : "pjDominoGetMIActionPIB_ID",
+    "uri" : "pipelines/pjDominoGetMIActionPIB_ID",
+    "language" : "scala",
+    "fabricId" : "3",
+    "frontEndLanguage" : "scala",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ ],
+      "functionPackageName" : "abhishekse2etestsprophecyioteam.automationdatastageldwhi2g19scala.functions",
+      "sharedFunctionPackageNames" : [ "io.prophecy.abiscalagems.functions", "io.prophecy.scalagems.functions", "io.prophecy.warehousegems.functions" ]
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "$APT_CONFIG_FILE",
+          "kind" : {
+            "type" : "string",
+            "value" : "$PROJDEF"
+          },
+          "optional" : false,
+          "comment" : "Configuration file",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$APT_DB2INSTANCE_HOME",
+          "kind" : {
+            "type" : "string",
+            "value" : "/home/ukdw_liv"
+          },
+          "optional" : false,
+          "comment" : "db2 instance home",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$APT_STRING_PADCHAR",
+          "kind" : {
+            "type" : "string",
+            "value" : "0x20"
+          },
+          "optional" : false,
+          "comment" : "Pad character",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$DB2_CLIENT_INSTANCE_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "cdwhd32"
+          },
+          "optional" : false,
+          "comment" : "DB2 Client Instance Name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "$DB2_SERVER",
+          "kind" : {
+            "type" : "string",
+            "value" : "idwhu01"
+          },
+          "optional" : false,
+          "comment" : "DB2 Server",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWCJOBRUNID",
+          "kind" : {
+            "type" : "string",
+            "value" : "1"
+          },
+          "optional" : false,
+          "comment" : "Control Job Run ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWCJOBRRUNID",
+          "kind" : {
+            "type" : "string",
+            "value" : "0"
+          },
+          "optional" : false,
+          "comment" : "Control Job  Re Run ID",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWDATADATE",
+          "kind" : {
+            "type" : "string",
+            "value" : "2014-01-01"
+          },
+          "optional" : false,
+          "comment" : "The Data Date that  the Job is Running For",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pSHRDREFDATAPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "/data/ds/dpr_ukdw_sys/shareddata/ukdw_s34"
+          },
+          "optional" : false,
+          "comment" : "The Directory which stores Common Reference Data Files such as Unloads from Xref tables into DataSet Files",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWTEMPFILEPATH",
+          "kind" : {
+            "type" : "string",
+            "value" : "/data/ds/dpr_ukdw_sys/working/DOM00001_20140101_FIX"
+          },
+          "optional" : false,
+          "comment" : "The Directory which stores Temporary Files Created Within the Job .Deleted after Run Successfully",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pCLEANSEDDATASET",
+          "kind" : {
+            "type" : "string",
+            "value" : "DOM00001CleansedDS"
+          },
+          "optional" : false,
+          "comment" : "The name of the cleansed data set",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pSUBJECT",
+          "kind" : {
+            "type" : "string",
+            "value" : "DOM00001"
+          },
+          "optional" : false,
+          "comment" : "The subject name for the batch",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWDATABASE",
+          "kind" : {
+            "type" : "string",
+            "value" : "ukdwhtst"
+          },
+          "optional" : false,
+          "comment" : "The DataBase Name.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWSCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : "ukdwhtst"
+          },
+          "optional" : false,
+          "comment" : "The Schema Name",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWUSERNAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "GB_DWHS_SILO34"
+          },
+          "optional" : false,
+          "comment" : "The logon user name.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pUKDWPASSWORD",
+          "kind" : {
+            "type" : "string",
+            "value" : "LL9@1KVHN93>0G5M4JJ51KAGB5NIM3U=BQKOoFK"
+          },
+          "optional" : false,
+          "comment" : "The logon password.",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pDS_TIMESTAMP",
+          "kind" : {
+            "type" : "string",
+            "value" : "20140101_01_01_01"
+          },
+          "optional" : false,
+          "comment" : "DS Time Statmp",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "pscKeyGenerationVC_PIB_ID",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "pXREFTABLE",
+              "kind" : {
+                "type" : "string",
+                "value" : "DWH_ARRG_XREF"
+              },
+              "optional" : false,
+              "comment" : "Xref Table",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pNATURALKEY",
+              "kind" : {
+                "type" : "string",
+                "value" : "RPS_ACCT_ID_14"
+              },
+              "optional" : false,
+              "comment" : "Natural Key",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pSURROGATEKEY",
+              "kind" : {
+                "type" : "string",
+                "value" : "ARRG_ID"
+              },
+              "optional" : false,
+              "comment" : "Surrogate Key",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pDB2SERVERNAME",
+              "kind" : {
+                "type" : "string",
+                "value" : "cdwhd32"
+              },
+              "optional" : false,
+              "comment" : "DB2 Server",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pUKDWDATABASE",
+              "kind" : {
+                "type" : "string",
+                "value" : "DWHD02"
+              },
+              "optional" : false,
+              "comment" : "DB2 Database Name",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pDB2CLIENTINSTANCE",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pUKDWUSERNAME",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pUKDWPASSWORD",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pUKDWSCHEMA",
+              "kind" : {
+                "type" : "string",
+                "value" : "DWHL001"
+              },
+              "optional" : false,
+              "comment" : "DB2 Schema",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pSHRDREFDATAPATH",
+              "kind" : {
+                "type" : "string",
+                "value" : "/ukdw/dev/rawdata/dohertysTest/shared"
+              },
+              "optional" : false,
+              "comment" : "Shared Ref Data Path",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pUKDWTEMPFILEPATH",
+              "kind" : {
+                "type" : "string",
+                "value" : "/ukdw/dev/rawdata/dohertysTest/temp"
+              },
+              "optional" : false,
+              "comment" : "Tmp data path",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pDS_TIMESTAMP",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pSUBJECT",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "comment" : "override this value",
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pscMessageHandlingSCtrC235",
+              "kind" : {
+                "type" : "record",
+                "fields" : [ {
+                  "name" : "$APT_CONFIG_FILE",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "$PROJDEF"
+                  },
+                  "optional" : false,
+                  "comment" : "Configuration file",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "$APT_DB2INSTANCE_HOME",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "/home/ukdw_liv"
+                  },
+                  "optional" : false,
+                  "comment" : "db2 instance home",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "$APT_STRING_PADCHAR",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "0x20"
+                  },
+                  "optional" : false,
+                  "comment" : "Pad character",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "$DB2_CLIENT_INSTANCE_NAME",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "cdwhd32"
+                  },
+                  "optional" : false,
+                  "comment" : "DB2 Client Instance Name",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "$DB2_SERVER",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "idwhu01"
+                  },
+                  "optional" : false,
+                  "comment" : "DB2 Server",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWCJOBRUNID",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "1"
+                  },
+                  "optional" : false,
+                  "comment" : "Control Job Run ID",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWCJOBRRUNID",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "0"
+                  },
+                  "optional" : false,
+                  "comment" : "Control Job  Re Run ID",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWDATADATE",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "2014-01-01"
+                  },
+                  "optional" : false,
+                  "comment" : "The Data Date that  the Job is Running For",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pSHRDREFDATAPATH",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "/data/ds/dpr_ukdw_sys/shareddata/ukdw_s34"
+                  },
+                  "optional" : false,
+                  "comment" : "The Directory which stores Common Reference Data Files such as Unloads from Xref tables into DataSet Files",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWTEMPFILEPATH",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "/data/ds/dpr_ukdw_sys/working/DOM00001_20140101_FIX"
+                  },
+                  "optional" : false,
+                  "comment" : "The Directory which stores Temporary Files Created Within the Job .Deleted after Run Successfully",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pCLEANSEDDATASET",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "DOM00001CleansedDS"
+                  },
+                  "optional" : false,
+                  "comment" : "The name of the cleansed data set",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pSUBJECT",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "DOM00001"
+                  },
+                  "optional" : false,
+                  "comment" : "The subject name for the batch",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWDATABASE",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "ukdwhtst"
+                  },
+                  "optional" : false,
+                  "comment" : "The DataBase Name.",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWSCHEMA",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "ukdwhtst"
+                  },
+                  "optional" : false,
+                  "comment" : "The Schema Name",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWUSERNAME",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "GB_DWHS_SILO34"
+                  },
+                  "optional" : false,
+                  "comment" : "The logon user name.",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pUKDWPASSWORD",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "LL9@1KVHN93>0G5M4JJ51KAGB5NIM3U=BQKOoFK"
+                  },
+                  "optional" : false,
+                  "comment" : "The logon password.",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "pDS_TIMESTAMP",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "20140101_01_01_01"
+                  },
+                  "optional" : false,
+                  "comment" : "DS Time Statmp",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                }, {
+                  "name" : "DATE",
+                  "kind" : {
+                    "type" : "string",
+                    "value" : "1711610061975"
+                  },
+                  "optional" : false,
+                  "comment" : "Current Date time",
+                  "isWorkflowNodeConfiguration" : false,
+                  "isReferenced" : false
+                } ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : true,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        }, {
+          "name" : "DATE",
+          "kind" : {
+            "type" : "string",
+            "value" : "1711610061975"
+          },
+          "optional" : false,
+          "comment" : "Current Date time",
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "10039",
+      "projectName" : "ProphecySparkAbinitioScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "39",
+      "projectName" : "ProphecySparkBasicsScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "40",
+      "projectName" : "ProphecyWarehouseScala",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : true,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "edge_1065",
+    "source" : "C76",
+    "sourcePort" : "C76P2",
+    "target" : "V75S7_copyV75S7P3",
+    "targetPort" : "V75S7_copyV75S7P3"
+  }, {
+    "id" : "edge_1066",
+    "source" : "V75S7_copyV75S7P2",
+    "sourcePort" : "V75S7P2",
+    "target" : "V75S3",
+    "targetPort" : "V75S3P2"
+  }, {
+    "id" : "edge_1067",
+    "source" : "V75S7_copyV75S7P3",
+    "sourcePort" : "V75S7P3",
+    "target" : "V75S6",
+    "targetPort" : "V75S6P1"
+  }, {
+    "id" : "edge_1068",
+    "source" : "V75S6",
+    "sourcePort" : "V75S6P2",
+    "target" : "V75S5",
+    "targetPort" : "V75S5P1"
+  }, {
+    "id" : "edge_1069",
+    "source" : "V75S10",
+    "sourcePort" : "V75S10P1",
+    "target" : "C76",
+    "targetPort" : "C76P3"
+  }, {
+    "id" : "edge_1070",
+    "source" : "C76",
+    "sourcePort" : "C76P2",
+    "target" : "V75S7_copyV75S7P2",
+    "targetPort" : "V75S7_copyV75S7P2"
+  }, {
+    "id" : "edge_1071",
+    "source" : "V75S5",
+    "sourcePort" : "V75S5P2",
+    "target" : "V75S4",
+    "targetPort" : "V75S4P1"
+  } ],
+  "processes" : {
+    "V75S5" : {
+      "id" : "V75S5",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "ddPIBs",
+        "slug" : "ddPIBs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V75S5P1",
+          "slug" : "lkDDPIBs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V75S5P2",
+          "slug" : "lkDistinctPIBs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ {
+          "colName" : "PIB_ID"
+        } ],
+        "dedupType" : "first",
+        "columnsSelector" : [ ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Deduplicate",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V75S7_copyV75S7P3" : {
+      "id" : "V75S7_copyV75S7P3",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cpAllPIBs",
+        "slug" : "cpAllPIBs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V75S7_copyV75S7P3",
+          "slug" : "lkPIBon",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "SURROGATEKEY",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NATURALKEY",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V75S7P3",
+          "slug" : "lkSoPIBs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "PIB_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"SURROGATEKEY\")"
+          },
+          "description" : ""
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V75S4" : {
+      "id" : "V75S4",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "dsDistinctPIBs",
+        "slug" : "dsDistinctPIBs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V75S4P1",
+          "slug" : "lkDistinctPIBs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dsDistinctPIBs"
+      }
+    },
+    "V75S10" : {
+      "id" : "V75S10",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "dsNewMIAs",
+        "slug" : "dsNewMIAs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "V75S10P1",
+          "slug" : "lkPostDominoMIAs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dsNewMIAs"
+      }
+    },
+    "V75S7_copyV75S7P2" : {
+      "id" : "V75S7_copyV75S7P2",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cpAllPIBs",
+        "slug" : "cpAllPIBs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V75S7_copyV75S7P2",
+          "slug" : "lkPIBon",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "SURROGATEKEY",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NATURALKEY",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V75S7P2",
+          "slug" : "lkPostPIB",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ATTRIB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PAGE_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "APP_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STAF_NUM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RECORD",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RPS_ACCT_ID_14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "GLOBL_SESSN_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RowNum",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ATTRIB_VALUE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CIN",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CHANL_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TIMESTAMP",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PIB_PTLT_NAM",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "target" : "ATTRIB_NAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"ATTRIB_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "PIB_PAGE_NAM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"PIB_PAGE_NAM\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "APP_NUM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"APP_NUM\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "STAF_NUM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"STAF_NUM\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "SESSN_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"SESSN_ID\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "RECORD",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RECORD\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "RPS_ACCT_ID_14",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RPS_ACCT_ID_14\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "GLOBL_SESSN_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"GLOBL_SESSN_ID\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "RowNum",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"RowNum\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "ATTRIB_VALUE",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"ATTRIB_VALUE\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "CIN",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"CIN\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "CHANL_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"CHANL_ID\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "PIB_ID",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"SURROGATEKEY\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "TIMESTAMP",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"TIMESTAMP\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "PIB_PTLT_NAM",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"PIB_PTLT_NAM\")"
+          },
+          "description" : ""
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    },
+    "V75S3" : {
+      "id" : "V75S3",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "dsPostDominoOut",
+        "slug" : "dsPostDominoOut",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V75S3P2",
+          "slug" : "lkPostPIB"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dsPostDominoOut"
+      }
+    },
+    "C76" : {
+      "id" : "C76",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "pscKeyGenerationVC_PIB_ID",
+        "slug" : "pscKeyGenerationVC_PIB_ID",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C76P3",
+          "slug" : "lkPostDominoMIAs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "C76P2",
+          "slug" : "lkPIBon"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { },
+      "connections" : [ {
+        "id" : "edge_1075",
+        "source" : "V55S171_stage_var",
+        "sourcePort" : "V55S171_stage_varP1_out",
+        "target" : "V55S171_V55S171P1_constraint",
+        "targetPort" : "V55S171P1_constraint_in"
+      }, {
+        "id" : "edge_1076",
+        "source" : "V55S171_V55S171P7_reformat",
+        "sourcePort" : "V55S171P7",
+        "target" : "V55S123",
+        "targetPort" : "V55S123P1"
+      }, {
+        "id" : "edge_1077",
+        "source" : "V55S171_stage_var",
+        "sourcePort" : "V55S171_stage_varP1_out",
+        "target" : "V55S171_V55S171P7_constraint",
+        "targetPort" : "V55S171P7_constraint_in"
+      }, {
+        "id" : "edge_1078",
+        "source" : "V55S171_V55S171P7_constraint",
+        "sourcePort" : "V55S171P7_constraint_out",
+        "target" : "V55S171_V55S171P7_reformat",
+        "targetPort" : "V55S171P7_reformat"
+      }, {
+        "id" : "edge_1079",
+        "source" : "V55S171_V55S171P4_constraint",
+        "sourcePort" : "V55S171P4_constraint_out",
+        "target" : "V55S171_V55S171P4_reformat",
+        "targetPort" : "V55S171P4_reformat"
+      }, {
+        "id" : "edge_1080",
+        "source" : "V55S171_V55S171P1_constraint",
+        "sourcePort" : "V55S171P1_constraint_out",
+        "target" : "V55S171_V55S171P1_reformat",
+        "targetPort" : "V55S171P1_reformat"
+      }, {
+        "id" : "edge_1081",
+        "source" : "V55S227_stage_var",
+        "sourcePort" : "V55S227_stage_varP1_out",
+        "target" : "V55S227_V55S227P3_reformat",
+        "targetPort" : "V55S227P3_reformat"
+      }, {
+        "id" : "edge_1082",
+        "source" : "V55S164",
+        "sourcePort" : "V55S164P2",
+        "target" : "V55S166",
+        "targetPort" : "V55S166P2"
+      }, {
+        "id" : "edge_1083",
+        "source" : "V55S202_V55S202P2_reformat",
+        "sourcePort" : "V55S202P2",
+        "target" : "V55S116",
+        "targetPort" : "V55S116P5"
+      }, {
+        "id" : "edge_1084",
+        "source" : "V55S227_V55S227P1_reformat",
+        "sourcePort" : "V55S227P1",
+        "target" : "V55S143",
+        "targetPort" : "V55S143P3"
+      }, {
+        "id" : "edge_1085",
+        "source" : "V55S166",
+        "sourcePort" : "V55S166P3",
+        "target" : "V55S171_stage_var",
+        "targetPort" : "V55S171_stage_varP1_in"
+      }, {
+        "id" : "edge_1086",
+        "source" : "V55S171_V55S171P1_reformat",
+        "sourcePort" : "V55S171P1",
+        "target" : "V55S139",
+        "targetPort" : "V55S139P2"
+      }, {
+        "id" : "edge_1087",
+        "source" : "V55S123",
+        "sourcePort" : "V55S123P2",
+        "target" : "V55S221",
+        "targetPort" : "V55S221P1"
+      }, {
+        "id" : "edge_1088",
+        "source" : "V55S221",
+        "sourcePort" : "V55S221P3",
+        "target" : "V55S227_stage_var",
+        "targetPort" : "V55S227_stage_varP1_in"
+      }, {
+        "id" : "edge_1089",
+        "source" : "V55S202_stage_var",
+        "sourcePort" : "V55S202_stage_varP1_out",
+        "target" : "V55S202_V55S202P2_reformat",
+        "targetPort" : "V55S202P2_reformat"
+      }, {
+        "id" : "edge_1090",
+        "source" : "V55S171_stage_var",
+        "sourcePort" : "V55S171_stage_varP1_out",
+        "target" : "V55S171_V55S171P4_constraint",
+        "targetPort" : "V55S171P4_constraint_in"
+      }, {
+        "id" : "edge_1091",
+        "source" : "V55S227_stage_var",
+        "sourcePort" : "V55S227_stage_varP1_out",
+        "target" : "V55S227_V55S227P1_reformat",
+        "targetPort" : "V55S227P1_reformat"
+      }, {
+        "id" : "edge_1092",
+        "source" : "V55S143",
+        "sourcePort" : "V55S143P1",
+        "target" : "V55S139",
+        "targetPort" : "V55S139P1"
+      }, {
+        "id" : "edge_1093",
+        "source" : "V55S171_V55S171P4_reformat",
+        "sourcePort" : "V55S171P4",
+        "target" : "V55S209",
+        "targetPort" : "V55S209P1"
+      }, {
+        "id" : "edge_1094",
+        "source" : "V55S227_V55S227P3_reformat",
+        "sourcePort" : "V55S227P3",
+        "target" : "C235",
+        "targetPort" : "C235P1"
+      }, {
+        "id" : "edge_1095",
+        "source" : "V55S159",
+        "sourcePort" : "V55S159P1",
+        "target" : "V55S164",
+        "targetPort" : "V55S164P1"
+      }, {
+        "id" : "edge_1096",
+        "source" : "V55S116",
+        "sourcePort" : "V55S116P4",
+        "target" : "V55S166",
+        "targetPort" : "V55S166P1"
+      }, {
+        "id" : "edge_1097",
+        "source" : "V55S209",
+        "sourcePort" : "V55S209P2",
+        "target" : "V55S143",
+        "targetPort" : "V55S143P4"
+      }, {
+        "id" : "edge_1098",
+        "source" : "C76",
+        "sourcePort" : "C76P3",
+        "target" : "V55S202_stage_var",
+        "targetPort" : "V55S202_stage_varP1_in"
+      }, {
+        "id" : "edge_1099",
+        "source" : "V55S139",
+        "sourcePort" : "V55S139P3",
+        "target" : "C76",
+        "targetPort" : "C76P2"
+      } ],
+      "processes" : {
+        "V55S171_V55S171P7_constraint" : {
+          "id" : "V55S171_V55S171P7_constraint",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "trCheckFound_V55S171P7_constraint",
+            "slug" : "trCheckFound_V55S171P7_constraint",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S171P7_constraint_in",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S171P7_constraint_out",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "condition" : {
+              "format" : "scala",
+              "expression" : "ds_not(col(\"svTestFound\"))"
+            }
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Filter",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S171_V55S171P1_reformat" : {
+          "id" : "V55S171_V55S171P1_reformat",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "trCheckFound_V55S171P1_reformat",
+            "slug" : "trCheckFound_V55S171P1_reformat",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S171P1_reformat",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S171P1",
+              "slug" : "lkFound",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"svNaturalKey\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "SURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"SURROGATEKEY\")"
+              },
+              "description" : ""
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S221" : {
+          "id" : "V55S221",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "bopGenTeradataKeys_221",
+            "slug" : "bopGenTeradataKeys_221",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S221P1",
+              "slug" : "NaturalKeys",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S221P3",
+              "slug" : "lkNewSKey",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "script" : "\n // Could not generate the component\n // Name : bopGenTeradataKeys_221\n // Properties :\n /*\n pUKDWUSERNAME -> Some(#pUKDWUSERNAME#)\nName -> Some(bopGenTeradataKeys_221)\nNextRecordID -> Some(0)\nAllowColumnMapping -> Some(0)\nNextID -> Some(4)\nInputPins -> Some(V55S221P1)\npUKDWPASSWORD -> Some(#pUKDWPASSWORD#)\npUKDWSCHEMA -> Some(#pUKDWSCHEMA#)\npUKDWTEMPFILEPATH -> Some(#pUKDWTEMPFILEPATH#)\nOutputPins -> Some(V55S221P3)\nStageType -> Some(bopGenTeradataKeys)\npXREFTABLE -> Some(#pXREFTABLE#)\npNATURALKEY -> Some(#pNATURALKEY#)\n */\n",
+            "scriptMethodHeader" : "",
+            "scriptMethodFooter" : ""
+          }
+        },
+        "V55S209" : {
+          "id" : "V55S209",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "moDropSurrogeteKey",
+            "slug" : "moDropSurrogeteKey",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S209P1",
+              "slug" : "lkAllRecs",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S209P2",
+              "slug" : "lkAllRecsOut",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"NATURALKEY\")"
+              },
+              "description" : ""
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S139" : {
+          "id" : "V55S139",
+          "component" : "SetOperation",
+          "metadata" : {
+            "label" : "fuAll",
+            "slug" : "fuAll",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S139P1",
+              "slug" : "lkNewKeysFound",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "V55S139P2",
+              "slug" : "lkFound",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S139P3",
+              "slug" : "lkKeysOut",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "operationType" : "unionAll",
+            "allowMissingColumns" : false
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SetOperation",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S171_V55S171P4_reformat" : {
+          "id" : "V55S171_V55S171P4_reformat",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "trCheckFound_V55S171P4_reformat",
+            "slug" : "trCheckFound_V55S171P4_reformat",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S171P4_reformat",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S171P4",
+              "slug" : "lkAllRecs",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"svNaturalKey\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "SURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "lit(-99.0)"
+              },
+              "description" : ""
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S171_stage_var" : {
+          "id" : "V55S171_stage_var",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "trCheckFound_stage_var",
+            "slug" : "trCheckFound_stage_var",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S171_stage_varP1_in",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S171_stage_varP1_out",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "transformations" : [ {
+              "kind" : "AddReplaceColumn",
+              "AddReplaceColumn" : {
+                "sourceColumn" : "svNaturalKey",
+                "expression" : {
+                  "format" : "scala",
+                  "expression" : "ds_trim(col(\"NATURALKEY\"))"
+                }
+              },
+              "DropColumn" : {
+                "sourceColumn" : ""
+              },
+              "RenameColumn" : {
+                "sourceColumn" : "",
+                "targetColumn" : ""
+              }
+            }, {
+              "kind" : "AddReplaceColumn",
+              "AddReplaceColumn" : {
+                "sourceColumn" : "svTestFound",
+                "expression" : {
+                  "format" : "scala",
+                  "expression" : "nulltozero(col(\"SURROGATEKEY\")) =!= lit(0.0)"
+                }
+              },
+              "DropColumn" : {
+                "sourceColumn" : ""
+              },
+              "RenameColumn" : {
+                "sourceColumn" : "",
+                "targetColumn" : ""
+              }
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S164" : {
+          "id" : "V55S164",
+          "component" : "OrderBy",
+          "metadata" : {
+            "label" : "soLkp",
+            "slug" : "soLkp",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S164P1",
+              "slug" : "lkLookupSurrogateKey",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S164P2",
+              "slug" : "lkLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "orders" : [ {
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"NATURALKEY\")"
+              },
+              "sortType" : "asc"
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/OrderBy",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S166" : {
+          "id" : "V55S166",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "joXref",
+            "slug" : "joXref",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S166P1",
+              "slug" : "lkData",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "V55S166P2",
+              "slug" : "lkLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S166P3",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "lkLkp",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkData.NATURALKEY\") === col(\"lkLkp.NATURALKEY\")"
+              },
+              "joinType" : "leftouter"
+            } ],
+            "expressions" : [ {
+              "_row_id" : "558352694",
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkData.NATURALKEY\")"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "454166038",
+              "target" : "SURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkLkp.SURROGATEKEY\")"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "1204553744",
+              "target" : "pXREFTABLE",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkData.pXREFTABLE\")"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "637268016",
+              "target" : "pNATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkData.pNATURALKEY\")"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "305156888",
+              "target" : "pSURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkData.pSURROGATEKEY\")"
+              },
+              "description" : ""
+            } ],
+            "hints" : [ {
+              "id" : "in0",
+              "alias" : "in0",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "in1",
+              "alias" : "in1",
+              "hintType" : "none",
+              "propagateColumns" : false
+            } ],
+            "activeTab" : "conditions",
+            "columnsSelector" : [ ],
+            "whereClause" : null,
+            "headAlias" : "lkData"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S227_stage_var" : {
+          "id" : "V55S227_stage_var",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "trSurrogateKey_stage_var",
+            "slug" : "trSurrogateKey_stage_var",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S227_stage_varP1_in",
+              "slug" : "lkNewSKey",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S227_stage_varP1_out",
+              "slug" : "lkNewSKey",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "transformations" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S227_V55S227P3_reformat" : {
+          "id" : "V55S227_V55S227P3_reformat",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "trSurrogateKey_V55S227P3_reformat",
+            "slug" : "trSurrogateKey_V55S227P3_reformat",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S227P3_reformat",
+              "slug" : "lkNewSKey",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S227P3",
+              "slug" : "LogMessage",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "MSG_TXT",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "MSG_TYP",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "MSG_TYP",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "lit(\"1\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "MSG_TXT",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "ds_string_concat(ds_string_concat(ds_string_concat(ds_string_concat(ds_string_concat(ds_string_concat(ds_string_concat(ds_string_concat(ds_string_concat(lit(\"Xreftable = \"), ds_trim(col(\"pXREFTABLE\"))), lit(\",\")), ds_trim(col(\"pNATURALKEY\"))), lit(\"= \")), ds_trim(col(\"NATURALKEY\"))), lit(\", \")), ds_trim(col(\"pSURROGATEKEY\"))), lit(\"= \")), ds_trim(col(\"SURROGATEKEY\")))"
+              },
+              "description" : ""
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S116" : {
+          "id" : "V55S116",
+          "component" : "OrderBy",
+          "metadata" : {
+            "label" : "soRecs",
+            "slug" : "soRecs",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S116P5",
+              "slug" : "lkSoNK",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S116P4",
+              "slug" : "lkData",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "orders" : [ {
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"NATURALKEY\")"
+              },
+              "sortType" : "asc"
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/OrderBy",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S159" : {
+          "id" : "V55S159",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "dsNaturalKeyToSurrogateKey_1",
+            "slug" : "dsNaturalKeyToSurrogateKey",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "V55S159P1",
+              "slug" : "lkLookupSurrogateKey",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/dsNaturalKeyToSurrogateKey_1"
+          }
+        },
+        "V55S171_V55S171P7_reformat" : {
+          "id" : "V55S171_V55S171P7_reformat",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "trCheckFound_V55S171P7_reformat",
+            "slug" : "trCheckFound_V55S171P7_reformat",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S171P7_reformat",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S171P7",
+              "slug" : "lkGetGenKeys",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"svNaturalKey\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "SURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"SURROGATEKEY\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "pXREFTABLE",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"pXREFTABLE\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "pNATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"pNATURALKEY\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "pSURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"pSURROGATEKEY\")"
+              },
+              "description" : ""
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S227_V55S227P1_reformat" : {
+          "id" : "V55S227_V55S227P1_reformat",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "trSurrogateKey_V55S227P1_reformat",
+            "slug" : "trSurrogateKey_V55S227P1_reformat",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S227P1_reformat",
+              "slug" : "lkNewSKey",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S227P1",
+              "slug" : "lkAttachNewKeys",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"NATURALKEY\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "SURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"SURROGATEKEY\")"
+              },
+              "description" : ""
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S202_V55S202P2_reformat" : {
+          "id" : "V55S202_V55S202P2_reformat",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "trTrimNK_V55S202P2_reformat",
+            "slug" : "trTrimNK_V55S202P2_reformat",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S202P2_reformat",
+              "slug" : "lkDataIn",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S202P2",
+              "slug" : "lkSoNK",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "ds_trim(col(\"NATURALKEY\"))"
+              },
+              "description" : ""
+            }, {
+              "target" : "pSURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"pSURROGATEKEY\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "pXREFTABLE",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"pXREFTABLE\")"
+              },
+              "description" : ""
+            }, {
+              "target" : "pNATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"pNATURALKEY\")"
+              },
+              "description" : ""
+            } ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S171_V55S171P4_constraint" : {
+          "id" : "V55S171_V55S171P4_constraint",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "trCheckFound_V55S171P4_constraint",
+            "slug" : "trCheckFound_V55S171P4_constraint",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S171P4_constraint_in",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S171P4_constraint_out",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "condition" : {
+              "format" : "scala",
+              "expression" : "ds_not(col(\"svTestFound\"))"
+            }
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Filter",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S143" : {
+          "id" : "V55S143",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "luAttachNewKeys",
+            "slug" : "luAttachNewKeys",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S143P3",
+              "slug" : "lkAttachNewKeys",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "V55S143P4",
+              "slug" : "lkAllRecsOut",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S143P1",
+              "slug" : "lkNewKeysFound",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "lkAttachNewKeys",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkAllRecsOut.NATURALKEY\") === col(\"lkAttachNewKeys.NATURALKEY\")"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "_row_id" : "1228337536",
+              "target" : "SURROGATEKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkAttachNewKeys.SURROGATEKEY\")"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "1927141952",
+              "target" : "NATURALKEY",
+              "expression" : {
+                "format" : "scala",
+                "expression" : "col(\"lkAllRecsOut.NATURALKEY\")"
+              },
+              "description" : ""
+            } ],
+            "hints" : [ {
+              "id" : "in0",
+              "alias" : "in0",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "in1",
+              "alias" : "in1",
+              "hintType" : "none",
+              "propagateColumns" : false
+            } ],
+            "activeTab" : "conditions",
+            "columnsSelector" : [ ],
+            "whereClause" : null,
+            "headAlias" : "lkAttachNewKeys"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "C235" : {
+          "id" : "C235",
+          "component" : "Subgraph",
+          "metadata" : {
+            "label" : "pscMessageHandlingSCtrC235",
+            "slug" : "pscMessageHandlingSCtrC235",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "C235P1",
+              "slug" : "LogMessage",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "MSG_TXT",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "MSG_TYP",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : { },
+          "connections" : [ {
+            "id" : "edge_1072",
+            "source" : "V3S0_stage_var",
+            "sourcePort" : "V3S0_stage_varP1_out",
+            "target" : "V3S0_V3S0P2_reformat",
+            "targetPort" : "V3S0P2_reformat"
+          }, {
+            "id" : "edge_1073",
+            "source" : "V3S0_V3S0P2_reformat",
+            "sourcePort" : "V3S0P2",
+            "target" : "V3S15",
+            "targetPort" : "V3S15P1"
+          }, {
+            "id" : "edge_1074",
+            "source" : "C235",
+            "sourcePort" : "C235P1",
+            "target" : "V3S0_stage_var",
+            "targetPort" : "V3S0_stage_varP1_in"
+          } ],
+          "processes" : {
+            "V3S0_stage_var" : {
+              "id" : "V3S0_stage_var",
+              "component" : "SchemaTransform",
+              "metadata" : {
+                "label" : "Msg_Tfm_stage_var",
+                "slug" : "Msg_Tfm_stage_var",
+                "x" : 2147483647,
+                "y" : 2147483647,
+                "phase" : 0,
+                "cache" : false,
+                "detailedStats" : false,
+                "isImported" : true
+              },
+              "ports" : {
+                "inputs" : [ {
+                  "id" : "V3S0_stage_varP1_in",
+                  "slug" : "Message_Move_Lnk",
+                  "schema" : {
+                    "type" : "struct",
+                    "fields" : [ {
+                      "name" : "MSG_TXT",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "MSG_TYP",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    } ]
+                  },
+                  "isStreaming" : false
+                } ],
+                "outputs" : [ {
+                  "id" : "V3S0_stage_varP1_out",
+                  "slug" : "Message_Move_Lnk",
+                  "schema" : {
+                    "type" : "struct",
+                    "fields" : [ {
+                      "name" : "MSG_TYP",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DSJobName",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DSJobController",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "INROWNUM",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "MSG_TXT",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    } ]
+                  },
+                  "isStreaming" : false
+                } ],
+                "selectedInputFields" : [ ],
+                "isCustomOutputSchema" : true,
+                "autoUpdateOnRun" : false
+              },
+              "properties" : {
+                "columnsSelector" : [ ],
+                "transformations" : [ ]
+              },
+              "componentInfo" : {
+                "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+                "projectName" : "ProphecySparkBasicsScala"
+              }
+            },
+            "V3S0_V3S0P2_reformat" : {
+              "id" : "V3S0_V3S0P2_reformat",
+              "component" : "Reformat",
+              "metadata" : {
+                "label" : "Msg_Tfm_V3S0P2_reformat",
+                "slug" : "Msg_Tfm_V3S0P2_reformat",
+                "x" : 2147483647,
+                "y" : 2147483647,
+                "phase" : 0,
+                "cache" : false,
+                "detailedStats" : false,
+                "isImported" : true
+              },
+              "ports" : {
+                "inputs" : [ {
+                  "id" : "V3S0P2_reformat",
+                  "slug" : "Message_Move_Lnk",
+                  "schema" : {
+                    "type" : "struct",
+                    "fields" : [ {
+                      "name" : "MSG_TYP",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DSJobName",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DSJobController",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "INROWNUM",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "MSG_TXT",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    } ]
+                  },
+                  "isStreaming" : false
+                } ],
+                "outputs" : [ {
+                  "id" : "V3S0P2",
+                  "slug" : "Message_Write_Lnk",
+                  "schema" : {
+                    "type" : "struct",
+                    "fields" : [ {
+                      "name" : "DS_MSG_TYP",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DS_CNTL_JOB",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DS_STAG",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DS_LOG_MSG_TS",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DS_JOB_NAM",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "CNTL_JOB_RUN_ID",
+                      "type" : "integer",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "CNTL_JOB_RRUN_ID",
+                      "type" : "integer",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "DS_MSG_TXT",
+                      "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    } ]
+                  },
+                  "isStreaming" : false
+                } ],
+                "selectedInputFields" : [ ],
+                "isCustomOutputSchema" : true,
+                "autoUpdateOnRun" : false
+              },
+              "properties" : {
+                "columnsSelector" : [ ],
+                "expressions" : [ {
+                  "target" : "DS_MSG_TYP",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "col(\"MSG_TYP\")"
+                  },
+                  "description" : ""
+                }, {
+                  "target" : "DS_CNTL_JOB",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "when(ds_trim(col(\"DSJobController\")) === lit(\"\"), col(\"DSJobName\")).otherwise(col(\"DSJobController\"))"
+                  },
+                  "description" : ""
+                }, {
+                  "target" : "DS_STAG",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "lit(\"Msg_Tfm\")"
+                  },
+                  "description" : ""
+                }, {
+                  "target" : "DS_LOG_MSG_TS",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "ds_string_concat(ds_string_concat(currenttimestamp(), lit(\".\")), ds_right(ds_string_concat(lit(\"000000\"), lit(Config.INROWNUM)), lit(6.0)))"
+                  },
+                  "description" : ""
+                }, {
+                  "target" : "DS_JOB_NAM",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "ds_trim(col(\"DSJobName\"))"
+                  },
+                  "description" : ""
+                }, {
+                  "target" : "CNTL_JOB_RUN_ID",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "lit(2.0)"
+                  },
+                  "description" : ""
+                }, {
+                  "target" : "CNTL_JOB_RRUN_ID",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "lit(3.0)"
+                  },
+                  "description" : ""
+                }, {
+                  "target" : "DS_MSG_TXT",
+                  "expression" : {
+                    "format" : "scala",
+                    "expression" : "col(\"MSG_TXT\")"
+                  },
+                  "description" : ""
+                } ]
+              },
+              "componentInfo" : {
+                "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Reformat",
+                "projectName" : "ProphecySparkBasicsScala"
+              }
+            },
+            "V3S15" : {
+              "id" : "V3S15",
+              "component" : "Target",
+              "metadata" : {
+                "label" : "MessageTgt_FF",
+                "slug" : "MessageTgt_FF",
+                "x" : 2147483647,
+                "y" : 2147483647,
+                "phase" : 0,
+                "cache" : false,
+                "detailedStats" : false,
+                "isImported" : true
+              },
+              "ports" : {
+                "inputs" : [ {
+                  "id" : "V3S15P1",
+                  "slug" : "Message_Write_Lnk"
+                } ],
+                "outputs" : [ ],
+                "selectedInputFields" : [ ],
+                "isCustomOutputSchema" : true,
+                "autoUpdateOnRun" : false
+              },
+              "properties" : {
+                "datasetId" : "datasets/test1711610083612"
+              }
+            }
+          }
+        },
+        "V55S123" : {
+          "id" : "V55S123",
+          "component" : "Deduplicate",
+          "metadata" : {
+            "label" : "ddNaturalKey",
+            "slug" : "ddNaturalKey",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S123P1",
+              "slug" : "lkGetGenKeys",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S123P2",
+              "slug" : "NaturalKeys",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "dedupColumns" : [ {
+              "colName" : "NATURALKEY"
+            } ],
+            "dedupType" : "first",
+            "columnsSelector" : [ ],
+            "orders" : [ ],
+            "useOrderBy" : false
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Deduplicate",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S171_V55S171P1_constraint" : {
+          "id" : "V55S171_V55S171P1_constraint",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "trCheckFound_V55S171P1_constraint",
+            "slug" : "trCheckFound_V55S171P1_constraint",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S171P1_constraint_in",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S171P1_constraint_out",
+              "slug" : "lkCheckLkp",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "SURROGATEKEY",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svNaturalKey",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "svTestFound",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "condition" : {
+              "format" : "scala",
+              "expression" : "col(\"svTestFound\")"
+            }
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/Filter",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        },
+        "V55S202_stage_var" : {
+          "id" : "V55S202_stage_var",
+          "component" : "SchemaTransform",
+          "metadata" : {
+            "label" : "trTrimNK_stage_var",
+            "slug" : "trTrimNK_stage_var",
+            "x" : 2147483647,
+            "y" : 2147483647,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V55S202_stage_varP1_in",
+              "slug" : "lkDataIn",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "V55S202_stage_varP1_out",
+              "slug" : "lkDataIn",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "pSURROGATEKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "NATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pXREFTABLE",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pNATURALKEY",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "transformations" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/SchemaTransform",
+            "projectName" : "ProphecySparkBasicsScala"
+          }
+        }
+      }
+    },
+    "V75S6" : {
+      "id" : "V75S6",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "soPIBs",
+        "slug" : "soPIBs",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V75S6P1",
+          "slug" : "lkSoPIBs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "V75S6P2",
+          "slug" : "lkDDPIBs",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "PIB_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ {
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"PIB_ID\")"
+          },
+          "sortType" : "asc"
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=&tag=0.1.4&projectSubscriptionProjectId=39&path=gems/OrderBy",
+        "projectName" : "ProphecySparkBasicsScala"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.udfs.udfs[0].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[1].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[2].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[3].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[4].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[5].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[6].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[7].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[8].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[9].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[10].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[11].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[12].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[13].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[14].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[15].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[16].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[17].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[18].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[19].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[20].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[21].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[22].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[23].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[24].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[25].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[26].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[27].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[28].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[29].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[30].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[31].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[32].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[33].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[34].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[35].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[36].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[37].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[38].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[39].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[40].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[41].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[42].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[43].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[44].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[45].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[46].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[47].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[48].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((argTargetTable: String, argSleepMins: String, argAbortOnTimeoutMins: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[49].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((InputArg: String, ErrorCode: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[50].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pUKDWTEMPFILEPATH: String, pCLEANSEDDATASET: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[51].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((pPATH: String, pFILENAME: String, pUKDWDATADATE: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[52].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((InputArg: String, ErrorCode: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[53].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf(\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[54].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:3: error: expected class or object definition identifier\n    udf((DirectoryName: String, FileName: String) => {\n    ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.udfs.udfs[55].code",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "UDF code parsing failed, <input>:2: error: expected class or object definition identifier\n udf((JobName: String) => {\n ^",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.metainfo.configuration.default.fields",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Configuration key 'PROJDEF' not found",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.C76",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Gems inside the subgraph are broken",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.C76.processes.C235",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Gems inside the subgraph are broken",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.C76.processes.C235.processes.V3S0_V3S0P2_reformat.properties.expressions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "ds_string_concat(ds_string_concat(currenttimestamp(), lit(\".\")), ds_right(ds_string_concat(lit(\"000000\"), lit(Config.INROWNUM)), lit(6.0))) is not a valid spark-scala expression. Error: configuration key: 'INROWNUM' does not exist",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.C76.processes.C235.processes.V3S15",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column ATTRIB_NAME",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column PIB_PAGE_NAM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column APP_NUM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column STAF_NUM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[4].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column SESSN_ID",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column RECORD",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[6].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column RPS_ACCT_ID_14",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[7].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column GLOBL_SESSN_ID",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[8].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column RowNum",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column ATTRIB_VALUE",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[10].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column CIN",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[11].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column CHANL_ID",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[13].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column TIMESTAMP",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S7_copyV75S7P2.properties.expressions[14].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column PIB_PTLT_NAM",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.V75S3",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
+}
