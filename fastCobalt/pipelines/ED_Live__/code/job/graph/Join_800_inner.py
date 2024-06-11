@@ -1,0 +1,13 @@
+from pyspark.sql import *
+from pyspark.sql.functions import *
+from pyspark.sql.types import *
+from prophecy.utils import *
+from prophecy.libs import typed_lit
+from job.config.ConfigStore import *
+from job.udfs.UDFs import *
+
+def Join_800_inner(spark: SparkSession, in0: DataFrame, in1: DataFrame, ) -> DataFrame:
+    return in0\
+        .alias("in0")\
+        .join(in1.alias("in1"), (col("in0.MBR_INDV_BE_KEY") == col("in1.MBR_INDV_BE_KEY")), "inner")\
+        .select(col("in1.`Service Area`").alias("Service Area"), col("in1.`Household ED Visit Alw Amt`").alias("Household ED Visit Alw Amt"), col("in1.`Medical Home (str)`").alias("Medical Home (str)"), col("in1.ZIP").alias("ZIP"), col("in1.`Drug Related ED`").alias("Drug Related ED"), col("in1.`Distance to Closest ED`").alias("Distance to Closest ED"), col("in1.`Psych Related ED`").alias("Psych Related ED"), col("in1.`Members in Household`").alias("Members in Household"), col("in1.Population").alias("Population"), col("in1.`Alcohol Related ED`").alias("Alcohol Related ED"), col("in1.`SPIRA Elligible`").alias("SPIRA Elligible"), col("in1.`Group ID`").alias("Group ID"), col("in1.CountDistinct_Week").alias("CountDistinct_Week"), col("in1.`7-12 Month ED Visit History`").alias("7-12 Month ED Visit History"), col("in1.Right_CountDistinct_Week").alias("Right_CountDistinct_Week"), col("in1.`CCI Score`").alias("CCI Score"), col("in1.Industry").alias("Industry"), col("in1.`Coverage Area`").alias("Coverage Area"), col("in1.`Household ED Visits`").alias("Household ED Visits"), col("in1.`Drug Classes`").alias("Drug Classes"), col("in1.`Medical Home`").alias("Medical Home"), col("in1.Relationship").alias("Relationship"), col("in1.`Household ED Visit Tot Alw Amt`").alias("Household ED Visit Tot Alw Amt"), col("in1.`Injury Related ED`").alias("Injury Related ED"), col("in1.Race").alias("Race"), col("in0.Concat_Value").alias("ED Visited"), col("in1.`PCMH Attributed`").alias("PCMH Attributed"), col("in1.`Index Month`").alias("Index Month"), col("in0.MBR_INDV_BE_KEY").alias("MBR_INDV_BE_KEY"), col("in1.Target").alias("Target"), col("in1.`ED Visits`").alias("ED Visits"), col("in1.Last_YMD").alias("Last_YMD"), col("in1.`Member Age`").alias("Member Age"), col("in1.Last_Week").alias("Last_Week"), col("in1.`ED Visit Alw Amt`").alias("ED Visit Alw Amt"), col("in1.Polypharmacy").alias("Polypharmacy"), col("in1.`Drug Counts`").alias("Drug Counts"), col("in1.`Non Emergent Percentage`").alias("Non Emergent Percentage"), col("in1.Gender").alias("Gender"), col("in1.`ED Visit Tot Alw Amt`").alias("ED Visit Tot Alw Amt"), col("in1.`Historic Non Emergent Visit`").alias("Historic Non Emergent Visit"), col("in1.`PCP Attributed`").alias("PCP Attributed"))
