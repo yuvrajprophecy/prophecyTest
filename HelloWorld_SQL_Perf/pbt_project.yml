@@ -54,6 +54,21 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-06-05 12:50:36'
+  .prophecy/metadata/sqlmodels/actual_medium:
+    name: actual_medium
+    schema: null
+    description: null
+    author: rohitjain@prophecy.io
+    files:
+    - models/actual_medium.sql
+    - .prophecy/ide/models/actual_medium.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-18 21:38:15'
   .prophecy/metadata/sqlmodels/orders:
     name: orders
     schema:

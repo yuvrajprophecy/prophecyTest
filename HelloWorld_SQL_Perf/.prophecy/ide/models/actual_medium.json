@@ -1,0 +1,1773 @@
+{
+  "id" : "actual_medium",
+  "metainfo" : {
+    "label" : "actual_medium",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "conc_output##LtLGrUeJ" : {
+      "id" : "conc_output##LtLGrUeJ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "conc_output",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "concat(FIRST_NAME0, LAST_NAME0)"
+          },
+          "alias" : "full_name"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lJkTCoc3",
+          "slug" : "Reformat_4"
+        } ],
+        "outputs" : [ {
+          "id" : "C4GDY4jb",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Reformat_1##KAApCDrv" : {
+      "id" : "Reformat_1##KAApCDrv",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "z12DzdXK##CUSTOMER_ID", "z12DzdXK##FIRST_NAME", "z12DzdXK##LAST_NAME" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID1"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID2"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID3"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID4"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID5"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID6"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID8"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID9"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID10"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID11"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID12"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID13"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID14"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID15"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID16"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID17"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID18"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID19"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID20"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME20"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME20"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID21"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME21"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME21"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID22"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME22"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME22"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID23"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME23"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME23"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID24"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME24"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME24"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID25"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME25"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME25"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID26"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME26"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME26"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID27"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME27"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME27"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID28"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME28"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME28"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID29"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME29"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME29"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID30"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME30"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME30"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID31"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME31"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME31"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID32"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME32"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME32"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID33"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME33"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME33"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID34"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME34"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME34"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID35"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME35"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME35"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID36"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME36"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME36"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID37"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME37"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME37"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID38"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME38"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME38"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID39"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME39"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME39"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID40"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME40"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME40"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID41"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME41"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME41"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID42"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME42"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME42"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID43"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME43"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME43"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID44"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME44"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME44"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID45"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME45"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME45"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID46"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME46"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME46"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID47"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME47"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME47"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID48"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME48"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME48"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID49"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME49"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME49"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID50"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME50"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME50"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID51"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME51"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME51"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID52"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME52"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME52"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID53"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME53"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME53"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID54"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME54"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME54"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID55"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME55"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME55"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID56"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME56"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME56"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID57"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME57"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME57"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID58"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME58"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME58"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID59"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME59"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME59"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID60"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME60"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME60"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID61"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME61"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME61"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID62"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME62"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME62"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID63"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME63"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME63"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID64"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME64"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME64"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID65"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME65"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME65"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID66"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME66"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME66"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID67"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME67"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME67"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID68"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME68"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME68"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID69"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME69"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME69"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID70"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME70"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME70"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID71"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME71"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME71"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID72"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME72"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME72"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID73"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME73"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME73"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID74"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME74"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME74"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID75"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME75"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME75"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID76"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME76"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME76"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID77"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME77"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME77"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID78"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME78"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME78"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID79"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME79"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME79"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID80"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME80"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME80"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID81"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME81"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME81"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID82"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME82"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME82"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID83"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME83"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME83"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID84"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME84"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME84"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID85"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME85"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME85"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID86"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME86"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME86"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID87"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME87"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME87"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID88"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME88"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME88"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID89"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME89"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME89"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID90"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME90"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME90"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID91"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME91"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME91"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID92"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME92"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME92"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID93"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME93"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME93"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID94"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME94"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME94"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID95"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME95"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME95"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID96"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME96"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME96"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID97"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME97"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME97"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID98"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME98"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME98"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID99"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME99"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME99"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "z12DzdXK",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "stg_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "X5mlANRE",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Reformat_3##r7nSnwgf" : {
+      "id" : "Reformat_3##r7nSnwgf",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_3",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID0"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME0"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME0"
+          },
+          "alias" : "LAST_NAME0"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "i3NsS5U5",
+          "slug" : "Reformat_1"
+        } ],
+        "outputs" : [ {
+          "id" : "sfTkLcCZ",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Reformat_4##XsSbHd2p" : {
+      "id" : "Reformat_4##XsSbHd2p",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_4",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "FIRST_NAME0"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME0"
+          },
+          "alias" : "LAST_NAME0"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "PMMUMrUu",
+          "slug" : "Reformat_3"
+        } ],
+        "outputs" : [ {
+          "id" : "BfeAZRpF",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "actual_medium##AbeJDi4v" : {
+      "id" : "actual_medium##AbeJDi4v",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "actual_medium",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM conc_output\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gks8PfpC",
+          "slug" : "conc_output"
+        } ],
+        "outputs" : [ {
+          "id" : "WxKIKlx4",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "stg_customers##MiTuX7rl" : {
+      "id" : "stg_customers##MiTuX7rl",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "stg_customers",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "stg_customers",
+          "sourceType" : "Model"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "k2wJOtNj",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "qIGZ8urE",
+    "source" : "stg_customers##MiTuX7rl",
+    "sourcePort" : "k2wJOtNj",
+    "target" : "Reformat_1##KAApCDrv",
+    "targetPort" : "z12DzdXK"
+  }, {
+    "id" : "jDnSnYkl",
+    "source" : "Reformat_1##KAApCDrv",
+    "sourcePort" : "X5mlANRE",
+    "target" : "Reformat_3##r7nSnwgf",
+    "targetPort" : "i3NsS5U5"
+  }, {
+    "id" : "lw3qIYTL",
+    "source" : "Reformat_3##r7nSnwgf",
+    "sourcePort" : "sfTkLcCZ",
+    "target" : "Reformat_4##XsSbHd2p",
+    "targetPort" : "PMMUMrUu"
+  }, {
+    "id" : "YDyJEqwn",
+    "source" : "Reformat_4##XsSbHd2p",
+    "sourcePort" : "BfeAZRpF",
+    "target" : "conc_output##LtLGrUeJ",
+    "targetPort" : "lJkTCoc3"
+  }, {
+    "id" : "XEaCYK4I",
+    "source" : "conc_output##LtLGrUeJ",
+    "sourcePort" : "C4GDY4jb",
+    "target" : "actual_medium##AbeJDi4v",
+    "targetPort" : "gks8PfpC"
+  } ],
+  "component" : "Model"
+}
