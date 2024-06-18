@@ -81,13 +81,13 @@
     "type" : "Model",
     "syncedOnce" : true
   }, {
-    "name" : "medium",
+    "name" : "large",
     "type" : "Model",
     "syncedOnce" : false
   }, {
-    "name" : "new_model",
+    "name" : "medium",
     "type" : "Model",
-    "syncedOnce" : true
+    "syncedOnce" : false
   }, {
     "name" : "orders",
     "type" : "Model",

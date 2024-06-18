@@ -162,7 +162,12 @@ sqlModels:
     createdAt: '2024-06-05 12:50:36'
   .prophecy/metadata/sqlmodels/large:
     name: large
-    schema: null
+    schema:
+      providerType: Databricks
+      fields:
+      - name: full_name
+        dataType:
+          type: String
     description: null
     author: rohitjain@prophecy.io
     files:
