@@ -56,7 +56,12 @@ sqlModels:
     createdAt: '2024-06-05 12:50:36'
   .prophecy/metadata/sqlmodels/actual_medium:
     name: actual_medium
-    schema: null
+    schema:
+      providerType: Databricks
+      fields:
+      - name: full_name
+        dataType:
+          type: String
     description: null
     author: rohitjain@prophecy.io
     files:

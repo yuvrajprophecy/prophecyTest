@@ -93,10 +93,6 @@
     "type" : "Model",
     "syncedOnce" : false
   }, {
-    "name" : "new_model",
-    "type" : "Model",
-    "syncedOnce" : true
-  }, {
     "name" : "orders",
     "type" : "Model",
     "syncedOnce" : true
