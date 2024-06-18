@@ -1,0 +1,5666 @@
+{
+  "id" : "medium",
+  "metainfo" : {
+    "label" : "medium",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "Eg4xQMvRRlhiMHrCq9OtB$$MCQ86a6em64dWto-Z98EI" : {
+      "id" : "Eg4xQMvRRlhiMHrCq9OtB$$MCQ86a6em64dWto-Z98EI",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_3",
+        "slug" : "Reformat_1_3",
+        "x" : 220,
+        "y" : 420,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "TNVpsMwz##CUSTOMER_ID", "TNVpsMwz##FIRST_NAME", "TNVpsMwz##LAST_NAME" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID1"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID2"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID3"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID4"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID5"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID6"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID8"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID9"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID10"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID11"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID12"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID13"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID14"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID15"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID16"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID17"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID18"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID19"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME19"
+        }, {
+          "alias" : "FIRST_NAME",
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          }
+        }, {
+          "alias" : "LAST_NAME",
+          "expression" : {
+            "expression" : "LAST_NAME"
+          }
+        }, {
+          "alias" : "CUSTOMER_ID",
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZxWtQV5avU9E-X1aBiIDg$$VOwIuxqHX4dhk6YveTwMH",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "stg_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "LVyapGXpGRD3aTWMH_d35$$JEt4XoD0XzkqRfDUvtixw",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Reformat_1##cV8MGrWx" : {
+      "id" : "Reformat_1##cV8MGrWx",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "TNVpsMwz##CUSTOMER_ID", "TNVpsMwz##FIRST_NAME", "TNVpsMwz##LAST_NAME" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID1"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID2"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID3"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID4"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID5"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID6"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID8"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID9"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID10"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID11"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID12"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID13"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID14"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID15"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID16"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID17"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID18"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID19"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME19"
+        }, {
+          "alias" : "FIRST_NAME",
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          }
+        }, {
+          "alias" : "LAST_NAME",
+          "expression" : {
+            "expression" : "LAST_NAME"
+          }
+        }, {
+          "alias" : "CUSTOMER_ID",
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TNVpsMwz",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "stg_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "sThSHD7N",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "stg_customers##Qz2MfR4A" : {
+      "id" : "stg_customers##Qz2MfR4A",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "stg_customers",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "stg_customers",
+          "sourceType" : "Model"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "QgECAUAQ",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "conc_output##rTWPVVPC" : {
+      "id" : "conc_output##rTWPVVPC",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "conc_output",
+        "x" : 1020,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "U27My0Ec##FIRST_NAME0", "U27My0Ec##LAST_NAME0" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "concat(FIRST_NAME0, LAST_NAME0)"
+          },
+          "alias" : "full_name"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "U27My0Ec",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "Reformat_4"
+        } ],
+        "outputs" : [ {
+          "id" : "VyiipSiQ",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "full_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "2JG1kkAZdpsQPzQxK6TXJ$$RYgNmTl4LhvJRuxNF9duk" : {
+      "id" : "2JG1kkAZdpsQPzQxK6TXJ$$RYgNmTl4LhvJRuxNF9duk",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_2",
+        "slug" : "Reformat_1_2",
+        "x" : 220,
+        "y" : 220,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID1"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID2"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID3"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID4"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID5"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID6"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID8"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID9"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID10"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID11"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID12"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID13"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID14"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID15"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID16"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID17"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID18"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID19"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME19"
+        }, {
+          "alias" : "FIRST_NAME",
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          }
+        }, {
+          "alias" : "LAST_NAME",
+          "expression" : {
+            "expression" : "LAST_NAME"
+          }
+        }, {
+          "alias" : "CUSTOMER_ID",
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1ib41rqUEhx5-fKmjdoUP$$XuYNECCuyKArO-p7Xm5y8",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "stg_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "ii3PlabPG44BB8GV6Tzux$$QglfbaJ27aeA9emJFqLMO",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "m8r1WbKDHB3HDJkxRdng1$$GPWdafzguOGMF_vrZ6zWF" : {
+      "id" : "m8r1WbKDHB3HDJkxRdng1$$GPWdafzguOGMF_vrZ6zWF",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_1_2",
+        "slug" : "Reformat_1_1_2",
+        "x" : 420,
+        "y" : 420,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "zFA7C2SclLxPwcd1BUGAU$$OjKhN5kpVJUC9G1qG5uqh##CUSTOMER_ID", "zFA7C2SclLxPwcd1BUGAU$$OjKhN5kpVJUC9G1qG5uqh##FIRST_NAME", "zFA7C2SclLxPwcd1BUGAU$$OjKhN5kpVJUC9G1qG5uqh##LAST_NAME" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID1"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID2"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID3"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID4"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID5"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID6"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID8"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID9"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID10"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID11"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID12"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID13"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID14"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID15"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID16"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID17"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID18"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID19"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME19"
+        }, {
+          "alias" : "FIRST_NAME",
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          }
+        }, {
+          "alias" : "LAST_NAME",
+          "expression" : {
+            "expression" : "LAST_NAME"
+          }
+        }, {
+          "alias" : "CUSTOMER_ID",
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zFA7C2SclLxPwcd1BUGAU$$OjKhN5kpVJUC9G1qG5uqh",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "stg_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "frIcqpFz7ZxP6R4gq1aur$$zDO8cm6aw4A5bFDm3U0FK",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "8Gxl0-lTmaUVMfvbgawL8$$fPbAXeU0ugg6g4NmtFwOD" : {
+      "id" : "8Gxl0-lTmaUVMfvbgawL8$$fPbAXeU0ugg6g4NmtFwOD",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_1",
+        "slug" : "Reformat_1_1",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "ilw9_YMECp58OgrpjcEMF$$dXAcyZObArbUSaHsqOIYf##CUSTOMER_ID", "ilw9_YMECp58OgrpjcEMF$$dXAcyZObArbUSaHsqOIYf##FIRST_NAME", "ilw9_YMECp58OgrpjcEMF$$dXAcyZObArbUSaHsqOIYf##LAST_NAME" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID1"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID2"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID3"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID4"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID5"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID6"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID8"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID9"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID10"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID11"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID12"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID13"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID14"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID15"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID16"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID17"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID18"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID19"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME19"
+        }, {
+          "alias" : "FIRST_NAME",
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          }
+        }, {
+          "alias" : "LAST_NAME",
+          "expression" : {
+            "expression" : "LAST_NAME"
+          }
+        }, {
+          "alias" : "CUSTOMER_ID",
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ilw9_YMECp58OgrpjcEMF$$dXAcyZObArbUSaHsqOIYf",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "stg_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "XD76s8f5BIQB3LK0NOgDd$$-aDuHEQeemqmicYsoY_At",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "medium##UK80YSTN" : {
+      "id" : "medium##UK80YSTN",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "medium",
+        "x" : 1220,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM conc_output\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DEKMrp1y",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "full_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "conc_output"
+        } ],
+        "outputs" : [ {
+          "id" : "wJYwI4MH",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "full_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Reformat_3##C1akU2pN" : {
+      "id" : "Reformat_3##C1akU2pN",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_3",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "e1lSeGlb##CUSTOMER_ID0", "e1lSeGlb##FIRST_NAME0", "e1lSeGlb##LAST_NAME0" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID0"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME0"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME0"
+          },
+          "alias" : "LAST_NAME0"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "e1lSeGlb",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "Reformat_1"
+        } ],
+        "outputs" : [ {
+          "id" : "HF2So2PV",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Reformat_4##zMVk2ly8" : {
+      "id" : "Reformat_4##zMVk2ly8",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_4",
+        "x" : 820,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "PiXsTLGC##FIRST_NAME0", "PiXsTLGC##LAST_NAME0" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "FIRST_NAME0"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME0"
+          },
+          "alias" : "LAST_NAME0"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "PiXsTLGC",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "Reformat_3"
+        } ],
+        "outputs" : [ {
+          "id" : "rzJaEoVg",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "4D1EUVxX3Rpijh3_poZ67$$8tc7iPv7tSyf3pmZK7o9x" : {
+      "id" : "4D1EUVxX3Rpijh3_poZ67$$8tc7iPv7tSyf3pmZK7o9x",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_1_1",
+        "slug" : "Reformat_1_1_1",
+        "x" : 420,
+        "y" : 220,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID0"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME0"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID1"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME1"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID2"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME2"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID3"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME3"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID4"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME4"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID5"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME5"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID6"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME6"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID7"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME7"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID8"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME8"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID9"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME9"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID10"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME10"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID11"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME11"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID12"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME12"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID13"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME13"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID14"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME14"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID15"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME15"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID16"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME16"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID17"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME17"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID18"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME18"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID19"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME19"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME19"
+        }, {
+          "alias" : "FIRST_NAME",
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          }
+        }, {
+          "alias" : "LAST_NAME",
+          "expression" : {
+            "expression" : "LAST_NAME"
+          }
+        }, {
+          "alias" : "CUSTOMER_ID",
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RDKOh9UR6tjQYxK8UdwTJ$$1mLEy8fSOBppeWz_NKb20",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "stg_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "PCNubo6lM1f3dIo3Kp2Bi$$HyPSWuL1anCCQDLLMPFLr",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID0",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME0",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID1",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID2",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID3",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID4",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID5",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME5",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID6",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME6",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID7",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME7",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID8",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME8",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID9",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME9",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID10",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID11",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME11",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID12",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME12",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID13",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME13",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID14",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME14",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID15",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME15",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID16",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME16",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID17",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME17",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID18",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME18",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID19",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "FIRST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME19",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ONdz9BIR",
+    "source" : "stg_customers##Qz2MfR4A",
+    "sourcePort" : "QgECAUAQ",
+    "target" : "Reformat_1##cV8MGrWx",
+    "targetPort" : "TNVpsMwz"
+  }, {
+    "id" : "zPW8jCIv",
+    "source" : "Reformat_3##C1akU2pN",
+    "sourcePort" : "HF2So2PV",
+    "target" : "Reformat_4##zMVk2ly8",
+    "targetPort" : "PiXsTLGC"
+  }, {
+    "id" : "BTMztDbw",
+    "source" : "Reformat_4##zMVk2ly8",
+    "sourcePort" : "rzJaEoVg",
+    "target" : "conc_output##rTWPVVPC",
+    "targetPort" : "U27My0Ec"
+  }, {
+    "id" : "XlJ0LhQS",
+    "source" : "conc_output##rTWPVVPC",
+    "sourcePort" : "VyiipSiQ",
+    "target" : "medium##UK80YSTN",
+    "targetPort" : "DEKMrp1y"
+  }, {
+    "id" : "Up2HKcS4W0CwimO_9G2nl",
+    "source" : "Reformat_1##cV8MGrWx",
+    "sourcePort" : "sThSHD7N",
+    "target" : "8Gxl0-lTmaUVMfvbgawL8$$fPbAXeU0ugg6g4NmtFwOD",
+    "targetPort" : "ilw9_YMECp58OgrpjcEMF$$dXAcyZObArbUSaHsqOIYf"
+  }, {
+    "id" : "YQPdu5zeX1epyqUfi918Z",
+    "source" : "8Gxl0-lTmaUVMfvbgawL8$$fPbAXeU0ugg6g4NmtFwOD",
+    "sourcePort" : "XD76s8f5BIQB3LK0NOgDd$$-aDuHEQeemqmicYsoY_At",
+    "target" : "Reformat_3##C1akU2pN",
+    "targetPort" : "e1lSeGlb"
+  }, {
+    "id" : "ijQR4cTyBbAFIeg8Ini5r",
+    "source" : "2JG1kkAZdpsQPzQxK6TXJ$$RYgNmTl4LhvJRuxNF9duk",
+    "sourcePort" : "ii3PlabPG44BB8GV6Tzux$$QglfbaJ27aeA9emJFqLMO",
+    "target" : "4D1EUVxX3Rpijh3_poZ67$$8tc7iPv7tSyf3pmZK7o9x",
+    "targetPort" : "RDKOh9UR6tjQYxK8UdwTJ$$1mLEy8fSOBppeWz_NKb20"
+  }, {
+    "id" : "Ncnd4OvfG0uz5cX13Zxjy",
+    "source" : "stg_customers##Qz2MfR4A",
+    "sourcePort" : "QgECAUAQ",
+    "target" : "2JG1kkAZdpsQPzQxK6TXJ$$RYgNmTl4LhvJRuxNF9duk",
+    "targetPort" : "1ib41rqUEhx5-fKmjdoUP$$XuYNECCuyKArO-p7Xm5y8"
+  }, {
+    "id" : "nyYmrEOeZlHODhrocc_L9",
+    "source" : "Eg4xQMvRRlhiMHrCq9OtB$$MCQ86a6em64dWto-Z98EI",
+    "sourcePort" : "LVyapGXpGRD3aTWMH_d35$$JEt4XoD0XzkqRfDUvtixw",
+    "target" : "m8r1WbKDHB3HDJkxRdng1$$GPWdafzguOGMF_vrZ6zWF",
+    "targetPort" : "zFA7C2SclLxPwcd1BUGAU$$OjKhN5kpVJUC9G1qG5uqh"
+  }, {
+    "id" : "VS86DQd4Q1RcChfSUmVGP",
+    "source" : "stg_customers##Qz2MfR4A",
+    "sourcePort" : "QgECAUAQ",
+    "target" : "Eg4xQMvRRlhiMHrCq9OtB$$MCQ86a6em64dWto-Z98EI",
+    "targetPort" : "ZxWtQV5avU9E-X1aBiIDg$$VOwIuxqHX4dhk6YveTwMH"
+  } ],
+  "component" : "Model"
+}
