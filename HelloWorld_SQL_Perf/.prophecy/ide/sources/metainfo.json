@@ -77,6 +77,10 @@
     "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ {
+    "name" : "actual_medium",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
     "name" : "customers",
     "type" : "Model",
     "syncedOnce" : true
@@ -88,6 +92,10 @@
     "name" : "medium",
     "type" : "Model",
     "syncedOnce" : false
+  }, {
+    "name" : "new_model",
+    "type" : "Model",
+    "syncedOnce" : true
   }, {
     "name" : "orders",
     "type" : "Model",
