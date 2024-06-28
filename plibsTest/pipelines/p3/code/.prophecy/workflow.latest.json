@@ -1,0 +1,192 @@
+{
+  "metainfo" : {
+    "codeGenConfiguration" : {
+      "editableConfig" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/p3",
+    "language" : "python",
+    "fabricId" : "4",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "rohitjainprophecyioteam.plibstest.functions",
+      "sharedFunctionPackageNames" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "p1",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "5iweQFR9EiGm7i2f7p-Q8$$ZV24KiF2tpbZu4p9lZFyz",
+    "source" : "9hQTnxLmUSf5EnxvvvHoU$$eOUoVYPotaqNbPi3fELaB",
+    "sourcePort" : "wDbKaI6OGVf_bWbpxrRn2$$AYaLf71W3rVTsd8rNMFzm",
+    "target" : "4o7Bh81Qy9BHevMsqGtXH$$fLGrM8T3AAIV4ikoPRQmI",
+    "targetPort" : "QXy0gVirqfyEW-2V5NP8_$$E_x0QMS9pLmGEh3Ebw00S"
+  }, {
+    "id" : "dANjWoun7jXdMWF5lLlZO$$leV5vrBztlVjNc3z5vbai",
+    "source" : "4o7Bh81Qy9BHevMsqGtXH$$fLGrM8T3AAIV4ikoPRQmI",
+    "sourcePort" : "eN_RgOIixmqP6j_dyDFFx$$CVf_u5ASENWuC7sUgl4nY",
+    "target" : "Y4oMEDVe4WzAzL_LqkobS$$A0p7_VRU95wWORSEQMKUl",
+    "targetPort" : "F-mxy-bc2OBy8CHQPGZVq$$7JbTCVTq4zFDxUzX7vDbk"
+  } ],
+  "processes" : {
+    "9hQTnxLmUSf5EnxvvvHoU$$eOUoVYPotaqNbPi3fELaB" : {
+      "id" : "9hQTnxLmUSf5EnxvvvHoU$$eOUoVYPotaqNbPi3fELaB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ds1",
+        "slug" : "ds1",
+        "x" : -1020,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "wDbKaI6OGVf_bWbpxrRn2$$AYaLf71W3rVTsd8rNMFzm",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds1"
+      }
+    },
+    "4o7Bh81Qy9BHevMsqGtXH$$fLGrM8T3AAIV4ikoPRQmI" : {
+      "id" : "4o7Bh81Qy9BHevMsqGtXH$$fLGrM8T3AAIV4ikoPRQmI",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -780,
+        "y" : -260,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QXy0gVirqfyEW-2V5NP8_$$E_x0QMS9pLmGEh3Ebw00S",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "eN_RgOIixmqP6j_dyDFFx$$CVf_u5ASENWuC7sUgl4nY",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      }
+    },
+    "Y4oMEDVe4WzAzL_LqkobS$$A0p7_VRU95wWORSEQMKUl" : {
+      "id" : "Y4oMEDVe4WzAzL_LqkobS$$A0p7_VRU95wWORSEQMKUl",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "ds2",
+        "slug" : "ds2",
+        "x" : -460,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "F-mxy-bc2OBy8CHQPGZVq$$7JbTCVTq4zFDxUzX7vDbk",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds2"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
