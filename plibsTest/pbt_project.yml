@@ -194,19 +194,7 @@ sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
-dependencies:
-- type: plibMaven
-  modifiedAt: '2024-06-28T08:13:05.740002Z'
-  name: plibMaven
-  version: 8.0.11
-  id: '1776365969'
-  createdAt: '2024-06-28T08:13:05.739974Z'
-- type: plibPypi
-  modifiedAt: '2024-06-28T08:13:05.74004Z'
-  name: plibPypi
-  version: 1.9.5
-  id: '1679944137'
-  createdAt: '2024-06-28T08:13:05.740032Z'
+dependencies: '[]'
 projectDependencies:
   '70':
     projectUID: 70
@@ -215,7 +203,7 @@ projectDependencies:
     version: 0.0.8
     isDefault: true
     author: null
-    createdAt: '2024-06-28 07:37:14'
+    createdAt: '2024-06-29 07:35:27'
   '77':
     projectUID: 77
     projectName: ProphecySparkBasicsPython
@@ -223,7 +211,7 @@ projectDependencies:
     version: 0.2.25
     isDefault: true
     author: null
-    createdAt: '2024-06-28 07:37:14'
+    createdAt: '2024-06-29 07:35:27'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
