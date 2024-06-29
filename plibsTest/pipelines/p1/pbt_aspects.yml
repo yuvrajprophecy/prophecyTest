@@ -1,5 +1,3 @@
 version: 1
 configurations:
 - default
-pipelineVersion:
-  version: '2'
