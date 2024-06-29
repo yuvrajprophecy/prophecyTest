@@ -1,7 +1,6 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
-from prophecy.utils import *
 from p1.config.ConfigStore import *
 from p1.udfs.UDFs import *
 from prophecy.utils import *
@@ -18,21 +17,12 @@ def main():
                 .config("spark.sql.legacy.allowUntypedScalaUDF", "true")\
                 .enableHiveSupport()\
                 .appName("Prophecy Pipeline")\
-                .getOrCreate()\
-                .newSession()
+                .getOrCreate()
     Utils.initializeFromArgs(spark, parse_args())
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/p2")
     registerUDFs(spark)
-
-    try:
-        
-        MetricsCollector.start(spark = spark, pipelineId = "pipelines/p2", config = Config)
-    except :
-        
-        MetricsCollector.start(spark = spark, pipelineId = "pipelines/p2")
-
-    pipeline(spark)
-    MetricsCollector.end(spark)
+    
+    MetricsCollector.instrument(spark = spark, pipelineId = "pipelines/p2", config = Config)(pipeline)
 
 if __name__ == "__main__":
     main()

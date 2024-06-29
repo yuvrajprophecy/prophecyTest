@@ -1,7 +1,12 @@
 {
   "metainfo" : {
+    "functions" : { },
     "codeGenConfiguration" : {
-      "editableConfig" : true
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.11",
+        "pyPiVersion" : "1.9.5"
+      }
     },
     "id" : "1",
     "uri" : "pipelines/p2",
@@ -13,7 +18,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "rohitjainprophecyioteam.plibstest.functions",
-      "sharedFunctionPackageNames" : [ ]
+      "sharedFunctionPackageNames" : [ "prophecy.warehouse.functions", "prophecy.spark_basic.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -39,7 +44,15 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "70",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "77",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -49,7 +62,7 @@
       "value" : 1000
     },
     "topLevelPackage" : "p1",
-    "configurationVersion" : "v1"
+    "configurationVersion" : "v2"
   },
   "connections" : [ {
     "id" : "5iweQFR9EiGm7i2f7p-Q8$$ZV24KiF2tpbZu4p9lZFyz",
