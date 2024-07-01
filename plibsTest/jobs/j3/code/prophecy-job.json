@@ -29,7 +29,7 @@
       }
     },
     "availableFabrics" : [ {
-      "id" : "4",
+      "id" : "28",
       "name" : "dev",
       "clusterSizes" : {
         "default" : "small",
@@ -77,7 +77,7 @@
         "configurations" : {
           "schema" : [ ],
           "instances" : {
-            "plibsTest" : [ "default" ]
+            "plibsTestAfterDeployment" : [ "default" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
