@@ -184,15 +184,34 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
+  businessRules: {}
 subgraphs: {}
 sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
 sqlMacros: {}
 sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies: '[]'
-projectDependencies: {}
+projectDependencies:
+  '12':
+    projectUID: 12
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/yIytkCgB_team_4/yIytkCgB_project_12.git&subPath=
+    version: 0.0.8
+    isDefault: true
+    author: null
+    createdAt: '2024-07-01 08:29:06'
+  '11':
+    projectUID: 11
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/yIytkCgB_team_4/yIytkCgB_project_11.git&subPath=
+    version: 0.2.25
+    isDefault: true
+    author: null
+    createdAt: '2024-07-01 08:29:06'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
