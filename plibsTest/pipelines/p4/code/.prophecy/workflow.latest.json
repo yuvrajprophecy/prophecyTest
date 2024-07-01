@@ -1,27 +1,19 @@
 {
   "metainfo" : {
-    "migrationVersions" : {
-      "gemBuilderVersion" : "v1"
-    },
-    "functions" : { },
     "codeGenConfiguration" : {
-      "editableConfig" : true,
-      "plibVersion" : {
-        "mavenVersion" : "8.0.11",
-        "pyPiVersion" : "1.9.5"
-      }
+      "editableConfig" : true
     },
     "id" : "1",
     "uri" : "pipelines/p4",
     "language" : "python",
-    "fabricId" : "28",
+    "fabricId" : "4",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "rohitjainprophecyioteam.plibstest.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.warehouse.functions", "prophecy.spark_basic.functions" ]
+      "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
       "language" : "python",
@@ -47,15 +39,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "12",
-      "projectName" : "ProphecyWarehousePython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "11",
-      "projectName" : "ProphecySparkBasicsPython",
-      "externalDependencies" : [ ]
-    } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -65,7 +49,7 @@
       "value" : 1000
     },
     "topLevelPackage" : "p1",
-    "configurationVersion" : "v2"
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "5iweQFR9EiGm7i2f7p-Q8$$ZV24KiF2tpbZu4p9lZFyz",
@@ -154,10 +138,6 @@
         "importString" : "",
         "activeTab" : "expressions",
         "columnsSelector" : [ ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/yIytkCgB_team_4/yIytkCgB_project_11.git&subPath=&tag=0.2.25&projectSubscriptionProjectId=11&path=gems/Reformat",
-        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "Y4oMEDVe4WzAzL_LqkobS$$A0p7_VRU95wWORSEQMKUl" : {
